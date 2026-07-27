@@ -1,0 +1,7 @@
+# 로컬 `wrangler dev` 용 시크릿 예시.
+# 이 파일을 .dev.vars 로 복사해 실제 값을 채우세요 (.dev.vars 는 커밋되지 않습니다).
+
+TELEGRAM_BOT_TOKEN=123456789:AA...
+TELEGRAM_WEBHOOK_SECRET=아무거나_긴_랜덤_문자열
+TELEGRAM_ALLOWED_CHAT_IDS=123456789
+GITHUB_TOKEN=github_pat_...

@@ -1,0 +1,21 @@
+{
+  "name": "@surf-issue/automation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Telegram 승인 워크플로 봇 + 카드뉴스 제작 오케스트레이션",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "webhook:set": "node scripts/set-webhook.mjs",
+    "webhook:info": "node scripts/set-webhook.mjs --info",
+    "webhook:delete": "node scripts/set-webhook.mjs --delete",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "test": "node --test test/"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

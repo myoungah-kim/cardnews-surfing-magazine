@@ -1,0 +1,102 @@
+name: 일일 후보 선별
+
+# 매일 아침 RSS 를 훑어 후보 5개를 뽑고 Telegram 으로 보낸다.
+# 07:12 KST = 22:12 UTC (전날). 정각을 피한 이유는 GitHub 크론이
+# 매시 정각에 요청이 몰려 수십 분씩 지연되기 때문.
+on:
+  schedule:
+    - cron: '12 22 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '후보를 뽑을 날짜 (YYYY-MM-DD, 비우면 오늘)'
+        required: false
+
+concurrency:
+  # 후보 파일을 동시에 쓰지 않도록 직렬화한다.
+  group: candidates
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  select:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 대상 날짜 결정 (한국 시간 기준)
+        id: meta
+        run: |
+          DATE="${{ inputs.date }}"
+          if [ -z "$DATE" ]; then DATE="$(TZ=Asia/Seoul date +%F)"; fi
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          echo "대상 날짜: $DATE"
+
+      - name: 스톡 이미지 API 키 주입
+        env:
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: |
+          {
+            echo "UNSPLASH_ACCESS_KEY=$UNSPLASH_ACCESS_KEY"
+            echo "UNSPLASH_APP_NAME=cardnews-surfing-magazine"
+            echo "PEXELS_API_KEY=$PEXELS_API_KEY"
+            echo "PIXABAY_API_KEY=$PIXABAY_API_KEY"
+          } > .env
+
+      - name: Claude Code 설치
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: 후보 선별 실행
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          TARGET_DATE: ${{ steps.meta.outputs.date }}
+        run: |
+          set -euo pipefail
+          node automation/scripts/render-prompt.mjs prompts/select-candidates.md > /tmp/prompt.txt
+          claude -p "$(cat /tmp/prompt.txt)" \
+            --allowedTools "Read,Write,Edit,Bash,Glob,Grep,WebFetch,WebSearch"
+
+      - name: 산출물 검증
+        env:
+          TARGET_DATE: ${{ steps.meta.outputs.date }}
+        run: |
+          set -euo pipefail
+          FILE="output/candidates/${TARGET_DATE}.json"
+          test -f "$FILE" || { echo "후보 JSON 이 생성되지 않았습니다: $FILE"; exit 1; }
+          # 깨진 JSON 이 커밋되면 다음 단계 전체가 조용히 무너지므로 여기서 막는다.
+          node -e "JSON.parse(require('node:fs').readFileSync('$FILE','utf8'))"
+          echo "✔ $FILE 유효"
+
+      - name: 결과 커밋
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/candidates/
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "chore: ${{ steps.meta.outputs.date }} 아티클 후보 선별"
+            git push
+          fi
+
+      - name: Telegram 으로 후보 발송
+        run: node automation/scripts/send-candidates.mjs "${{ steps.meta.outputs.date }}"
+
+      - name: 실패 알림
+        if: failure()
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: node automation/scripts/notify.mjs "일일 후보 선별이 실패했습니다."

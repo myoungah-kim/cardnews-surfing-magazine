@@ -1,0 +1,52 @@
+<!doctype html>
+<!--
+  본문 슬라이드 템플릿 — DESIGN.md 2-2번 섹션
+  =================================================
+  캐러셀의 2~N번째 장(커버와 CTA 사이)에 필요한 만큼 복사해서 사용.
+  사진 전체 배경 + 하단 다크 그라데이션 + 헤드라인(+선택적 캡션). 배지 없음(배지는 표지 전용).
+
+  채워야 할 placeholder:
+    {{BG_CLASS}}   - 배경 프리셋 클래스 4종 중 하나: bg-ocean-blue / bg-sunset / bg-dusk-red / bg-night-teal
+                     실제 사진을 쓰려면 .slide의 class="slide {{BG_CLASS}}" 를 지우고
+                     style="background-image:url('사진경로'); background-size:cover; background-position:center;" 로 교체
+    {{HEADLINE}}   - 헤드라인, 1~2줄 (핵심 문장 / 인물명 + 핵심 소식)
+    {{CAPTION}}    - 캡션형 서브 문장 (선택, 보통 이미지 출처·부연 설명용으로 작게 표시됨).
+                     필요 없으면 <p class="caption">...</p> 줄 자체를 삭제할 것
+
+  렌더링 (카드 번호에 맞게 파일명만 바꿔서 여러 장 생성):
+    google-chrome --headless --disable-gpu --hide-scrollbars \
+      --force-device-scale-factor=1 --window-size=1080,1350 \
+      --screenshot="output/card_02.png" "file://$(pwd)/body.html"
+
+  주의:
+  - 색상/폰트/여백은 이 파일에서 직접 건드리지 말고 template.css 를 통해서만 바뀌어야 함
+  - 좌측 정렬 고정 (중앙 정렬 금지)
+  - 헤드라인은 표준 크기(64~72px) 그대로 유지, 캡션만 훨씬 작은 크기로 유지할 것 (헤드라인을 줄이지 말 것)
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="template.css">
+</head>
+<body>
+  <div class="slide {{BG_CLASS}}">
+    <!-- 장식용 물결 (실제 사진 사용 시 이 svg 통째로 삭제) -->
+    <svg class="waves" viewBox="0 0 1080 320" preserveAspectRatio="none" style="height:320px;" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,120 C180,70 360,170 540,120 C720,70 900,170 1080,120 L1080,320 L0,320 Z" fill="rgba(255,255,255,0.08)"/>
+      <path d="M0,180 C180,220 360,140 540,180 C720,220 900,140 1080,180 L1080,320 L0,320 Z" fill="rgba(255,255,255,0.12)"/>
+    </svg>
+
+    <div class="overlay-gradient"></div>
+
+    <div class="text">
+      <h2 class="headline">{{HEADLINE}}</h2>
+      <p class="caption">{{CAPTION}}</p>
+    </div>
+
+    <div class="watermark">
+      <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><path d="M15,150 Q55,25 95,8 Q88,55 128,88 Q78,98 55,128 Q32,144 15,150 Z" fill="#FFFFFF"/></svg>
+      <span>@surf.issue</span>
+    </div>
+  </div>
+</body>
+</html>

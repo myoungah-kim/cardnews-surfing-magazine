@@ -1,0 +1,183 @@
+<!doctype html>
+<!--
+  CTA(팔로우 유도) 슬라이드 템플릿 — DESIGN.md 9번 섹션
+  =================================================
+  캐러셀의 마지막 장 전용. 유일하게 중앙 정렬을 쓰는 슬라이드.
+  워드마크 → 서브 헤드라인 → 브랜드 강조 헤드라인 → 팔로우 칩 UI → 서브 안내 문구 → 하단 워터마크.
+
+  채워야 할 placeholder:
+    {{BG_CLASS}}     - 배경 프리셋 클래스 4종 중 하나 (기본값 bg-night-teal 권장, CTA는 대체로 어두운 톤이 잘 어울림)
+    {{SUB_HEADLINE}} - 가는 글씨 1줄 (채널의 핵심 가치 제안, 예: "매일 전하는 글로벌 서핑뉴스")
+    {{BRAND_KR}}     - 메인 헤드라인 안에서 강조되는 국문 브랜드명 (예: 서핑슈) — 실제 @handle이 아니라 읽기 쉬운 국문 표기
+    {{HANDLE}}       - 팔로우 칩에 들어가는 실제 영문 계정 핸들 (예: @surf.issue)
+    {{SUBTITLE}}     - 팔로우 칩 아래 안내 문구 (예: - 실시간 소식 받아보기 -)
+
+  렌더링:
+    google-chrome --headless --disable-gpu --hide-scrollbars \
+      --force-device-scale-factor=1 --window-size=1080,1350 \
+      --screenshot="output/card_05.png" "file://$(pwd)/cta.html"
+
+  주의:
+  - 팔로우 칩(.follow-chip)은 반드시 fit-content 방식 유지 (고정 폭으로 늘리지 말 것 — 좌우 여백 불균형 발생)
+  - 메인 헤드라인엔 국문 브랜드명, 팔로우 칩엔 영문 @handle — 역할 분리 유지
+  - 워드마크(SURF/ISSUE)와 하단 workmark는 브랜드 고정 요소이므로 보통 바꾸지 않음
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="template.css">
+<style>
+  /* CTA 슬라이드 전용 컴포넌트 (다른 템플릿에서 재사용하지 않으므로 여기서만 정의) */
+  .dim{ position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+
+  .wordmark{
+    position:absolute; top:70px; left:0; right:0;
+    display:flex; align-items:center; justify-content:center; gap:8px;
+  }
+  .wordmark .chip{
+    background:var(--accent); color:#fff; font-weight:800; font-size:22px;
+    padding:6px 14px; border-radius:8px; letter-spacing:0.5px;
+  }
+  .wordmark .word{
+    color:#fff; font-weight:700; font-size:26px; letter-spacing:1px;
+  }
+
+  .headline-cta{
+    position:absolute; top:410px; left:60px; right:60px;
+    text-align:center;
+  }
+  .headline-cta .sub{
+    color:rgba(255,255,255,0.85);
+    font-weight:500;
+    font-size:32px;
+    text-shadow:var(--text-shadow);
+  }
+  .headline-cta .main{
+    margin-top:14px;
+    color:var(--headline-color);
+    font-weight:800;
+    font-size:48px;
+    line-height:1.3;
+    text-shadow:var(--text-shadow);
+  }
+  .headline-cta .main .quote{ margin:0 3px; }
+  .headline-cta .main em{
+    font-style:normal;
+    color:#fff;
+    background:rgba(74,108,247,0.35);
+    padding:2px 10px;
+    border-radius:6px;
+  }
+
+  .follow-chip{
+    position:absolute; top:610px; left:50%;
+    transform:translateX(-50%);
+    height:150px;
+    background:#FFFFFF;
+    border-radius:999px;
+    box-shadow:0 18px 40px rgba(0,0,0,0.35);
+    display:inline-flex; align-items:center;
+    gap:26px;
+    padding:0 32px;
+    white-space:nowrap;
+  }
+  .avatar-ring{
+    width:96px; height:96px; border-radius:50%;
+    background:conic-gradient(from 200deg, #4A6CF7, #7f6bf0, #ff8f6b, #4A6CF7);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .avatar{
+    width:84px; height:84px; border-radius:50%;
+    background:#0a2436;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .avatar svg{ width:44px; height:44px; }
+  .handle{
+    font-weight:800;
+    font-size:34px;
+    color:#101418;
+    flex-shrink:0;
+  }
+  .follow-btn{
+    position:relative;
+    background:var(--accent);
+    color:#fff;
+    font-weight:800;
+    font-size:26px;
+    padding:16px 36px;
+    border-radius:999px;
+    flex-shrink:0;
+  }
+  .cursor{
+    position:absolute; right:-10px; bottom:-14px;
+    width:38px; height:38px;
+  }
+
+  .subtitle-cta{
+    position:absolute; top:815px; left:60px; right:60px;
+    text-align:center;
+    color:rgba(255,255,255,0.75);
+    font-weight:500;
+    font-size:26px;
+  }
+
+  .footer-mark{
+    position:absolute; bottom:90px; left:0; right:0;
+    display:flex; align-items:center; justify-content:center;
+    opacity:0.45;
+  }
+  .footer-mark svg{ width:48px; height:48px; }
+</style>
+</head>
+<body>
+  <div class="slide bg-night-teal">
+    <!-- 장식용 물결 (실제 사진 사용 시 이 svg 통째로 삭제) -->
+    <svg class="waves" viewBox="0 0 1080 320" preserveAspectRatio="none" style="height:320px; opacity:0.4;" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,150 C180,110 360,190 540,150 C720,110 900,190 1080,150 L1080,320 L0,320 Z" fill="rgba(255,255,255,0.05)"/>
+      <path d="M0,190 C180,220 360,160 540,190 C720,220 900,160 1080,190 L1080,320 L0,320 Z" fill="rgba(255,255,255,0.08)"/>
+    </svg>
+    <div class="dim"></div>
+
+    <div class="wordmark">
+      <span class="chip">SURF</span>
+      <span class="word">ISSUE</span>
+    </div>
+
+    <div class="headline-cta">
+      <div class="sub">{{SUB_HEADLINE}}</div>
+      <div class="main"><span class="quote">&lsquo;</span><em>{{BRAND_KR}}</em><span class="quote">&rsquo;</span>를 팔로우하세요</div>
+    </div>
+
+    <div class="follow-chip">
+      <div class="avatar-ring">
+        <div class="avatar">
+          <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15,150 Q55,25 95,8 Q88,55 128,88 Q78,98 55,128 Q32,144 15,150 Z" fill="#EDEDED"/>
+          </svg>
+        </div>
+      </div>
+      <div class="handle">{{HANDLE}}</div>
+      <div class="follow-btn">
+        팔로우
+        <svg class="cursor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 2 L4 20 L9 15.5 L12.5 22 L15.5 20.5 L12 14 L19 14 Z" fill="#FFFFFF" stroke="#101418" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="subtitle-cta">{{SUBTITLE}}</div>
+
+    <div class="footer-mark">
+      <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15,150 Q55,25 95,8 Q88,55 128,88 Q78,98 55,128 Q32,144 15,150 Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+
+    <div class="watermark">
+      <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><path d="M15,150 Q55,25 95,8 Q88,55 128,88 Q78,98 55,128 Q32,144 15,150 Z" fill="#FFFFFF"/></svg>
+      <span>@surf.issue</span>
+    </div>
+  </div>
+</body>
+</html>
