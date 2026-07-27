@@ -1,0 +1,68 @@
+name: 확정 / 폐기
+
+# Telegram 의 Upload / Drop 버튼이 이 워크플로를 깨운다.
+# 무거운 작업이 없어 대개 1분 안에 끝난다.
+on:
+  repository_dispatch:
+    types: [finalize-card]
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '후보 날짜 (YYYY-MM-DD)'
+        required: true
+      index:
+        description: '후보 순번'
+        required: true
+      decision:
+        description: 'uploaded 또는 dropped'
+        required: true
+
+concurrency:
+  # 처리 로그 CSV 를 동시에 쓰지 않도록 전체 직렬화한다.
+  group: finalize
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      EVENT_DATE: ${{ github.event.client_payload.date || inputs.date }}
+      EVENT_INDEX: ${{ github.event.client_payload.index || inputs.index }}
+      EVENT_DECISION: ${{ github.event.client_payload.decision || inputs.decision }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 상태 갱신 및 처리 로그 기록
+        id: run
+        run: node automation/scripts/finalize.mjs
+
+      - name: 결과 커밋
+        if: steps.run.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "chore: ${{ env.EVENT_DECISION }} — ${{ env.EVENT_DATE }} #${{ env.EVENT_INDEX }}"
+            git pull --rebase --autostash
+            git push
+          fi
+
+      - name: 실패 알림
+        if: failure()
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: node automation/scripts/notify.mjs "확정/폐기 처리가 실패했습니다."

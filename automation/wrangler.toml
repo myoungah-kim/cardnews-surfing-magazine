@@ -1,0 +1,20 @@
+name = "cardnews-telegram-webhook"
+main = "worker/index.js"
+compatibility_date = "2024-11-06"
+
+# 비밀값은 여기에 적지 않는다. 전부 `wrangler secret put <이름>` 으로 등록할 것:
+#
+#   wrangler secret put TELEGRAM_BOT_TOKEN         # @BotFather 발급 토큰
+#   wrangler secret put TELEGRAM_WEBHOOK_SECRET    # 임의 문자열, setWebhook 과 동일해야 함
+#   wrangler secret put TELEGRAM_ALLOWED_CHAT_IDS  # 본인 chat id (쉼표로 여러 개)
+#   wrangler secret put GITHUB_TOKEN               # repository_dispatch 권한 PAT
+#
+# 로컬 개발(`npm run dev`)에서는 automation/.dev.vars 파일에 같은 값을 넣으면 된다.
+# .dev.vars 는 .gitignore 에 등록되어 있다.
+
+[vars]
+# 비밀이 아닌 설정만 여기에 둔다.
+GITHUB_REPO = "myoungah-kim/cardnews-surfing-magazine"
+
+[observability]
+enabled = true

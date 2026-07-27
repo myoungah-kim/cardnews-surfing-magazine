@@ -1,0 +1,23 @@
+# API 키 (절대 커밋 금지)
+.env
+
+# 스톡 이미지 원본 / 캐시
+input/*.jpg
+input/*.jpeg
+input/*.png
+!input/.gitkeep
+.cache/
+
+# humanize-korean 스킬 작업 폴더 (윤문 중간 산출물)
+_workspace/
+
+__pycache__/
+
+# 릴즈용 배경음악 — 저작권 있는 음원이므로 공개 저장소에 올리지 않는다
+input/bgm/
+
+# automation (Node / Cloudflare Workers)
+node_modules/
+.wrangler/
+# wrangler 로컬 개발용 시크릿 — 절대 커밋 금지
+.dev.vars

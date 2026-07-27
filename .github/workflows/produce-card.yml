@@ -1,0 +1,138 @@
+name: 카드뉴스 제작
+
+# Telegram 의 Choose / Recreate 버튼이 Cloudflare Worker 를 거쳐 이 워크플로를 깨운다.
+on:
+  repository_dispatch:
+    types: [produce-card]
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '후보 날짜 (YYYY-MM-DD)'
+        required: true
+      index:
+        description: '후보 순번'
+        required: true
+      feedback:
+        description: '수정 요청 (재생성일 때만)'
+        required: false
+
+concurrency:
+  # 같은 후보에 대한 중복 실행만 막는다. 서로 다른 후보는 병렬로 만들어도 무방.
+  group: produce-${{ github.event.client_payload.date || inputs.date }}-${{ github.event.client_payload.index || inputs.index }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  produce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      EVENT_DATE: ${{ github.event.client_payload.date || inputs.date }}
+      EVENT_INDEX: ${{ github.event.client_payload.index || inputs.index }}
+      EVENT_FEEDBACK: ${{ github.event.client_payload.feedback || inputs.feedback }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 크롬 확인
+        run: |
+          which google-chrome || which google-chrome-stable || {
+            echo "러너에 크롬이 없습니다."; exit 1;
+          }
+          google-chrome --version
+
+      - name: 정책 검사 및 제작 준비
+        id: prep
+        run: node automation/scripts/prepare-produce.mjs
+
+      - name: 스톡 이미지 API 키 주입
+        if: steps.prep.outputs.allowed == 'true'
+        env:
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+        run: |
+          {
+            echo "UNSPLASH_ACCESS_KEY=$UNSPLASH_ACCESS_KEY"
+            echo "UNSPLASH_APP_NAME=cardnews-surfing-magazine"
+            echo "PEXELS_API_KEY=$PEXELS_API_KEY"
+            echo "PIXABAY_API_KEY=$PIXABAY_API_KEY"
+          } > .env
+
+      - name: Claude Code 설치
+        if: steps.prep.outputs.allowed == 'true'
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: 카드뉴스 제작
+        if: steps.prep.outputs.allowed == 'true'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          ARTICLE_TITLE: ${{ steps.prep.outputs.title }}
+          ARTICLE_URL: ${{ steps.prep.outputs.url }}
+          CARD_SLUG: ${{ steps.prep.outputs.slug }}
+          ATTEMPT: ${{ steps.prep.outputs.attempts }}
+          FEEDBACK: ${{ steps.prep.outputs.feedback }}
+        run: |
+          set -euo pipefail
+          node automation/scripts/render-prompt.mjs prompts/produce-card.md > /tmp/prompt.txt
+          claude -p "$(cat /tmp/prompt.txt)" \
+            --allowedTools "Read,Write,Edit,Bash,Glob,Grep,WebFetch,WebSearch,Skill"
+
+      - name: 산출물 검증
+        if: steps.prep.outputs.allowed == 'true'
+        env:
+          CARD_SLUG: ${{ steps.prep.outputs.slug }}
+        run: |
+          set -euo pipefail
+          DIR="output/cards/${CARD_SLUG}"
+          test -f "$DIR/card_01.png" || { echo "카드 이미지가 없습니다: $DIR/card_01.png"; exit 1; }
+          test -f "$DIR/caption.md"  || { echo "캡션이 없습니다: $DIR/caption.md"; exit 1; }
+          # 규격(1080x1350)에서 벗어난 이미지가 그대로 올라가는 것을 막는다.
+          SIZE=$(node -e "
+            const b=require('node:fs').readFileSync('$DIR/card_01.png');
+            console.log(b.readUInt32BE(16)+'x'+b.readUInt32BE(20));
+          ")
+          echo "카드 규격: $SIZE"
+          test "$SIZE" = "1080x1350" || { echo "규격이 1080x1350 이 아닙니다"; exit 1; }
+
+      - name: 결과 커밋
+        if: steps.prep.outputs.allowed == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "feat: 카드뉴스 제작 ${{ steps.prep.outputs.slug }} (${{ steps.prep.outputs.attempts }}회차)"
+            # 다른 워크플로가 그사이 푸시했을 수 있으므로 rebase 후 푸시한다.
+            git pull --rebase --autostash
+            git push
+          fi
+
+      - name: 검수 요청 발송
+        if: steps.prep.outputs.allowed == 'true'
+        run: node automation/scripts/send-result.mjs
+
+      - name: 실패 시 상태 복구 및 알림
+        if: failure()
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          node automation/scripts/reset-status.mjs || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/candidates/ || true
+          git diff --cached --quiet || {
+            git commit -m "chore: 제작 실패 상태 복구"
+            git pull --rebase --autostash && git push
+          }
+          node automation/scripts/notify.mjs "카드뉴스 제작이 실패했습니다. 다시 Choose 를 눌러 재시도할 수 있습니다."
