@@ -63,64 +63,66 @@ claude setup-token
 
 출력된 토큰을 `CLAUDE_CODE_OAUTH_TOKEN` 으로 씁니다.
 
-### 2-3. GitHub Secrets 등록
+### 2-3. GitHub PAT (워커가 워크플로를 깨우는 용도)
 
-저장소 → Settings → Secrets and variables → Actions:
+[fine-grained token](https://github.com/settings/personal-access-tokens/new) 을 만들고
+이 저장소에만 **Contents: Read and write** 권한을 줍니다.
+
+### 2-4. Cloudflare API 토큰
+
+[API 토큰 발급](https://dash.cloudflare.com/profile/api-tokens) → **Edit Cloudflare Workers** 템플릿.
+계정 ID 는 Cloudflare 대시보드 오른쪽 사이드바에서 확인합니다.
+
+### 2-5. GitHub Secrets 등록
+
+**모든 비밀값은 GitHub Secrets 한 곳에만 둡니다.** 워커 시크릿은 배포 워크플로가
+여기서 읽어 Cloudflare 로 동기화하므로, 대시보드에서 따로 관리하지 않습니다.
 
 | 이름 | 값 |
 |---|---|
-| `CLAUDE_CODE_OAUTH_TOKEN` | 위에서 발급한 토큰 |
+| `CLAUDE_CODE_OAUTH_TOKEN` | 2-2 에서 발급한 토큰 |
 | `TELEGRAM_BOT_TOKEN` | BotFather 토큰 |
 | `TELEGRAM_CHAT_ID` | 내 chat id |
+| `TELEGRAM_WEBHOOK_SECRET` | 아무 긴 랜덤 문자열 (`openssl rand -hex 32`) |
+| `REPO_DISPATCH_TOKEN` | 2-3 의 PAT — GitHub 이 `GITHUB_` 접두사를 금지해 이 이름을 씁니다 |
+| `CLOUDFLARE_API_TOKEN` | 2-4 의 토큰 |
+| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare 계정 ID |
 | `UNSPLASH_ACCESS_KEY` | (선택) 스톡 사진용 |
 | `PEXELS_API_KEY` | (선택) |
 | `PIXABAY_API_KEY` | (선택) |
 
 ```bash
+# 값은 화면에 표시되지 않게 입력됩니다.
 gh secret set CLAUDE_CODE_OAUTH_TOKEN
 gh secret set TELEGRAM_BOT_TOKEN
 gh secret set TELEGRAM_CHAT_ID
+gh secret set REPO_DISPATCH_TOKEN
+gh secret set CLOUDFLARE_API_TOKEN
+gh secret set CLOUDFLARE_ACCOUNT_ID
+
+# 웹훅 시크릿은 즉석에서 만들어 넣습니다.
+openssl rand -hex 32 | gh secret set TELEGRAM_WEBHOOK_SECRET
 ```
-
-### 2-4. GitHub PAT (워커가 워크플로를 깨우는 용도)
-
-[fine-grained token](https://github.com/settings/personal-access-tokens/new) 을 만들고
-이 저장소에만 **Contents: Read and write** 권한을 줍니다.
-
-### 2-5. Cloudflare Worker 배포
-
-```bash
-cd automation
-npm install
-npx wrangler login
-
-npx wrangler secret put TELEGRAM_BOT_TOKEN
-npx wrangler secret put TELEGRAM_WEBHOOK_SECRET   # 아무 긴 랜덤 문자열
-npx wrangler secret put TELEGRAM_ALLOWED_CHAT_IDS # 내 chat id
-npx wrangler secret put GITHUB_TOKEN              # 2-4 의 PAT
-
-npx wrangler deploy
-```
-
-배포되면 `https://cardnews-telegram-webhook.<계정>.workers.dev` URL 이 나옵니다.
 
 > `wrangler.toml` 의 `GITHUB_REPO` 값이 실제 저장소와 맞는지 확인하세요.
 
-### 2-6. 웹훅 등록
+### 2-6. 배포
 
 ```bash
-cd automation
-TELEGRAM_BOT_TOKEN=... \
-TELEGRAM_WEBHOOK_URL=https://cardnews-telegram-webhook.<계정>.workers.dev \
-TELEGRAM_WEBHOOK_SECRET=<2-5 에서 정한 것과 동일> \
-node scripts/set-webhook.mjs
+gh workflow run "웹훅 배포"
+gh run watch
 ```
 
-확인:
+이 워크플로가 한 번에 처리합니다:
 
-```bash
-TELEGRAM_BOT_TOKEN=... node scripts/set-webhook.mjs --info
-```
+1. Cloudflare Worker 배포
+2. 워커 시크릿을 GitHub Secrets 기준으로 동기화
+3. Telegram 웹훅 등록 + 상태 출력
+
+이후 `automation/worker/`·`core/`·`app/` 을 수정해 push 하면 자동 재배포됩니다.
+
+> 로컬에 wrangler 를 설치할 필요가 없습니다. wrangler 4 는 Node 22 이상을 요구하는데,
+> 러너에서 돌리면 로컬 Node 버전과 무관하게 동작합니다.
 
 ---
 
@@ -192,8 +194,9 @@ node --test test/
 
 | 증상 | 확인할 것 |
 |---|---|
-| 버튼을 눌러도 반응 없음 | `node scripts/set-webhook.mjs --info` 의 `last_error_message` |
-| "권한이 없습니다" | `TELEGRAM_ALLOWED_CHAT_IDS` 가 내 chat id 와 일치하는지 |
-| 워커는 되는데 워크플로가 안 돌음 | PAT 권한(Contents: write), `wrangler.toml` 의 `GITHUB_REPO` |
+| 버튼을 눌러도 반응 없음 | `TELEGRAM_BOT_TOKEN=... node scripts/set-webhook.mjs --info` 의 `last_error_message` |
+| "권한이 없습니다" | `TELEGRAM_CHAT_ID` 시크릿이 내 chat id 와 일치하는지 (워커의 허용목록으로 동기화됩니다) |
+| 워커는 되는데 워크플로가 안 돌음 | `REPO_DISPATCH_TOKEN` 권한(Contents: write), `wrangler.toml` 의 `GITHUB_REPO` |
+| 시크릿을 바꿨는데 반영이 안 됨 | 워커 시크릿은 배포 시에만 동기화됩니다. `gh workflow run "웹훅 배포"` |
 | 카드가 계속 "제작 중"에서 멈춤 | Actions 로그 확인. 실패 시 상태는 자동 복구되고 알림이 옵니다 |
 | 후보 JSON 이 없다는 오류 | 그날 크롤링이 안 돈 것. `gh workflow run "일일 후보 선별"` |

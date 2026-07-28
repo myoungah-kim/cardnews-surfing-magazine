@@ -16,6 +16,6 @@
     "test": "node --test test/"
   },
   "devDependencies": {
-    "wrangler": "^3.90.0"
+    "wrangler": "^4.86.0"
   }
 }

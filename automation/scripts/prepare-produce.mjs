@@ -12,7 +12,7 @@
  */
 
 import { findCandidate, readCandidates, writeCandidates } from '../app/candidates.js';
-import { canProduce } from '../app/policy.js';
+import { canProduce, canRecreate } from '../app/policy.js';
 import { REPO_ROOT, chatId, requireEnv, run, setOutputs, telegram, today } from './lib/runtime.mjs';
 
 /** 기사 제목에서 output/cards/<slug> 폴더명을 만든다 */
@@ -41,9 +41,9 @@ run(async () => {
     ['producing', 'review', 'uploaded'].includes(item.status),
   ).length;
 
-  // 재생성은 이미 review 상태에서 출발하므로 canProduce 를 우회한다.
+  // 재생성은 검수 상태에서 출발하므로 나이·중복 검사가 아닌 별도 정책을 탄다.
   const verdict = feedback
-    ? { allow: true }
+    ? canRecreate({ candidate })
     : canProduce({ candidate, today: today(), producedToday });
 
   if (!verdict.allow) {
@@ -54,6 +54,12 @@ run(async () => {
     await setOutputs({ allowed: 'false' });
     console.log(`거부됨: ${verdict.reason}`);
     return;
+  }
+
+  // 막지는 않지만 알려둘 것이 있는 경우 (예: 재생성 횟수가 쌓였을 때)
+  if (verdict.warn) {
+    await telegram().sendMessage({ chat_id: chatId(), text: `ℹ️ ${verdict.warn}` });
+    console.log(`경고: ${verdict.warn}`);
   }
 
   candidate.status = 'producing';

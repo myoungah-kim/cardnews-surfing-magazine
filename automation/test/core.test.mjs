@@ -20,7 +20,14 @@ import { embedContext, extractContext } from '../core/context.js';
 import { isAuthorized, parseIdList, timingSafeEqual } from '../core/guard.js';
 import { inlineKeyboard } from '../core/keyboard.js';
 import { findCandidate } from '../app/candidates.js';
-import { canFinalize } from '../app/policy.js';
+import {
+  canFinalize,
+  canProduce,
+  canRecreate,
+  daysBetween,
+  MAX_CANDIDATE_AGE_DAYS,
+  RECREATE_WARN_AFTER,
+} from '../app/policy.js';
 
 test('callback_data 왕복', () => {
   const data = encodeCallback('ch', ['260727', 3]);
@@ -107,4 +114,61 @@ test('검수 대기가 아니면 확정할 수 없다', () => {
 test('이미 처리된 후보는 다시 확정할 수 없다', () => {
   assert.equal(canFinalize({ candidate: { status: 'uploaded' }, target: 'uploaded' }).allow, false);
   assert.equal(canFinalize({ candidate: { status: 'dropped' }, target: 'uploaded' }).allow, false);
+});
+
+test('날짜 차이 계산', () => {
+  assert.equal(daysBetween('2026-07-21', '2026-07-28'), 7);
+  assert.equal(daysBetween('2026-07-28', '2026-07-28'), 0);
+  // 서머타임이 있는 지역이어도 UTC 고정이라 어긋나지 않아야 한다.
+  assert.equal(daysBetween('2026-03-01', '2026-04-01'), 31);
+});
+
+test('7일 이내 후보는 제작을 허용한다', () => {
+  const at = (published) => canProduce({ candidate: { status: 'pending', published }, today: '2026-07-28' });
+  assert.equal(at('2026-07-28').allow, true);
+  assert.equal(at('2026-07-21').allow, true, '경계값 7일은 허용되어야 한다');
+});
+
+test('7일을 넘긴 후보는 거부하고 이유를 알려준다', () => {
+  const verdict = canProduce({
+    candidate: { status: 'pending', published: '2026-07-20' },
+    today: '2026-07-28',
+  });
+  assert.equal(verdict.allow, false);
+  assert.match(verdict.reason, new RegExp(`8일.*상한 ${MAX_CANDIDATE_AGE_DAYS}일`));
+});
+
+test('발행일이 없으면 나이를 이유로 막지 않는다', () => {
+  assert.equal(canProduce({ candidate: { status: 'pending' }, today: '2026-07-28' }).allow, true);
+  assert.equal(
+    canProduce({ candidate: { status: 'pending', published: '알수없음' }, today: '2026-07-28' }).allow,
+    true,
+  );
+});
+
+test('하루 제작 개수는 제한하지 않는다', () => {
+  const verdict = canProduce({
+    candidate: { status: 'pending', published: '2026-07-28' },
+    today: '2026-07-28',
+    producedToday: 99,
+  });
+  assert.equal(verdict.allow, true);
+});
+
+test('재생성은 횟수로 막지 않되 누적되면 경고한다', () => {
+  const at = (attempts) => canRecreate({ candidate: { status: 'review', attempts } });
+  assert.equal(at(1).allow, true);
+  assert.equal(at(1).warn, undefined);
+
+  const warned = at(RECREATE_WARN_AFTER);
+  assert.equal(warned.allow, true, '경고 이후에도 계속 허용되어야 한다');
+  assert.match(warned.warn, /회차/);
+
+  // 훨씬 더 쌓여도 여전히 허용
+  assert.equal(at(20).allow, true);
+});
+
+test('검수 대기가 아니면 재생성할 수 없다', () => {
+  assert.equal(canRecreate({ candidate: { status: 'pending' } }).allow, false);
+  assert.equal(canRecreate({ candidate: { status: 'uploaded' } }).allow, false);
 });
