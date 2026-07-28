@@ -56,9 +56,19 @@ test('후보 선별 워크플로: 커밋이 발송보다 먼저여야 한다', (
   assert.ok(stepAt(source, '결과 커밋') < stepAt(source, 'Telegram 으로 후보 발송'));
 });
 
+test('검수 재발송: 발송이 상태 커밋보다 먼저여야 한다', () => {
+  const source = workflow('resend-review.yml');
+  assert.ok(stepAt(source, '검수 요청 재발송') < stepAt(source, '검수 대기 상태 커밋'));
+});
+
 test('상태를 바꾸는 워크플로는 모두 commit-push 헬퍼를 쓴다', () => {
   // 각자 git 명령을 직접 쓰면 push 재시도가 빠져 동시 실행 시 조용히 실패한다.
-  for (const name of ['produce-card.yml', 'finalize-card.yml', 'daily-candidates.yml']) {
+  for (const name of [
+    'produce-card.yml',
+    'finalize-card.yml',
+    'daily-candidates.yml',
+    'resend-review.yml',
+  ]) {
     const source = workflow(name);
     assert.match(source, /commit-push\.sh/, `${name} 이 commit-push.sh 를 쓰지 않습니다`);
     assert.doesNotMatch(source, /^\s+git commit /m, `${name} 에 직접 git commit 이 남아 있습니다`);

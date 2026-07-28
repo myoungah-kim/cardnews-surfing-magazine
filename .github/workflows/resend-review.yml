@@ -1,0 +1,56 @@
+name: 검수 재발송
+
+# 이미 만들어진 카드를 검수 버튼과 함께 다시 보낸다.
+#
+# 버튼은 한 번 누르면 제거된다(중복 실행 방지). 그래서 실수로 눌렀거나,
+# 요청이 거부되어 아무 일도 일어나지 않은 채 버튼만 사라진 경우
+# 되돌릴 방법이 필요하다. 이 워크플로가 그 복구 경로다.
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '후보 날짜 (YYYY-MM-DD)'
+        required: true
+      index:
+        description: '후보 순번'
+        required: true
+
+concurrency:
+  group: resend-${{ inputs.date }}-${{ inputs.index }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  resend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      EVENT_DATE: ${{ inputs.date }}
+      EVENT_INDEX: ${{ inputs.index }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 검수 요청 재발송
+        run: node automation/scripts/send-result.mjs
+
+      # send-result 는 상태를 review 로 되돌린다. 이미 review 면 변경이 없어
+      # 커밋이 생략되고, uploaded/dropped 였다면 검수 단계로 되돌아온다.
+      - name: 검수 대기 상태 커밋
+        run: |
+          automation/scripts/commit-push.sh \
+            "chore: ${{ inputs.date }} #${{ inputs.index }} 검수 재발송" \
+            output/candidates/
+
+      - name: 실패 알림
+        if: failure()
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: node automation/scripts/notify.mjs "검수 재발송이 실패했습니다."
