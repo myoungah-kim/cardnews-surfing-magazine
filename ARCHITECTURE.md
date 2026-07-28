@@ -43,6 +43,7 @@ flowchart TB
     TG2["Telegram<br/>카드 + 캡션 + 🚀 Upload · 🔁 Recreate · 🗑 Drop"]
 
     FIN["3단계 · 확정 / 폐기 — GitHub Actions"]
+    IG["Instagram Graph API<br/>미디어 컨테이너 생성 → 게시<br/><i>인증: IG_ACCESS_TOKEN</i>"]
 
     ARCH[("output/cards 아래 주제별 폴더<br/>card_01.png · caption.md · credit.json<br/>_processed_articles.csv")]
 
@@ -56,6 +57,8 @@ flowchart TB
     CHR -->|"TELEGRAM_BOT_TOKEN"| TG2
     TG2 -->|"버튼 클릭<br/>X-Telegram-Bot-Api-Secret-Token"| WK
     WK -->|"repository_dispatch: finalize-card<br/>REPO_DISPATCH_TOKEN"| FIN
+    FIN -->|"card_01.png raw URL + caption"| IG
+    IG -->|"게시 성공 시에만"| FIN
     FIN -->|"상태 · 처리 로그 커밋"| ARCH
     TG2 -.->|"🔁 Recreate — 수정 요청 답장"| WK
 ```
@@ -96,6 +99,7 @@ sequenceDiagram
     participant W as Cloudflare Worker
     participant G as GitHub Actions
     participant R as git 저장소
+    participant IG as Instagram Graph API
 
     U->>T: ✅ Choose 클릭
     T->>W: POST /  (헤더: 시크릿 토큰)
@@ -118,6 +122,20 @@ sequenceDiagram
     end
 
     U->>T: 🚀 Upload / 🔁 Recreate / 🗑 Drop
+    T->>W: POST / (Upload 인 경우)
+    W->>G: repository_dispatch (finalize-card)
+    alt Upload
+        G->>IG: 미디어 컨테이너 생성 → 게시
+        alt 게시 성공
+            G->>R: status = uploaded · 처리 로그 커밋
+            G-->>T: 🚀 게시 완료 + permalink
+        else 게시 실패
+            G-->>T: ⛔ 실패 알림 (상태는 review 로 유지)
+        end
+    else Drop
+        G->>R: status = dropped 커밋
+        G-->>T: 🗑 폐기 알림
+    end
 ```
 
 > **14 → 15 순서가 중요합니다.** 상태를 git 에 저장하는 설계에서는 "상태를 바꾸는 코드"가
@@ -201,6 +219,8 @@ stateDiagram-v2
 | `UNSPLASH_ACCESS_KEY` | GitHub Secrets | 러너 | 스톡 사진 (선택) |
 | `PEXELS_API_KEY` | GitHub Secrets | 러너 | 스톡 사진 (선택) |
 | `PIXABAY_API_KEY` | GitHub Secrets | 러너 | 스톡 사진 (선택) |
+| `IG_ACCESS_TOKEN` | GitHub Secrets | 러너 (finalize) | Instagram Graph API 장기 토큰 — **60일 후 만료, 수동 갱신** |
+| `IG_USER_ID` | GitHub Secrets | 러너 (finalize) | 게시 대상 Instagram 비즈니스 계정 ID |
 
 로컬 작업용 `.env` 는 스톡 사진 키만 담으며 `.gitignore` 되어 있습니다.
 Openverse 는 키가 필요 없습니다.
@@ -229,7 +249,7 @@ flowchart LR
 
 | 제약 | 영향 | 대응 |
 |---|---|---|
-| 인스타그램 자동 게시 없음 | `🚀 Upload` 는 "확정" 기록까지만. 실제 업로드는 수동 | Graph API 연동 자리는 `automation/scripts/finalize.mjs` 에 TODO 로 표시 |
+| IG 장기 토큰은 60일 후 만료 | 만료 후 `🚀 Upload` 시 게시 실패 (후보는 `review` 에 그대로 남아 재시도 가능) | 자동 갱신 없음 — `automation/README.md` 2-6 절차로 수동 재발급 |
 | 릴즈 영상 미지원 | 카드 이미지 1장 + 캡션만 생성 | 범위 밖 |
 | AI 이미지 생성 사용 안 함 | 무인 실행이라 비용 승인을 받을 수 없음 | 원문 이미지 → 스톡 → 프리셋 배경 순으로 폴백 |
 | 버튼은 일회용 | 누르면 제거되어 되돌릴 수 없음 | 「검수 재발송」 워크플로로 복구 |

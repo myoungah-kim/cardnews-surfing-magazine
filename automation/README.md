@@ -92,6 +92,8 @@ claude setup-token
 | `UNSPLASH_ACCESS_KEY` | (선택) 스톡 사진용 |
 | `PEXELS_API_KEY` | (선택) |
 | `PIXABAY_API_KEY` | (선택) |
+| `IG_ACCESS_TOKEN` | 2-6 에서 발급한 장기 액세스 토큰 |
+| `IG_USER_ID` | 2-6 에서 확인한 Instagram 비즈니스 계정 ID |
 
 ```bash
 # 값은 화면에 표시되지 않게 입력됩니다.
@@ -101,6 +103,8 @@ gh secret set TELEGRAM_CHAT_ID
 gh secret set REPO_DISPATCH_TOKEN
 gh secret set CLOUDFLARE_API_TOKEN
 gh secret set CLOUDFLARE_ACCOUNT_ID
+gh secret set IG_ACCESS_TOKEN
+gh secret set IG_USER_ID
 
 # 웹훅 시크릿은 즉석에서 만들어 넣습니다.
 openssl rand -hex 32 | gh secret set TELEGRAM_WEBHOOK_SECRET
@@ -108,7 +112,28 @@ openssl rand -hex 32 | gh secret set TELEGRAM_WEBHOOK_SECRET
 
 > `wrangler.toml` 의 `GITHUB_REPO` 값이 실제 저장소와 맞는지 확인하세요.
 
-### 2-6. 배포
+### 2-6. Instagram Graph API 설정 (자동 게시용)
+
+`🚀 Upload` 를 누르면 `automation/scripts/finalize.mjs` 가 이 자격으로 실제
+`@surf.issue` 계정에 게시합니다 ([../core/instagram.js](../core/instagram.js)).
+아래는 1회성 설정이며, 사람이 Meta/Facebook 화면에서 직접 해야 합니다.
+
+1. `@surf.issue` 인스타그램 계정을 **비즈니스 또는 크리에이터 계정**으로 전환하고,
+   **Facebook 페이지**에 연결합니다 (인스타그램 앱 → 설정 → 계정 유형 전환).
+2. [developers.facebook.com](https://developers.facebook.com) 에서 Meta 앱을 만들고
+   **Instagram Graph API** 제품을 추가합니다.
+3. Graph API Explorer 에서 `me/accounts` 를 호출해 연결된 페이지를 찾고,
+   그 페이지의 `instagram_business_account` 필드로 **IG 사용자 ID**를 확인합니다.
+4. `instagram_basic`, `instagram_content_publish`, `pages_show_list`,
+   `pages_read_engagement` 권한을 포함한 토큰을 발급받고,
+   `GET /oauth/access_token?grant_type=fb_exchange_token&...` 로 **장기(60일) 토큰**으로 교환합니다.
+5. 위 토큰과 IG 사용자 ID를 2-5 의 `IG_ACCESS_TOKEN`, `IG_USER_ID` 로 등록합니다.
+
+> **60일마다 만료됩니다.** 자동 갱신은 구현하지 않았으므로, 만료 전에 4번 과정을
+> 반복해 토큰을 다시 발급·등록해야 합니다. 만료된 채로 Upload 를 누르면 게시가
+> 실패하고 후보는 `review` 상태로 남아 재시도할 수 있습니다 (아래 3번 섹션 참고).
+
+### 2-7. 배포
 
 ```bash
 gh workflow run "웹훅 배포"
@@ -136,7 +161,9 @@ gh run watch
 4. **🚀 Upload** / **🔁 Recreate** / **🗑 Drop** 중 선택.
    - Recreate 는 "어디를 고칠지" 되묻습니다. 그 메시지에 **답장**으로 적으세요
      (일반 메시지로 보내면 어떤 카드에 대한 요청인지 알 수 없어 무시됩니다).
-   - Upload 는 `_processed_articles.csv` 에 기록해 다음 날 중복 추천을 막습니다.
+   - Upload 는 실제로 `@surf.issue` 에 게시한 뒤 `_processed_articles.csv` 에 기록해
+     다음 날 중복 추천을 막습니다. 게시가 실패하면 아무것도 기록되지 않고 후보는
+     `review` 상태 그대로 남습니다 — 다시 Upload 를 시도할 수 있습니다.
    - 재생성 횟수에 제한은 없습니다. 3회차부터 안내 메시지가 함께 옵니다.
 
 > **버튼은 한 번 누르면 사라집니다** (중복 실행 방지). 실수로 눌렀거나 요청이 거부되어
@@ -210,3 +237,4 @@ node --test test/
 | 시크릿을 바꿨는데 반영이 안 됨 | 워커 시크릿은 배포 시에만 동기화됩니다. `gh workflow run "웹훅 배포"` |
 | 카드가 계속 "제작 중"에서 멈춤 | Actions 로그 확인. 실패 시 상태는 자동 복구되고 알림이 옵니다 |
 | 후보 JSON 이 없다는 오류 | 그날 크롤링이 안 돈 것. `gh workflow run "일일 후보 선별"` |
+| Upload 눌렀는데 게시 실패 알림 | `IG_ACCESS_TOKEN` 만료(60일) 여부 먼저 확인 — 2-6 을 다시 진행해 재발급 |

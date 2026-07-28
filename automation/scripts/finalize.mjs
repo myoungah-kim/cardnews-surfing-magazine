@@ -2,18 +2,20 @@
 /**
  * Upload(확정) / Drop(폐기) 처리.
  *
- * Upload 는 이 단계에서 **인스타그램에 실제로 올리지 않는다.**
- * IG 자동 게시는 비즈니스 계정 + Graph API 심사가 필요해 별도 작업이며,
- * 지금은 "확정됨" 상태를 기록하고 처리 로그를 남기는 데까지가 범위다.
- * 나중에 붙일 자리는 아래 TODO 주석에 표시해 두었다.
+ * Upload 는 인스타그램 게시까지 이 스크립트 안에서 끝낸다. 게시(Graph API 호출)를
+ * 먼저 시도하고, 성공했을 때만 후보 상태·처리 로그를 갱신한다 — 게시가 실패했는데
+ * "업로드됨"으로 기록되는 일을 막기 위한 순서다 (실패하면 예외가 run() 까지 전파되어
+ * 이 스크립트가 아무것도 쓰지 않은 채 종료되고, 워크플로의 커밋 스텝도 건너뛴다).
  *
- * 환경변수: EVENT_DATE, EVENT_INDEX, EVENT_DECISION(uploaded|dropped)
+ * 환경변수: EVENT_DATE, EVENT_INDEX, EVENT_DECISION(uploaded|dropped),
+ *          IG_ACCESS_TOKEN, IG_USER_ID (decision=uploaded 일 때만 필요)
  */
 
 import { appendFile, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { findCandidate, readCandidates, writeCandidates } from '../app/candidates.js';
 import { canFinalize } from '../app/policy.js';
+import { InstagramClient } from '../core/instagram.js';
 import { REPO_ROOT, chatId, requireEnv, run, setOutputs, telegram } from './lib/runtime.mjs';
 
 const LOG_PATH = path.join(REPO_ROOT, 'output', 'cards', '_processed_articles.csv');
@@ -52,18 +54,27 @@ run(async () => {
     return;
   }
 
-  candidate.status = decision;
-  await writeCandidates(REPO_ROOT, data);
-
   if (decision === 'uploaded') {
+    const imageUrl = `https://raw.githubusercontent.com/${requireEnv('GITHUB_REPOSITORY')}/${requireEnv('GITHUB_REF_NAME')}/output/cards/${candidate.slug}/card_01.png`;
+    const captionPath = path.join(REPO_ROOT, 'output', 'cards', candidate.slug, 'caption.md');
+    const caption = (await readFile(captionPath, 'utf8')).trim();
+
+    const ig = new InstagramClient(requireEnv('IG_ACCESS_TOKEN'), requireEnv('IG_USER_ID'));
+    const { permalink } = await ig.postImage({ imageUrl, caption });
+
+    candidate.status = decision;
+    await writeCandidates(REPO_ROOT, data);
     await appendProcessedLog(date, candidate);
-    // TODO: 인스타그램 자동 게시를 붙인다면 여기 (Graph API 미디어 컨테이너 생성 → 게시).
+
     await bot.sendMessage({
       chat_id: chat,
-      text: `🚀 확정 완료 — <code>${candidate.slug}</code>\n처리 로그에 기록했습니다. 이제 인스타그램에 올리시면 됩니다.`,
+      text: `🚀 인스타그램 게시 완료 — <code>${candidate.slug}</code>\n${permalink}`,
       parse_mode: 'HTML',
     });
   } else {
+    candidate.status = decision;
+    await writeCandidates(REPO_ROOT, data);
+
     await bot.sendMessage({
       chat_id: chat,
       text: `🗑 폐기했습니다 — <code>${candidate.slug ?? candidate.title}</code>\n처리 로그에 남기지 않으므로 나중에 다시 후보로 올라올 수 있습니다.`,
