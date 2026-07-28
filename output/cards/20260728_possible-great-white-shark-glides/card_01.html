@@ -1,0 +1,47 @@
+<!doctype html>
+<!--
+  표지 슬라이드 (커버) 템플릿 — DESIGN.md 2-1번 섹션
+  =================================================
+  캐러셀의 1번째 장에만 사용. 사진 전체 배경 + 하단 다크 그라데이션 + 배지/헤드라인/서브텍스트/태그.
+
+  채워야 할 placeholder ({{ }} 로 표시된 부분만 교체하세요):
+    {{BG_CLASS}}   - 배경 프리셋 클래스 4종 중 하나: bg-ocean-blue / bg-sunset / bg-dusk-red / bg-night-teal
+                     실제 사진을 쓰려면 .slide의 class="slide" style="background-image:url('bg.jpg'); background-size:cover; background-position:center;" 를 지우고
+                     style="background-image:url('사진경로'); background-size:cover; background-position:center;" 로 교체
+    포착      - 카테고리 배지 텍스트, 1~3단어 (예: ISSUE, NEWS, 속보)
+    세계 최대 파도가 치는 바다<br>수면 아래, 낯선 그림자   - 헤드라인, 2줄 이내 권장 (줄바꿈은 <br> 사용, 3줄 넘어가면 폰트가 아니라 문장을 줄일 것)
+    백상아리로 추정되는 대형 상어 목격    - 서브텍스트, 1줄 권장 (짧고 간결하게. 상세 설명은 본문 슬라이드(body.html)에서)
+    #나자레&nbsp;&nbsp;#shark       - 해시태그 (예: #surfing&nbsp;&nbsp;#news)
+
+  렌더링 (1080x1350 PNG로 캡처):
+    google-chrome --headless --disable-gpu --hide-scrollbars \
+      --force-device-scale-factor=1 --window-size=1080,1350 \
+      --screenshot="output/card_01.png" "file://$(pwd)/cover.html"
+
+  주의:
+  - 색상/폰트/여백은 이 파일에서 직접 건드리지 말고 template.css 를 통해서만 바뀌어야 함
+  - 좌측 정렬 고정 (중앙 정렬 금지) — CTA 슬라이드(cta.html)만 예외
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="template.css">
+</head>
+<body>
+  <div class="slide" style="background-image:url('bg.jpg'); background-size:cover; background-position:center;">
+    <div class="overlay-gradient"></div>
+
+    <div class="text">
+      <span class="badge">포착</span>
+      <h1 class="headline">세계 최대 파도가 치는 바다<br>수면 아래, 낯선 그림자</h1>
+      <p class="subtext">백상아리로 추정되는 대형 상어 목격</p>
+      <p class="tags">#나자레&nbsp;&nbsp;#shark</p>
+    </div>
+
+    <div class="watermark">
+      <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><path d="M15,150 Q55,25 95,8 Q88,55 128,88 Q78,98 55,128 Q32,144 15,150 Z" fill="#FFFFFF"/></svg>
+      <span>@surf.issue</span>
+    </div>
+  </div>
+</body>
+</html>
