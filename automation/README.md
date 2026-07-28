@@ -17,6 +17,12 @@ Cloudflare Worker  ── 인증 → 즉시 응답 → GitHub 깨우기
 GitHub Actions     ── Claude 실행 → 카드 렌더링 → 커밋 → Telegram 발송
       │
       ▼
+검수 (🚀 Upload / 🔁 Recreate / 🗑 Drop)
+      │  Upload
+      ▼
+Instagram Graph API ── 실제 @surf.issue 계정에 게시
+      │
+      ▼
 git 저장소가 곧 아카이브 (output/cards/<slug>/)
 ```
 
@@ -34,7 +40,7 @@ git 저장소가 곧 아카이브 (output/cards/<slug>/)
 
 | 경로 | 성격 |
 |---|---|
-| `core/` | **프로젝트 무관 · 그대로 복사해 재사용** — Telegram 클라이언트, 버튼 인코딩, 라우터, 인증, GitHub dispatch |
+| `core/` | **프로젝트 무관 · 그대로 복사해 재사용** — Telegram 클라이언트, Instagram Graph API 클라이언트, 버튼 인코딩, 라우터, 인증, GitHub dispatch |
 | `app/` | 이 프로젝트 전용 — 액션 정의, 후보 상태 파일, 운영 정책 |
 | `worker/` | Cloudflare Worker 엔트리 (core + app 배선) |
 | `scripts/` | GitHub Actions 러너에서 도는 실행 스크립트 |

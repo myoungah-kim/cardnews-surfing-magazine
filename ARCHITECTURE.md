@@ -1,6 +1,6 @@
 # 아키텍처
 
-RSS 수집부터 인스타그램 업로드 확정까지, **로컬 컴퓨터 없이** 돌아가는 파이프라인의 구조 문서입니다.
+RSS 수집부터 인스타그램 실제 게시까지, **로컬 컴퓨터 없이** 돌아가는 파이프라인의 구조 문서입니다.
 콘텐츠 규칙은 [CARDNEWS.md](CARDNEWS.md)·[DESIGN.md](DESIGN.md)에, 설치 절차는
 [automation/README.md](automation/README.md)에 있습니다. 이 문서는 **무엇이 어디서 돌고, 무엇으로 인증하는가**만 다룹니다.
 
@@ -166,6 +166,9 @@ stateDiagram-v2
     dropped --> [*]
 ```
 
+> `review → uploaded` 전이는 Instagram Graph API 게시가 **성공했을 때만** 일어난다.
+> 게시가 실패하면 상태는 `review` 에 그대로 남아 Upload 를 다시 시도할 수 있다.
+
 정책은 [automation/app/policy.js](automation/app/policy.js) 한 곳에 모여 있습니다.
 
 | 정책 | 값 | 근거 |
@@ -181,7 +184,7 @@ stateDiagram-v2
 
 | 구성 요소 | 실행 위치 | 역할 |
 |---|---|---|
-| [automation/core/](automation/core/) | 워커 + 러너 공용 | **프로젝트 무관 재사용 레이어** — Telegram 클라이언트, 버튼 인코딩, 라우터, 인증, GitHub dispatch |
+| [automation/core/](automation/core/) | 워커 + 러너 공용 | **프로젝트 무관 재사용 레이어** — Telegram 클라이언트, Instagram Graph API 클라이언트, 버튼 인코딩, 라우터, 인증, GitHub dispatch |
 | [automation/app/](automation/app/) | 워커 + 러너 공용 | 이 프로젝트 전용 — 액션 정의, 후보 상태 파일, 운영 정책 |
 | [automation/worker/](automation/worker/) | Cloudflare | 웹훅 엔트리. core + app 배선만 담당 |
 | [automation/scripts/](automation/scripts/) | GitHub Actions | 후보/결과 발송, 정책 검사, 렌더링, 상태 복구, 커밋·푸시 |
@@ -195,7 +198,7 @@ stateDiagram-v2
 |---|---|---|
 | 일일 후보 선별 | cron `12 22 * * *` (07:12 KST) · 수동 | RSS → 후보 5건 → 커밋 → Telegram 발송 |
 | 카드뉴스 제작 | `repository_dispatch: produce-card` · 수동 | 정책 검사 → 카드 제작 → 커밋 → 검수 요청 |
-| 확정 / 폐기 | `repository_dispatch: finalize-card` · 수동 | 상태 확정, 처리 로그 기록 |
+| 확정 / 폐기 | `repository_dispatch: finalize-card` · 수동 | Upload 시 Instagram Graph API로 실제 게시 → 성공 시 상태 확정·처리 로그 기록 |
 | 검수 재발송 | 수동 | 버튼이 사라진 카드를 다시 발송 (복구 경로) |
 | 웹훅 배포 | `automation/worker·core·app` push · 수동 | 워커 배포 + 시크릿 동기화 + 웹훅 등록 |
 

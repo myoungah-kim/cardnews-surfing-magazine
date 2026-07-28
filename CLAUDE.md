@@ -39,7 +39,7 @@ cardnews-surfing-magazine/
 ├── .github/workflows/     # 자동 파이프라인 (5종) — 상세는 ARCHITECTURE.md 4번
 │   ├── daily-candidates.yml  #   매일 07:12 KST 후보 선별 → Telegram 발송
 │   ├── produce-card.yml      #   Choose/Recreate 버튼 → 카드 제작
-│   ├── finalize-card.yml     #   Upload/Drop 버튼 → 확정·폐기
+│   ├── finalize-card.yml     #   Upload/Drop 버튼 → 인스타그램 게시(Graph API)·확정·폐기
 │   ├── resend-review.yml     #   버튼이 사라진 카드를 다시 발송 (복구용)
 │   └── deploy-worker.yml     #   Cloudflare Worker 배포 + 시크릿 동기화
 ├── automation/            # Telegram 봇 구현 (자세한 건 automation/README.md)
@@ -90,9 +90,10 @@ cardnews-surfing-magazine/
 | 아티클 선택 | 사람이 URL 지정 | `ARTICLE_CANDIDATE_FILTER.md`로 5건 선별 → Telegram에서 Choose |
 | 실행 위치 | 로컬 (macOS) | GitHub Actions 러너 (Linux) |
 | 검수 | 사람이 직접 확인 | 카드가 Telegram으로 오고 Upload/Recreate/Drop |
-| 처리 로그 | 사람이 직접 기록 (Step 9) | Upload 확정 시 자동 기록 |
+| 인스타그램 게시 | 사람이 인스타그램 앱에서 직접 업로드 | Upload 클릭 시 Instagram Graph API로 자동 게시 (`automation/core/instagram.js`) |
+| 처리 로그 | 사람이 직접 기록 (Step 9) | 게시 성공 시 자동 기록 |
 
-**자동 모드에서 달라지는 점은 아래 3가지뿐입니다:**
+**자동 모드에서 달라지는 점은 아래 4가지뿐입니다:**
 
 1. **렌더링 명령** — Step 6의 macOS 크롬 경로는 리눅스에서 동작하지 않습니다.
    `node automation/scripts/render-card.mjs <html> <png>`를 쓰면 플랫폼을 알아서 찾습니다.
@@ -102,6 +103,9 @@ cardnews-surfing-magazine/
 3. **처리 로그를 건드리지 않음** — `_processed_articles.csv`는 사용자가 Upload를 눌러
    확정했을 때 `automation/scripts/finalize.mjs`가 기록합니다. 제작 단계에서 미리 쓰면
    폐기한 기사까지 "제작됨"으로 남아 다시 후보에 오르지 못합니다.
+4. **Upload = 실제 게시** — 자동 모드의 Upload는 확정 기록뿐 아니라 Instagram Graph API로
+   `@surf.issue`에 실제로 게시까지 끝냅니다 (게시 실패 시 상태는 `review`로 남아 재시도 가능).
+   1회성 API 자격 설정은 `automation/README.md` 2-6절 참고.
 
 자동 모드의 구조·인증·상태 기계는 [ARCHITECTURE.md](ARCHITECTURE.md)에 있습니다.
 파이프라인 자체를 손볼 게 아니라면 읽지 않아도 됩니다.
@@ -228,10 +232,11 @@ node automation/scripts/render-card.mjs card_01.html output/cards/<주제-slug>/
 ### Step 9. 처리 로그 갱신
 `ARTICLE_CANDIDATE_FILTER.md`가 매일 후보를 뽑을 때 "이미 카드 생성된 아티클"을 걸러내려면 아래 로그가 최신 상태여야 합니다. 카드 완성 직후 `output/cards/_processed_articles.csv`에 한 줄을 추가하세요 (컬럼: `date_produced,feed_source,article_url,slug,status`, `status`는 항상 `produced`). 후보로만 뽑히고 제작까지 안 간 아티클은 여기에 적지 않습니다.
 
-> **자동 모드에서는 이 단계를 직접 하지 마세요.** 사용자가 Telegram에서 `🚀 Upload`를 눌러
-> 확정했을 때 `automation/scripts/finalize.mjs`가 기록합니다. 제작 시점에 미리 적으면
-> 검수에서 폐기(`🗑 Drop`)한 기사까지 "제작됨"으로 남아 다시 후보에 오르지 못합니다.
-> 즉 **"만들었다"가 아니라 "쓰기로 확정했다"가 기록 시점**입니다.
+> **자동 모드에서는 이 단계를 직접 하지 마세요.** 사용자가 Telegram에서 `🚀 Upload`를 누르면
+> `automation/scripts/finalize.mjs`가 Instagram Graph API로 실제 게시한 뒤, **게시가
+> 성공했을 때만** 기록합니다. 제작 시점에 미리 적으면 검수에서 폐기(`🗑 Drop`)한
+> 기사까지 "제작됨"으로 남아 다시 후보에 오르지 못합니다.
+> 즉 **"만들었다"가 아니라 "실제로 게시됐다"가 기록 시점**입니다.
 
 ---
 

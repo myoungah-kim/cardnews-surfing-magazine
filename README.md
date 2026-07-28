@@ -38,6 +38,8 @@ Cloudflare Worker (수백 ms 내 200 응답) ──▶ GitHub Actions
                                              ▼
                         [🚀 Upload] [🔁 Recreate] [🗑 Drop]
                                              │
+                              Upload → Instagram Graph API 게시
+                                             │
                                      git 저장소에 아카이브
 ```
 
@@ -72,7 +74,7 @@ Cloudflare Worker (수백 ms 내 200 응답) ──▶ GitHub Actions
 |---|---|
 | [templates/](templates/) | 디자인 규칙의 실행 가능한 구현체. `cover.html` + `template.css`가 현재 사용하는 조합 |
 | [automation/](automation/) | Telegram 봇 · Cloudflare Worker · 러너 스크립트 ([전용 README](automation/README.md)) |
-| [.github/workflows/](.github/workflows/) | 워크플로 5종 — 일일 후보 선별 · 카드 제작 · 확정/폐기 · 검수 재발송 · 웹훅 배포 |
+| [.github/workflows/](.github/workflows/) | 워크플로 5종 — 일일 후보 선별 · 카드 제작 · 확정/폐기(+ 인스타그램 게시) · 검수 재발송 · 웹훅 배포 |
 | [.claude/skills/stock-image-search/](.claude/skills/stock-image-search/) | 스톡 사진 검색 스킬 (Unsplash·Pexels·Pixabay·Openverse 4곳 동시 검색) |
 | `output/cards/<slug>/` | 생성 결과 — `card_01.png`, `caption.md`, `bg.jpg`, `credit.json` |
 | `output/sample/` | 디자인 회귀 테스트용 고정 샘플. 건드리지 말 것 |
@@ -108,7 +110,7 @@ Telegram 봇 생성, GitHub Secrets, Cloudflare Worker 배포, 웹훅 등록까�
 ```bash
 gh workflow run "일일 후보 선별"
 gh workflow run "카드뉴스 제작" -f date=2026-07-28 -f index=2
-gh workflow run "확정 / 폐기" -f date=2026-07-28 -f index=2 -f decision=uploaded
+gh workflow run "확정 / 폐기" -f date=2026-07-28 -f index=2 -f decision=uploaded  # 실제 인스타그램에 게시됨
 
 # 버튼은 한 번 누르면 사라진다. 실수로 눌렀다면 이걸로 되살린다.
 gh workflow run "검수 재발송" -f date=2026-07-28 -f index=2
@@ -130,6 +132,7 @@ gh workflow run "검수 재발송" -f date=2026-07-28 -f index=2
 | 웹훅 | Cloudflare Workers (무상태 — KV·DB 없음) |
 | 실행 | GitHub Actions |
 | 렌더링 | 헤드리스 Chrome + HTML/CSS |
+| 인스타그램 게시 | Instagram Graph API (Upload 클릭 시 자동 게시) |
 | 스톡 사진 | Unsplash · Pexels · Pixabay · Openverse |
 | 런타임 | Node 20+ (automation), Python 3 표준 라이브러리만 (스킬 스크립트) |
 
