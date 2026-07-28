@@ -17,8 +17,11 @@
 | `DESIGN.md` | **어떻게 보일지** — 색상/폰트/레이아웃 규칙 + 템플릿 사용법 | 디자인 규칙 |
 | `templates/` | 위 규칙을 실제로 구현한 실행 가능한 HTML/CSS | 구현체 |
 | `.claude/skills/stock-image-search/` | **배경 사진을 어디서 구할지** — 스톡 API 4곳 검색·선택·크레딧 규칙 + 실행 스크립트 | 독립 스킬 |
+| `ARCHITECTURE.md` | **어디서 무엇이 도는지** — 컴포넌트·흐름·인증 다이어그램 (자동 파이프라인을 손볼 때만 필요) | 인프라 |
+| `automation/` | Telegram 승인 봇 · Cloudflare Worker · 러너 스크립트 ([전용 README](automation/README.md)) | 자동화 구현체 |
 
 문서 하나만 보고 처음부터 다시 해석하지 말고, 항상 이 순서(ARTICLE_CANDIDATE_FILTER.md → CLAUDE.md → CARDNEWS.md → DESIGN.md → templates/)로 참고하세요.
+**카드 내용을 만드는 작업이라면 `ARCHITECTURE.md`와 `automation/`은 읽지 않아도 됩니다** — 그쪽은 파이프라인 배관이지 콘텐츠 규칙이 아닙니다.
 
 > `DESIGN.md`는 캐러셀 시절(표지/본문/CTA 3종 슬라이드)의 디자인 규칙을 그대로 담고 있으며 현재도 변경되지 않았습니다. 지금 실제로 쓰는 건 그중 **표지 슬라이드(2-1번 섹션) 규칙뿐**이고, 본문·CTA 규칙은 나중에 캐러셀 형식으로 돌아갈 경우를 위해 남아있는 것입니다.
 
@@ -33,7 +36,22 @@ cardnews-surfing-magazine/
 │       ├── SKILL.md           #   언제 쓰는지 + 검색어/선택/라이선스 규칙
 │       ├── scripts/stock_image.py  #   실행 스크립트 (표준 라이브러리만 사용)
 │       └── references/providers.md #   제공처별 필드·한도·제약 상세
+├── .github/workflows/     # 자동 파이프라인 (5종) — 상세는 ARCHITECTURE.md 4번
+│   ├── daily-candidates.yml  #   매일 07:12 KST 후보 선별 → Telegram 발송
+│   ├── produce-card.yml      #   Choose/Recreate 버튼 → 카드 제작
+│   ├── finalize-card.yml     #   Upload/Drop 버튼 → 확정·폐기
+│   ├── resend-review.yml     #   버튼이 사라진 카드를 다시 발송 (복구용)
+│   └── deploy-worker.yml     #   Cloudflare Worker 배포 + 시크릿 동기화
+├── automation/            # Telegram 봇 구현 (자세한 건 automation/README.md)
+│   ├── core/              #   프로젝트 무관 재사용 레이어 — 다른 프로젝트에 그대로 복사 가능
+│   ├── app/               #   이 프로젝트 전용 — 액션·후보 상태·운영 정책(policy.js)
+│   ├── worker/            #   Cloudflare Worker 엔트리
+│   ├── scripts/           #   러너에서 도는 실행 스크립트 (발송·정책검사·렌더·복구)
+│   ├── prompts/           #   Claude 에게 주는 지시서 (워크플로 YAML 과 분리)
+│   └── test/              #   node --test 로 도는 단위·통합 테스트
 ├── .env                   # API 키 (gitignore 됨, .env.example 참고)
+├── README.md              # 저장소 첫인상 — 무엇을 만드는 프로젝트인지
+├── ARCHITECTURE.md        # 자동 파이프라인 구조·흐름·인증 다이어그램
 ├── CLAUDE.md              # 이 파일 — 프로젝트 지도 + 작업 프로세스
 ├── ARTICLE_CANDIDATE_FILTER.md  # 매일 RSS 피드에서 후보 아티클을 뽑는 선정 기준 (CLAUDE.md보다 앞단계)
 ├── CARDNEWS.md            # 카드뉴스 콘텐츠/카피 제작 지침 (타겟, 톤, 카드 구성 규칙, 캡션 규칙, 금지사항)
@@ -48,7 +66,8 @@ cardnews-surfing-magazine/
     ├── sample/            # DESIGN.md/템플릿 검증용 고정 샘플 (캐러셀 5장짜리 디자인 회귀 테스트) — 건드리지 말 것
     │   └── card_01.png ~ card_05.png
     ├── candidates/        # ARTICLE_CANDIDATE_FILTER.md 실행 결과 (일자별 후보 목록)
-    │   └── YYYY-MM-DD.md
+    │   ├── YYYY-MM-DD.md     #   사람이 읽는 요약
+    │   └── YYYY-MM-DD.json   #   ★ 자동화가 읽는 상태 파일 (이 파이프라인의 단일 상태 저장소)
     └── cards/             # 실제 아티클 기반으로 생성한 카드뉴스 결과물
         ├── _processed_articles.csv   # 이미 카드로 만든 아티클 URL 추적 로그 (ARTICLE_CANDIDATE_FILTER.md가 제외 판단에 사용)
         ├── card_01.png ~ card_05.png   # (나자레 대백상 아티클 — v1 캐러셀 시절 예시, 참고용으로 남겨둠)
@@ -58,6 +77,34 @@ cardnews-surfing-magazine/
 **주의**:
 - `output/sample/`은 디자인 시스템이 깨지지 않았는지 확인하는 용도의 고정 데모이므로, 실제 카드뉴스 생성 결과와 섞이면 안 됩니다.
 - `output/cards/`의 기존 나자레 예시는 **캐러셀(5장) 시절 결과물**입니다. v2(표지 1장) 방식으로 새로 만들 때는 아래 4번 섹션의 출력 위치 규칙(주제별 하위 폴더, 카드 1장 + caption.md)을 따르세요.
+
+---
+
+## 2-1. 두 가지 실행 모드
+
+아래 3번의 제작 프로세스는 **두 경로에서 똑같이 쓰입니다.** 규칙은 하나이고 실행 주체만 다릅니다.
+
+| | 수동 모드 | 자동 모드 |
+|---|---|---|
+| 언제 | 사람이 Claude Code 세션에서 "이 URL로 만들어줘" | 매일 크론 + Telegram 버튼 |
+| 아티클 선택 | 사람이 URL 지정 | `ARTICLE_CANDIDATE_FILTER.md`로 5건 선별 → Telegram에서 Choose |
+| 실행 위치 | 로컬 (macOS) | GitHub Actions 러너 (Linux) |
+| 검수 | 사람이 직접 확인 | 카드가 Telegram으로 오고 Upload/Recreate/Drop |
+| 처리 로그 | 사람이 직접 기록 (Step 9) | Upload 확정 시 자동 기록 |
+
+**자동 모드에서 달라지는 점은 아래 3가지뿐입니다:**
+
+1. **렌더링 명령** — Step 6의 macOS 크롬 경로는 리눅스에서 동작하지 않습니다.
+   `node automation/scripts/render-card.mjs <html> <png>`를 쓰면 플랫폼을 알아서 찾습니다.
+   (수동 모드에서도 이 스크립트를 쓸 수 있고, 그 편이 안전합니다.)
+2. **AI 이미지 생성 금지** — 무인 실행이라 비용 승인을 받을 수 없습니다.
+   원문 이미지 → `stock-image-search` 스킬 → `template.css` 프리셋 배경 순으로만 폴백합니다.
+3. **처리 로그를 건드리지 않음** — `_processed_articles.csv`는 사용자가 Upload를 눌러
+   확정했을 때 `automation/scripts/finalize.mjs`가 기록합니다. 제작 단계에서 미리 쓰면
+   폐기한 기사까지 "제작됨"으로 남아 다시 후보에 오르지 못합니다.
+
+자동 모드의 구조·인증·상태 기계는 [ARCHITECTURE.md](ARCHITECTURE.md)에 있습니다.
+파이프라인 자체를 손볼 게 아니라면 읽지 않아도 됩니다.
 
 ---
 
@@ -150,13 +197,21 @@ s = re.sub(r'<!-- 장식용.*?</svg>\n', '', s, flags=re.S)  # fin-deco / waves 
 `template.css`는 채워 넣은 html과 같은 폴더에 두고(상대경로 `<link>` 유지):
 
 ```bash
+node automation/scripts/render-card.mjs card_01.html output/cards/<주제-slug>/card_01.png
+```
+
+이 스크립트가 플랫폼별 크롬 경로를 알아서 찾고, 규격(1080x1350)과 필요한 플래그를 고정합니다.
+`CHROME_BIN` 환경변수가 있으면 그걸 최우선으로 씁니다.
+
+크롬을 직접 부르고 싶다면 아래와 같지만, **경로가 OS마다 다르므로 위 스크립트를 권장합니다**
+(자동 모드의 리눅스 러너에서는 아래 macOS 경로가 동작하지 않습니다):
+
+```bash
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
   --headless --disable-gpu --hide-scrollbars \
   --force-device-scale-factor=1 --window-size=1080,1350 \
   --screenshot="output/cards/<주제-slug>/card_01.png" "file://$(pwd)/card_01.html"
 ```
-
-(macOS 기준 경로. Linux는 보통 `google-chrome`, Windows는 `chrome.exe`로 바뀝니다.)
 
 ### Step 7. 캡션 작성
 `output/cards/<주제-slug>/caption.md`에 Step 3의 "캡션 카피" 규칙대로 작성.
@@ -172,6 +227,11 @@ s = re.sub(r'<!-- 장식용.*?</svg>\n', '', s, flags=re.S)  # fin-deco / waves 
 
 ### Step 9. 처리 로그 갱신
 `ARTICLE_CANDIDATE_FILTER.md`가 매일 후보를 뽑을 때 "이미 카드 생성된 아티클"을 걸러내려면 아래 로그가 최신 상태여야 합니다. 카드 완성 직후 `output/cards/_processed_articles.csv`에 한 줄을 추가하세요 (컬럼: `date_produced,feed_source,article_url,slug,status`, `status`는 항상 `produced`). 후보로만 뽑히고 제작까지 안 간 아티클은 여기에 적지 않습니다.
+
+> **자동 모드에서는 이 단계를 직접 하지 마세요.** 사용자가 Telegram에서 `🚀 Upload`를 눌러
+> 확정했을 때 `automation/scripts/finalize.mjs`가 기록합니다. 제작 시점에 미리 적으면
+> 검수에서 폐기(`🗑 Drop`)한 기사까지 "제작됨"으로 남아 다시 후보에 오르지 못합니다.
+> 즉 **"만들었다"가 아니라 "쓰기로 확정했다"가 기록 시점**입니다.
 
 ---
 

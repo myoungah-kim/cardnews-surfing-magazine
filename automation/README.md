@@ -20,6 +20,8 @@ GitHub Actions     ── Claude 실행 → 카드 렌더링 → 커밋 → Tele
 git 저장소가 곧 아카이브 (output/cards/<slug>/)
 ```
 
+> 컴포넌트·데이터 흐름·인증·상태 기계를 그림으로 본 것은 [../ARCHITECTURE.md](../ARCHITECTURE.md)에 있습니다.
+
 왜 이렇게 나눴는가:
 
 - **Telegram 은 웹훅이 몇 초 안에 200 을 안 주면 같은 업데이트를 재전송합니다.**
@@ -132,14 +134,22 @@ gh run watch
 2. 만들고 싶은 기사의 **✅ Choose** 를 누릅니다.
 3. 수 분 뒤 카드 PNG + 캡션이 옵니다.
 4. **🚀 Upload** / **🔁 Recreate** / **🗑 Drop** 중 선택.
-   - Recreate 는 "어디를 고칠지" 되묻습니다. 그 메시지에 **답장**으로 적으세요.
+   - Recreate 는 "어디를 고칠지" 되묻습니다. 그 메시지에 **답장**으로 적으세요
+     (일반 메시지로 보내면 어떤 카드에 대한 요청인지 알 수 없어 무시됩니다).
    - Upload 는 `_processed_articles.csv` 에 기록해 다음 날 중복 추천을 막습니다.
+   - 재생성 횟수에 제한은 없습니다. 3회차부터 안내 메시지가 함께 옵니다.
+
+> **버튼은 한 번 누르면 사라집니다** (중복 실행 방지). 실수로 눌렀거나 요청이 거부되어
+> 버튼만 잃었다면 「검수 재발송」으로 되살립니다.
 
 수동 실행:
 
 ```bash
 gh workflow run "일일 후보 선별"
-gh workflow run "카드뉴스 제작" -f date=2026-07-27 -f index=2
+gh workflow run "카드뉴스 제작" -f date=2026-07-28 -f index=2
+gh workflow run "카드뉴스 제작" -f date=2026-07-28 -f index=2 -f feedback="헤드라인을 더 세게"
+gh workflow run "확정 / 폐기" -f date=2026-07-28 -f index=2 -f decision=uploaded
+gh workflow run "검수 재발송" -f date=2026-07-28 -f index=2
 ```
 
 ---

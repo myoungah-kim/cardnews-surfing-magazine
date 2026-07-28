@@ -43,7 +43,8 @@ Cloudflare Worker (수백 ms 내 200 응답) ──▶ GitHub Actions
 
 **설계상의 핵심 결정 하나:** Telegram 웹훅은 몇 초 안에 200을 받지 못하면 같은 업데이트를 재전송합니다. 카드 제작은 수 분이 걸리므로 웹훅에서 직접 처리하면 카드가 여러 장 만들어집니다. 그래서 **즉시 응답하는 Cloudflare Worker**와 **오래 도는 GitHub Actions**를 `repository_dispatch`로 분리했습니다. 서버리스 웹훅이 헤드리스 크롬을 못 돌린다는 제약도 같은 방향을 가리킵니다.
 
-자세한 내용은 [automation/README.md](automation/README.md)에 있습니다.
+컴포넌트·데이터 흐름·인증 다이어그램은 [ARCHITECTURE.md](ARCHITECTURE.md)에,
+설치·운영 절차는 [automation/README.md](automation/README.md)에 있습니다.
 
 ---
 
@@ -58,6 +59,7 @@ Cloudflare Worker (수백 ms 내 200 응답) ──▶ GitHub Actions
 | 파일 | 역할 |
 |---|---|
 | [ARTICLE_CANDIDATE_FILTER.md](ARTICLE_CANDIDATE_FILTER.md) | **어떤 기사를 고를지** — RSS 피드 목록, 점수화 기준, 하드컷, 중복 제외 규칙 |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | **어디서 무엇이 도는지** — 컴포넌트·흐름·인증·상태 기계 다이어그램 |
 | [CLAUDE.md](CLAUDE.md) | **전체 지도 + 제작 프로세스** — Step 0~9 오케스트레이션 |
 | [CARDNEWS.md](CARDNEWS.md) | **무엇을 쓸지** — 카드 카피·캡션 브리핑 규칙, 톤, 금지사항 |
 | [DESIGN.md](DESIGN.md) | **어떻게 보일지** — 색상·폰트·레이아웃 규칙 |
@@ -70,11 +72,12 @@ Cloudflare Worker (수백 ms 내 200 응답) ──▶ GitHub Actions
 |---|---|
 | [templates/](templates/) | 디자인 규칙의 실행 가능한 구현체. `cover.html` + `template.css`가 현재 사용하는 조합 |
 | [automation/](automation/) | Telegram 봇 · Cloudflare Worker · 러너 스크립트 ([전용 README](automation/README.md)) |
-| [.github/workflows/](.github/workflows/) | 일일 후보 선별 · 카드 제작 · 확정/폐기 3종 워크플로 |
+| [.github/workflows/](.github/workflows/) | 워크플로 5종 — 일일 후보 선별 · 카드 제작 · 확정/폐기 · 검수 재발송 · 웹훅 배포 |
 | [.claude/skills/stock-image-search/](.claude/skills/stock-image-search/) | 스톡 사진 검색 스킬 (Unsplash·Pexels·Pixabay·Openverse 4곳 동시 검색) |
 | `output/cards/<slug>/` | 생성 결과 — `card_01.png`, `caption.md`, `bg.jpg`, `credit.json` |
 | `output/sample/` | 디자인 회귀 테스트용 고정 샘플. 건드리지 말 것 |
-| `output/cards/_processed_articles.csv` | 제작 완료 기사 로그. 다음 날 중복 추천을 막는 데 쓰임 |
+| `output/candidates/YYYY-MM-DD.json` | 후보 상태 파일. **이 파이프라인의 단일 상태 저장소** (별도 DB 없음) |
+| `output/cards/_processed_articles.csv` | 업로드 확정된 기사 로그. 다음 날 중복 추천을 막는 데 쓰임 |
 
 ---
 
@@ -88,13 +91,11 @@ Telegram·Actions 없이 손으로 돌려보는 경로입니다. Claude Code에�
 다음 URL 아티클로 카드뉴스 만들어줘: <기사 URL>
 ```
 
-`CLAUDE.md`의 Step 0~9가 그대로 실행됩니다. 렌더링에는 헤드리스 크롬이 필요합니다:
+`CLAUDE.md`의 Step 0~9가 그대로 실행됩니다. 렌더링에는 헤드리스 크롬이 필요하고,
+플랫폼별 경로는 아래 스크립트가 알아서 찾습니다:
 
 ```bash
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-  --headless --disable-gpu --hide-scrollbars \
-  --force-device-scale-factor=1 --window-size=1080,1350 \
-  --screenshot="card_01.png" "file://$(pwd)/card_01.html"
+node automation/scripts/render-card.mjs card_01.html card_01.png
 ```
 
 ### 자동 파이프라인 켜기
@@ -106,7 +107,11 @@ Telegram 봇 생성, GitHub Secrets, Cloudflare Worker 배포, 웹훅 등록까�
 
 ```bash
 gh workflow run "일일 후보 선별"
-gh workflow run "카드뉴스 제작" -f date=2026-07-27 -f index=2
+gh workflow run "카드뉴스 제작" -f date=2026-07-28 -f index=2
+gh workflow run "확정 / 폐기" -f date=2026-07-28 -f index=2 -f decision=uploaded
+
+# 버튼은 한 번 누르면 사라진다. 실수로 눌렀다면 이걸로 되살린다.
+gh workflow run "검수 재발송" -f date=2026-07-28 -f index=2
 ```
 
 ### 환경 변수
