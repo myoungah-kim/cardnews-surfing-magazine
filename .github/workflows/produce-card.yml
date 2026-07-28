@@ -102,25 +102,25 @@ jobs:
           echo "카드 규격: $SIZE"
           test "$SIZE" = "1080x1350" || { echo "규격이 1080x1350 이 아닙니다"; exit 1; }
 
-      - name: 결과 커밋
+      - name: 산출물 커밋
         if: steps.prep.outputs.allowed == 'true'
         run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add output/
-          if git diff --cached --quiet; then
-            echo "변경 없음 — 커밋 생략"
-          else
-            git commit -m "feat: 카드뉴스 제작 ${{ steps.prep.outputs.slug }} (${{ steps.prep.outputs.attempts }}회차)"
-            # 다른 워크플로가 그사이 푸시했을 수 있으므로 rebase 후 푸시한다.
-            git pull --rebase --autostash
-            git push
-          fi
+          automation/scripts/commit-push.sh \
+            "feat: 카드뉴스 제작 ${{ steps.prep.outputs.slug }} (${{ steps.prep.outputs.attempts }}회차)"
 
       - name: 검수 요청 발송
         if: steps.prep.outputs.allowed == 'true'
         run: node automation/scripts/send-result.mjs
+
+      # send-result 가 상태를 review 로 바꾼다. 이 커밋이 없으면 그 변경이
+      # 러너와 함께 사라져 후보가 producing 에 갇히고, 이후 Upload·Recreate 가
+      # "아직 검수할 카드가 없습니다" 로 전부 거부된다.
+      - name: 검수 대기 상태 커밋
+        if: steps.prep.outputs.allowed == 'true'
+        run: |
+          automation/scripts/commit-push.sh \
+            "chore: ${{ steps.prep.outputs.slug }} 검수 대기로 전환" \
+            output/candidates/
 
       - name: 실패 시 상태 복구 및 알림
         if: failure()
@@ -128,11 +128,5 @@ jobs:
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           node automation/scripts/reset-status.mjs || true
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add output/candidates/ || true
-          git diff --cached --quiet || {
-            git commit -m "chore: 제작 실패 상태 복구"
-            git pull --rebase --autostash && git push
-          }
+          automation/scripts/commit-push.sh "chore: 제작 실패 상태 복구" output/candidates/ || true
           node automation/scripts/notify.mjs "카드뉴스 제작이 실패했습니다. 다시 Choose 를 눌러 재시도할 수 있습니다."

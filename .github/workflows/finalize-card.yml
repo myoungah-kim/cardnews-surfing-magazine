@@ -49,17 +49,8 @@ jobs:
       - name: 결과 커밋
         if: steps.run.outputs.changed == 'true'
         run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add output/
-          if git diff --cached --quiet; then
-            echo "변경 없음 — 커밋 생략"
-          else
-            git commit -m "chore: ${{ env.EVENT_DECISION }} — ${{ env.EVENT_DATE }} #${{ env.EVENT_INDEX }}"
-            git pull --rebase --autostash
-            git push
-          fi
+          automation/scripts/commit-push.sh \
+            "chore: ${{ env.EVENT_DECISION }} — ${{ env.EVENT_DATE }} #${{ env.EVENT_INDEX }}"
 
       - name: 실패 알림
         if: failure()
