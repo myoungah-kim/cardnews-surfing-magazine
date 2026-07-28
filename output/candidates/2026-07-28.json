@@ -1,0 +1,66 @@
+{
+  "date": "2026-07-28",
+  "generatedAt": "2026-07-28T09:15:00Z",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "1,600-Foot Waves: Russian Submarine Makes Manmade Lake Surfing Behemoth (Video)",
+      "url": "https://www.surfer.com/news/russia-manmade-waves-lake-surfing-video",
+      "feed": "surfer.com",
+      "published": "2026-07-22",
+      "topic": "파도/스펙터클",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "러시아 회사 Surfinity가 잠수함처럼 생긴 플로우 장치로 호수·저수지에 파도를 만드는 이색 기술이라 서퍼가 아니어도 흥미를 느낄 크로스오버 소재다. 시간당 최대 600개 파도, 최대 5피트 높이 등 구체적 수치가 있어 사실 밀도도 충분하다. '웨이브풀이 아니라 잠수함으로 파도를 만든다'는 반전 한 줄이 바로 나온다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "'Murph the Surf': the extraordinary life of Jack Roland Murphy",
+      "url": "https://www.surfertoday.com/surfing/murph-the-surf",
+      "feed": "surfertoday.com",
+      "published": "2026-07-24",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "플로리다 서핑 문화를 개척한 인물이 알고 보니 미국 역사상 손꼽히는 보석 절도 사건의 주범이었고, 이후 살인죄로 복역까지 한 실화. 반전과 현실 폭로가 동시에 성립하는 강력한 후킹이며 범죄·역사 콘텐츠 소비층까지 끌어올 수 있는 크로스오버 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "British Surfer's $665,000 Lawsuit Claims FlowRider Crash Left Him Terrified of Surfing",
+      "url": "https://www.surfer.com/news/british-surfer-sues-flowrider-crash",
+      "feed": "surfer.com",
+      "published": "2026-07-23",
+      "topic": "안전/시설",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "한국에도 있는 웨이브파크·플로우라이더 계열 장비에서 실제로 벌어진 부상·소송 사례. 665,000달러(약 9억원)라는 구체적 배상 청구액과 법원 기록, 운영사 측 과실 인정 등 사실 밀도가 높아 '타기 전에 이건 봐라'는 경고형 저장 유도에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Category 5 Hurricane Genevieve Hurls Life-Threatening Surf at Southern California",
+      "url": "https://www.surfer.com/news/hurricane-genevieve-southern-california-surf",
+      "feed": "surfer.com",
+      "published": "2026-07-28",
+      "topic": "파도/스펙터클",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "카테고리 5로 발달한 허리케인이 만든 초대형 스웰이 이번 주 캘리포니아를 덮친다는 속보성 뉴스. 미국 국립허리케인센터의 공식 경보 인용문까지 확보돼 사실 밀도가 높고, 시의성이 가장 강해 발행 즉시 조회수를 노리기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Possible Great White Shark Glides Into Nazaré Lineup, Stuns Portugal's Big-Wave Hotspot (Video)",
+      "url": "https://www.surfer.com/news/great-white-shark-nazare-video",
+      "feed": "surfer.com",
+      "published": "2026-07-25",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "댓글",
+      "reason": "세계 최고 빅웨이브 스팟 나자레 인근에서 백상아리로 추정되는 개체가 촬영된 영상. 목격자 인용문까지 확보돼 있고, '가장 안전할 줄 알았던 그 파도에도'라는 경고형 훅으로 진위 논쟁을 유도해 댓글을 끌어내기 좋다.",
+      "status": "pending"
+    }
+  ]
+}
