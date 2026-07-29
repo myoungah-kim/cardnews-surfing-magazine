@@ -15,6 +15,9 @@ on:
       feedback:
         description: '수정 요청 (재생성일 때만)'
         required: false
+      photo_file_id:
+        description: 'Telegram 사진 file_id (재생성 시 사용자가 첨부한 참고 사진, 선택)'
+        required: false
 
 concurrency:
   # 같은 후보에 대한 중복 실행만 막는다. 서로 다른 후보는 병렬로 만들어도 무방.
@@ -34,6 +37,8 @@ jobs:
       EVENT_DATE: ${{ github.event.client_payload.date || inputs.date }}
       EVENT_INDEX: ${{ github.event.client_payload.index || inputs.index }}
       EVENT_FEEDBACK: ${{ github.event.client_payload.feedback || inputs.feedback }}
+      EVENT_PHOTO_FILE_ID: ${{ github.event.client_payload.photoFileId || inputs.photo_file_id }}
+      EVENT_REPLY_MESSAGE_ID: ${{ github.event.client_payload.replyMessageId }}
     steps:
       - uses: actions/checkout@v4
 
@@ -79,6 +84,7 @@ jobs:
           CARD_SLUG: ${{ steps.prep.outputs.slug }}
           ATTEMPT: ${{ steps.prep.outputs.attempts }}
           FEEDBACK: ${{ steps.prep.outputs.feedback }}
+          USER_PHOTO_PATH: ${{ steps.prep.outputs.photo_path }}
         run: |
           set -euo pipefail
           node automation/scripts/render-prompt.mjs prompts/produce-card.md > /tmp/prompt.txt
@@ -101,6 +107,12 @@ jobs:
           ")
           echo "카드 규격: $SIZE"
           test "$SIZE" = "1080x1350" || { echo "규격이 1080x1350 이 아닙니다"; exit 1; }
+          # 인스타그램 캡션 상한(2200자)을 여기서 미리 걸러낸다. 여기서 안 걸러지면
+          # 검수까지 통과한 뒤 Upload 시점에야 Graph API 400 으로 실패한다 —
+          # 이 실행 안에서 Claude 가 바로 캡션을 손볼 수 있을 때 잡는 게 낫다.
+          CAPTION_LEN=$(node -e "console.log(require('node:fs').readFileSync('$DIR/caption.md','utf8').trim().length)")
+          echo "캡션 길이: ${CAPTION_LEN}자"
+          test "$CAPTION_LEN" -le 2200 || { echo "캡션이 인스타그램 상한(2200자)을 넘었습니다: ${CAPTION_LEN}자"; exit 1; }
 
       - name: 산출물 커밋
         if: steps.prep.outputs.allowed == 'true'
@@ -129,4 +141,12 @@ jobs:
         run: |
           node automation/scripts/reset-status.mjs || true
           automation/scripts/commit-push.sh "chore: 제작 실패 상태 복구" output/candidates/ || true
-          node automation/scripts/notify.mjs "카드뉴스 제작이 실패했습니다. 다시 Choose 를 눌러 재시도할 수 있습니다."
+          # Choose/Recreate 버튼은 클릭 즉시 제거된다(중복 클릭 방지) — 이 시점엔
+          # 실패한 그 버튼이 이미 사라진 뒤이므로 "다시 눌러주세요"는 누를 곳이
+          # 없는 안내다. 항상 유효한 수동 재시도 명령을 정확히 알려준다.
+          RETRY_CMD="gh workflow run \"카드뉴스 제작\" -f date=${EVENT_DATE} -f index=${EVENT_INDEX}"
+          if [ -n "${EVENT_FEEDBACK}" ] || [ -n "${EVENT_PHOTO_FILE_ID}" ]; then
+            node automation/scripts/notify.mjs "카드 재생성이 실패했습니다. 검수 버튼은 이미 사라진 상태입니다. '검수 재발송' 워크플로를 실행해 Upload/Recreate/Drop 버튼을 다시 받거나, 다음 명령으로 직접 재시도하세요 (수정 요청은 -f feedback=\"...\" 로 다시 붙이면 됩니다): ${RETRY_CMD}"
+          else
+            node automation/scripts/notify.mjs "카드뉴스 제작이 실패했습니다. Choose 버튼은 이미 사라진 상태입니다. 다음 명령으로 재시도하세요: ${RETRY_CMD}"
+          fi

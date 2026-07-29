@@ -27,6 +27,8 @@ import path from 'node:path';
  * @property {string} [slug] 제작 후 output/cards/<slug>
  * @property {number} [attempts] 제작 시도 횟수 (Recreate 포함)
  * @property {string[]} [feedback] Recreate 로 받은 수정 요청 이력
+ * @property {string} [lastRecreateMessageId] 마지막으로 처리한 Recreate 답장의 Telegram
+ *   message_id — 같은 답장이 중복 전달됐을 때 재실행을 막는 데 쓴다
  */
 
 /**

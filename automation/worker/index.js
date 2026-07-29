@@ -59,6 +59,20 @@ function buildRouter(env) {
     });
   }
 
+  /** Recreate 흐름의 force_reply 질문 — 최초 클릭과 "재입력 유도" 양쪽에서 재사용 */
+  async function askForRecreateFeedback(ctx, packedDate, index) {
+    await ctx.telegram.sendMessage({
+      chat_id: ctx.chatId,
+      text: embedContext(
+        '🔁 어떤 부분을 고칠까요?\n\n이 메시지에 <b>답장</b>으로 적어주세요. 사진을 첨부하면 그 사진을 참고해서 다시 만듭니다.\n예: "헤드라인이 밋밋해요. 수치를 넣어 더 세게", "이 사진으로 배경을 바꿔줘" (사진 첨부)',
+        ACTIONS.RECREATE,
+        [packedDate, index],
+      ),
+      parse_mode: 'HTML',
+      reply_markup: forceReply('수정 요청을 입력하세요 (사진 첨부 가능)'),
+    });
+  }
+
   return createRouter({
     buttons: {
       /** 후보 채택 → 카드 제작 워크플로 실행 */
@@ -99,39 +113,44 @@ function buildRouter(env) {
             })
             .catch(() => {});
         }
-        await ctx.telegram.sendMessage({
-          chat_id: ctx.chatId,
-          text: embedContext(
-            '🔁 어떤 부분을 고칠까요?\n\n이 메시지에 <b>답장</b>으로 적어주세요.\n예: "헤드라인이 밋밋해요. 수치를 넣어 더 세게", "배경 사진을 더 어두운 걸로"',
-            ACTIONS.RECREATE,
-            [packedDate, index],
-          ),
-          parse_mode: 'HTML',
-          reply_markup: forceReply('수정 요청을 입력하세요'),
-        });
+        await askForRecreateFeedback(ctx, packedDate, index);
       },
     },
 
     replies: {
       /** 위 force_reply 에 대한 답장 — 여기서 비로소 재생성을 건다 */
-      async [ACTIONS.RECREATE](text, [packedDate, index], ctx) {
+      async [ACTIONS.RECREATE]({ text, photo }, [packedDate, index], ctx) {
         const feedback = text.trim();
-        if (!feedback) {
+        if (!feedback && !photo) {
+          // 버튼은 이미 사라진 상태이므로 "다시 눌러주세요"는 막다른 길이다.
+          // 같은 태그를 심어 다시 물어보면, 사용자는 이 메시지에 답장만 하면 된다.
           await ctx.telegram.sendMessage({
             chat_id: ctx.chatId,
-            text: '수정 요청 내용이 비어 있어 재생성을 취소했습니다. Recreate 를 다시 눌러주세요.',
+            text: '수정 요청 내용이 비어 있습니다. 아래 메시지에 다시 답장으로 적어주세요.',
           });
+          await askForRecreateFeedback(ctx, packedDate, index);
           return;
         }
+
+        const summary = feedback || '(사진만 참고)';
         await ctx.telegram.sendMessage({
           chat_id: ctx.chatId,
-          text: `⏳ 요청을 반영해 다시 만들고 있습니다:\n<i>${escapeHtml(feedback)}</i>`,
+          text: `⏳ 요청을 반영해 다시 만들고 있습니다:\n<i>${escapeHtml(summary)}</i>${
+            photo ? '\n📷 첨부한 사진을 참고합니다.' : ''
+          }`,
           parse_mode: 'HTML',
         });
         await github.dispatch(
           EVENTS.PRODUCE,
           // client_payload 는 문자열만 안전하게 왕복한다 — 길이가 길면 잘릴 수 있으므로 제한.
-          makeDispatchPayload(ctx, packedDate, index, { feedback: feedback.slice(0, 900) }),
+          makeDispatchPayload(ctx, packedDate, index, {
+            feedback: feedback.slice(0, 900),
+            photoFileId: photo?.file_id ?? '',
+            // 이 답장 자체의 message_id — 같은 웹훅 업데이트가 재전송되거나
+            // (Telegram 은 non-200 응답에 재시도한다) 실수로 같은 메시지가
+            // 두 번 처리되는 것을, 러너 쪽에서 이 값으로 걸러낼 수 있게 한다.
+            replyMessageId: String(ctx.update.message.message_id),
+          }),
         );
       },
     },
@@ -146,6 +165,22 @@ function buildRouter(env) {
           })
           .catch(() => {});
       }
+    },
+
+    /**
+     * 답장을 보낸 뒤 오타를 고치려고 "메시지 수정"을 쓰는 경우 — Telegram 은
+     * 원본 메시지를 이미 처리한 뒤이므로, 수정본을 다시 처리하면 두 번 실행될
+     * 위험이 있어 재처리하지 않는다. 대신 조용히 무시하지 않고 새로 답장하라고
+     * 알려준다 (완전한 무응답은 "봇이 죽었다"는 오해를 부른다).
+     */
+    async onEditedMessage(ctx) {
+      if (!ctx.chatId) return;
+      await ctx.telegram
+        .sendMessage({
+          chat_id: ctx.chatId,
+          text: '메시지를 수정해도 반영되지 않습니다. 수정한 내용으로 새 메시지를 다시 답장해주세요.',
+        })
+        .catch(() => {});
     },
 
     async onError(error, ctx) {

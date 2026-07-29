@@ -162,7 +162,7 @@ test('수정 요청 답장이 오면 feedback 과 함께 재제작을 건다', a
   assert.equal(dispatch.body.client_payload.index, '1');
 });
 
-test('빈 답장은 재제작을 걸지 않는다', async () => {
+test('빈 답장은 재제작을 걸지 않고, 같은 태그로 다시 물어본다', async () => {
   await post({
     message: {
       message_id: 63,
@@ -173,6 +173,50 @@ test('빈 답장은 재제작을 걸지 않는다', async () => {
     },
   });
   assert.equal(githubCalls().length, 0);
+
+  // 버튼이 이미 사라진 상태이므로, 다시 답장만 하면 되도록 태그를 심어 재요청한다.
+  const reAsked = telegramCalls('sendMessage').at(-1);
+  assert.equal(reAsked.body.reply_markup.force_reply, true);
+  assert.match(reAsked.body.text, /〔#rc:260727:1〕/);
+});
+
+test('사진 캡션으로 수정 요청을 보내면 caption 을 feedback 으로 읽는다', async () => {
+  await post({
+    message: {
+      message_id: 64,
+      from: { id: 777 },
+      chat: { id: 777 },
+      caption: '이 사진으로 배경을 바꿔줘',
+      photo: [
+        { file_id: 'small', width: 90, height: 90 },
+        { file_id: 'large', width: 1280, height: 1280 },
+      ],
+      reply_to_message: { text: '〔#rc:260727:1〕' },
+    },
+  });
+
+  const dispatch = githubCalls()[0];
+  assert.equal(dispatch.body.event_type, 'produce-card');
+  assert.equal(dispatch.body.client_payload.feedback, '이 사진으로 배경을 바꿔줘');
+  // 여러 해상도 중 가장 큰 파일을 골라야 한다.
+  assert.equal(dispatch.body.client_payload.photoFileId, 'large');
+});
+
+test('문구 없이 사진만 첨부해도 재제작을 건다', async () => {
+  await post({
+    message: {
+      message_id: 65,
+      from: { id: 777 },
+      chat: { id: 777 },
+      photo: [{ file_id: 'only-photo', width: 800, height: 800 }],
+      reply_to_message: { text: '〔#rc:260727:1〕' },
+    },
+  });
+
+  const dispatch = githubCalls()[0];
+  assert.equal(dispatch.body.event_type, 'produce-card');
+  assert.equal(dispatch.body.client_payload.feedback, '');
+  assert.equal(dispatch.body.client_payload.photoFileId, 'only-photo');
 });
 
 test('핸들러가 터져도 200 을 유지하고 사용자에게 알린다', async () => {

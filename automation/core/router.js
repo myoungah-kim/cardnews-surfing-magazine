@@ -30,9 +30,16 @@ import { isAuthorized } from './guard.js';
  * @param {object} config
  * @param {Record<string, (args: string[], ctx: HandlerContext) => Promise<void>>} config.buttons
  *        버튼 액션 이름 → 핸들러
- * @param {Record<string, (text: string, args: string[], ctx: HandlerContext) => Promise<void>>} [config.replies]
- *        강제 답장 컨텍스트 액션 이름 → 핸들러
+ * @param {Record<string, (reply: {text: string, photo?: {file_id: string, width: number, height: number}}, args: string[], ctx: HandlerContext) => Promise<void>>} [config.replies]
+ *        강제 답장 컨텍스트 액션 이름 → 핸들러.
+ *        `reply.text` 는 일반 텍스트든 사진 캡션이든 항상 문자열(없으면 빈 문자열)이고,
+ *        사진이 첨부됐으면 `reply.photo` 에 가장 큰 해상도의 파일 정보가 담긴다.
  * @param {(ctx: HandlerContext) => Promise<void>} [config.onUnknown] 처리할 수 없는 업데이트
+ * @param {(ctx: HandlerContext) => Promise<void>} [config.onEditedMessage]
+ *        사용자가 보낸 메시지를 나중에 "수정"한 경우 (Telegram 은 이걸 `message` 가
+ *        아니라 `edited_message` 로 보낸다). 수정된 내용을 다시 처리하면 원래
+ *        메시지 처리와 중복 실행될 위험이 있어, 기본적으로는 재처리하지 않고
+ *        이 콜백으로만 안내한다.
  * @param {(error: Error, ctx: HandlerContext) => Promise<void>} [config.onError]
  */
 export function createRouter(config) {
@@ -47,7 +54,10 @@ export function createRouter(config) {
     const { telegram, policy, background } = deps;
     const callback = update.callback_query;
     const message = update.message;
-    const source = callback?.message ?? message;
+    const editedMessage = update.edited_message;
+    // edited_message 도 채팅방은 있으므로, 여기서 폴백해 두지 않으면 안내
+    // 메시지를 보낼 chatId 조차 정할 수 없어 완전한 무응답이 된다.
+    const source = callback?.message ?? message ?? editedMessage;
 
     /** @type {HandlerContext} */
     const ctx = {
@@ -93,8 +103,24 @@ export function createRouter(config) {
           await config.onUnknown?.(ctx);
           return { status: 'unknown-reply' };
         }
-        await handler(message.text ?? '', parsed.args, ctx);
+        // 사진 첨부 메시지는 텍스트가 `text` 가 아니라 `caption` 에 실린다 —
+        // 여기서 놓치면 캡션에 적은 지시문이 통째로 빈 문자열로 읽힌다.
+        const text = message.text ?? message.caption ?? '';
+        // Telegram 클라이언트에서 "압축 안 함"으로 보내면 photo 가 아니라
+        // document 로 온다 — mime_type 이 이미지면 같은 것으로 취급한다.
+        // 그러지 않으면 사용자는 사진을 보냈다고 믿는데 조용히 빠진다.
+        const photo =
+          message.photo?.at(-1) ??
+          (message.document?.mime_type?.startsWith('image/')
+            ? { file_id: message.document.file_id }
+            : undefined);
+        await handler({ text, photo }, parsed.args, ctx);
         return { status: 'ok', action: parsed.action };
+      }
+
+      if (editedMessage) {
+        await config.onEditedMessage?.(ctx);
+        return { status: 'edited-message-ignored' };
       }
 
       await config.onUnknown?.(ctx);

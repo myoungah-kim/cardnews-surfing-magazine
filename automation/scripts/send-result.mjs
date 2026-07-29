@@ -15,25 +15,15 @@ import { findCandidate, readCandidates, writeCandidates } from '../app/candidate
 import { reviewButtons } from '../app/actions.js';
 import { singleRow } from '../core/keyboard.js';
 import { packDate } from '../core/callback.js';
-import { escapeHtml } from '../core/telegram.js';
+import { chunkText, escapeHtml } from '../core/telegram.js';
 import { REPO_ROOT, chatId, requireEnv, run, telegram } from './lib/runtime.mjs';
 
-/** Telegram 텍스트 메시지 상한 (4096자) — 캡션이 길면 잘라 보낸다 */
-const MESSAGE_LIMIT = 3800;
+/** `<pre>` + `</pre>` 로 감쌀 때 늘어나는 고정 길이 */
+const PRE_WRAPPER_LENGTH = '<pre></pre>'.length;
 
-/** 문단 경계를 최대한 지키며 자른다 */
-function chunk(text, limit = MESSAGE_LIMIT) {
-  if (text.length <= limit) return [text];
-  const chunks = [];
-  let rest = text;
-  while (rest.length > limit) {
-    const cut = rest.lastIndexOf('\n\n', limit);
-    const at = cut > limit * 0.5 ? cut : limit;
-    chunks.push(rest.slice(0, at));
-    rest = rest.slice(at).trimStart();
-  }
-  if (rest) chunks.push(rest);
-  return chunks;
+/** 실제로 전송될 `<pre>${escapeHtml(chunk)}</pre>` 의 길이 — Telegram 4096자 상한 기준 */
+function wrappedLength(chunk) {
+  return escapeHtml(chunk).length + PRE_WRAPPER_LENGTH;
 }
 
 /** 카드 PNG 파일명이 프로젝트 이력상 card.png / card_01.png 두 가지로 존재한다 */
@@ -71,7 +61,9 @@ run(async () => {
     { data: card.data, filename: `${candidate.slug}.png`, contentType: 'image/png' },
   );
 
-  const parts = chunk(caption.trim());
+  // Telegram 하드 상한은 4096자 — 그 아래로 여유를 두고, escapeHtml + <pre>
+  // 래핑까지 끝난 "실제 전송될" 길이 기준으로 자른다.
+  const parts = chunkText(caption.trim(), { limit: 4000, measure: wrappedLength });
   for (let i = 0; i < parts.length; i += 1) {
     const isLast = i === parts.length - 1;
     await bot.sendMessage({

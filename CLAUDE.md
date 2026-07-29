@@ -149,11 +149,12 @@ cardnews-surfing-magazine/
 (고정 Footer는 더 이상 사용하지 않음 — `CARDNEWS.md`에서 제거됨)
 
 ### Step 4. 이미지 소싱 (표지 카드 1장분)
-`CARDNEWS.md`가 지정한 우선순위: (1) 아티클 자체 이미지(저작권 안전 시) → (2) 무료 스톡 사진(Unsplash/Pexels 등) → (3) AI 이미지 생성(`gemini-imagen` MCP).
+`CARDNEWS.md`가 지정한 우선순위: (0) 사용자가 직접 첨부한 사진(있을 때만) → (1) 아티클 자체 이미지(저작권 안전 시) → (2) 무료 스톡 사진(Unsplash/Pexels 등) → (3) AI 이미지 생성(`gemini-imagen` MCP).
 실전에서 확인된 현실적 제약과 대응:
 
 | 방법 | 실전 결과 | 대응 |
 |---|---|---|
+| 0. 사용자 첨부 사진 | 자동 모드에서 Telegram Recreate 답장에 사진을 첨부하면, 러너가 `output/cards/<주제-slug>/user_photo.*`로 미리 받아둔다(`prepare-produce.mjs`) | 이 파일이 있으면 저작권 걱정이 없으므로 **무조건 최우선 사용** — 스톡 검색이나 프리셋으로 대체하지 말 것 |
 | 1. 원문 이미지 다운로드 | 뉴스 사이트가 크롤링을 막는 경우가 많음 (403) | 안 되면 바로 2번으로 |
 | 2. 무료 스톡 사진 검색 | **`stock-image-search` 스킬**을 호출한다. Unsplash·Pexels·Pixabay·Openverse 4곳을 한 번에 검색해서 점수순으로 고르고, 다운로드와 크레딧(`credit.json`) 정리까지 끝낸다. 제공처별 한도·라이선스 제약·검색어 만드는 법은 전부 스킬 문서에 있으므로 여기서 반복하지 않는다 | 결과물은 `output/cards/<주제-slug>/bg.jpg` + `credit.json`. `--dry-run`으로 후보를 먼저 확인하고, 점수만 믿지 말고 실제 사진을 눈으로 볼 것. 마땅한 사진이 없으면 3번 또는 4번으로 |
 | 3. AI 이미지 생성 (`gemini-imagen` MCP, 또는 연결 안 돼 있으면 Higgsfield `generate_image`) | 세션에 MCP가 연결 안 돼 있거나(`ListMcpResourcesTool`로 확인), Higgsfield는 유료 크레딧 소모 — 플랜 제한이나 크레딧 0으로 실패할 수 있음 | 생성 전 비용을 먼저 확인하고, **비용이 드는 생성은 사용자에게 반드시 먼저 물어보고 승인받은 뒤 진행** (자동 진행 금지) |

@@ -62,6 +62,15 @@ export function canProduce({ candidate, today }) {
   if (candidate.status === 'producing') {
     return { allow: false, reason: '이미 제작이 진행 중입니다' };
   }
+  // 이미 카드가 나와 검수 대기 중인 후보를 Choose 로 다시 누르면(다른 기기에
+  // 남아 있던 화면 등) 완전히 새 제작이 걸려 검수방에 카드가 중복으로 온다.
+  // 마음에 안 들면 검수 메시지의 🔁 Recreate 를 쓰는 게 맞는 경로다.
+  if (REVIEWABLE.has(candidate.status)) {
+    return {
+      allow: false,
+      reason: '이미 카드가 만들어져 검수 대기 중입니다. 수정하려면 검수 메시지의 🔁 Recreate 를 이용하세요.',
+    };
+  }
 
   // published 가 비어 있거나 깨진 후보를 나이 때문에 막아버리면
   // 원인을 알기 어려운 거부가 된다 — 나이 검사만 건너뛰고 통과시킨다.
@@ -129,4 +138,21 @@ export function canFinalize({ candidate, target }) {
     return { allow: false, reason: '아직 확정할 카드가 없습니다' };
   }
   return { allow: true };
+}
+
+/**
+ * 같은 Recreate 답장이 중복으로 들어왔는지 판단한다.
+ *
+ * Telegram 웹훅은 비-200 응답에 같은 업데이트를 재전송하고, 사용자가 실수로
+ * 같은 메시지를 두 번 보낼 수도 있다 — 이때 Claude 실행·스톡 검색·렌더링을
+ * 다시 돌리면 비용이 두 배로 든다. 반면 **다른** 메시지로 이어서 보낸 추가
+ * 요청(message_id 가 다름)은 정당한 새 요청이므로 막지 않는다.
+ *
+ * @param {object} input
+ * @param {import('./candidates.js').Candidate} input.candidate
+ * @param {string} [input.replyMessageId] 이번 답장의 Telegram message_id
+ * @returns {boolean}
+ */
+export function isDuplicateRecreateReply({ candidate, replyMessageId }) {
+  return Boolean(replyMessageId) && candidate.lastRecreateMessageId === replyMessageId;
 }

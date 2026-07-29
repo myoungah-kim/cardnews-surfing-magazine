@@ -158,6 +158,32 @@ export class TelegramClient {
   sendDocument(fields, document) {
     return this.upload('sendDocument', fields, { document });
   }
+
+  /**
+   * file_id 로 다운로드 경로(`file_path`)를 조회한다. 파일 자체는 별도
+   * 엔드포인트(`/file/bot<token>/<file_path>`)에 있어 이 결과만으로는 못 받는다
+   * — {@link downloadFile} 이 두 단계를 감춘다.
+   * @param {{file_id: string}} params
+   */
+  getFile(params) {
+    return this.call('getFile', params);
+  }
+
+  /**
+   * 사용자가 답장에 첨부한 사진 등을 실제 바이트로 받아온다.
+   * 20MB 를 넘는 파일은 Bot API 자체가 `getFile` 을 거부한다.
+   * @param {string} fileId
+   * @returns {Promise<{data: ArrayBuffer, filePath: string}>}
+   */
+  async downloadFile(fileId) {
+    const { file_path: filePath } = await this.getFile({ file_id: fileId });
+    const url = `${API_ROOT}/file/bot${this.token}/${filePath}`;
+    const response = await fetch(url, { signal: AbortSignal.timeout(this.timeoutMs) });
+    if (!response.ok) {
+      throw new Error(`Telegram 파일 다운로드 실패 (${response.status}): ${filePath}`);
+    }
+    return { data: await response.arrayBuffer(), filePath };
+  }
 }
 
 /**
@@ -179,4 +205,43 @@ export function escapeHtml(text) {
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
+}
+
+/** sendMessage 텍스트 상한(4096자) 아래에 여유를 둔 기본 청크 크기 */
+export const TEXT_MESSAGE_LIMIT = 3800;
+
+/**
+ * 긴 본문을 문단 경계를 최대한 지키며 여러 메시지로 자른다.
+ *
+ * 자르는 기준은 **원문 길이**가 아니라 `measure(chunk)` — 기본값은 원문
+ * 길이 그대로지만, 호출부가 `escapeHtml(chunk).length + 래핑 태그 길이`처럼
+ * "실제로 전송될 최종 문자열의 길이"를 넘겨주면 그 기준으로 자른다.
+ * 특수문자(&, <, >)가 많은 입력을 원문 길이만 보고 자르면, escapeHtml 이
+ * 한 글자를 최대 5글자로 부풀려 최종 길이가 Telegram 4096자 상한을 넘을 수
+ * 있다 — 그 문제를 여기서 막는다.
+ *
+ * @param {string} text
+ * @param {object} [options]
+ * @param {number} [options.limit]
+ * @param {(chunk: string) => number} [options.measure] 실제 전송 길이를 재는 함수
+ */
+export function chunkText(text, { limit = TEXT_MESSAGE_LIMIT, measure = (s) => s.length } = {}) {
+  if (measure(text) <= limit) return [text];
+  const chunks = [];
+  let rest = text;
+  while (measure(rest) > limit) {
+    // 원문 길이 기준으로 문단 경계를 먼저 골라 본 뒤(대부분은 이걸로 충분하다),
+    // measure 후에도 상한을 넘으면 문단 경계를 하나씩 앞으로 물려가며 줄인다.
+    let at = rest.lastIndexOf('\n\n', limit);
+    if (!(at > limit * 0.5)) at = limit;
+    while (at > 0 && measure(rest.slice(0, at)) > limit) {
+      const prevBoundary = rest.lastIndexOf('\n\n', at - 1);
+      at = prevBoundary > 0 ? prevBoundary : Math.floor(at * 0.9);
+    }
+    at = Math.max(at, 1); // 극단적인 입력(문자 하나가 이미 상한을 넘는 등)에 대한 안전장치
+    chunks.push(rest.slice(0, at));
+    rest = rest.slice(at).trimStart();
+  }
+  if (rest) chunks.push(rest);
+  return chunks;
 }
