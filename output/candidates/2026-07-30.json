@@ -1,0 +1,66 @@
+{
+  "date": "2026-07-30",
+  "generatedAt": "2026-07-30T09:00:00Z",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Pavones Was Founded by a Drug Smuggler — and How the Costa Rican Surf Town Is Now Fighting to Save Itself",
+      "url": "https://www.surfer.com/news/pavones-drug-smuggler-development-scandal",
+      "feed": "surfer.com",
+      "published": "2026-07-29",
+      "topic": "환경",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "전설적인 코스타리카 서핑 명소 파보네스를 만든 사람이 다름 아닌 마약 밀매업자였다는 반전 하나로 카드가 성립한다. 이후 그의 몰락, 새벽 불도저 철거, 소송전, 노사라·산타테레사처럼 외국 자본에 잠식된 다른 서핑 마을과의 비교까지 사실이 풍부해 캡션 브리핑을 채우기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Sunset Cliffs 'Aura Farming' Stunt Ends in Horror as Jumper Slams Into Rocks (Video)",
+      "url": "https://www.surfer.com/news/san-diego-sunset-cliffs-jump-injury-video",
+      "feed": "surfer.com",
+      "published": "2026-07-29",
+      "topic": "안전/시설",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "SNS 관심을 노리고 절벽에서 뛰어내리는 '아우라 파밍' 트렌드가 실제 부상 사고로 이어졌다는 경고형 소재. 담당 소방 간부의 실명 인용, 관련 시 조례 번호, 2019년 사망 사례까지 구체적 사실이 갖춰져 있고, SNS 챌린지 문화는 한국 독자에게도 낯설지 않아 경각심을 자극하는 저장용 콘텐츠로 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Why CT Surfers Threatened To Boycott The ISA World Games",
+      "url": "https://stabmag.com/news/why-ct-surfers-threatened-to-boycott-the-isa-world-games/",
+      "feed": "stabmag.com",
+      "published": "2026-07-29",
+      "topic": "씬/담론",
+      "headlineType": "현실폭로형",
+      "metric": "댓글",
+      "reason": "올림픽 서핑 출전권을 CT 랭킹에서 대폭 줄이려던 ISA 방침에 선수 92%가 보이콧에 찬성했다는 뒷이야기. IOC가 중재해 8+8 인원으로 절충됐지만 국가당 1인 제한 등 논란은 여전히 남아 있어, 올림픽 서핑에 관심 있는 독자의 찬반 댓글을 유도하기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Tracks Back: Location – Redacted",
+      "url": "https://tracksmag.com.au/tracks-back-location-redacted",
+      "feed": "tracksmag.com.au",
+      "published": "2026-07-29",
+      "topic": "파도/스펙터클",
+      "headlineType": "결과암시형",
+      "metric": "팔로우",
+      "reason": "켈리 슬레이터와 조디 스미스까지 찾아갔지만 위치는 끝내 밝히지 않는 비밀의 파도 이야기. 국경에서의 뇌물 실랑이, 생계를 위해 고기를 잡는 현지 어부와 특권을 누리는 서퍼들의 대비, 플라스틱 오염 문제까지 담겨 있어 궁금증과 크로스오버(셀럽 언급) 요소를 동시에 확보한다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "From The Championship Tour To Louis Vuitton | Mikey February | StabMic Ep. 24",
+      "url": "https://stabmag.com/stabcinema/from-the-championship-tour-to-louis-vuitton-mikey-february-stabmic-ep-24/",
+      "feed": "stabmag.com",
+      "published": "2026-07-27",
+      "topic": "인물/셀럽",
+      "headlineType": "선언형",
+      "metric": "댓글",
+      "reason": "CT 투어 프로 서퍼 마이키 페브러리가 루이비통 캠페인에 등장하자 '코어 서핑의 죽음'이라는 비판과 '멋있다'는 옹호가 동시에 터진 사건. 명품 브랜드라는 비서퍼도 아는 크로스오버 소재라 팔로워 유입에 유리하고, 찬반이 갈리는 인용문이 있어 캡션에서 논쟁 구도를 그대로 살릴 수 있다.",
+      "status": "pending"
+    }
+  ]
+}
