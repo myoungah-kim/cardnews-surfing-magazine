@@ -14,6 +14,5 @@
 이런 진짜 '코어'의 이야기, 놓치지 않으려면 저장해두세요 📌
 
 Tracks Magazine, 2026.07.27
-Photo: Manuel Moreno / Pexels
 
 #서핑 #surfing #빅웨이브 #서프컬처 #코어서퍼 #빅웨이브서핑 #서핑슈
