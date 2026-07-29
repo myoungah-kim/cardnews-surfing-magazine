@@ -125,6 +125,43 @@ export class InstagramClient {
   }
 
   /**
+   * 릴즈(동영상) 미디어 컨테이너를 생성한다.
+   *
+   * `share_to_feed=false` 면 릴즈 탭에만 올라가고 프로필 그리드에는 뜨지 않는다 —
+   * 같은 내용의 이미지 포스트를 따로 올리는 운영이라, 그리드에 중복 노출되는 것을 막는다.
+   *
+   * @param {{videoUrl: string, caption: string, shareToFeed?: boolean}} params
+   * @returns {Promise<{id: string}>} creation_id
+   */
+  createReelContainer({ videoUrl, caption, shareToFeed = false }) {
+    return this.#call(`/${this.igUserId}/media`, {
+      media_type: 'REELS',
+      video_url: videoUrl,
+      caption,
+      // Graph API 는 폼 값을 문자열로 받으므로 boolean 을 그대로 넘기면 안 된다.
+      share_to_feed: shareToFeed ? 'true' : 'false',
+    });
+  }
+
+  /**
+   * 릴즈 게시 전체 흐름.
+   *
+   * 이미지와 달리 **영상은 인스타그램 쪽 트랜스코딩에 훨씬 오래 걸린다**
+   * (수십 초~수 분). postImage 가 쓰는 기본 대기(3초x10회=30초)로는 거의 항상
+   * 시간 초과가 나므로, 여기서는 5초x60회(최대 5분)로 늘려 기다린다.
+   *
+   * @param {{videoUrl: string, caption: string, shareToFeed?: boolean}} params
+   * @returns {Promise<{mediaId: string, permalink: string}>}
+   */
+  async postReel({ videoUrl, caption, shareToFeed = false }) {
+    const { id: creationId } = await this.createReelContainer({ videoUrl, caption, shareToFeed });
+    await this.waitUntilFinished(creationId, { intervalMs: 5000, maxAttempts: 60 });
+    const { id: mediaId } = await this.publish(creationId);
+    const permalink = await this.getPermalink(mediaId);
+    return { mediaId, permalink };
+  }
+
+  /**
    * @param {string} endpoint `/` 로 시작하는 경로
    * @param {Record<string, string>} params
    * @param {'GET'|'POST'} [method]

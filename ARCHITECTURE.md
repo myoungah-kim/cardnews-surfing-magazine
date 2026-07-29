@@ -40,12 +40,12 @@ flowchart TB
         STOCK --> CHR
     end
 
-    TG2["Telegram<br/>카드 + 캡션 + 🚀 Upload · 🔁 Recreate · 🗑 Drop"]
+    TG2["Telegram<br/>카드 + 릴즈 미리보기 + 캡션<br/>🚀 Upload · 🔁 Recreate · 🗑 Drop"]
 
     FIN["3단계 · 확정 / 폐기 — GitHub Actions"]
-    IG["Instagram Graph API<br/>미디어 컨테이너 생성 → 게시<br/><i>인증: IG_ACCESS_TOKEN</i>"]
+    IG["Instagram Graph API<br/>이미지 포스트 + 릴즈 각각 게시<br/><i>인증: IG_ACCESS_TOKEN</i>"]
 
-    ARCH[("output/cards 아래 주제별 폴더<br/>card_01.png · caption.md · credit.json<br/>_processed_articles.csv")]
+    ARCH[("output/cards 아래 주제별 폴더<br/>card_01.png · reel.mp4 · caption.md · credit.json<br/>_processed_articles.csv")]
 
     CRON --> SEL
     CC1 -->|"커밋 · 푸시"| STATE
@@ -57,7 +57,7 @@ flowchart TB
     CHR -->|"TELEGRAM_BOT_TOKEN"| TG2
     TG2 -->|"버튼 클릭<br/>X-Telegram-Bot-Api-Secret-Token"| WK
     WK -->|"repository_dispatch: finalize-card<br/>REPO_DISPATCH_TOKEN"| FIN
-    FIN -->|"card_01.png raw URL + caption"| IG
+    FIN -->|"card_01.png · reel.mp4 raw URL + caption"| IG
     IG -->|"게시 성공 시에만"| FIN
     FIN -->|"상태 · 처리 로그 커밋"| ARCH
     TG2 -.->|"🔁 Recreate — 수정 요청 답장"| WK
@@ -116,8 +116,8 @@ sequenceDiagram
     else 허용
         G->>R: status = producing 기록
         G->>G: Claude 실행 → 기사 확보 · 카피 · 사진 · 렌더링
-        G->>R: 산출물 커밋 (card_01.png · caption.md)
-        G-->>T: 카드 + 캡션 + 검수 버튼 발송
+        G->>R: 산출물 커밋 (card_01.png · reel.mp4 · caption.md)
+        G-->>T: 카드 + 릴즈 미리보기 + 캡션 + 검수 버튼 발송
         G->>R: status = review 커밋
     end
 
@@ -125,7 +125,7 @@ sequenceDiagram
     T->>W: POST / (Upload 인 경우)
     W->>G: repository_dispatch (finalize-card)
     alt Upload
-        G->>IG: 미디어 컨테이너 생성 → 게시
+        G->>IG: 이미지 포스트 게시 → 릴즈 게시 (각각)
         alt 게시 성공
             G->>R: status = uploaded · 처리 로그 커밋
             G-->>T: 🚀 게시 완료 + permalink
@@ -166,8 +166,10 @@ stateDiagram-v2
     dropped --> [*]
 ```
 
-> `review → uploaded` 전이는 Instagram Graph API 게시가 **성공했을 때만** 일어난다.
-> 게시가 실패하면 상태는 `review` 에 그대로 남아 Upload 를 다시 시도할 수 있다.
+> `review → uploaded` 전이는 이미지 포스트와 릴즈가 **둘 다 성공했을 때만** 일어난다.
+> 하나라도 실패하면 상태는 `review` 에 남고, 성공한 쪽의 permalink 가 후보 파일에
+> 기록된다 — Upload 를 다시 누르면 **이미 올라간 것은 건너뛰고 실패한 것만** 재시도해
+> 같은 글이 두 번 게시되지 않는다.
 
 정책은 [automation/app/policy.js](automation/app/policy.js) 한 곳에 모여 있습니다.
 
@@ -198,7 +200,7 @@ stateDiagram-v2
 |---|---|---|
 | 일일 후보 선별 | cron `12 22 * * *` (07:12 KST) · 수동 | RSS → 후보 5건 → 커밋 → Telegram 발송 |
 | 카드뉴스 제작 | `repository_dispatch: produce-card` · 수동 | 정책 검사 → 카드 제작 → 커밋 → 검수 요청 |
-| 확정 / 폐기 | `repository_dispatch: finalize-card` · 수동 | Upload 시 Instagram Graph API로 실제 게시 → 성공 시 상태 확정·처리 로그 기록 |
+| 확정 / 폐기 | `repository_dispatch: finalize-card` · 수동 | Upload 시 이미지 포스트 + 릴즈를 각각 게시 → **둘 다** 성공해야 상태 확정·처리 로그 기록 |
 | 검수 재발송 | 수동 | 버튼이 사라진 카드를 다시 발송 (복구 경로) |
 | 웹훅 배포 | `automation/worker·core·app` push · 수동 | 워커 배포 + 시크릿 동기화 + 웹훅 등록 |
 
@@ -224,6 +226,7 @@ stateDiagram-v2
 | `PIXABAY_API_KEY` | GitHub Secrets | 러너 | 스톡 사진 (선택) |
 | `IG_ACCESS_TOKEN` | GitHub Secrets | 러너 (finalize) | Instagram Graph API 장기 토큰 — **60일 후 만료, 수동 갱신** |
 | `IG_USER_ID` | GitHub Secrets | 러너 (finalize) | 게시 대상 Instagram 비즈니스 계정 ID |
+| `BGM_PASSPHRASE` | GitHub Secrets | 러너 (produce) | 릴즈 배경음악(`input/bgm/bgm.mp3.gpg`) 복호화 암호 — 음원 원본은 라이선스상 저장소에 둘 수 없어 암호화본만 커밋한다 |
 
 로컬 작업용 `.env` 는 스톡 사진 키만 담으며 `.gitignore` 되어 있습니다.
 Openverse 는 키가 필요 없습니다.
@@ -253,7 +256,8 @@ flowchart LR
 | 제약 | 영향 | 대응 |
 |---|---|---|
 | IG 장기 토큰은 60일 후 만료 | 만료 후 `🚀 Upload` 시 게시 실패 (후보는 `review` 에 그대로 남아 재시도 가능) | 자동 갱신 없음 — `automation/README.md` 2-6 절차로 수동 재발급 |
-| 릴즈 영상 미지원 | 카드 이미지 1장 + 캡션만 생성 | 범위 밖 |
+| 릴즈 배경음악이 한 곡 고정 | 모든 릴즈가 같은 음악·같은 15초 구간 | `make-reel.mjs` 의 `BGM_START_SECONDS` 로 구간만 조정 가능 |
+| 릴즈는 인스타그램에서 취소 불가 | Upload 후 마음에 안 들면 앱에서 직접 삭제 | 검수 단계에서 영상 미리보기를 먼저 보냄 |
 | AI 이미지 생성 사용 안 함 | 무인 실행이라 비용 승인을 받을 수 없음 | 원문 이미지 → 스톡 → 프리셋 배경 순으로 폴백 |
 | 버튼은 일회용 | 누르면 제거되어 되돌릴 수 없음 | 「검수 재발송」 워크플로로 복구 |
 | 동시 제작 시 푸시 충돌 | 같은 후보 JSON 을 두 러너가 수정 | `commit-push.sh` 가 rebase 후 최대 5회 재시도 |

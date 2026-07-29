@@ -100,6 +100,7 @@ claude setup-token
 | `PIXABAY_API_KEY` | (선택) |
 | `IG_ACCESS_TOKEN` | 2-6 에서 발급한 장기 액세스 토큰 |
 | `IG_USER_ID` | 2-6 에서 확인한 Instagram 비즈니스 계정 ID |
+| `BGM_PASSPHRASE` | 2-7 에서 정한 릴즈 배경음악 복호화 암호 |
 
 ```bash
 # 값은 화면에 표시되지 않게 입력됩니다.
@@ -111,6 +112,7 @@ gh secret set CLOUDFLARE_API_TOKEN
 gh secret set CLOUDFLARE_ACCOUNT_ID
 gh secret set IG_ACCESS_TOKEN
 gh secret set IG_USER_ID
+gh secret set BGM_PASSPHRASE
 
 # 웹훅 시크릿은 즉석에서 만들어 넣습니다.
 openssl rand -hex 32 | gh secret set TELEGRAM_WEBHOOK_SECRET
@@ -162,7 +164,34 @@ openssl rand -hex 32 | gh secret set TELEGRAM_WEBHOOK_SECRET
 > 현재 등록된 토큰은 **2026-07-29** 에 발급했습니다 — **2026-09-27** 전에 갱신하세요
 > (실제로 이 날짜에 카드 한 장을 진짜로 게시해 전체 흐름을 검증했습니다).
 
-### 2-7. 배포
+### 2-7. 릴즈 배경음악 등록
+
+Upload 를 누르면 이미지 포스트와 함께 **15초 릴즈**도 게시됩니다. 그 배경음악을
+러너가 쓸 수 있게 준비하는 단계입니다.
+
+음원 원본(`input/bgm/*.mp3`)은 **"영상에 합성해 쓰는 것"만 허용된 라이선스**라
+공개 저장소에 그대로 둘 수 없습니다. 그렇다고 GitHub Secrets 에 넣을 수도 없습니다 —
+시크릿 상한이 48KB 인데 음원은 그보다 훨씬 큽니다. 그래서 **암호화본만 커밋하고
+암호만 시크릿에 두는** 방식을 씁니다. `.gitignore` 가 `.gpg` 외의 음원 파일은
+커밋되지 않도록 막고 있습니다.
+
+```bash
+# 1) 암호를 정해 음원을 암호화합니다 (파일명은 bgm.mp3.gpg 로 고정).
+gpg --symmetric --cipher-algo AES256 \
+  -o input/bgm/bgm.mp3.gpg "input/bgm/<음원파일>.mp3"
+
+# 2) 같은 암호를 시크릿으로 등록합니다.
+gh secret set BGM_PASSPHRASE
+
+# 3) 암호화본을 커밋합니다 (원본 mp3 는 .gitignore 가 막아줍니다).
+git add input/bgm/bgm.mp3.gpg && git commit -m "chore: 릴즈 배경음악 등록"
+```
+
+러너는 제작 단계에서 이걸 임시 폴더에만 풀어 쓰고, 저장소에는 절대 쓰지 않습니다.
+음악에서 잘라 쓸 구간은 `automation/scripts/make-reel.mjs` 의 `BGM_START_SECONDS`
+로 조정합니다 (기본 0초부터 15초).
+
+### 2-8. 배포
 
 ```bash
 gh workflow run "웹훅 배포"
@@ -186,7 +215,7 @@ gh run watch
 
 1. 매일 **07:12 KST** 에 후보 5개가 Telegram 으로 옵니다.
 2. 만들고 싶은 기사의 **✅ Choose** 를 누릅니다.
-3. 수 분 뒤 카드 PNG + 캡션이 옵니다.
+3. 수 분 뒤 카드 PNG + **릴즈 미리보기 영상** + 캡션이 옵니다.
 4. **🚀 Upload** / **🔁 Recreate** / **🗑 Drop** 중 선택.
    - Recreate 는 "어디를 고칠지" 되묻습니다. 그 메시지에 **답장**으로 적으세요
      (일반 메시지로 보내면 어떤 카드에 대한 요청인지 알 수 없어 무시됩니다).
@@ -194,9 +223,13 @@ gh run watch
      읽고, 첨부한 사진은 배경 이미지로 최우선 사용됩니다. 문구만 있어도, 사진만
      있어도, 둘 다 있어도 됩니다. 빈 답장(문구도 사진도 없음)을 보내면 버튼을
      다시 찾을 필요 없이 봇이 같은 질문을 다시 보내주니 그 메시지에 답장하면 됩니다.
-   - Upload 는 실제로 `@surf.issue` 에 게시한 뒤 `_processed_articles.csv` 에 기록해
-     다음 날 중복 추천을 막습니다. 게시가 실패하면 아무것도 기록되지 않고 후보는
-     `review` 상태 그대로 남습니다 — 다시 Upload 를 시도할 수 있습니다.
+   - Upload 는 **이미지 포스트와 릴즈를 둘 다** `@surf.issue` 에 게시한 뒤
+     `_processed_articles.csv` 에 기록해 다음 날 중복 추천을 막습니다. 릴즈는
+     그리드에 뜨지 않고 릴즈 탭에만 올라갑니다(같은 내용이 그리드에 두 번
+     노출되지 않도록). 게시 전에 영상 미리보기를 꼭 확인하세요 — **한 번 올라간
+     릴즈는 파이프라인으로 되돌릴 수 없고 인스타그램 앱에서 직접 지워야 합니다.**
+   - 둘 중 하나만 실패하면 성공한 쪽의 링크가 기록되고 후보는 `review` 로 남습니다.
+     Upload 를 다시 누르면 **이미 올라간 것은 건너뛰고 실패한 것만** 재시도합니다.
    - 재생성 횟수에 제한은 없습니다. 3회차부터 안내 메시지가 함께 옵니다.
 
 > **버튼은 한 번 누르면 사라집니다** (중복 실행 방지). 실수로 눌렀거나 요청이 거부되어
@@ -271,3 +304,5 @@ node --test test/
 | 카드가 계속 "제작 중"에서 멈춤 | Actions 로그 확인. 실패 시 상태는 자동 복구되고 알림이 옵니다 |
 | 후보 JSON 이 없다는 오류 | 그날 크롤링이 안 돈 것. `gh workflow run "일일 후보 선별"` |
 | Upload 눌렀는데 게시 실패 알림 | `IG_ACCESS_TOKEN` 만료(60일) 여부 먼저 확인 — 2-6 을 다시 진행해 재발급 |
+| 릴즈만 실패했다는 알림 | 이미지는 이미 올라가 있습니다. Upload 를 다시 누르면 릴즈만 재시도합니다 (이미지 중복 게시 안 됨) |
+| 제작이 "배경음악 복호화" 에서 실패 | `BGM_PASSPHRASE` 가 등록됐는지, `input/bgm/bgm.mp3.gpg` 가 커밋됐는지 확인 (2-7) |

@@ -133,3 +133,99 @@ test('postImage 는 컨테이너 생성 → 대기 → 게시 → permalink 조�
     assert.match(fetchMock.calls[3].url, /\/media-1\?/);
   });
 });
+
+// ── 릴즈 ────────────────────────────────────────────────────────────────
+
+test('createReelContainer 는 media_type=REELS 와 video_url 을 보낸다', async () => {
+  const fetchMock = mockFetch([{ body: { id: 'creation-r' } }]);
+  await withFetch(fetchMock, async () => {
+    const client = new InstagramClient('token-abc', 'ig-user-1');
+    await client.createReelContainer({ videoUrl: 'https://example.com/r.mp4', caption: '캡션' });
+
+    const sentBody = new URLSearchParams(fetchMock.calls[0].init.body);
+    assert.equal(sentBody.get('media_type'), 'REELS');
+    assert.equal(sentBody.get('video_url'), 'https://example.com/r.mp4');
+    assert.equal(sentBody.get('caption'), '캡션');
+  });
+});
+
+test('릴즈는 기본적으로 그리드(피드)에 노출하지 않는다', async () => {
+  // 같은 내용의 이미지 포스트를 따로 올리므로, 릴즈까지 그리드에 뜨면 중복 노출된다.
+  const fetchMock = mockFetch([{ body: { id: 'creation-r' } }]);
+  await withFetch(fetchMock, async () => {
+    const client = new InstagramClient('token-abc', 'ig-user-1');
+    await client.createReelContainer({ videoUrl: 'https://example.com/r.mp4', caption: 'c' });
+
+    const sentBody = new URLSearchParams(fetchMock.calls[0].init.body);
+    // Graph API 는 폼 값을 문자열로 받는다 — boolean 을 그대로 넣으면 안 된다.
+    assert.equal(sentBody.get('share_to_feed'), 'false');
+  });
+});
+
+test('shareToFeed:true 를 주면 피드에도 노출한다', async () => {
+  const fetchMock = mockFetch([{ body: { id: 'creation-r' } }]);
+  await withFetch(fetchMock, async () => {
+    const client = new InstagramClient('token-abc', 'ig-user-1');
+    await client.createReelContainer({
+      videoUrl: 'https://example.com/r.mp4',
+      caption: 'c',
+      shareToFeed: true,
+    });
+
+    assert.equal(new URLSearchParams(fetchMock.calls[0].init.body).get('share_to_feed'), 'true');
+  });
+});
+
+test('postReel 은 영상 트랜스코딩을 기다렸다가 게시한다', async () => {
+  // 영상은 이미지와 달리 IN_PROGRESS 가 여러 번 나온다 — 그동안 계속 기다려야 한다.
+  const fetchMock = mockFetch([
+    { body: { id: 'creation-r' } },
+    { body: { status_code: 'IN_PROGRESS' } },
+    { body: { status_code: 'IN_PROGRESS' } },
+    { body: { status_code: 'FINISHED' } },
+    { body: { id: 'media-r' } },
+    { body: { permalink: 'https://instagram.com/reel/abc' } },
+  ]);
+  await withFetch(fetchMock, async () => {
+    const client = new InstagramClient('token-abc', 'ig-user-1');
+    // 실제 폴링 간격(5초)으로 돌리면 테스트가 15초 걸리므로 대기를 없앤다.
+    client.waitUntilFinished = (id) =>
+      InstagramClient.prototype.waitUntilFinished.call(client, id, {
+        intervalMs: 1,
+        maxAttempts: 60,
+      });
+
+    const result = await client.postReel({ videoUrl: 'https://example.com/r.mp4', caption: 'c' });
+
+    assert.deepEqual(result, { mediaId: 'media-r', permalink: 'https://instagram.com/reel/abc' });
+    assert.match(fetchMock.calls.at(-2).url, /\/ig-user-1\/media_publish$/);
+  });
+});
+
+test('릴즈 대기 한도는 이미지보다 넉넉해야 한다', async () => {
+  // 이미지 기본값(3초x10회=30초)으로는 영상 트랜스코딩이 거의 항상 시간 초과된다.
+  // postReel 이 자체 옵션을 넘기는지 확인한다.
+  const seen = [];
+  const fetchMock = mockFetch([
+    { body: { id: 'creation-r' } },
+    { body: { status_code: 'FINISHED' } },
+    { body: { id: 'media-r' } },
+    { body: { permalink: 'https://instagram.com/reel/abc' } },
+  ]);
+  await withFetch(fetchMock, async () => {
+    const client = new InstagramClient('token-abc', 'ig-user-1');
+    const original = client.waitUntilFinished.bind(client);
+    client.waitUntilFinished = (id, opts) => {
+      seen.push(opts);
+      return original(id, { ...opts, intervalMs: 1 });
+    };
+
+    await client.postReel({ videoUrl: 'https://example.com/r.mp4', caption: 'c' });
+  });
+
+  assert.equal(seen.length, 1);
+  assert.ok(
+    seen[0].intervalMs * seen[0].maxAttempts >= 300_000,
+    `릴즈 대기 한도가 ${seen[0].intervalMs * seen[0].maxAttempts}ms 로 5분 미만이다`,
+  );
+});

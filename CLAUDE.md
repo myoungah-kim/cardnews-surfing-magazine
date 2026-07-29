@@ -61,7 +61,9 @@ cardnews-surfing-magazine/
 │   ├── cover.html         #   ★ 현재 실제로 쓰는 템플릿 (표지: 배지+헤드라인+서브텍스트+태그)
 │   ├── body.html          #   (v2에서 미사용) 본문 슬라이드 템플릿 — 캐러셀 형식으로 돌아가면 재사용
 │   └── cta.html           #   (v2에서 미사용) CTA 슬라이드 템플릿 — 캐러셀 형식으로 돌아가면 재사용
-├── input/                 # (현재 비어 있음) 실제 사진을 쓰게 되면 원본 이미지를 여기에 둘 것
+├── input/                 # 실제 사진을 쓰게 되면 원본 이미지를 여기에 둘 것
+│   └── bgm/               #   릴즈 배경음악. 원본 mp3는 라이선스상 커밋 금지 —
+│                          #   암호화본(bgm.mp3.gpg)만 커밋하고 암호는 BGM_PASSPHRASE 시크릿에 둔다
 └── output/
     ├── sample/            # DESIGN.md/템플릿 검증용 고정 샘플 (캐러셀 5장짜리 디자인 회귀 테스트) — 건드리지 말 것
     │   └── card_01.png ~ card_05.png
@@ -89,11 +91,11 @@ cardnews-surfing-magazine/
 | 언제 | 사람이 Claude Code 세션에서 "이 URL로 만들어줘" | 매일 크론 + Telegram 버튼 |
 | 아티클 선택 | 사람이 URL 지정 | `ARTICLE_CANDIDATE_FILTER.md`로 5건 선별 → Telegram에서 Choose |
 | 실행 위치 | 로컬 (macOS) | GitHub Actions 러너 (Linux) |
-| 검수 | 사람이 직접 확인 | 카드가 Telegram으로 오고 Upload/Recreate/Drop |
-| 인스타그램 게시 | 사람이 인스타그램 앱에서 직접 업로드 | Upload 클릭 시 Instagram Graph API로 자동 게시 (`automation/core/instagram.js`) |
+| 검수 | 사람이 직접 확인 | 카드 + 릴즈 미리보기가 Telegram으로 오고 Upload/Recreate/Drop |
+| 인스타그램 게시 | 사람이 인스타그램 앱에서 직접 업로드 | Upload 클릭 시 이미지 포스트 + 릴즈를 Instagram Graph API로 자동 게시 (`automation/core/instagram.js`) |
 | 처리 로그 | 사람이 직접 기록 (Step 9) | 게시 성공 시 자동 기록 |
 
-**자동 모드에서 달라지는 점은 아래 4가지뿐입니다:**
+**자동 모드에서 달라지는 점은 아래 5가지뿐입니다:**
 
 1. **렌더링 명령** — Step 6의 macOS 크롬 경로는 리눅스에서 동작하지 않습니다.
    `node automation/scripts/render-card.mjs <html> <png>`를 쓰면 플랫폼을 알아서 찾습니다.
@@ -107,6 +109,12 @@ cardnews-surfing-magazine/
    `@surf.issue`에 실제로 게시까지 끝냅니다 (게시 실패 시 상태는 `review`로 남아 재시도 가능).
    API 자격은 이미 설정되어 있고 2026-07-29에 실제 게시로 검증까지 끝났습니다.
    토큰 갱신 절차·다음 만료 시점은 `automation/README.md` 2-6절 참고.
+
+5. **릴즈도 함께 만든다** — 카드 PNG를 만든 뒤 `automation/scripts/make-reel.mjs`가
+   같은 이미지를 15초 영상(1080x1920, 블러 배경 + 배경음악)으로 만들어
+   `output/cards/<slug>/reel.mp4`에 저장하고, 검수 때 미리보기로 함께 보냅니다.
+   Upload를 누르면 이미지 포스트와 릴즈가 **둘 다** 게시됩니다(릴즈는 그리드에
+   노출하지 않음). 이 단계는 자동 모드 전용이며, 수동 모드에서는 만들지 않습니다.
 
 자동 모드의 구조·인증·상태 기계는 [ARCHITECTURE.md](ARCHITECTURE.md)에 있습니다.
 파이프라인 자체를 손볼 게 아니라면 읽지 않아도 됩니다.
@@ -274,4 +282,5 @@ node automation/scripts/render-card.mjs card_01.html output/cards/<주제-slug>/
 **출력 위치 규칙:**
 - 카드 이미지: `output/cards/<주제-slug>/card_01.png` (1장만)
 - 캡션: `output/cards/<주제-slug>/caption.md`
+- 릴즈 영상: `output/cards/<주제-slug>/reel.mp4` (자동 모드에서만 생성)
 - 매일 후보 선정 결과(`ARTICLE_CANDIDATE_FILTER.md` 실행 산출물): `output/candidates/YYYY-MM-DD.md`

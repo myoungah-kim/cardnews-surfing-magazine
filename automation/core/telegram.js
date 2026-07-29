@@ -160,6 +160,16 @@ export class TelegramClient {
   }
 
   /**
+   * 동영상 전송. sendDocument 와 달리 대화 안에서 바로 재생되므로,
+   * 검수용 미리보기(릴즈가 실제로 어떻게 보이는지)에 적합하다.
+   * @param {{chat_id: string|number, caption?: string, parse_mode?: string, reply_markup?: object, width?: number, height?: number, duration?: number}} fields
+   * @param {{data: Uint8Array, filename: string, contentType?: string}} video
+   */
+  sendVideo(fields, video) {
+    return this.upload('sendVideo', fields, { video: { contentType: 'video/mp4', ...video } });
+  }
+
+  /**
    * file_id 로 다운로드 경로(`file_path`)를 조회한다. 파일 자체는 별도
    * 엔드포인트(`/file/bot<token>/<file_path>`)에 있어 이 결과만으로는 못 받는다
    * — {@link downloadFile} 이 두 단계를 감춘다.

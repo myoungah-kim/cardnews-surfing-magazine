@@ -53,6 +53,11 @@ jobs:
           }
           google-chrome --version
 
+      - name: ffmpeg 확인
+        run: |
+          which ffmpeg || { echo "러너에 ffmpeg 가 없습니다."; exit 1; }
+          ffmpeg -version | head -1
+
       - name: 정책 검사 및 제작 준비
         id: prep
         run: node automation/scripts/prepare-produce.mjs
@@ -91,6 +96,32 @@ jobs:
           claude -p "$(cat /tmp/prompt.txt)" \
             --allowedTools "Read,Write,Edit,Bash,Glob,Grep,WebFetch,WebSearch,Skill"
 
+      # 음원 원본은 라이선스상 저장소에 둘 수 없어 암호화본만 커밋돼 있다.
+      # 여기서 러너 임시 폴더에만 풀고, 저장소 안에는 절대 쓰지 않는다.
+      - name: 배경음악 복호화
+        if: steps.prep.outputs.allowed == 'true'
+        env:
+          BGM_PASSPHRASE: ${{ secrets.BGM_PASSPHRASE }}
+        run: |
+          set -euo pipefail
+          test -n "$BGM_PASSPHRASE" || { echo "BGM_PASSPHRASE 시크릿이 설정되지 않았습니다."; exit 1; }
+          test -f input/bgm/bgm.mp3.gpg || { echo "암호화된 배경음악(input/bgm/bgm.mp3.gpg)이 없습니다."; exit 1; }
+          gpg --batch --yes --quiet --decrypt \
+            --passphrase-fd 0 \
+            --output "$RUNNER_TEMP/bgm.mp3" \
+            input/bgm/bgm.mp3.gpg <<< "$BGM_PASSPHRASE"
+          test -s "$RUNNER_TEMP/bgm.mp3" || { echo "복호화 결과가 비어 있습니다."; exit 1; }
+
+      - name: 릴즈 영상 생성
+        if: steps.prep.outputs.allowed == 'true'
+        env:
+          CARD_SLUG: ${{ steps.prep.outputs.slug }}
+        run: |
+          set -euo pipefail
+          DIR="output/cards/${CARD_SLUG}"
+          node automation/scripts/make-reel.mjs \
+            "$DIR/card_01.png" "$RUNNER_TEMP/bgm.mp3" "$DIR/reel.mp4"
+
       - name: 산출물 검증
         if: steps.prep.outputs.allowed == 'true'
         env:
@@ -113,6 +144,17 @@ jobs:
           CAPTION_LEN=$(node -e "console.log(require('node:fs').readFileSync('$DIR/caption.md','utf8').trim().length)")
           echo "캡션 길이: ${CAPTION_LEN}자"
           test "$CAPTION_LEN" -le 2200 || { echo "캡션이 인스타그램 상한(2200자)을 넘었습니다: ${CAPTION_LEN}자"; exit 1; }
+          # 릴즈 규격 확인. 깨진 영상이 커밋되면 Upload 시점에야 Graph API 가 거절한다.
+          test -f "$DIR/reel.mp4" || { echo "릴즈 영상이 없습니다: $DIR/reel.mp4"; exit 1; }
+          REEL_SPEC=$(ffprobe -v error -select_streams v:0 \
+            -show_entries stream=width,height -show_entries format=duration \
+            -of csv=p=0:s=x "$DIR/reel.mp4" | tr -d '\n')
+          echo "릴즈 규격: $REEL_SPEC"
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0:s=x \
+            "$DIR/reel.mp4" | grep -qx '1080x1920' || { echo "릴즈가 1080x1920 이 아닙니다"; exit 1; }
+          # 오디오 트랙이 빠진 채 인코딩되는 사고를 잡는다 (음악이 릴즈의 핵심).
+          ffprobe -v error -select_streams a:0 -show_entries stream=codec_type -of csv=p=0 \
+            "$DIR/reel.mp4" | grep -qx 'audio' || { echo "릴즈에 오디오 트랙이 없습니다"; exit 1; }
 
       - name: 산출물 커밋
         if: steps.prep.outputs.allowed == 'true'

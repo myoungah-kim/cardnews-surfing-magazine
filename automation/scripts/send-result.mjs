@@ -2,9 +2,14 @@
 /**
  * 완성된 카드뉴스를 검수용으로 발송한다. (제작 워크플로의 마지막 단계)
  *
- * 발송 순서: 카드 이미지 → 캡션 전문 → 검수 버튼.
+ * 발송 순서: 카드 이미지 → 릴즈 영상 → 캡션 전문 → 검수 버튼.
  * 버튼은 마지막 메시지에 붙인다 — 캡션이 길어 여러 조각으로 나뉘어도
  * 버튼이 항상 대화 맨 아래에 오게 하기 위함.
+ *
+ * 릴즈를 여기서 함께 보내는 이유: Upload 를 누르면 이미지와 릴즈가 **둘 다**
+ * 게시되는데, 영상은 한 번 올라가면 파이프라인으로 되돌릴 수 없다
+ * (Recreate 는 카드를 다시 만들 뿐 게시물을 내리지 않는다). 음악·블러가
+ * 어떻게 나왔는지 미리 보고 Upload 를 누를 수 있어야 한다.
  *
  * 환경변수: EVENT_DATE, EVENT_INDEX
  */
@@ -60,6 +65,39 @@ run(async () => {
     },
     { data: card.data, filename: `${candidate.slug}.png`, contentType: 'image/png' },
   );
+
+  // 릴즈 미리보기. 발송에 실패해도 검수 자체를 막지는 않는다 — 카드와 캡션만으로도
+  // 판단할 수 있고, 여기서 예외를 던지면 워크플로가 실패해 후보가 producing 에 갇힌다.
+  const reel = await readFile(path.join(cardDir, 'reel.mp4')).catch(() => null);
+  if (reel) {
+    await bot
+      .sendVideo(
+        {
+          chat_id: chat,
+          caption: '🎬 릴즈 미리보기 — Upload 를 누르면 이 영상도 함께 게시됩니다',
+          width: 1080,
+          height: 1920,
+          duration: 15,
+        },
+        { data: reel, filename: `${candidate.slug}.mp4` },
+      )
+      .catch(async (error) => {
+        console.error(`릴즈 미리보기 발송 실패: ${error.message}`);
+        await bot
+          .sendMessage({
+            chat_id: chat,
+            text: '⚠️ 릴즈 미리보기를 보내지 못했습니다. 영상 파일은 저장소에 있으며 Upload 시 게시는 정상 진행됩니다.',
+          })
+          .catch(() => {});
+      });
+  } else {
+    await bot
+      .sendMessage({
+        chat_id: chat,
+        text: '⚠️ 릴즈 영상이 없어 미리보기를 건너뜁니다. Upload 를 누르면 이미지 포스트만 게시됩니다.',
+      })
+      .catch(() => {});
+  }
 
   // Telegram 하드 상한은 4096자 — 그 아래로 여유를 두고, escapeHtml + <pre>
   // 래핑까지 끝난 "실제 전송될" 길이 기준으로 자른다.

@@ -29,6 +29,9 @@ import path from 'node:path';
  * @property {string[]} [feedback] Recreate 로 받은 수정 요청 이력
  * @property {string} [lastRecreateMessageId] 마지막으로 처리한 Recreate 답장의 Telegram
  *   message_id — 같은 답장이 중복 전달됐을 때 재실행을 막는 데 쓴다
+ * @property {string} [imagePermalink] 게시된 이미지 포스트 링크. 값이 있으면 이미 올라간
+ *   것이므로 재시도 시 건너뛴다 (인스타그램 게시는 취소할 수 없다)
+ * @property {string} [reelPermalink] 게시된 릴즈 링크. 위와 같은 목적
  */
 
 /**

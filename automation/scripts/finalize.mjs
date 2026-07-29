@@ -2,22 +2,29 @@
 /**
  * Upload(확정) / Drop(폐기) 처리.
  *
- * Upload 는 인스타그램 게시까지 이 스크립트 안에서 끝낸다. 게시(Graph API 호출)를
- * 먼저 시도하고, 성공했을 때만 후보 상태·처리 로그를 갱신한다 — 게시가 실패했는데
- * "업로드됨"으로 기록되는 일을 막기 위한 순서다 (실패하면 예외가 run() 까지 전파되어
- * 이 스크립트가 아무것도 쓰지 않은 채 종료되고, 워크플로의 커밋 스텝도 건너뛴다).
+ * Upload 는 인스타그램 게시까지 이 스크립트 안에서 끝낸다. 게시할 것은 두 가지다:
+ * **이미지 포스트**와 **릴즈**. 둘 다 성공해야 후보를 `uploaded` 로 확정한다.
  *
- * 반대 방향도 있다: 게시(Graph API 호출)는 성공했는데 그 *뒤* 의 상태 기록이
- * 실패하는 경우 — 이땐 "실패했다"는 알림만 보고 Upload 를 다시 누르면 이미
- * 올라간 글이 인스타그램에 중복 게시된다. 그래서 게시 성공 직후, 기록을
- * 시도하기 *전에* 먼저 "게시 완료"를 알리고, 기록이 실패하면 별도로
- * "다시 누르지 말라"고 명시한다.
+ * ── 되돌릴 수 없는 작업을 다루는 원칙 ──────────────────────
+ * 인스타그램 게시는 파이프라인으로 취소할 수 없다. 그래서:
+ *
+ *  1) 한쪽이 성공하면 **즉시** permalink 를 candidate 에 적고 저장한다.
+ *     그래야 Upload 를 다시 눌렀을 때 성공한 쪽은 건너뛰고 실패한 쪽만
+ *     재시도되어, 같은 글이 두 번 올라가지 않는다.
+ *  2) 하나라도 실패하면 status 를 `review` 로 남긴다 — 그래야 canFinalize 가
+ *     재시도를 허용한다.
+ *  3) 게시는 성공했는데 그 *뒤* 의 기록이 실패하면, 사용자가 "실패했다"는
+ *     알림만 보고 Upload 를 다시 눌러 중복 게시하는 일이 생긴다. 그래서 기록보다
+ *     **먼저** 성공을 알리고, 기록 실패 시엔 "다시 누르지 말라"고 명시한다.
+ *
+ * 이 기록이 살아남으려면 워크플로의 커밋 스텝이 `if: always()` 여야 한다 —
+ * 실패 시 커밋을 건너뛰면 permalink 가 통째로 사라져 1) 이 무의미해진다.
  *
  * 환경변수: EVENT_DATE, EVENT_INDEX, EVENT_DECISION(uploaded|dropped),
  *          IG_ACCESS_TOKEN, IG_USER_ID (decision=uploaded 일 때만 필요)
  */
 
-import { appendFile, readFile } from 'node:fs/promises';
+import { access, appendFile, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { findCandidate, readCandidates, writeCandidates } from '../app/candidates.js';
 import { canFinalize } from '../app/policy.js';
@@ -66,24 +73,89 @@ run(async () => {
     // 브랜치명 URL을 수 분간 CDN 캐시하므로, 방금 Recreate 한 새 카드를 바로
     // Upload 하면 캐시된 이전 버전이 게시될 수 있다. 커밋 SHA 로 주소를 고정하면
     // 그 내용이 절대 바뀌지 않으므로 캐시가 있어도 항상 정확한 버전이 나온다.
-    const imageUrl = `https://raw.githubusercontent.com/${requireEnv('GITHUB_REPOSITORY')}/${requireEnv('GITHUB_SHA')}/output/cards/${candidate.slug}/card_01.png`;
+    const rawBase = `https://raw.githubusercontent.com/${requireEnv('GITHUB_REPOSITORY')}/${requireEnv('GITHUB_SHA')}/output/cards/${candidate.slug}`;
     const captionPath = path.join(REPO_ROOT, 'output', 'cards', candidate.slug, 'caption.md');
     const caption = (await readFile(captionPath, 'utf8')).trim();
+    const reelPath = path.join(REPO_ROOT, 'output', 'cards', candidate.slug, 'reel.mp4');
+    const hasReel = await access(reelPath).then(() => true, () => false);
 
     const ig = new InstagramClient(requireEnv('IG_ACCESS_TOKEN'), requireEnv('IG_USER_ID'));
-    const { permalink } = await ig.postImage({ imageUrl, caption });
 
-    // 게시는 이미 끝났다 — 이 아래에서 상태 기록이 실패하더라도 사용자에게
-    // "성공"을 먼저 알려야, 뒤이은 실패 알림을 보고 Upload 를 다시 눌러
-    // 인스타그램에 같은 글이 중복 게시되는 일을 막을 수 있다.
-    await bot.sendMessage({
-      chat_id: chat,
-      text: `🚀 인스타그램 게시 완료 — <code>${escapeHtml(candidate.slug)}</code>\n${permalink}`,
-      parse_mode: 'HTML',
-    });
+    /**
+     * 이미지와 릴즈를 각각 게시한다.
+     *
+     * 한쪽이 실패해도 이미 올라간 다른 쪽은 되돌릴 수 없으므로, **성공한 즉시
+     * permalink 를 candidate 에 기록하고 저장**한다. 그래야 Upload 를 다시
+     * 눌렀을 때 성공한 쪽은 건너뛰고 실패한 쪽만 재시도되어, 같은 글이 두 번
+     * 올라가지 않는다. (이 저장이 커밋되도록 워크플로의 커밋 스텝은
+     * `if: always()` 로 걸려 있다 — 그러지 않으면 실패 시 기록이 통째로 사라진다.)
+     */
+    const publishStep = async (label, key, emoji, action) => {
+      if (candidate[key]) {
+        console.log(`${label}: 이미 게시됨 — 건너뜀 (${candidate[key]})`);
+        return { skipped: true };
+      }
+      try {
+        const { permalink } = await action();
+        candidate[key] = permalink;
+        await writeCandidates(REPO_ROOT, data).catch((error) => {
+          // 저장이 실패해도 게시는 이미 끝났다 — 알림만은 반드시 나가게 둔다.
+          console.error(`${label} permalink 저장 실패: ${error.message}`);
+        });
+        await bot
+          .sendMessage({
+            chat_id: chat,
+            text: `${emoji} ${label} 게시 완료 — <code>${escapeHtml(candidate.slug)}</code>\n${permalink}`,
+            parse_mode: 'HTML',
+          })
+          .catch(() => {});
+        return { permalink };
+      } catch (error) {
+        await bot
+          .sendMessage({
+            chat_id: chat,
+            text:
+              `⚠️ ${label} 게시에 실패했습니다.\n` +
+              `<code>${escapeHtml(error.message)}</code>\n` +
+              '다시 🚀 Upload 를 누르면 <b>이미 게시된 것은 건너뛰고 실패한 것만</b> 재시도합니다.',
+            parse_mode: 'HTML',
+          })
+          .catch(() => {});
+        return { error };
+      }
+    };
 
+    const imageResult = await publishStep('이미지 포스트', 'imagePermalink', '🚀', () =>
+      ig.postImage({ imageUrl: `${rawBase}/card_01.png`, caption }),
+    );
+
+    // 영상 파일이 없는 예전 카드는 릴즈 없이 이미지만 올린다 (기능 도입 전 산출물 호환).
+    const reelResult = hasReel
+      ? await publishStep('릴즈', 'reelPermalink', '🎬', () =>
+          ig.postReel({ videoUrl: `${rawBase}/reel.mp4`, caption, shareToFeed: false }),
+        )
+      : { skipped: true, missing: true };
+
+    if (reelResult.missing) {
+      await bot
+        .sendMessage({
+          chat_id: chat,
+          text: 'ℹ️ 이 카드에는 릴즈 영상이 없어 이미지 포스트만 게시했습니다.',
+        })
+        .catch(() => {});
+    }
+
+    // 하나라도 실패했으면 status 를 uploaded 로 바꾸지 않는다 — review 로 남아야
+    // Upload 를 다시 눌러 실패한 쪽만 재시도할 수 있다 (canFinalize 가 review 만 허용).
+    const failed = [imageResult, reelResult].filter((r) => r.error);
+    if (failed.length > 0) {
+      await writeCandidates(REPO_ROOT, data);
+      await setOutputs({ changed: 'true' });
+      throw new Error(`${failed.length}건의 게시가 실패했습니다 — 상태는 review 로 유지됩니다`);
+    }
+
+    candidate.status = decision;
     try {
-      candidate.status = decision;
       await writeCandidates(REPO_ROOT, data);
       await appendProcessedLog(date, candidate);
     } catch (recordError) {

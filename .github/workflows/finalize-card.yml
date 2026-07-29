@@ -48,8 +48,12 @@ jobs:
         id: run
         run: node automation/scripts/finalize.mjs
 
+      # always() 가 핵심이다. 이미지·릴즈 중 하나만 성공한 부분 실패에서도
+      # finalize.mjs 는 성공한 쪽의 permalink 를 후보 파일에 적어둔다. 그 기록이
+      # 커밋되지 않으면 러너와 함께 사라지고, 다시 Upload 를 눌렀을 때 이미 올라간
+      # 게시물을 "아직 안 올렸다"고 판단해 **중복 게시**하게 된다.
       - name: 결과 커밋
-        if: steps.run.outputs.changed == 'true'
+        if: always() && steps.run.outputs.changed == 'true'
         run: |
           automation/scripts/commit-push.sh \
             "chore: ${{ env.EVENT_DECISION }} — ${{ env.EVENT_DATE }} #${{ env.EVENT_INDEX }}"

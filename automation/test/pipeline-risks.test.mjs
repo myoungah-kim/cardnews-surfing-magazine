@@ -248,16 +248,20 @@ test('[수정됨] finalize.mjs 는 캐시가 절대 stale 할 수 없는 GITHUB_
   );
 });
 
-test('[수정됨] finalize.mjs 는 게시 완료를 알린 뒤에 상태 기록을 시도한다', () => {
-  // 순서가 반대라면(기록 먼저) "성공" 이벤트를 놓치는 경우는 없지만, 기록이
-  // 실패했을 때 사용자는 "실패했다"는 알림만 보고 Upload 를 다시 눌러 이미
-  // 게시된 글을 인스타그램에 중복으로 올릴 수 있다.
+test('[수정됨] finalize.mjs 는 게시 성공 즉시 permalink 를 남기고 알린 뒤에야 확정한다', () => {
+  // 게시는 파이프라인으로 취소할 수 없다. 그래서 성공한 즉시 permalink 를 적어야
+  // 재시도가 그걸 건너뛸 수 있고, 기록보다 알림이 먼저여야 "실패했다"는 메시지만
+  // 보고 Upload 를 다시 눌러 중복 게시하는 일을 막을 수 있다.
   const source = finalizeSource();
-  const notifySuccess = source.indexOf('인스타그램 게시 완료');
-  const recordState = source.indexOf("candidate.status = decision");
+  const recordPermalink = source.indexOf('candidate[key] = permalink');
+  const notifySuccess = source.indexOf('게시 완료 —');
+  const confirmUploaded = source.indexOf('candidate.status = decision;');
+
+  assert.notEqual(recordPermalink, -1);
   assert.notEqual(notifySuccess, -1);
-  assert.notEqual(recordState, -1);
-  assert.ok(notifySuccess < recordState, '게시 완료 알림이 상태 기록보다 먼저여야 한다');
+  assert.notEqual(confirmUploaded, -1);
+  assert.ok(recordPermalink < notifySuccess, 'permalink 기록이 알림보다 먼저여야 한다');
+  assert.ok(notifySuccess < confirmUploaded, '개별 게시 알림이 최종 확정보다 먼저여야 한다');
 });
 
 test('[수정됨] finalize.mjs 는 상태 기록 실패 시 "다시 누르지 말라"고 명시적으로 경고한다', () => {
