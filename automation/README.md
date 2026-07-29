@@ -125,19 +125,42 @@ openssl rand -hex 32 | gh secret set TELEGRAM_WEBHOOK_SECRET
 아래는 1회성 설정이며, 사람이 Meta/Facebook 화면에서 직접 해야 합니다.
 
 1. `@surf.issue` 인스타그램 계정을 **비즈니스 또는 크리에이터 계정**으로 전환하고,
-   **Facebook 페이지**에 연결합니다 (인스타그램 앱 → 설정 → 계정 유형 전환).
+   **Facebook 페이지**에 연결합니다 (인스타그램 앱 → 설정 → 계정 유형 전환,
+   또는 Meta Business Suite → 설정 → 계정에서 연결해도 동일합니다).
 2. [developers.facebook.com](https://developers.facebook.com) 에서 Meta 앱을 만들고
-   **Instagram Graph API** 제품을 추가합니다.
-3. Graph API Explorer 에서 `me/accounts` 를 호출해 연결된 페이지를 찾고,
-   그 페이지의 `instagram_business_account` 필드로 **IG 사용자 ID**를 확인합니다.
-4. `instagram_basic`, `instagram_content_publish`, `pages_show_list`,
-   `pages_read_engagement` 권한을 포함한 토큰을 발급받고,
-   `GET /oauth/access_token?grant_type=fb_exchange_token&...` 로 **장기(60일) 토큰**으로 교환합니다.
-5. 위 토큰과 IG 사용자 ID를 2-5 의 `IG_ACCESS_TOKEN`, `IG_USER_ID` 로 등록합니다.
+   **Instagram API 유스케이스**를 추가합니다. 화면에 "Instagram API with Facebook Login"과
+   "Instagram API with Instagram Login" 두 갈래가 보이면, 반드시 **Facebook Login** 쪽을
+   선택합니다 (Instagram Login 쪽은 페이지 연결 없는 별도 방식이라 이 구조에 안 맞습니다).
+   이 앱은 Business Suite 의 비즈니스 포트폴리오에 연결되어 있어야 합니다.
+3. 해당 유스케이스의 "Permissions and features" 에서 아래 5개 권한을 각각 **Add**:
+   `instagram_basic`, `instagram_content_publish`, `pages_show_list`,
+   `pages_read_engagement`, `business_management`.
+   자기 계정에만 게시하는 용도라 **App Review 는 필요 없습니다** ("Ready for testing" 상태로 충분).
+4. [Graph API Explorer](https://developers.facebook.com/tools/explorer/) 에서 방금 만든 앱을 선택하고
+   **"Get User Access Token"** 으로 토큰을 발급합니다 (Get App Token 이나 Get Page Access Token 아님).
+   권한 동의 화면 다음에 **어떤 페이지를 허용할지 선택하는 화면이 따로 뜨는데, 여기서
+   반드시 페이지를 선택**해야 합니다 — 건너뛰면 이후 `/me/accounts` 호출이 빈 배열을 반환합니다.
+5. 발급된 토큰을 장기 토큰으로 교환하고, 연결된 페이지·IG 계정 ID를 확인합니다:
 
-> **60일마다 만료됩니다.** 자동 갱신은 구현하지 않았으므로, 만료 전에 4번 과정을
+   ```bash
+   # 1) 장기(60일) 사용자 토큰으로 교환 (App ID·Secret 은 앱 대시보드 → Settings → Basic)
+   curl -s "https://graph.facebook.com/v21.0/oauth/access_token?grant_type=fb_exchange_token&client_id=<APP_ID>&client_secret=<APP_SECRET>&fb_exchange_token=<위에서 발급받은 토큰>"
+
+   # 2) 관리 중인 페이지 목록 (access_token 이 곧 IG_ACCESS_TOKEN — 페이지 토큰은 만료되지 않음)
+   curl -s "https://graph.facebook.com/v21.0/me/accounts?access_token=<장기 사용자 토큰>"
+
+   # 3) 그 페이지에 연결된 IG 계정 ID (instagram_business_account.id 가 곧 IG_USER_ID)
+   curl -s "https://graph.facebook.com/v21.0/<페이지 ID>?fields=instagram_business_account&access_token=<페이지 access_token>"
+   ```
+
+6. 위에서 얻은 페이지 access_token과 IG 계정 ID를 2-5 의 `IG_ACCESS_TOKEN`, `IG_USER_ID` 로 등록합니다.
+
+> **60일마다 만료됩니다.** 자동 갱신은 구현하지 않았으므로, 만료 전에 4~6번 과정을
 > 반복해 토큰을 다시 발급·등록해야 합니다. 만료된 채로 Upload 를 누르면 게시가
 > 실패하고 후보는 `review` 상태로 남아 재시도할 수 있습니다 (아래 3번 섹션 참고).
+>
+> 현재 등록된 토큰은 **2026-07-29** 에 발급했습니다 — **2026-09-27** 전에 갱신하세요
+> (실제로 이 날짜에 카드 한 장을 진짜로 게시해 전체 흐름을 검증했습니다).
 
 ### 2-7. 배포
 

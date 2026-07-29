@@ -105,7 +105,8 @@ cardnews-surfing-magazine/
    폐기한 기사까지 "제작됨"으로 남아 다시 후보에 오르지 못합니다.
 4. **Upload = 실제 게시** — 자동 모드의 Upload는 확정 기록뿐 아니라 Instagram Graph API로
    `@surf.issue`에 실제로 게시까지 끝냅니다 (게시 실패 시 상태는 `review`로 남아 재시도 가능).
-   1회성 API 자격 설정은 `automation/README.md` 2-6절 참고.
+   API 자격은 이미 설정되어 있고 2026-07-29에 실제 게시로 검증까지 끝났습니다.
+   토큰 갱신 절차·다음 만료 시점은 `automation/README.md` 2-6절 참고.
 
 자동 모드의 구조·인증·상태 기계는 [ARCHITECTURE.md](ARCHITECTURE.md)에 있습니다.
 파이프라인 자체를 손볼 게 아니라면 읽지 않아도 됩니다.
