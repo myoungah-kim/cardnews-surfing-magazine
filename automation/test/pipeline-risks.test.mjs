@@ -269,6 +269,23 @@ test('[수정됨] finalize.mjs 는 상태 기록 실패 시 "다시 누르지 �
   assert.match(source, /다시 누르지 마세요/);
 });
 
+test('[수정됨] finalize.mjs 게시 실패 알림에는 재시도할 수 있는 Upload 버튼이 다시 붙는다', () => {
+  // worker/index.js 의 markPending() 은 버튼을 누르는 즉시(성공 여부와 무관하게)
+  // 원본 메시지의 키보드를 지운다(중복 클릭 방지). 게시가 실패하면 "다시 Upload 를
+  // 누르면 재시도합니다" 라는 문구만 있고 누를 버튼이 없는 채로 남았었다 —
+  // produce-card.yml 의 "사라진 버튼을 가리키는 안내"(테스트 C)와 같은 종류의 버그.
+  const source = finalizeSource();
+  const failureMessage = source.indexOf('게시에 실패했습니다');
+  const replyMarkup = source.indexOf('reply_markup: singleRow(reviewButtons(');
+
+  assert.notEqual(failureMessage, -1);
+  assert.notEqual(replyMarkup, -1, '실패 알림에 재시도 버튼이 없으면 수동으로 검수 재발송 워크플로를 돌려야 한다');
+  assert.ok(
+    Math.abs(replyMarkup - failureMessage) < 400,
+    'reply_markup 이 실패 메시지와 같은 sendMessage 호출 안에 있어야 한다',
+  );
+});
+
 // ── C. produce-card.yml: 실패 안내가 이미 사라진 버튼을 가리키지 않는다 ──────
 
 test('[수정됨] produce-card.yml 실패 알림은 이미 사라진 버튼 대신 실행 가능한 재시도 방법을 알려준다', () => {

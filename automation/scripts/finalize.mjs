@@ -28,7 +28,10 @@ import { access, appendFile, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { findCandidate, readCandidates, writeCandidates } from '../app/candidates.js';
 import { canFinalize } from '../app/policy.js';
+import { reviewButtons } from '../app/actions.js';
+import { packDate } from '../core/callback.js';
 import { InstagramClient } from '../core/instagram.js';
+import { singleRow } from '../core/keyboard.js';
 import { escapeHtml } from '../core/telegram.js';
 import { REPO_ROOT, chatId, requireEnv, run, setOutputs, telegram } from './lib/runtime.mjs';
 
@@ -119,6 +122,9 @@ run(async () => {
               `<code>${escapeHtml(error.message)}</code>\n` +
               '다시 🚀 Upload 를 누르면 <b>이미 게시된 것은 건너뛰고 실패한 것만</b> 재시도합니다.',
             parse_mode: 'HTML',
+            // 버튼 클릭 시 원본 메시지의 키보드는 이미 지워진 뒤다(중복 클릭 방지).
+            // 재시도할 버튼이 아예 없는 채로 남지 않도록, 실패 알림에 새 버튼을 붙여 보낸다.
+            reply_markup: singleRow(reviewButtons(packDate(date), candidate.index)),
           })
           .catch(() => {});
         return { error };
