@@ -303,6 +303,8 @@ node --test test/
 | 시크릿을 바꿨는데 반영이 안 됨 | 워커 시크릿은 배포 시에만 동기화됩니다. `gh workflow run "웹훅 배포"` |
 | 카드가 계속 "제작 중"에서 멈춤 | Actions 로그 확인. 실패 시 상태는 자동 복구되고 알림이 옵니다 |
 | 후보 JSON 이 없다는 오류 | 그날 크롤링이 안 돈 것. `gh workflow run "일일 후보 선별"` |
-| Upload 눌렀는데 게시 실패 알림 | `IG_ACCESS_TOKEN` 만료(60일) 여부 먼저 확인 — 2-6 을 다시 진행해 재발급 |
+| Upload 눌렀는데 게시 실패 알림 | `IG_ACCESS_TOKEN` 만료(60일) 여부 먼저 확인 — 2-6 을 다시 진행해 재발급. 단 발급한 지 얼마 안 됐는데도 `pages_read_engagement, pages_manage_metadata, ... permission(s) must be granted before impersonating a user's page` 류의 오류가 날 수 있다(2026-07-30 실사례 — 발급 22시간 만에 발생, 재발급 없이 그대로 재시도하니 성공했다). 60일 만료가 아니어도 나는 오류이니, 만료 전이라고 코드 문제로 단정하지 말고 우선 Upload 를 다시 눌러볼 것. 계속 나면 `curl -s "https://graph.facebook.com/debug_token?input_token=<토큰>&access_token=<토큰>"` 로 `is_valid`/`scopes` 를 직접 확인 |
+| 게시 실패 알림에 재시도할 버튼이 안 보임 | 2026-07-30 이전엔 `finalize.mjs` 가 실패 알림에 버튼을 안 붙여서, 검수 재발송(`resend-review.yml`) 워크플로를 수동으로 돌려야 했다. 지금은 실패 알림 자체에 Upload/Recreate/Drop 버튼이 다시 붙는다 — 안 보이면 배포된 코드가 이 수정 이전 버전인지 확인 |
 | 릴즈만 실패했다는 알림 | 이미지는 이미 올라가 있습니다. Upload 를 다시 누르면 릴즈만 재시도합니다 (이미지 중복 게시 안 됨) |
 | 제작이 "배경음악 복호화" 에서 실패 | `BGM_PASSPHRASE` 가 등록됐는지, `input/bgm/bgm.mp3.gpg` 가 커밋됐는지 확인 (2-7) |
+| 제작이 "ffmpeg 설치" 단계에서 실패 | ubuntu-latest 러너는 Chrome과 달리 ffmpeg를 기본 포함하지 않는다(2026-07-30 실사례로 확인). `produce-card.yml` 이 없으면 `apt-get install`로 자동 설치하게 되어 있어야 한다 — 새 CLI 의존성을 추가할 땐 "확인 후 실패" 대신 "없으면 설치" 패턴을 쓸 것 |
