@@ -1,0 +1,66 @@
+{
+  "date": "2026-07-31",
+  "generatedAt": "2026-07-31T09:00:00Z",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Surf World Mourns British Pro Arran Strong After Tragic Disappearance in Portugal",
+      "url": "https://www.surfer.com/news/arran-strong-surfer-death-portugal",
+      "feed": "surfer.com",
+      "published": "2026-07-30",
+      "topic": "안전/시설",
+      "headlineType": "결과암시형",
+      "metric": "댓글",
+      "reason": "세계랭킹 1위 피오라반티까지 애도를 표한 국제 프로 서퍼의 실종·사망 소식으로, '패들보드만 홀로 파도 위에 떠 있었다'는 결과암시형 훅이 자연스럽게 나온다. 멘토의 절절한 SNS 추모글과 실종 경위(해상 1마일, 다이빙 수색)까지 구체적 사실이 확보돼 캡션 브리핑을 채우기 충분하지만, 자극적 톤이 아닌 애도 중심으로 다뤄야 하는 민감 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Canada's First Full-Size Wave Pool Unveils a Jaw-Dropping Mountain Surf Park",
+      "url": "https://www.surfer.com/news/canada-first-wave-pool-scenic-surf-park",
+      "feed": "surfer.com",
+      "published": "2026-07-30",
+      "topic": "씬/담론",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "시간당 1,000개 파도를 만드는 7에이커 규모 웨이브가든 라군이 캐나다 산악 절경 한복판에 들어선다는 스펙터클한 수치와 비주얼이 강력한 훅이 된다. 한국에도 웨이브파크가 있어 독자 관련성이 직접적이고, '이게 진짜 만들어진다고?' 식의 놀라움으로 조회수·공유를 노리기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "The case for recognizing open water lifeguards as first responders",
+      "url": "https://www.surfertoday.com/surfing/open-water-lifeguards-first-responders",
+      "feed": "surfertoday.com",
+      "published": "2026-07-29",
+      "topic": "안전/시설",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "익수 사고 현장에 가장 먼저 도착하는 사람이 오픈워터 라이프가드인데도 법적으로는 '응급구조대원'으로 인정받지 못한다는 현실폭로형 반전이 명확하다. 한국에서도 유사한 안전요원 처우 논의가 있어 관련성이 있고, 정보성이 짙어 저장을 유도하기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Greenland Glacier Implodes and Unleashes Tsunami Wave at Tour Boat (Video)",
+      "url": "https://www.surfer.com/news/greenland-glacier-tsunami-tour-boat-video",
+      "feed": "surfer.com",
+      "published": "2026-07-30",
+      "topic": "파도/스펙터클",
+      "headlineType": "질문형",
+      "metric": "조회수",
+      "reason": "빙하가 붕괴하며 관광보트를 향해 밀려오는 쓰나미급 파도 영상은 '이 배 안에 있었다면?' 질문형 훅을 바로 만들어낸다. 서퍼가 아니어도 흥미를 느낄 크로스오버 소재라 바이럴 조회수를 노리기 좋고, 노벨티 웨이브 헌터들의 반응까지 있어 사실 밀도도 충분하다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Can Karma Decide Who Wins A Surf Contest?",
+      "url": "https://stabmag.com/news/can-karma-decide-who-wins-a-surf-contest/",
+      "feed": "stabmag.com",
+      "published": "2026-07-30",
+      "topic": "씬/담론",
+      "headlineType": "반전형",
+      "metric": "댓글",
+      "reason": "실력이 아니라 발리 힌두 전통의 '카르마'가 서핑 대회 우승자를 가른다는 반전형 스토리로, 2관왕 메가 세마디가 후배에게 자리를 양보한 미담과 우승자 아버지의 별세라는 감정적 디테일까지 갖췄다. '카르마가 진짜 통한다고 믿나'는 논쟁성 질문으로 댓글을 유도하기 좋다.",
+      "status": "pending"
+    }
+  ]
+}
