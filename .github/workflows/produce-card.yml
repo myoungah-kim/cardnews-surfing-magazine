@@ -53,9 +53,9 @@ jobs:
           }
           google-chrome --version
 
-      - name: ffmpeg 확인
+      - name: ffmpeg 설치
         run: |
-          which ffmpeg || { echo "러너에 ffmpeg 가 없습니다."; exit 1; }
+          which ffmpeg || { sudo apt-get update && sudo apt-get install -y ffmpeg; }
           ffmpeg -version | head -1
 
       - name: 정책 검사 및 제작 준비
