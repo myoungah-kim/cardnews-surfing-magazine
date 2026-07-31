@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-01",
+  "generatedAt": "2026-08-01T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Teen Lifeguard Ryder Williams Battles 10-Foot Santa Cruz Surf to Save Boy as Viral Rescue Rocks the Nation",
+      "url": "https://www.surfer.com/news/ryder-williams-viral-santa-cruz-rescue-video",
+      "feed": "surfer.com",
+      "published": "2026-07-31",
+      "topic": "안전/시설",
+      "headlineType": "결과암시형",
+      "metric": "조회수",
+      "reason": "16세 인명구조원이 허리케인발 8~10피트 파도 속에서 소년을 놓지 않고 끝까지 구조해낸 영상이 미국 전역에서 화제입니다. 죽음을 무릅쓴 사투 장면 자체가 강한 몰입감을 주고, 소년의 아버지가 '용기와 희생'이라 표현한 인터뷰까지 있어 캡션 브리핑을 채울 사실이 충분합니다. 인명구조·해변 안전이라는 소재는 국내 여름 해변 안전 이슈와도 자연스럽게 연결됩니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Fisherman Shoves Hands in 8-Foot Shark's Mouth, Then Drags It Back to Sea in Los Angeles",
+      "url": "https://www.surfer.com/news/shark-caught-sunset-beach-los-angeles-video",
+      "feed": "surfer.com",
+      "published": "2026-07-31",
+      "topic": "해양생물",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "LA 해변에서 어부가 8피트 백상아리 새끼의 입에서 낚싯바늘을 직접 빼주고 다시 바다로 돌려보낸 영상입니다. '위험한 포식자'라는 통념을 뒤집는 반전 요소가 강하고, 최근 남가주에서 상어 목격담이 잇따르는 배경(온난화로 인한 새끼 상어 서식지 확대)까지 있어 사실 밀도도 충분한 조회수용 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Kelly Slater, 54, Welcomes Daughter as He Plots Wildcard Return to Teahupo'o",
+      "url": "https://www.surfer.com/news/kelly-slater-daughter-azumi-moon-photos",
+      "feed": "surfer.com",
+      "published": "2026-07-30",
+      "topic": "인물/셀럽",
+      "headlineType": "수치충격형",
+      "metric": "팔로우",
+      "reason": "11회 세계 챔피언 켈리 슬레이터(54)가 딸 출산 소식과 동시에 타히티 테아후포오 와일드카드 복귀를 예고했습니다. '54세'라는 나이와 '복귀'의 조합이 수치충격형 헤드라인을 만들기 좋고, 슬레이터는 비서퍼도 아는 이름이라 대회(8월 8~18일) 결과가 궁금해 팔로우로 이어질 가능성이 큽니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Greenland Glacier Implodes and Unleashes Tsunami Wave at Tour Boat",
+      "url": "https://www.surfer.com/news/greenland-glacier-tsunami-tour-boat-video",
+      "feed": "surfer.com",
+      "published": "2026-07-30",
+      "topic": "파도/스펙터클",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "그린란드 빙하가 붕괴하며 만들어진 해일급 파도가 관광보트를 덮치는 순간이 영상으로 포착됐습니다. 평온한 빙하 투어가 순식간에 재난급 장면으로 바뀌는 반전이 강하고, 노벨티 웨이브 헌터들의 반응까지 담겨 있어 서퍼가 아니어도 흥미를 느낄 크로스오버 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Pavones Was Founded by a Drug Smuggler — and How the Costa Rican Surf Town Is Now Fighting to Save Itself",
+      "url": "https://www.surfer.com/news/pavones-drug-smuggler-development-scandal",
+      "feed": "surfer.com",
+      "published": "2026-07-29",
+      "topic": "씬/담론",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "코스타리카의 유명 서핑타운 파보네스가 사실은 마약 밀매업자가 세운 마을이었고, 지금은 개발 압력으로 지역 커뮤니티가 무너지고 있다는 폭로성 스토리입니다. '내가 알던 서핑 낙원의 숨겨진 기원'이라는 현실폭로형 훅이 강하고, 서핑 여행지 개발이라는 구조는 국내 서퍼들에게도 낯설지 않아 저장할 만한 정보성 콘텐츠입니다.",
+      "status": "pending"
+    }
+  ]
+}
