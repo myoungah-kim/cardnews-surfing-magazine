@@ -14,6 +14,5 @@
 캐나다까지 안 가도 되게, 저장해두고 다시 보기 🔖
 
 Surfer Magazine, 2026.07.30
-Photo: Malcolm Gillanders / Pexels
 
 #서핑 #surfing #웨이브풀 #wavegarden #서프파크 #캐나다 #서핑슈
