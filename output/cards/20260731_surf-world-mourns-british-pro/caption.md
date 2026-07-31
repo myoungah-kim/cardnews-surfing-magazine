@@ -17,6 +17,5 @@
 오늘 바다에 나가는 사람이 있다면, 이 이야기를 저장해서 보내주세요.
 
 출처: Surfer Magazine, 2026.07.31
-Photo: Wafa Haris / Pexels
 
 #서핑 #surfing #스탠드업패들 #SUP #포르투갈서핑 #서핑뉴스 #서핑슈
