@@ -76,7 +76,9 @@
       "headlineType": "반전형",
       "metric": "댓글",
       "reason": "실력이 아니라 발리 힌두 전통의 '카르마'가 서핑 대회 우승자를 가른다는 반전형 스토리로, 2관왕 메가 세마디가 후배에게 자리를 양보한 미담과 우승자 아버지의 별세라는 감정적 디테일까지 갖췄다. '카르마가 진짜 통한다고 믿나'는 논쟁성 질문으로 댓글을 유도하기 좋다.",
-      "status": "pending"
+      "status": "producing",
+      "attempts": 1,
+      "slug": "20260731_can-karma-decide-who-wins"
     }
   ]
 }
