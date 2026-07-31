@@ -25,6 +25,12 @@ const ROOT = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
 const finalizeSource = () => readFileSync(path.join(ROOT, 'scripts', 'finalize.mjs'), 'utf8');
 const produceWorkflowSource = () =>
   readFileSync(path.join(ROOT, '..', '.github', 'workflows', 'produce-card.yml'), 'utf8');
+const finalizeWorkflowSource = () =>
+  readFileSync(path.join(ROOT, '..', '.github', 'workflows', 'finalize-card.yml'), 'utf8');
+const resendWorkflowSource = () =>
+  readFileSync(path.join(ROOT, '..', '.github', 'workflows', 'resend-review.yml'), 'utf8');
+const dailyCandidatesWorkflowSource = () =>
+  readFileSync(path.join(ROOT, '..', '.github', 'workflows', 'daily-candidates.yml'), 'utf8');
 
 // ── 워커 통합 테스트용 공통 하네스 (worker.test.mjs 와 동일한 패턴) ──────────
 
@@ -310,3 +316,35 @@ test('[수정됨] produce-card.yml 산출물 검증에 인스타그램 캡션 22
   const source = produceWorkflowSource();
   assert.match(source, /2200/);
 });
+
+// ── E. concurrency 락이 걸린 워크플로는 대기 후 최신 커밋을 다시 받는다 ──────
+//
+// actions/checkout 은 "이 실행이 큐에 들어간 시점"의 커밋을 체크아웃한다.
+// concurrency 락은 실행 순서만 직렬화할 뿐, 대기가 끝난 뒤 실제로 도는 시점의
+// "지금 main"을 다시 보여주지 않는다. 그래서 거의 동시에 큐에 들어간 두 실행은
+// 서로의 커밋을 못 본 채 같은 낡은 상태를 놓고 각자 판단한다.
+// finalize-card.yml 에서 이 틈으로 실제 인스타그램 이미지·릴즈가 중복 게시된
+// 사례가 있다(2026-07-31 — 두 실행이 2초 간격으로 큐에 들어갔고, 뒤의 실행은
+// 앞선 실행의 게시 완료 기록을 못 본 채 똑같이 게시한 뒤에야 git push 충돌로
+// 실패를 알아챘다. 게시 자체는 이미 되돌릴 수 없었다).
+
+for (const [name, source] of [
+  ['finalize-card.yml', finalizeWorkflowSource],
+  ['produce-card.yml', produceWorkflowSource],
+  ['resend-review.yml', resendWorkflowSource],
+  ['daily-candidates.yml', dailyCandidatesWorkflowSource],
+]) {
+  test(`[수정됨] ${name} 은 checkout 직후 최신 커밋을 다시 받는다 (대기 중 다른 실행의 커밋을 놓치지 않도록)`, () => {
+    const text = source();
+    const checkoutIndex = text.indexOf('actions/checkout@v4');
+    const pullIndex = text.indexOf('git pull --ff-only');
+
+    assert.notEqual(checkoutIndex, -1);
+    assert.notEqual(
+      pullIndex,
+      -1,
+      'concurrency 락으로 대기했다가 실행되는 워크플로는 checkout 직후 최신 커밋을 다시 받아야 한다',
+    );
+    assert.ok(pullIndex > checkoutIndex, 'git pull 은 checkout 다음에 와야 한다');
+  });
+}

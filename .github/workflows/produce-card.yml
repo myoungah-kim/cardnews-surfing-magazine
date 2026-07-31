@@ -42,6 +42,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # 위 concurrency 락은 같은 (date, index) 를 겨냥한 실행끼리만 직렬화한다.
+      # 그 대기 중에도 actions/checkout 은 "이 실행이 큐에 들어간 시점"의 커밋을
+      # 그대로 체크아웃하므로, 앞선 실행이 그 사이 커밋한 내용을 놓칠 수 있다
+      # (finalize-card.yml 에서 이 틈으로 인스타그램 중복 게시가 난 사례가 있다 —
+      # 2026-07-31). 여기서는 외부에 되돌릴 수 없는 부작용은 없지만, 최신 상태를
+      # 보지 못하면 같은 커밋을 놓고 두 실행이 서로 다른 산출물을 밀어넣어 푸시
+      # 충돌을 일으킬 수 있으므로 동일하게 갱신한다.
+      - name: 최신 커밋으로 갱신 (대기 중 다른 실행이 커밋했을 수 있음)
+        run: git pull --ff-only
+
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
