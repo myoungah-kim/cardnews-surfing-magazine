@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-02",
+  "generatedAt": "2026-08-02T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Growing up as a surfer in South Korea",
+      "url": "https://tracksmag.com.au/growing-up-as-a-surfer-in-south-korea",
+      "feed": "tracksmag.com.au",
+      "published": "2026-07-28",
+      "topic": "씬/담론",
+      "headlineType": "수치충격형",
+      "metric": "팔로우",
+      "reason": "부산 여름 서퍼 100명, 양양 겨울 서퍼 15~20명뿐인 작은 씬에서 자란 가노아 희재 팔미아노(18)가 2026년 7월 한국 최초로 WSL 대회(웨이브풀 롱보드) 우승을 차지하고 곧이어 아시안 서핑 챔피언십 2관왕까지 달성해 아시안게임 출전권까지 확정한 이야기입니다. 국내 서핑 커뮤니티가 '우리 얘기'로 직접 공감할 수 있는 최고 관련성 소재이고, 아버지가 국내 SUP를 처음 들여온 개척자였다는 배경까지 있어 사실 밀도도 충분합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Gabriel Medina Gets Married, Drops Pregnancy Announcement In Vows",
+      "url": "https://stabmag.com/elsewhere/gabriel-medina-gets-married-drops-pregnancy-announcement-in-vows/",
+      "feed": "stabmag.com",
+      "published": "2026-07-31",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "3회 세계 챔피언 가브리엘 메디나가 7월 30일 상파울루에서 결혼식을 올리며 주례사 도중 아내의 임신 소식을 깜짝 발표했습니다. 열흘 뒤 타히티 CT 대회(8월 8일) 출전을 앞둔 시점과 겹쳐 화제성이 크고, 비서퍼도 아는 톱스타라 조회수를 노리기 좋은 크로스오버 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Fisherman Shoves Hands in 8-Foot Shark's Mouth, Then Drags It Back to Sea in Los Angeles (Video)",
+      "url": "https://www.surfer.com/news/shark-caught-sunset-beach-los-angeles-video",
+      "feed": "surfer.com",
+      "published": "2026-07-31",
+      "topic": "해양생물",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "LA 선셋비치에서 낚시꾼이 8피트 백상아리 새끼의 입에서 낚싯바늘을 손으로 직접 빼주고 다시 바다로 놓아준 영상입니다. '위험한 포식자'라는 통념을 뒤집는 반전 요소가 강하고, 온난화로 남가주 앞바다가 새끼 백상아리의 새 서식지가 되고 있다는 배경 설명까지 있어 사실 밀도가 충분합니다. 어제도 후보였으나 제작까지 가지 않아 오늘 다시 추천합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "'Most Toxic' Algae Bloom Ever Is Killing Millions Of Animals In Cold-Water Australia",
+      "url": "https://www.surfer.com/news/toxic-algae-bloom-south-australia",
+      "feed": "surfer.com",
+      "published": "2026-08-01",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "남호주에서 작년부터 이어진 사상 최악의 독성 조류 대발생 원인이 기존에 알려지지 않았던 신종 미세조류(Karenia cristata)로 밝혀졌습니다. '지금까지 연구된 것 중 가장 독성이 강한 종'이라는 과학자 인용과 피해 규모(약 750제곱마일, 백만 마리 폐사) 등 사실 밀도가 충분하고, '비슷한 수온 조건이면 어디서든 발생 가능'하다는 경고는 국내 냉수역 서퍼에게도 남 얘기가 아닙니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Tosh Tudor on Foamball Spirituality, Giving Up Weed, And Learnings From His Father",
+      "url": "https://stabmag.com/features/tosh-tudor-on-foamball-spirituality-giving-up-weed-and-learnings-from-his-father/",
+      "feed": "stabmag.com",
+      "published": "2026-08-01",
+      "topic": "인물/셀럽",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "조엘 튜더의 아들이자 개성 강한 미국 프리서퍼 토시 튜더가 배럴을 '영적 경험'이라 표현하며 대마초를 끊은 이유, 파이프라인 우승이라는 꿈, 폼볼을 인간이 탈 수 있는 한계로 보는 철학까지 솔직하게 털어놓은 인터뷰입니다. 유명 서핑 가문의 2세가 스스로 삶의 방향을 찾아가는 공감형 스토리로, 서핑을 진지하게 즐기는 국내 독자층이 저장할 만한 깊이 있는 콘텐츠입니다.",
+      "status": "pending"
+    }
+  ]
+}
