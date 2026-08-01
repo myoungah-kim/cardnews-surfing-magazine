@@ -12,9 +12,13 @@
       "headlineType": "결과암시형",
       "metric": "조회수",
       "reason": "16세 인명구조원이 허리케인발 8~10피트 파도 속에서 소년을 놓지 않고 끝까지 구조해낸 영상이 미국 전역에서 화제입니다. 죽음을 무릅쓴 사투 장면 자체가 강한 몰입감을 주고, 소년의 아버지가 '용기와 희생'이라 표현한 인터뷰까지 있어 캡션 브리핑을 채울 사실이 충분합니다. 인명구조·해변 안전이라는 소재는 국내 여름 해변 안전 이슈와도 자연스럽게 연결됩니다.",
-      "status": "review",
-      "attempts": 1,
-      "slug": "20260801_teen-lifeguard-ryder-williams-battles"
+      "status": "producing",
+      "attempts": 2,
+      "slug": "20260801_teen-lifeguard-ryder-williams-battles",
+      "feedback": [
+        "1. 사진을 내가 첨부한 사진으로 바꿔줘.\n2. 헤드라인을 이걸로 바꿔줘: 죽음을 무릅쓰고 허리케인 파도에 뛰어든 신입 라이프가드\n3. 부제목을 이걸로 바꿔줘: 트럼프와 미국 전역을 울리다"
+      ],
+      "lastRecreateMessageId": "181"
     },
     {
       "index": 2,
