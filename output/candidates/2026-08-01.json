@@ -36,7 +36,9 @@
       "headlineType": "수치충격형",
       "metric": "팔로우",
       "reason": "11회 세계 챔피언 켈리 슬레이터(54)가 딸 출산 소식과 동시에 타히티 테아후포오 와일드카드 복귀를 예고했습니다. '54세'라는 나이와 '복귀'의 조합이 수치충격형 헤드라인을 만들기 좋고, 슬레이터는 비서퍼도 아는 이름이라 대회(8월 8~18일) 결과가 궁금해 팔로우로 이어질 가능성이 큽니다.",
-      "status": "pending"
+      "status": "producing",
+      "attempts": 1,
+      "slug": "20260801_kelly-slater-54-welcomes-daughter"
     },
     {
       "index": 4,
