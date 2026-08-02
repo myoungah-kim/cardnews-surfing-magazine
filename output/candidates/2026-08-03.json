@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-03",
+  "generatedAt": "2026-08-03T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "'Sharkzilla' Mauls Whales off Long Island and Ignites Radioactive Shark Fears (Video)",
+      "url": "https://www.surfer.com/news/sharkzilla-radioactive-mako-long-island-video",
+      "feed": "surfer.com",
+      "published": "2026-08-02",
+      "topic": "해양생물",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "롱아일랜드 앞바다에서 고래 몸통에 24인치짜리 물어뜯긴 자국을 남긴 12피트 마코상어를 두고 해양생물학자 크레이그 오코넬 박사가 처음엔 '방사능 돌연변이 상어'까지 의심했지만, DNA 분석 결과 새끼를 지키던 초대형 임신 마코상어로 밝혀진 반전 스토리입니다. 괴담처럼 시작해 과학적 설명으로 끝나는 서사가 강한 후킹이고, 상어 콘텐츠 특유의 공유·클릭 유발력이 커 조회수를 노리기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Generations of Core – Matt Archbold",
+      "url": "https://tracksmag.com.au/generations-of-core-matt-archbold",
+      "feed": "tracksmag.com.au",
+      "published": "2026-08-02",
+      "topic": "인물/셀럽",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "샌클레멘테 출신 천재 서퍼 매트 아치볼드가 대회 규정에 얽매이지 않는 파격적 스타일로 이름을 알렸지만 마약 중독으로 무너졌다가, 가족의 지지와 하와이 오프더월에 대한 헌신으로 재기한 장문 인물 피처입니다. 화려한 재능 뒤의 몰락과 회복이라는 진짜 서핑 스토리로, 서핑을 진지하게 즐기는 독자층이 저장할 만한 깊이가 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Behind-The-Scenes Of Liam O'Brien's 12-Second Cloudbreak Screamer",
+      "url": "https://stabmag.com/stabcinema/behind-the-scenes-of-liam-obriens-12-second-cloudbreak-screamer/",
+      "feed": "stabmag.com",
+      "published": "2026-08-02",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "네이선 헤지가 CT 대회 개최지가 타히티로 넘어가기 전 프로 서퍼 4명을 데리고 피지 클라우드브레이크에서 훈련시킨 가운데, 리암 오브라이언이 12초짜리 배럴 라이딩에 성공해 SNS에서 폭발적으로 공유됐습니다. 본인이 '오랜만에 타본 최고의 파도'라 밝힐 정도의 임팩트 있는 순간이라 짧고 강렬한 영상 훅으로 조회수를 노리기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Shark Attack Survival: The First 10 Seconds That Could Save Your Life",
+      "url": "https://www.surfer.com/news/shark-attack-survival-what-to-do",
+      "feed": "surfer.com",
+      "published": "2026-08-01",
+      "topic": "안전/시설",
+      "headlineType": "리스트형",
+      "metric": "저장",
+      "reason": "상어와 마주쳤을 때 처음 10초 동안의 대응법을 단계별로 정리한 실용 가이드로, 침착하게 뒤로 물러나기·눈맞춤 유지·최후 수단으로 눈과 아가미 공격·지혈대 사용법까지 구체적인 행동 수칙을 담고 있습니다. '서핑 중 상어에게 물릴 확률은 1,700만분의 1'이라는 안심 수치와 함께 실전 체크리스트를 제공해 저장 유도에 최적화된 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "'Most Toxic' Algae Bloom Ever Is Killing Millions Of Animals In Cold-Water Australia",
+      "url": "https://www.surfer.com/news/toxic-algae-bloom-south-australia",
+      "feed": "surfer.com",
+      "published": "2026-08-01",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "팔로우",
+      "reason": "작년 남호주에서 해양생물 약 100만 마리를 몰살시킨 사상 최악의 독성 조류 대발생 원인이 그동안 알려지지 않았던 신종 미세조류(Karenia cristata)로 밝혀졌으며, 과학자들은 '지금까지 연구된 것 중 가장 독성이 강한 종'이라 평가했습니다. 비슷한 수온 조건이면 어디서든 발생할 수 있다는 경고는 냉수역 서퍼들에게도 남 얘기가 아니라 지속적인 팔로우를 유도하기 좋습니다.",
+      "status": "pending"
+    }
+  ]
+}
