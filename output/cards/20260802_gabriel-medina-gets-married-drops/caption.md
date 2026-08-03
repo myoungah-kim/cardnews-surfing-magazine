@@ -16,6 +16,5 @@
 최신 서핑 뉴스를 전달해드립니다 @surf.issue 📰
 
 Stab Mag, 2026.07.31
-Photo: Valeriia Neganova / Unsplash
 
 #서핑 #surfing #가브리엘메디나 #WSL #서핑슈
