@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-04",
+  "generatedAt": "2026-08-04T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Investigation: The $24 Million Plan To Kill Shark's Cove",
+      "url": "https://stabmag.com/news/investigation-the-24-million-plan-to-kill-sharks-cove/",
+      "feed": "stabmag.com",
+      "published": "2026-08-03",
+      "topic": "안전/시설",
+      "headlineType": "현실폭로형",
+      "metric": "댓글",
+      "reason": "호놀룰루시가 노스쇼어의 상징적 스팟 샤크스 코브 2.7에이커 부지에 2400만 달러짜리 '오션 세이프티 허브'를 짓기로 하면서, 25년 역사의 노스쇼어 서프숍을 포함한 로컬 업체 8곳이 단 90일 안에 떠나라는 통보를 받았습니다. 20년차 라이프가드 카일 포일조차 사업 필요성에 의문을 제기하고 주민들은 '안전'을 명분 삼은 고급화 시도라 반발하고 있어, 일자리 100개와 연 30만 달러 세수를 둘러싼 갈등이 국내 서퍼들 사이에서도 댓글로 갑론을박하기 좋은 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Watch: Jack Robinson Is Invited To The Churrasco",
+      "url": "https://stabmag.com/stabcinema/watch-jack-robinson-is-invited-to-the-churrasco/",
+      "feed": "stabmag.com",
+      "published": "2026-08-03",
+      "topic": "씬/담론",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "브라질의 초호화 웨이브풀 '보아 비스타 빌리지'는 회원권만 10만 달러가 넘고 주변 주택은 200만~800만 달러, 월세는 최대 2만 1천 달러에 달하는 서핑 부자들의 도시로, 완공 시 4만 5천 명이 거주할 예정입니다. CT 서퍼 잭 로빈슨과 카노아 이가라시 등이 이례적으로 무료 초대를 받아 입수한 이 이야기는 '서핑도 결국 부동산'이라는 현실을 구체적 액수로 보여줘 조회수를 끌기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Before 'GTA' and 'Red Dead Redemption,' Rockstar built a surfing game",
+      "url": "https://www.surfertoday.com/surfing/the-story-of-the-transworld-surf-video-game",
+      "feed": "surfertoday.com",
+      "published": "2026-08-03",
+      "topic": "문화/무비",
+      "headlineType": "반전형",
+      "metric": "팔로우",
+      "reason": "'GTA'와 '레드 데드 리뎀션'을 만든 록스타 게임즈의 전신 앤젤 스튜디오가 2001년 켈리 슬레이터 게임에 밀려 묻혔던 서핑 게임 'TransWorld Surf'를 개발했었다는 사실이 재조명되고 있습니다. 당시 실시간 파도 시뮬레이션으로 엑스박스 '올해의 물 그래픽' 후보(2위)까지 올랐던 이 게임 이야기는 서퍼는 몰랐던 게임사 뒷이야기이자 게이머는 몰랐던 서핑 디테일이라 크로스오버 유입으로 팔로우를 늘리기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "No Sponsor? No Problem For Spain's Nadia Erostarbe",
+      "url": "https://www.surfer.com/news/no-sponsor-no-problem-for-spains-nadia-erostarbe",
+      "feed": "surfer.com",
+      "published": "2026-08-03",
+      "topic": "인물/셀럽",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "스페인 바스크 출신 나디아 에로스타르베가 별다른 메인 스폰서 없이 스나퍼록스와 브라질 대회 준결승 성적만으로 바스크·스페인 여성 최초로 월드서프리그 챔피언십투어에 진입했습니다. '처음엔 완전히 이방인처럼 느껴졌다'던 그는 상금만으로 원정 경비를 충당하며 톱10까지 올라, 후원 없이도 실력으로 증명한 무명 서퍼의 성장 스토리라 공감과 저장을 이끌어내기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Crocodile Sends Surfers Scrambling from Sri Lanka Lineup in Wild Video",
+      "url": "https://www.surfer.com/news/crocodile-surfers-sri-lanka-video",
+      "feed": "surfer.com",
+      "published": "2026-08-03",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "스리랑카에서 서핑 세션 도중 대형 바닷물악어가 라인업 사이로 유유히 헤엄쳐 지나가자 서퍼들이 일제히 보트로 대피하는 영상이 화제입니다. 이후 마취된 듯한 악어가 트럭에 실려가는 장면까지 포착됐고, 켈리 슬레이터가 과거 '악어보다는 차라리 상어가 낫다'고 말했던 발언도 함께 회자되며 조회수를 끌기 좋은 스펙터클 소재입니다.",
+      "status": "pending"
+    }
+  ]
+}
