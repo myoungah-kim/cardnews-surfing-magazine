@@ -61,6 +61,10 @@ google-chrome --headless --disable-gpu --hide-scrollbars \
 - 우측 상단 워터마크(`@surf.issue` + 로고)는 세 템플릿 모두에 이미 포함되어 있으므로 지우지 마세요.
 - `template.css`를 수정해야 할 만큼 디자인을 바꾸고 싶다면, **먼저 이 문서(DESIGN.md)를 수정**하고 그 다음
   `templates/template.css`에 반영하세요 (문서와 실제 결과물이 어긋나지 않도록).
+- `template.css`는 `@font-face`로 `input/font/Paperlogy-1.000/`의 ttf 파일을 상대경로(`../../../`)로
+  직접 로드합니다. 이 경로는 렌더링 시점에 `template.css`가 항상 `output/cards/<주제-slug>/`
+  (레포 루트에서 3단계 아래)에 있다는 전제를 깔고 있으므로, `templates/` 폴더 안에서 이 파일을
+  직접 렌더링하면 폰트가 폴백으로 표시됩니다 — 반드시 복사한 뒤 렌더링하세요.
 
 ### 검증 이력
 
@@ -157,16 +161,19 @@ google-chrome --headless --disable-gpu --hide-scrollbars \
 
 ## 4. 타이포그래피
 
-> 가독성 개선(v2): 국내 주요 뉴스/뉴스레터 카드뉴스 계정들은 공통적으로 (1) 헤드라인에 Black(900) 굵기, (2) 최소 30px 이상의 서브텍스트, (3) 사진 위에서도 눈에 띄는 고대비 색상을 사용합니다. 기존 스펙 대비 굵기·크기·대비를 한 단계씩 상향했습니다.
+> 가독성 개선(v2): 국내 주요 뉴스/뉴스레터 카드뉴스 계정들은 공통적으로 (1) 헤드라인에 굵은 굵기, (2) 최소 30px 이상의 서브텍스트, (3) 사진 위에서도 눈에 띄는 고대비 색상을 사용합니다. 기존 스펙 대비 굵기·크기·대비를 한 단계씩 상향했습니다.
+> (v4) Pretendard 기준으로 잡았던 Black(900)/SemiBold(600)이 Paperlogy에서는 같은 숫자 굵기에서도
+> 훨씬 두껍게 보여, 헤드라인 Bold(700)·서브텍스트 Medium(500)으로 한 단계씩 낮췄습니다.
+> (폰트마다 같은 숫자 굵기라도 실제 획 두께는 다릅니다 — 굵기를 바꿀 때는 항상 렌더링해서 눈으로 확인할 것)
 
 | 요소 | 폰트 굵기 | 크기 | 비고 |
 |---|---|---|---|
-| 헤드라인 | Black (900) 고정 | 64~72px | 좌측 정렬, line-height 1.25, text-shadow 적용 |
-| 서브텍스트 | SemiBold ~ Bold (600-700) | 30~34px | line-height 1.5, text-shadow 적용 |
+| 헤드라인 | Bold (700) 고정 (v4: Paperlogy 적용 후 Black 900에서 하향) | 92px (v4: 모바일 가독성 개선, 기존 64~72px 범위에서 상향 — 68→76→92px) | 좌측 정렬, line-height 1.25, text-shadow 적용 |
+| 서브텍스트 | Medium (500, v4: Paperlogy 적용 후 SemiBold~Bold에서 하향) | 30~34px | line-height 1.5, text-shadow 적용 |
 | 배지 텍스트 | Bold (700) | 24px | padding 10px 22px, border-radius 999px |
 | **서브 문장 (이미지 출처 캡션)** — 본문 슬라이드 전용 | Medium (500) | 16~20px | color `rgba(237,237,237,0.7)`, line-height 1.5, text-shadow 적용. 헤드라인은 표준 크기 그대로 유지 |
 
-- 권장 폰트: **Pretendard Black/ExtraBold** (헤드라인), **Pretendard SemiBold** (서브텍스트) 우선 사용. 미설치 환경 폴백: Noto Sans KR Black → Apple SD Gothic Neo Bold → 시스템 sans-serif
+- 폰트: **Paperlogy** (v4부터 사용, `input/font/Paperlogy-1.000/`에서 `template.css`가 `@font-face`로 직접 로드 — 시스템에 설치되어 있지 않아도 렌더링됨). Bold(700)를 헤드라인·배지에, Medium(500)을 서브텍스트에, SemiBold(600)를 태그·워터마크에 사용. `@font-face` 로드가 실패하는 예외 상황을 대비한 폴백: Pretendard → Noto Sans KR → Apple SD Gothic Neo → 시스템 sans-serif
 - 정렬: 표지·본문 슬라이드는 좌측 정렬 고정 (중앙 정렬 사용 안 함). **단, CTA(팔로우 유도) 슬라이드는 예외적으로 중앙 정렬** (9번 섹션 참고)
 - 얇은 폰트(Regular/Light)는 사진 배경 위에서 가독성이 떨어지므로 사용하지 않음
 
@@ -225,7 +232,7 @@ google-chrome --headless --disable-gpu --hide-scrollbars \
   position: relative;
   background-size: cover;
   background-position: center top;
-  font-family: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+  font-family: 'Paperlogy', 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
 }
 
 /* v2: 55% -> 60%로 확장, 2-stop -> 3-stop, 종단 대비 0.85 -> 0.92로 강화 */
@@ -254,15 +261,15 @@ google-chrome --headless --disable-gpu --hide-scrollbars \
 
 .headline {
   color: #fff;
-  font-weight: 900; /* Black, 기존 800에서 상향 */
-  font-size: 68px;  /* 기존 60px에서 상향 (범위 64~72px) */
+  font-weight: 700; /* Bold. v4: Paperlogy 적용 후 900(Black)에서 하향 (같은 숫자 굵기라도 폰트마다 두께가 다름) */
+  font-size: 92px;  /* v4: 모바일 가독성 개선을 위해 68px → 76px → 92px 순으로 상향 */
   line-height: 1.25;
   text-shadow: 0 2px 12px rgba(0,0,0,0.55);
 }
 
 .subtext {
   color: #EDEDED;   /* 기존 #D8D8D8에서 명도 상향 */
-  font-weight: 600; /* 기존 400에서 상향 */
+  font-weight: 500; /* Medium. v4: Paperlogy 적용 후 600(SemiBold)에서 하향 */
   font-size: 32px;  /* 기존 28px에서 상향 (범위 30~34px) */
   line-height: 1.5;
   text-shadow: 0 2px 12px rgba(0,0,0,0.55);

@@ -65,8 +65,10 @@ cardnews-surfing-magazine/
 │   ├── body.html          #   (v2에서 미사용) 본문 슬라이드 템플릿 — 캐러셀 형식으로 돌아가면 재사용
 │   └── cta.html           #   (v2에서 미사용) CTA 슬라이드 템플릿 — 캐러셀 형식으로 돌아가면 재사용
 ├── input/                 # 실제 사진을 쓰게 되면 원본 이미지를 여기에 둘 것
-│   └── bgm/               #   릴즈 배경음악. 원본 mp3는 라이선스상 커밋 금지 —
-│                          #   암호화본(bgm.mp3.gpg)만 커밋하고 암호는 BGM_PASSPHRASE 시크릿에 둔다
+│   ├── bgm/               #   릴즈 배경음악. 원본 mp3는 라이선스상 커밋 금지 —
+│   │                      #   암호화본(bgm.mp3.gpg)만 커밋하고 암호는 BGM_PASSPHRASE 시크릿에 둔다
+│   └── font/Paperlogy-1.000/  # 카드뉴스 한글 폰트 원본(ttf). template.css가 @font-face로 직접 로드
+│                          #   (상세: DESIGN.md 0번/4번 섹션)
 └── output/
     ├── sample/            # DESIGN.md/템플릿 검증용 고정 샘플 (캐러셀 5장짜리 디자인 회귀 테스트) — 건드리지 말 것
     │   └── card_01.png ~ card_05.png
