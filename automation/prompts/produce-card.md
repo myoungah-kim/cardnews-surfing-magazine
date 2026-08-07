@@ -44,8 +44,13 @@ ${USER_PHOTO_PATH:-없음}
    좌측 정렬·안전 영역·워터마크·헤드라인 2줄 이내를 확인하고,
    문제가 있으면 문장을 줄여 다시 렌더링하세요.
 
-6. 스톡 사진을 썼다면 `credit.json` 의 `caption_line` 을 `caption.md` 출처란에
+6. `caption.md` 작성 직후, `checking-korean-translation-tone` 스킬을 반드시
+   호출해 문단별로 번역투를 검수하세요. Step 8 프로즈 안 체크리스트를 눈으로만
+   훑고 넘어가는 것으로는 부족합니다 — 이 스킬을 실제로 호출해서 5개 항목을
+   하나씩 짚어야 합니다.
+
+7. 스톡 사진을 썼다면 `credit.json` 의 `caption_line` 을 `caption.md` 출처란에
    기사 출처와 함께 반드시 표기하세요 (Unsplash API 가이드라인상 필수).
 
-7. `caption.md` 는 **공백 포함 2200자를 넘지 마세요.** 인스타그램 Graph API의
+8. `caption.md` 는 **공백 포함 2200자를 넘지 마세요.** 인스타그램 Graph API의
    캡션 상한입니다 — 넘으면 이 실행의 "산출물 검증" 단계에서 바로 실패합니다.

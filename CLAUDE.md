@@ -17,6 +17,7 @@
 | `DESIGN.md` | **어떻게 보일지** — 색상/폰트/레이아웃 규칙 + 템플릿 사용법 | 디자인 규칙 |
 | `templates/` | 위 규칙을 실제로 구현한 실행 가능한 HTML/CSS | 구현체 |
 | `.claude/skills/stock-image-search/` | **배경 사진을 어디서 구할지** — 스톡 API 4곳 검색·선택·크레딧 규칙 + 실행 스크립트 | 독립 스킬 |
+| `.claude/skills/checking-korean-translation-tone/` | **번역투가 남았는지** — 캡션 문단의 대명사/반복 서술어/wh-질문 나열/수동태 직역 5가지 체크리스트 | 독립 스킬 |
 | `ARCHITECTURE.md` | **어디서 무엇이 도는지** — 컴포넌트·흐름·인증 다이어그램 (자동 파이프라인을 손볼 때만 필요) | 인프라 |
 | `automation/` | Telegram 승인 봇 · Cloudflare Worker · 러너 스크립트 ([전용 README](automation/README.md)) | 자동화 구현체 |
 
@@ -32,10 +33,12 @@
 ```
 cardnews-surfing-magazine/
 ├── .claude/skills/
-│   └── stock-image-search/    # 스톡 사진 검색 스킬 (Unsplash·Pexels·Pixabay·Openverse)
-│       ├── SKILL.md           #   언제 쓰는지 + 검색어/선택/라이선스 규칙
-│       ├── scripts/stock_image.py  #   실행 스크립트 (표준 라이브러리만 사용)
-│       └── references/providers.md #   제공처별 필드·한도·제약 상세
+│   ├── stock-image-search/    # 스톡 사진 검색 스킬 (Unsplash·Pexels·Pixabay·Openverse)
+│   │   ├── SKILL.md           #   언제 쓰는지 + 검색어/선택/라이선스 규칙
+│   │   ├── scripts/stock_image.py  #   실행 스크립트 (표준 라이브러리만 사용)
+│   │   └── references/providers.md #   제공처별 필드·한도·제약 상세
+│   └── checking-korean-translation-tone/  # 번역투 검수 스킬
+│       └── SKILL.md           #   대명사/반복 서술어/wh-질문/수동태 5가지 체크리스트
 ├── .github/workflows/     # 자동 파이프라인 (5종) — 상세는 ARCHITECTURE.md 4번
 │   ├── daily-candidates.yml  #   매일 07:12 KST 후보 선별 → Telegram 발송
 │   ├── produce-card.yml      #   Choose/Recreate 버튼 → 카드 제작
@@ -250,13 +253,11 @@ node automation/scripts/render-card.mjs card_01.html output/cards/<주제-slug>/
 - 헤드라인이 2줄을 넘기지 않는지 (넘기면 폰트를 줄이지 말고 문장을 줄일 것 — `DESIGN.md` 원칙)
 - `caption.md`가 미니 브리핑 포맷([헤드라인] → 도입 → 브리핑 본문(3문단 이내) → 고정 마무리 문구 → 출처 → 해시태그)을 갖추고 있는지
 
-**번역투 자가 점검 (캡션 문장 하나하나에 적용, `CARDNEWS.md` 번역 톤 항목 기준):**
-- [ ] "그는/그녀는/그것은"이 남아 있는가 → 있다면 실명·구체명사로 교체
-- [ ] "~라고 말했다"가 3번 이상 반복되는가 → 짚었다/전했다/털어놨다 등으로 변주
-- [ ] "어디서 누가/얼마나 큰가" 같은 영어식 질문 나열이 그대로 있는가 → "주최는?/규모는?" 같은 한국어 압축 질문으로 교체
-- [ ] 인용·설명 문장을 소리 내어 읽었을 때 실제 사람이 할 법한 말투인가, 아니면 신문 사설투 대조문인가
-- [ ] "~로 알려져 있다/~라고 여겨진다" 같은 수동태 직역이 남아 있는가 → 능동 또는 "~로 알려졌다" 수준으로 축약
-- 하나라도 걸리면 그 문장만 국소적으로 고치지 말고, Step 3의 2차 리라이트를 그 문단에 한해 다시 수행할 것 (부분 수정은 앞뒤 문장과 톤이 어긋나기 쉬움)
+**번역투 자가 점검 — 눈으로 훑지 말고 반드시 `checking-korean-translation-tone` 스킬을 호출할 것.**
+캡션 문단마다 대명사→실명 치환, "~라고 말했다" 반복, 영어식 wh-질문 나열, 수동태 직역 등
+5가지를 점검하는 체크리스트가 그 스킬 안에 있다 (`CARDNEWS.md` 번역 톤 항목의 실행판).
+하나라도 걸리면 그 문장만 국소적으로 고치지 말고, Step 3의 2차 리라이트를 그 문단에 한해
+다시 수행할 것 (부분 수정은 앞뒤 문장과 톤이 어긋나기 쉬움).
 
 ### Step 9. 처리 로그 갱신
 `ARTICLE_CANDIDATE_FILTER.md`가 매일 후보를 뽑을 때 "이미 카드 생성된 아티클"을 걸러내려면 아래 로그가 최신 상태여야 합니다. 카드 완성 직후 `output/cards/_processed_articles.csv`에 한 줄을 추가하세요 (컬럼: `date_produced,feed_source,article_url,slug,status`, `status`는 항상 `produced`). 후보로만 뽑히고 제작까지 안 간 아티클은 여기에 적지 않습니다.
