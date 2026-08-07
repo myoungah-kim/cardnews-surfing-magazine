@@ -16,6 +16,5 @@
 최신 서핑 뉴스를 전달해드립니다 @surf.issue 📰
 
 Stab Mag, 2026.08.03
-Photo: Sérgio Souza / Pexels
 
 #서핑 #surfing #웨이브풀 #잭로빈슨 #WSL #서핑슈
