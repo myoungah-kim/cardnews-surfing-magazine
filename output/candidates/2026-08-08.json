@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-08",
+  "generatedAt": "2026-08-08T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Kelly Slater, Guy Fieri, Andy Roddick Join Star-Studded NASCAR Ownership Group",
+      "url": "https://www.surfer.com/news/kelly-slater-guy-fieri-nascar-ownership",
+      "feed": "surfer.com",
+      "published": "2026-08-07",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "서핑 황제 켈리 슬레이터가 나스카(NASCAR) 팀 '레거시 모터클럽'의 전략적 오너십 그룹에 합류했습니다. 셰프 가이 피에리, 테니스 스타 앤디 로딕, MLB 스타 브라이스 하퍼 등 이종 업계 유명인들과 나란히 이름을 올려 크로스오버 화제성이 높고, 서핑과 전혀 무관해 보이는 모터스포츠 진출이라는 반전 요소가 강합니다. 8일 시작되는 타히티 프로 와일드카드 복귀를 앞둔 시점이라 시의성도 있어 비서퍼 유입까지 노릴 수 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Great White Sharks Swarm Swimmer in Tense Southern California Standoff (Video)",
+      "url": "https://www.surfer.com/news/great-white-sharks-swarm-swimmer-video",
+      "feed": "surfer.com",
+      "published": "2026-08-07",
+      "topic": "해양생물",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "다큐멘터리 작가 카를로스 가우나가 드론으로 촬영한 영상에서, 스윔머 한 명이 어린 백상아리 6마리에 둘러싸이고도 물 밖으로 나오지 않는 장면이 포착됐습니다. 상어 중 하나에 '티나'라는 이름까지 붙어 있고, '잔디 깎다 죽을 확률이 상어에게 물릴 확률보다 높다'는 통계 인용까지 있어 공포와 반전이 동시에 있는 스펙터클 소재입니다. 엘니뇨로 어린 백상아리가 몰리는 서던캘리포니아 여름 시즌이라는 배경 설명도 갖춰 사실 밀도가 높습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Will Kauli Vaast Make His Move in Tahiti?",
+      "url": "https://tracksmag.com.au/will-kauli-vaast-make-his-move-in-tahiti",
+      "feed": "tracksmag.com.au",
+      "published": "2026-08-07",
+      "topic": "인물/셀럽",
+      "headlineType": "결과암시형",
+      "metric": "댓글",
+      "reason": "2024 파리 올림픽 금메달리스트 카울리 바스트가 8일 개막하는 타히티 프로에서 랭킹 14위로 고향 파도 테아후포오에 나섭니다. 프랑스령 폴리네시아 선수의 역대 최고 성적이 2014년 미셸 부레즈의 5위에 그쳤다는 기록, 벨스비치 0.07점차 석패 등 구체적 수치가 풍부해 '고향에서 첫 우승 역사를 쓸 수 있을까'라는 결과 암시형 훅이 자연스럽게 나옵니다. 대회 개막 임박으로 시의성이 높고 팬 예측·응원 댓글을 유도하기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "2 Million Tires Were Sunk Off Florida In The '70s. What Are They Doing Now?",
+      "url": "https://www.surfer.com/news/2-million-tires-sunk-off-florida-70s-what-are-they-doing-now",
+      "feed": "surfer.com",
+      "published": "2026-08-07",
+      "topic": "환경",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "1970년대 플로리다 포트로더데일 앞바다에 '친환경 인공어초'라는 명목으로 폐타이어 200만 개 이상을 가라앉혔지만, 결과적으로 산호와 해양생물을 죽이는 재앙이 됐다는 반전 스토리입니다. 담당 교수·미 육군공병대 승인·굿이어의 홍보 문구까지 구체적으로 나와 사실 밀도가 높고, 몰랐던 해양 상식형 콘텐츠라 저장 유도에 적합합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Clean Water, Filthy Tubes",
+      "url": "https://stabmag.com/elsewhere/clean-water-filthy-tubes/",
+      "feed": "stabmag.com",
+      "published": "2026-08-07",
+      "topic": "환경",
+      "headlineType": "공감형",
+      "metric": "댓글",
+      "reason": "서퍼 알 클리랜드 주니어와 롤란도 스탠리가 피지 클라우드브레이크에서 완벽한 배럴을 타는 동안, 동행한 브랜드 팍고(PARGO)는 현지 3개 마을에 정수 시설 200개를 설치해 1,500명에게 깨끗한 식수를 제공했습니다. 화려한 파도 라이딩과 실질적인 지역사회 기여가 함께 담겨 있어 공감·응원 댓글을 이끌어내기 좋은 소재입니다.",
+      "status": "pending"
+    }
+  ]
+}
