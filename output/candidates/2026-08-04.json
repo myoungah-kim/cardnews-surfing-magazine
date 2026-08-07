@@ -24,9 +24,13 @@
       "headlineType": "수치충격형",
       "metric": "조회수",
       "reason": "브라질의 초호화 웨이브풀 '보아 비스타 빌리지'는 회원권만 10만 달러가 넘고 주변 주택은 200만~800만 달러, 월세는 최대 2만 1천 달러에 달하는 서핑 부자들의 도시로, 완공 시 4만 5천 명이 거주할 예정입니다. CT 서퍼 잭 로빈슨과 카노아 이가라시 등이 이례적으로 무료 초대를 받아 입수한 이 이야기는 '서핑도 결국 부동산'이라는 현실을 구체적 액수로 보여줘 조회수를 끌기 좋습니다.",
-      "status": "review",
-      "attempts": 1,
-      "slug": "20260804_watch-jack-robinson-is-invited"
+      "status": "producing",
+      "attempts": 2,
+      "slug": "20260804_watch-jack-robinson-is-invited",
+      "feedback": [
+        "사진을 내가 첨부한 사진으로 바꿔줘.\n제목을 이걸로 바꿔줘: 가입비 1억 넘는 브라질 초호화 웨이브풀\n부제목을 이걸로 바꿔줘: 보아 비스타 빌리지 (Boa Vista Village)\n •  4. 캡션 내용을 초호화 가입비와 exclusivity 를 강조하는 내용으로 바꿔줘"
+      ],
+      "lastRecreateMessageId": "263"
     },
     {
       "index": 3,
