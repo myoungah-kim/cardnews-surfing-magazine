@@ -1,0 +1,86 @@
+name: 릴즈만 게시
+
+# 이미지 포스트 없이 릴즈 하나만 올린다.
+#
+# finalize-card.yml(확정/폐기)은 Telegram 버튼이 깨우고 이미지+릴즈를 함께
+# 올리지만, 이 워크플로는 **사람이 직접 실행**하는 용도다. 그래서
+# repository_dispatch 트리거를 두지 않았다 — 봇이 실수로 깨울 경로를
+# 아예 만들지 않기 위해서다.
+#
+# 후보 상태(status/permalink)와 처리 로그(_processed_articles.csv)는
+# 건드리지 않는다. 즉 여기서 릴즈를 올려도 그 기사는 나중에 정상적으로
+# 🚀 Upload 로 이미지 포스트까지 올릴 수 있다 (자세한 이유는 post-reel.mjs 주석).
+on:
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: '카드 폴더 이름 (예: 20260807_the-gamification-of-wave-pools)'
+        required: true
+      share_to_feed:
+        description: '프로필 그리드에도 노출할지 (기본: 릴즈 탭에만)'
+        required: false
+        type: boolean
+        default: false
+      force:
+        description: '이미 게시된 표식이 있어도 다시 올린다 (중복 게시 주의)'
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  # 같은 카드를 두 번 동시에 올리는 일이 없도록 직렬화한다.
+  # 인스타그램 게시는 되돌릴 수 없어서 취소보다 대기가 안전하다.
+  group: post-reel
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  post-reel:
+    runs-on: ubuntu-latest
+    # 인스타그램 트랜스코딩 대기가 최대 5분이라 기본 타임아웃보다 넉넉히 잡는다.
+    timeout-minutes: 15
+    env:
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      SLUG: ${{ inputs.slug }}
+      SHARE_TO_FEED: ${{ inputs.share_to_feed }}
+      FORCE: ${{ inputs.force }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # 대기 중 다른 실행이 커밋했을 수 있다. 갱신하지 않으면 이전 커밋 기준으로
+      # 돌면서 reel_post.json 표식을 놓치고 중복 게시할 수 있다
+      # (finalize-card.yml 의 2026-07-31 사고와 같은 구조).
+      - name: 최신 커밋으로 갱신
+        run: git pull --ff-only
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 릴즈 게시
+        id: run
+        run: node automation/scripts/post-reel.mjs
+
+      # always() 인 이유는 finalize-card.yml 과 같다. 게시는 성공했는데 그 뒤
+      # 단계에서 실패하면 reel_post.json 이 러너와 함께 사라지고, 다음 실행이
+      # "아직 안 올렸다"고 판단해 **중복 게시**한다. 표식은 무슨 일이 있어도 남긴다.
+      - name: 게시 표식 커밋
+        if: always()
+        # slug 를 ${{ }} 로 run 안에 직접 박으면 셸 명령이 주입될 수 있다
+        # (workflow_dispatch 입력은 사람이 타이핑한 값이다).
+        # 위 job env 의 $SLUG 를 큰따옴표로 감싸 셸 변수로만 다룬다.
+        run: |
+          automation/scripts/commit-push.sh \
+            "chore: 릴즈 게시 — $SLUG" \
+            "output/cards/$SLUG/reel_post.json"
+
+      - name: 실패 알림
+        if: failure()
+        env:
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: node automation/scripts/notify.mjs "릴즈 게시가 실패했습니다."

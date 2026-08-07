@@ -31,6 +31,9 @@ const resendWorkflowSource = () =>
   readFileSync(path.join(ROOT, '..', '.github', 'workflows', 'resend-review.yml'), 'utf8');
 const dailyCandidatesWorkflowSource = () =>
   readFileSync(path.join(ROOT, '..', '.github', 'workflows', 'daily-candidates.yml'), 'utf8');
+const postReelWorkflowSource = () =>
+  readFileSync(path.join(ROOT, '..', '.github', 'workflows', 'post-reel.yml'), 'utf8');
+const postReelSource = () => readFileSync(path.join(ROOT, 'scripts', 'post-reel.mjs'), 'utf8');
 
 // ── 워커 통합 테스트용 공통 하네스 (worker.test.mjs 와 동일한 패턴) ──────────
 
@@ -333,6 +336,7 @@ for (const [name, source] of [
   ['produce-card.yml', produceWorkflowSource],
   ['resend-review.yml', resendWorkflowSource],
   ['daily-candidates.yml', dailyCandidatesWorkflowSource],
+  ['post-reel.yml', postReelWorkflowSource],
 ]) {
   test(`[수정됨] ${name} 은 checkout 직후 최신 커밋을 다시 받는다 (대기 중 다른 실행의 커밋을 놓치지 않도록)`, () => {
     const text = source();
@@ -348,3 +352,61 @@ for (const [name, source] of [
     assert.ok(pullIndex > checkoutIndex, 'git pull 은 checkout 다음에 와야 한다');
   });
 }
+
+// ── 릴즈만 게시(post-reel) ────────────────────────────────────
+// finalize 와 같은 "되돌릴 수 없는 게시" 위험을 지지만, 상태를 건드리지
+// 않는다는 점이 다르다. 그 차이가 실수로 사라지지 않도록 소스에 고정한다.
+
+test('[수정됨] post-reel.mjs 도 캐시가 stale 할 수 없는 GITHUB_SHA 로 영상 URL을 만든다', () => {
+  // finalize.mjs 와 같은 이유 — 브랜치명 URL 은 raw.githubusercontent.com 이
+  // 수 분간 캐시해서, 방금 갱신한 릴즈를 올려도 이전 영상이 게시될 수 있다.
+  const source = postReelSource();
+  assert.match(source, /requireEnv\('GITHUB_SHA'\)/);
+  assert.doesNotMatch(source, /GITHUB_REF_NAME/, 'GITHUB_REF_NAME 은 캐시 stale 위험이 있다');
+});
+
+/**
+ * 주석을 걷어낸 코드 본문만 남긴다.
+ * "이 파일은 X 를 하지 않는다"고 설명하는 주석 자체가 X 를 언급하기 때문에,
+ * 소스 전체를 그대로 검사하면 설명문에 걸려 오탐한다.
+ */
+const codeOnly = (source) => source.replace(/\/\*[\s\S]*?\*\//g, '').replace(/^\s*\/\/.*$/gm, '');
+
+test('[수정됨] post-reel.mjs 는 처리 로그와 후보 상태를 건드리지 않는다', () => {
+  // 릴즈만 올린 기사를 "처리 완료"로 적으면 다음 후보 선별에서 빠져
+  // 이미지 포스트를 영영 올릴 수 없게 된다.
+  const code = codeOnly(postReelSource());
+  assert.doesNotMatch(code, /_processed_articles/, '처리 로그를 건드리면 안 된다');
+  assert.doesNotMatch(code, /writeCandidates|readCandidates/, '후보 상태를 건드리면 안 된다');
+  assert.doesNotMatch(code, /appendFile/, '어떤 로그에도 append 하면 안 된다');
+});
+
+test('[수정됨] post-reel.mjs 는 이미 게시된 표식이 있으면 FORCE 없이는 다시 올리지 않는다', () => {
+  // 인스타그램 게시는 취소할 수 없다 (2026-07-31 중복 게시 사례).
+  const source = postReelSource();
+  assert.match(source, /reel_post\.json/);
+  assert.match(source, /FORCE/);
+});
+
+test('[수정됨] post-reel.mjs 는 slug 를 경로에 쓰기 전에 형식을 검증한다', () => {
+  // slug 는 그대로 파일 경로와 URL 에 들어간다. `../` 가 섞이면 카드 폴더를 벗어난다.
+  assert.match(postReelSource(), /\^\[A-Za-z0-9\._-\]\+\$/);
+});
+
+test('[수정됨] post-reel.yml 은 게시 표식을 always() 로 커밋한다', () => {
+  // 게시는 됐는데 표식 커밋을 건너뛰면 러너와 함께 사라지고,
+  // 다음 실행이 "아직 안 올렸다"고 판단해 중복 게시한다.
+  const source = postReelWorkflowSource();
+  const markerStep = source.indexOf('- name: 게시 표식 커밋');
+  assert.notEqual(markerStep, -1);
+  assert.match(source.slice(markerStep, markerStep + 200), /if: always\(\)/);
+});
+
+test('[수정됨] post-reel.yml 은 봇이 깨울 수 있는 트리거를 두지 않는다', () => {
+  // 사람이 직접 실행하는 워크플로다. repository_dispatch 가 붙으면
+  // 텔레그램 버튼 오작동으로 의도치 않게 게시될 수 있다.
+  const source = postReelWorkflowSource();
+  const onBlock = source.slice(source.indexOf('\non:'), source.indexOf('concurrency:'));
+  assert.match(onBlock, /workflow_dispatch:/);
+  assert.doesNotMatch(onBlock, /repository_dispatch:/);
+});

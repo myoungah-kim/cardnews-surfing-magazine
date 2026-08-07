@@ -68,6 +68,7 @@ test('상태를 바꾸는 워크플로는 모두 commit-push 헬퍼를 쓴다', 
     'finalize-card.yml',
     'daily-candidates.yml',
     'resend-review.yml',
+    'post-reel.yml',
   ]) {
     const source = workflow(name);
     assert.match(source, /commit-push\.sh/, `${name} 이 commit-push.sh 를 쓰지 않습니다`);
