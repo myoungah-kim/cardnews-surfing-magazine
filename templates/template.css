@@ -137,7 +137,7 @@ html, body{
 .headline{
   color:var(--headline-color);
   font-weight:700;
-  font-size:92px;
+  font-size:97px;
   line-height:1.25;
   text-align:left;
   text-shadow:var(--text-shadow);

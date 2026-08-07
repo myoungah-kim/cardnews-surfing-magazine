@@ -168,7 +168,7 @@ google-chrome --headless --disable-gpu --hide-scrollbars \
 
 | 요소 | 폰트 굵기 | 크기 | 비고 |
 |---|---|---|---|
-| 헤드라인 | Bold (700) 고정 (v4: Paperlogy 적용 후 Black 900에서 하향) | 92px (v4: 모바일 가독성 개선, 기존 64~72px 범위에서 상향 — 68→76→92px) | 좌측 정렬, line-height 1.25, text-shadow 적용 |
+| 헤드라인 | Bold (700) 고정 (v4: Paperlogy 적용 후 Black 900에서 하향) | 97px (v4: 모바일 가독성 개선, 기존 64~72px 범위에서 상향 — 68→76→92→97px. 2줄이 기본이지만 이 크기에서는 문장에 따라 3줄까지 갈 수 있음, 3번째 줄까지는 허용) | 좌측 정렬, line-height 1.25, text-shadow 적용 |
 | 서브텍스트 | Medium (500, v4: Paperlogy 적용 후 SemiBold~Bold에서 하향) | 30~34px | line-height 1.5, text-shadow 적용 |
 | 배지 텍스트 | Bold (700) | 24px | padding 10px 22px, border-radius 999px |
 | **서브 문장 (이미지 출처 캡션)** — 본문 슬라이드 전용 | Medium (500) | 16~20px | color `rgba(237,237,237,0.7)`, line-height 1.5, text-shadow 적용. 헤드라인은 표준 크기 그대로 유지 |
@@ -202,7 +202,7 @@ google-chrome --headless --disable-gpu --hide-scrollbars \
 ### 표지 슬라이드
 ```
 배지: [카테고리명]
-헤드라인 (2줄 이내): 핵심 주제
+헤드라인 (2줄 기본, 최대 3줄): 핵심 주제
 서브텍스트 (1줄): 부가 설명
 ```
 
@@ -262,7 +262,8 @@ google-chrome --headless --disable-gpu --hide-scrollbars \
 .headline {
   color: #fff;
   font-weight: 700; /* Bold. v4: Paperlogy 적용 후 900(Black)에서 하향 (같은 숫자 굵기라도 폰트마다 두께가 다름) */
-  font-size: 92px;  /* v4: 모바일 가독성 개선을 위해 68px → 76px → 92px 순으로 상향 */
+  font-size: 97px;  /* v4: 모바일 가독성 개선을 위해 68px → 76px → 92px → 97px 순으로 상향.
+                        헤드라인이 2줄 안에 들어가는 최대치에 가까워서, 문장에 따라 3줄까지 갈 수 있음(3줄까지는 허용) */
   line-height: 1.25;
   text-shadow: 0 2px 12px rgba(0,0,0,0.55);
 }
