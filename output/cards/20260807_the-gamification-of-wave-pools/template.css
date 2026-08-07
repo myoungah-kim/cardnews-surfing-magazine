@@ -9,6 +9,34 @@
      (반대로 여기만 고치고 DESIGN.md를 안 고치면 문서와 실제 결과물이 어긋납니다)
 */
 
+/*
+  이 파일은 항상 output/cards/<주제-slug>/template.css 위치(레포 루트에서 3단계 아래)로
+  복사된 뒤 렌더링된다 (CLAUDE.md Step 5). 아래 @font-face의 상대경로(../../../)는
+  그 고정된 폴더 깊이를 전제로 한다 — templates/ 안에서 이 파일을 직접 렌더링하면
+  폰트 경로가 깨지고 폴백 폰트로 표시된다.
+*/
+@font-face{
+  font-family:'Paperlogy';
+  src:url('../../../input/font/Paperlogy-1.000/Paperlogy-7Bold.ttf') format('truetype');
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:'Paperlogy';
+  src:url('../../../input/font/Paperlogy-1.000/Paperlogy-6SemiBold.ttf') format('truetype');
+  font-weight:600;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:'Paperlogy';
+  src:url('../../../input/font/Paperlogy-1.000/Paperlogy-5Medium.ttf') format('truetype');
+  font-weight:500;
+  font-style:normal;
+  font-display:swap;
+}
+
 :root{
   /* 색상 */
   --accent:#4A6CF7;
@@ -19,7 +47,7 @@
   --text-shadow: 0 2px 12px rgba(0,0,0,0.55);
 
   /* 폰트 */
-  --font-sans:'Pretendard','Apple SD Gothic Neo','Noto Sans KR',-apple-system,sans-serif;
+  --font-sans:'Paperlogy','Pretendard','Apple SD Gothic Neo','Noto Sans KR',-apple-system,sans-serif;
 
   /* 캔버스 & 여백 */
   --canvas-w:1080px;
@@ -105,11 +133,11 @@ html, body{
   border-radius:999px;
 }
 
-/* 헤드라인 (표지 + 본문 공통, Black 900 고정) */
+/* 헤드라인 (표지 + 본문 공통) */
 .headline{
   color:var(--headline-color);
-  font-weight:900;
-  font-size:68px;
+  font-weight:700;
+  font-size:97px;
   line-height:1.25;
   text-align:left;
   text-shadow:var(--text-shadow);
@@ -118,7 +146,7 @@ html, body{
 /* 서브텍스트 (표지 전용 — 1줄 권장) */
 .subtext{
   color:var(--subtext-color);
-  font-weight:600;
+  font-weight:500;
   font-size:32px;
   line-height:1.5;
   text-align:left;

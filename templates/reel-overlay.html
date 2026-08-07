@@ -1,0 +1,151 @@
+<!doctype html>
+<!--
+  릴즈 자막 오버레이 템플릿 (영상 소스 릴즈 전용) — 1080x1920 투명 PNG
+  ===================================================================
+  카드 PNG 를 그대로 영상으로 만드는 automation/scripts/make-reel.mjs 와 달리,
+  **다운로드한 영상을 소재로 릴즈를 만들 때** 그 위에 얹을 자막판을 만드는 템플릿입니다.
+  배경이 투명한 PNG 로 렌더링해서 ffmpeg 으로 영상 위에 합성합니다.
+
+  채워야 할 placeholder ({{ }} 로 표시된 부분만 교체하세요):
+    {{HEADLINE}} - 헤드라인, 2줄 기본 (줄바꿈은 <br>). 카드와 같은 97px 이므로
+                   한 줄에 대략 9~10자. 3줄이 되면 아래 '세로 예산'을 반드시 다시 계산할 것
+    {{SUBTEXT}}  - 서브텍스트, 1~2줄 (줄바꿈은 <br>)
+    {{CREDIT}}   - 영상 출처 한 줄 (예: Video: SurferToday / YouTube)
+                   credit.json 의 caption_line 을 그대로 넣으면 됩니다
+
+  ── 왜 template.css 를 <link> 하는가 ────────────────────────────
+  폰트 크기·행간·색·요소 간 여백을 이 파일에 다시 적지 않습니다.
+  카드(1080x1350)와 릴즈(1080x1920)는 **가로가 똑같이 1080px** 이라 축소할 이유가
+  전혀 없고, 여기에 숫자를 복사해 두면 template.css 가 바뀔 때 조용히 어긋납니다.
+  .headline / .subtext / .tags / .watermark 를 그대로 재사용하면
+  크기(97/32/20/22px)도, 여백(.headline+.subtext=20px, .subtext+.tags=12px)도
+  자동으로 따라옵니다. 아래 <style> 은 **릴즈 캔버스 구조만** 다룹니다.
+
+  ⚠️ 이 파일도 cover.html 과 마찬가지로 output/cards/<주제-slug>/ 로 복사한 뒤
+     렌더링해야 합니다. template.css 의 @font-face 상대경로(../../../)가
+     그 깊이를 전제로 하기 때문입니다.
+
+  ⚠️⚠️ **template.css 도 templates/ 에서 반드시 새로 복사할 것.**
+     각 카드 폴더의 template.css 는 "그때 실제로 렌더링한 값"이 얼어붙은 기록이라,
+     예전 카드 폴더에는 옛날 디자인이 그대로 들어 있습니다
+     (예: 2026-08-07 16:33 이전 폴더는 헤드라인 68px + Paperlogy 없음).
+     그 폴더에서 이 템플릿을 렌더링하면 헤드라인이 조용히 작게 나오고,
+     에러는 전혀 나지 않습니다. 실제로 이 함정에 한 번 빠졌습니다.
+     렌더 직후 헤드라인이 카드와 같은 크기인지 눈으로 확인하세요.
+
+  ── 세로 예산 (--video-top 을 바꾸면 ffmpeg 의 overlay y 값도 같이 바꿀 것) ──
+    0    ~ 530   상단 띠 — 워터마크 / 헤드라인 / 서브텍스트 / 출처
+    530  ~ 1730  영상 (1080x1200 소재 기준)
+    1730 ~ 1920  하단 띠 — 인스타 릴즈 UI(계정명·캡션·버튼)가 덮는 영역, 블러만
+
+    상단 띠 내역 (전부 template.css 원본 값):
+      워터마크   top 52                       → ~90
+      헤드라인   top 124, 97px×1.25×2줄 =242.5 → 366.5
+      서브텍스트 +여백20,  32px×1.5×2줄  = 96  → 482.5
+      출처       +여백12,  20px           = ~24 → ~518   (영상까지 12px 여유)
+
+    자막을 왜 아래가 아니라 위에 두는가: 하단 1500px 아래는 인스타 UI 가 덮고,
+    영상 안쪽은 소재 자체의 UI(점수·타임스탬프)와 겹치기 때문입니다.
+
+  ── 렌더링 (투명 PNG) ──────────────────────────────────────────
+  automation/scripts/render-card.mjs 는 1080x1350 고정 + 배경 불투명이라 못 씁니다.
+  --default-background-color=00000000 이 없으면 배경이 흰색으로 채워집니다:
+
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+      --headless --disable-gpu --hide-scrollbars --no-sandbox \
+      --force-device-scale-factor=1 --default-background-color=00000000 \
+      --window-size=1080,1920 \
+      --screenshot="overlay.png" "file://$(pwd)/reel_overlay.html"
+
+  ── 영상과 합성 ────────────────────────────────────────────────
+  블러 배경 + 선명한 전경은 make-reel.mjs 와 같은 문법입니다.
+  START/DUR 로 소재에서 쓸 구간을 고르고, overlay y 값(530)은 위 --video-top 과 일치시킵니다:
+
+    ffmpeg -y -ss "$START" -i 소재.mp4 -i overlay.png -i bgm.mp3 \
+      -filter_complex "\
+    [0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,gblur=sigma=40[bg];\
+    [0:v]scale=1080:-2[fg];\
+    [bg][fg]overlay=(W-w)/2:530[base];\
+    [base][1:v]overlay=0:0,format=yuv420p[v]" \
+      -map "[v]" -map 2:a -t 15 -r 30 \
+      -c:v libx264 -preset medium -crf 20 -c:a aac -b:a 128k \
+      -af "afade=t=in:st=0:d=0.5,afade=t=out:st=14:d=1" \
+      -movflags +faststart output/cards/<주제-slug>/reel.mp4
+
+  주의:
+  - 색상/폰트/여백은 이 파일에서 직접 건드리지 말고 template.css 를 통해서만 바뀌어야 함
+  - 좌측 정렬 고정 (cover.html 과 동일 규칙)
+  - 소재 영상이 1080x1200 이 아니면 전경 높이가 달라지므로 세로 예산을 다시 계산할 것
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="template.css">
+<style>
+  /*
+    릴즈 캔버스 구조 전용. 폰트 크기·색은 여기서 절대 재정의하지 않는다
+    (그 순간 template.css 가 더 이상 유일한 기준이 아니게 된다).
+  */
+  :root{
+    --reel-h:1920px;
+    --video-top:530px;   /* ffmpeg overlay 의 y 값과 반드시 일치 */
+  }
+
+  /* template.css 는 1350px 캔버스를 전제하므로 높이만 릴즈 규격으로 덮어쓴다 */
+  html, body{
+    height:var(--reel-h);
+    background:transparent;   /* 합성용이므로 배경이 있으면 안 된다 */
+  }
+
+  .reel{
+    position:relative;
+    width:var(--canvas-w);
+    height:var(--reel-h);
+    overflow:hidden;
+  }
+
+  /*
+    위아래 띠 — 블러 영상이 비치되 텍스트가 묻히지 않을 만큼만 어둡게.
+    아래로 갈수록 투명해져서 영상과의 경계가 드러나지 않는다.
+  */
+  .scrim-top{
+    position:absolute; top:0; left:0; width:100%; height:600px;
+    background:linear-gradient(to bottom,
+      rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.74) 78%, rgba(0,0,0,0) 100%);
+  }
+  .scrim-bottom{
+    position:absolute; bottom:0; left:0; width:100%; height:260px;
+    background:linear-gradient(to top,
+      rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0) 100%);
+  }
+
+  /*
+    텍스트 블록: cover.html 의 .text 는 하단 앵커라 릴즈에서는 못 쓴다.
+    상단 고정으로 바꾸되, 요소 간 여백은 template.css 의 인접 형제 규칙에 맡긴다.
+  */
+  .reel-text{
+    position:absolute;
+    left:var(--margin-x); right:var(--margin-x); top:124px;
+    text-align:left;
+  }
+</style>
+</head>
+<body>
+  <div class="reel">
+    <div class="scrim-top"></div>
+    <div class="scrim-bottom"></div>
+
+    <div class="watermark">
+      <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><path d="M15,150 Q55,25 95,8 Q88,55 128,88 Q78,98 55,128 Q32,144 15,150 Z" fill="#FFFFFF"/></svg>
+      <span>@surf.issue</span>
+    </div>
+
+    <div class="reel-text">
+      <h1 class="headline">{{HEADLINE}}</h1>
+      <p class="subtext">{{SUBTEXT}}</p>
+      <!-- 출처는 해시태그와 같은 급(.tags) — 가장 작고 옅게 -->
+      <p class="tags">{{CREDIT}}</p>
+    </div>
+  </div>
+</body>
+</html>
