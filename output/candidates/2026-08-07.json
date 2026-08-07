@@ -12,7 +12,9 @@
       "headlineType": "반전형",
       "metric": "저장",
       "reason": "호주 서핑테크 기업 Flowstate가 URBNSURF 시드니·멜버른 등 웨이브파크에 AI 기반 포인트 게임 시스템 'Flowstate Game Modes'를 도입했습니다. 모든 라이딩을 AI가 채점해 실력별 핸디캡 리더보드·주간 대회·업적 시스템으로 연결하는 방식이라, 국내에도 웨이브파크가 늘고 있는 만큼 직접 체감되는 소재입니다. 구체적 게임 4종과 회사 관계자 인용까지 갖춰 정보성이 높아 저장 유도에 적합합니다.",
-      "status": "pending"
+      "status": "producing",
+      "attempts": 1,
+      "slug": "20260807_the-gamification-of-wave-pools"
     },
     {
       "index": 2,
