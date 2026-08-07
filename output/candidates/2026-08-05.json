@@ -24,7 +24,7 @@
       "headlineType": "비교형",
       "metric": "댓글",
       "reason": "2021년 WSL 파이널스 포맷 도입 후 서핑 월드챔피언은 1년 전체 성적이 아니라 시즌 마지막 날 상위 5명이 겨루는 단 하루 승부로 결정됩니다. 이 기사는 테니스가 세계 랭킹 1위와 그랜드슬램 챔피언을 별도로 인정하는 방식을 대안으로 제시하며 '서핑도 이렇게 하면 어떨까'라는 논쟁적 화두를 던집니다. 파이널스 포맷을 둘러싼 팬들의 찬반이 이미 뜨거운 주제라 댓글 반응을 이끌기 좋고, 테니스라는 익숙한 비교 대상 덕분에 비서퍼도 쉽게 이입할 수 있습니다.",
-      "status": "review",
+      "status": "uploaded",
       "attempts": 5,
       "slug": "20260805_why-surfing-should-borrow-tennis",
       "feedback": [
@@ -32,7 +32,9 @@
         "이 사진으로 바꿔줘",
         "사진 화질이 너무 구려. 해상도가 깨지는것 조정좀 해줘"
       ],
-      "lastRecreateMessageId": "310"
+      "lastRecreateMessageId": "310",
+      "imagePermalink": "https://www.instagram.com/p/DbuhTsUlVpW/",
+      "reelPermalink": "https://www.instagram.com/reel/DbuhVl3An0S/"
     },
     {
       "index": 3,
