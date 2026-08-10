@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-11",
+  "generatedAt": "2026-08-11T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Kelly Slater, 54, Dominates 20-Foot Teahupo'o and Schools Kids Half His Age (Video)",
+      "url": "https://www.surfer.com/news/kelly-slater-teahupoo-tahiti-barrel-video",
+      "feed": "surfer.com",
+      "published": "2026-08-10",
+      "topic": "인물/셀럽",
+      "headlineType": "비교형",
+      "metric": "조회수",
+      "reason": "11회 세계챔피언 켈리 슬레이터가 54세 나이로 20피트 테아후포오에서 9.00점 라이딩을 기록하며 23세 엘리 한네만 등 자신의 절반 나이 선수들을 압도했습니다. 나이와 파도 크기라는 두 축의 극적인 대비가 뚜렷해 '54세가 20대 절반을 가르쳤다'는 비교형 헤드라인이 바로 나오고, 슬레이터라는 이름값 자체가 비서퍼에게도 클릭을 유도하는 크로스오버 소재라 조회수에 가장 적합합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Super El Niño Could Unleash Venomous Sea Snakes and Hammerheads on California",
+      "url": "https://www.surfer.com/news/super-el-nino-venomous-sea-snakes-hammerheads",
+      "feed": "surfer.com",
+      "published": "2026-08-10",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "슈퍼 엘니뇨로 캘리포니아 바다 수온이 오르며 맹독을 지닌 노랑배바다뱀과 귀상어까지 북상할 가능성이 제기됐습니다. 1972년 이후 캘리포니아에서 바다뱀이 목격된 사례가 단 5건뿐이고 그중 3건이 2015~16년 엘니뇨 때 몰렸다는 구체적 수치가 있어 사실 밀도가 높고, '내가 아는 바다에 독사가 나타난다'는 경고형 훅이 해양생물 소재 특유의 강한 조회수를 이끕니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Pacific Marine Heatwave Spans Nearly 15% of the Planet",
+      "url": "https://www.surfer.com/news/pacific-marine-heatwave-spans-nearly-15-percent-planet",
+      "feed": "surfer.com",
+      "published": "2026-08-10",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "필리핀·하와이부터 페루·캘리포니아까지 지구 표면의 13.5%, 전 세계 바다의 37%를 뒤덮은 해양열파 '더 블롭'이 연말까지 이어질 전망입니다. 1980년대 9%에서 30% 이상으로 늘었다는 비교 수치와 UCLA 기후학자의 '전례 없는 폭우·폭풍' 경고 인용이 있어 사실 밀도가 높고, 서퍼가 다가올 겨울 이상기후를 대비하도록 저장을 유도하는 수치충격형 훅이 강합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Generations of Core – Martin Potter",
+      "url": "https://tracksmag.com.au/generations-of-core-martin-potter",
+      "feed": "tracksmag.com.au",
+      "published": "2026-08-10",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "1980년대 에어리얼을 개척했지만 대회에서는 외면당했던 마틴 포터가 결국 방식을 바꿔가며 1989년 세계챔피언에 올랐다는 서사가 담겨 있습니다. '반항아가 규칙에 맞춰 우승했다'는 반전형 훅과 숀 톰슨의 회고 인용까지 갖춰 사실 밀도가 높고, 서핑 역사에 관심 있는 팔로워들이 소장하듯 저장할 만한 레거시 콘텐츠입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Where and How Artificial Intelligence Is Coming to Surfing",
+      "url": "https://www.surfer.com/news/how-artificial-intelligence-impact-surfing",
+      "feed": "surfer.com",
+      "published": "2026-08-10",
+      "topic": "씬/담론",
+      "headlineType": "현실폭로형",
+      "metric": "댓글",
+      "reason": "예보(Surf-Forecast 'Rusty')부터 상어 위험도 분석, 웨이브풀 코칭(Flowstate), 로그웨이브 예측까지 AI가 서핑 전 영역에 이미 들어와 있다는 사실을 구체적 사례로 보여줍니다. '나도 모르는 새 서핑에 AI가 이렇게 깊이 들어왔다'는 현실폭로형 훅이 자연스럽고, AI에 대한 호불호가 갈리는 소재라 댓글 논쟁을 유도하기 좋습니다.",
+      "status": "pending"
+    }
+  ]
+}
