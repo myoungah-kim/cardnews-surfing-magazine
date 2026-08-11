@@ -1,0 +1,42 @@
+{
+  "date": "2026-08-12",
+  "generatedAt": "2026-08-12T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Growing up as a surfer in Afghanistan",
+      "url": "https://tracksmag.com.au/growing-up-as-a-surfer-in-afghanistan",
+      "feed": "tracksmag.com.au",
+      "published": "2026-08-11",
+      "topic": "씬/담론",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "바다도 강도 흔치 않은 내륙국 아프가니스탄에 국가대표 서퍼가 있다는 사실 자체가 강한 반전 훅입니다. 카불 출신 아프리둔 아무가 프랑스에서 서핑을 접한 뒤 판지시르 계곡의 눈 녹은 급류에서 리버서핑 프로그램을 만들었고, 지난해 아시안서핑선수권에 아프간 국기를 들고 출전해 올해 아시안게임 출전권까지 땄다는 구체적 서사가 있어 사실 밀도가 높습니다. Tracks의 '~나라에서 서퍼로 자라기' 포맷은 이미 두 차례 카드로 제작된 검증된 소재라 완성도 높은 결과물이 예상됩니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Ben Weiland's Five Rules For Cold Water Surf Exploration",
+      "url": "https://tracksmag.com.au/ben-weilands-five-rules-for-cold-water-surf-exploration",
+      "feed": "tracksmag.com.au",
+      "published": "2026-08-11",
+      "topic": "문화/무비",
+      "headlineType": "리스트형",
+      "metric": "저장",
+      "reason": "콜드워터 서프 탐험 다큐멘터리 감독 벤 와일랜드가 알래스카·캄차카 등 오지를 다니며 얻은 원칙 5가지를 정리한 글로, 숫자+항목 구조가 리스트형 헤드라인으로 바로 이어집니다. 다만 극한 원정 촬영이라는 소재 자체는 국내 서핑 취미 인구와 직접 관련성은 낮아 정보성보다는 동경·저장용 콘텐츠로 접근하는 게 맞습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "'Where Did the Stoke Go?': a heartfelt poem by Zachary Payne",
+      "url": "https://www.surfertoday.com/surfing/where-did-the-stoke-go-surf-poem-zachary-payne",
+      "feed": "surfertoday.com",
+      "published": "2026-08-11",
+      "topic": "문화/무비",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "'설렘은 어디로 갔을까'라는 시 제목 자체가 질문형·공감형 헤드라인으로 바로 쓸 수 있고, 호놀룰루 서프필름페스티벌이라는 구체적 행사와 시인 재커리 페인이 전설적 워터맨 마크 커닝엄에게 즉흥으로 시를 읽어준 일화가 있어 최소한의 사실 골격은 갖췄습니다. 다만 문예 낭독 행사라는 니치하고 감성적인 소재라, 오늘 신규 수집분 중 뉴스성이 부족한 상황을 보완하는 후보로 넣었습니다.",
+      "status": "pending"
+    }
+  ]
+}
