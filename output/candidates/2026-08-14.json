@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-14",
+  "generatedAt": "2026-08-14T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Beach Closed After Lifeguard Dragged Under Water By Shark",
+      "url": "https://www.surfer.com/news/great-white-drags-maine-lifeguard",
+      "feed": "surfer.com",
+      "published": "2026-08-13",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "71세 라이프가드가 부표 수영 중 백상아리에게 구조용 부표를 물려 5피트 아래로 끌려갔다가 스스로 빠져나온 실화로, 본인이 '마이클 펠프스보다 빨랐을 것'이라 말한 생생한 인용까지 확보돼 사실 밀도가 높습니다. 메인주에서 이달 들어 목격 건수가 평소보다 훨씬 많다는 관리관 코멘트까지 있어 '해수욕장이 통째로 폐쇄됐다'는 경고형 훅이 바로 나옵니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Over 5,000 Stingray Wounds Savage Huntington Beach Summer Crowds",
+      "url": "https://www.surfer.com/news/over-5000-stingray-wounds-huntington-beach-summer-crowds",
+      "feed": "surfer.com",
+      "published": "2026-08-13",
+      "topic": "해양생물",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "헌팅턴비치 한 곳에서만 2026년 여름 스팅레이 부상이 3,100건을 넘어 작년 한 해 전체의 두 배를 이미 넘겼다는 구체적 수치가 확보됩니다. '스팅레이 셔플'이라는 실용적 예방법까지 기사에 담겨 있어 저장을 노리기 좋고, 수온 상승이라는 원인까지 짚어줘 육하원칙이 잘 채워집니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "The Paddle-In Big Wave World Championship Is Back After Five Years — And It's Heading to Brazil",
+      "url": "https://www.surfer.com/news/big-wave-world-championship-returns-laje-da-jagua-brazil",
+      "feed": "surfer.com",
+      "published": "2026-08-12",
+      "topic": "파도/스펙터클",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "5년 만에 부활한 패들인 빅웨이브 챔피언십이 나자레도 마브릭스도 아닌, 브라질 남부의 이름조차 생소한 슬랩 라제 지 자구아에서 열립니다. 트위기 베이커·카이 레니·저스틴 뒤퐁 등 18명의 최정상급 라인업과, 2006년 그 파도를 타다 세상을 떠난 브라질 서퍼 제카 셰퍼를 기리는 헌정 성격까지 갖춰 사실 밀도가 높습니다. 어제 후보 1번으로 올랐으나 제작으로 이어지지 않아 오늘 다시 추천합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Africa's Surfing Movement Gets Another Boost From Zimbabwe",
+      "url": "https://www.surfer.com/news/africas-surfing-movement-gets-another-boost-from-zimbabwe",
+      "feed": "surfer.com",
+      "published": "2026-08-12",
+      "topic": "씬/담론",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "바다가 없는 짐바브웨가 국제서핑협회(ISA)의 120번째 회원국이자 21번째 아프리카 회원국으로 가입했다는 구체적 숫자가 바로 수치충격형 헤드라인으로 이어집니다. 잠베지강 리버 웨이브에서 훈련해온 마르첼로 제데가 2026 ISA 주니어 세계선수권에 출전할 예정이라는 실명·구체적 사실도 확보했습니다. 어제 후보 3번으로 올랐으나 제작되지 않아 오늘 다시 추천합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Watch: Youth Is A Moving Target",
+      "url": "https://stabmag.com/elsewhere/watch-youth-is-a-moving-target/",
+      "feed": "stabmag.com",
+      "published": "2026-08-12",
+      "topic": "문화/무비",
+      "headlineType": "비교형",
+      "metric": "저장",
+      "reason": "퀵실버가 20년 전 클레이 마조·줄리안 윌슨을 스타로 키운 팀 필름 '영 건스'를 그대로 재현해 리오 와이다·카노아 이가라시·케후 버틀러 등 현재 톱랭커들로 새로 찍었다는 비교형 훅이 명확합니다. 19세 날루 데오다토가 '가장 오리지널 취지에 부합하는 신인'으로 꼽히고 37세 제레미 플로레스가 최고령 영 건 기록을 새로 썼다는 세대 비교 요소도 풍부합니다. 어제 후보 4번으로 올랐으나 제작되지 않아 오늘 다시 추천합니다.",
+      "status": "pending"
+    }
+  ]
+}
