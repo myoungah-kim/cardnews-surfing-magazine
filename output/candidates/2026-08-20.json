@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-20",
+  "generatedAt": "2026-08-20T07:30:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "A New Made-For-TV Surf League Just Launched In Australia",
+      "url": "https://www.surfer.com/news/surfing-gets-new-pro-league",
+      "feed": "surfer.com",
+      "published": "2026-08-18",
+      "topic": "씬/담론",
+      "headlineType": "반전형",
+      "metric": "댓글",
+      "reason": "느긋한 저지 판정 방식을 버리고 90분 고정 시계 안에서 팀 릴레이로 싸우는 8팀 체제의 '서핑 슈퍼리그'가 호주에서 실제로 출범했습니다. 남녀 선수 전원 동일 연봉(1인당 8주 시즌 8만9천 달러)이라는 파격 조건까지 있어, WSL 롱보드·테니스식 랭킹 등 앞서 다룬 대회 포맷 논쟁 시리즈의 정점으로 댓글 유도가 강합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Pristine Waters, Timeless Style, and Canada's Coolest Surf Contest",
+      "url": "https://www.surfer.com/news/pristine-waters-timeless-style-and-canadas-coolest-surf-contest",
+      "feed": "surfer.com",
+      "published": "2026-08-19",
+      "topic": "인물/셀럽",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "세 번의 발목 수술을 겪은 에이미 시미즈가 보드에 다시 오른 지 단 2주 만에 밴쿠버 아일랜드 롱보드 클래식 마스터스 여자부에서 우승했습니다. 회복 불가 판정을 뒤집었다는 서사가 뚜렷한 공감형 훅이라 저장을 유도하기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "$60 Million Arizona Wave Pool Wipes Out As Partner Kicks Out",
+      "url": "https://www.surfer.com/news/gilbert-arizona-surf-park-developer-walks-away-wave-pool",
+      "feed": "surfer.com",
+      "published": "2026-08-18",
+      "topic": "안전/시설",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "2019년 착공 발표 이후 이름·소유주가 바뀌고 개장이 몇 차례 밀리던 6천만 달러 사막 파도풀이, 개발사 화이트워터 웨스트가 손을 떼면서 6년 만에 좌초됐습니다. 물 사용량 60% 절감 재설계까지 했음에도 무산됐다는 점이 웨이브파크에 관심 많은 한국 서퍼들에게 강한 궁금증을 자극합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "$100,000 Up For Grabs For Surviving 2026's Biggest Waves",
+      "url": "https://www.surfer.com/news/2026-big-wave-challenge-nominees-announced",
+      "feed": "surfer.com",
+      "published": "2026-08-19",
+      "topic": "파도/스펙터클",
+      "headlineType": "리스트형",
+      "metric": "조회수",
+      "reason": "2026 빅웨이브 챌린지 노미네이트가 발표됐고, 시상식은 9월 19일 뉴포트비치에서 10만 달러 이상 상금을 걸고 열립니다. 남자 최대 파도 부문 후보 전원이 포르투갈 프라이아 두 노르테(나자레) 출신으로 쏠렸다는 점이 스펙터클과 화제성을 동시에 제공합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "How Asymmetrical Surfboards Went From Curiosity to CT-Approved",
+      "url": "https://www.surfer.com/culture/asymmetrical-surfboards-explained",
+      "feed": "surfer.com",
+      "published": "2026-08-18",
+      "topic": "기어/어워드",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "몇 년 전만 해도 이상하게 생겼다는 취급을 받던 좌우 비대칭 보드가 스테프 길모어·케이티 시머스 등 CT 선수들의 선택을 받으며 주류로 편입되고 있습니다. 발끝·뒤꿈치 레일 길이를 다르게 만든다는 명확한 원리가 있어 장비에 관심 많은 실서퍼 독자층의 저장을 노릴 수 있습니다.",
+      "status": "pending"
+    }
+  ]
+}
