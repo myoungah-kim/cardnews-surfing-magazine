@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-21",
+  "generatedAt": "2026-08-21T07:30:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "200,000 Barrels of Radioactive Waste Under the Sea",
+      "url": "https://www.surfer.com/news/200000-barrels-of-radioactive-waste-underwater-ocean",
+      "feed": "surfer.com",
+      "published": "2026-08-20",
+      "topic": "환경",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "3마일 깊이 북대서양 바닥의 방사성 폐기물 통 위에서 게·말미잘 등 생명체가 번성하고 있다는 사실이 프랑스 연구팀 조사로 확인됐습니다. '핵폐기물 = 죽음의 지대'라는 통념을 뒤집는 반전형 훅에 3,355개 통, 15,400피트 심해 같은 구체적 수치가 더해져 비서퍼도 궁금해할 크로스오버 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Two 16-Year-Olds Crowned Rip Curl Cup Padang Padang Champs",
+      "url": "https://www.surfer.com/news/two-16-year-olds-crowned-rip-curl-cup-padang-padang-champs",
+      "feed": "surfer.com",
+      "published": "2026-08-20",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "인도네시아 파당파당 립컬컵에서 16세인 루시 대러와 라조 사푸트라가 나란히 우승했고, 사푸트라는 20년 전 같은 대회 준우승자였던 아버지의 대를 이었습니다. 어린 나이에 어른들을 제친 반전 포인트와 부자 서사가 겹쳐 저장·공유를 유도하기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "We Brought In Two Proper Heavyweights For Our Surf100 Finale",
+      "url": "https://stabmag.com/features/we-brought-in-two-proper-heavyweights-for-our-surf100-finale/",
+      "feed": "stabmag.com",
+      "published": "2026-08-20",
+      "topic": "씬/담론",
+      "headlineType": "비교형",
+      "metric": "댓글",
+      "reason": "2012년 세계챔피언 조엘 파킨슨(45)이 스탭매거진의 신생 포맷 'Surf100' 파이널에 와일드카드로 합류해 자유서핑 반란아 노아 딘과 맞붙습니다. 경쟁 시대와 프리서핑 시대의 상징이 붙는 비교 구도가 뚜렷해 논쟁·댓글을 유도하기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Pristine Waters, Timeless Style, and Canada's Coolest Surf Contest",
+      "url": "https://www.surfer.com/news/pristine-waters-timeless-style-and-canadas-coolest-surf-contest",
+      "feed": "surfer.com",
+      "published": "2026-08-19",
+      "topic": "인물/셀럽",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "캐나다 밴쿠버 아일랜드 롱보드 클래식에서 발목을 세 차례 수술한 에이미 시미즈가 복귀 2주 만에 마스터스 여자부 우승을 차지했습니다. 의사도 예전처럼은 못 탈 거라 했다는 본인 인용이 있어 부상에서 돌아온 서퍼 독자층의 공감·저장을 노릴 수 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "$60 Million Arizona Wave Pool Wipes Out As Partner Kicks Out",
+      "url": "https://www.surfer.com/news/gilbert-arizona-surf-park-developer-walks-away-wave-pool",
+      "feed": "surfer.com",
+      "published": "2026-08-18",
+      "topic": "안전/시설",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "2019년 착공 발표 이후 이름과 소유주가 여러 번 바뀌던 애리조나 길버트의 6천만 달러 웨이브파크가 개발사가 손을 떼며 사실상 무산됐습니다. 물 사용량을 60% 줄인 재설계까지 마쳤음에도 좌초한 구체적 수치 기반 실패담이라 조회수·댓글을 동시에 기대할 수 있습니다.",
+      "status": "pending"
+    }
+  ]
+}
