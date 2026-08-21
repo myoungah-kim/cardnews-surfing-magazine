@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-22",
+  "generatedAt": "2026-08-22T07:30:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "200,000 Barrels of Radioactive Waste Under the Sea",
+      "url": "https://www.surfer.com/news/200000-barrels-of-radioactive-waste-underwater-ocean",
+      "feed": "surfer.com",
+      "published": "2026-08-20",
+      "topic": "환경",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "프랑스 연구팀이 북대서양 3마일 심해에 가라앉은 핵폐기물 통 3,355개 위에서 게와 말미잘 등 생명체가 번성하고 있는 것을 확인했습니다. '방사성 폐기물=죽음의 지대'라는 통념을 뒤집는 반전형 훅에 구체적 수치(3,355개 통, 15,400피트 심해)가 더해져 비서퍼도 궁금해할 크로스오버 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "How A Robot Rebuilt Kelly Slater's Hip -- Then He Stormed Teahupo'o",
+      "url": "https://www.surfer.com/news/how-a-robot-rebuilt-kelly-slaters-hip-then-he-stormed-teahupoo",
+      "feed": "surfer.com",
+      "published": "2026-08-21",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "54세 켈리 슬레이터가 9개월 전 로봇 팔을 이용한 엉덩이 수술을 받고도 테아후포오에서 19.06점의 거의 완벽한 라이딩을 선보였습니다. '나이 들면 은퇴'라는 통념을 뒤집는 반전 서사에 로봇 수술이라는 구체적 기술 디테일까지 있어 저장·공유하고 싶은 회복 스토리입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Why British Surfing Is Shit(e)",
+      "url": "https://stabmag.com/news/why-british-surfing-is-shite/",
+      "feed": "stabmag.com",
+      "published": "2026-08-21",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "영국 서퍼 인구가 크리켓 선수보다 많을 정도로 커졌지만, 대표 프로 루시 캠벨과 루카스 스키너는 빅토리아 시대에 깔린 낡은 하수관 때문에 매 시즌 오수 속에서 서핑한다고 증언합니다. 사우스웨스트워터가 지난해에만 20만 시간 분량의 하수를 바다에 방류했다는 구체적 수치와 실명 인용이 있어 경고형 훅으로 조회수·댓글을 동시에 노릴 수 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Two 16-Year-Olds Crowned Rip Curl Cup Padang Padang Champs",
+      "url": "https://www.surfer.com/news/two-16-year-olds-crowned-rip-curl-cup-padang-padang-champs",
+      "feed": "surfer.com",
+      "published": "2026-08-20",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "인도네시아 립컬컵 파당파당에서 16세 두 명, 호주의 루시 대러와 현지 서퍼 라조 사푸트라가 나란히 우승을 차지했습니다. 사푸트라는 라운드2와 파이널에서 각각 퍼펙트 10점을 받으며 디펜딩 챔피언을 제쳤고, '어젯밤 우승하는 꿈을 꿨다'는 인용까지 있어 어린 나이에 어른들을 이긴 반전 포인트가 저장·공유를 유도합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "We Brought In Two Proper Heavyweights For Our Surf100 Finale",
+      "url": "https://stabmag.com/features/we-brought-in-two-proper-heavyweights-for-our-surf100-finale/",
+      "feed": "stabmag.com",
+      "published": "2026-08-20",
+      "topic": "씬/담론",
+      "headlineType": "비교형",
+      "metric": "댓글",
+      "reason": "스탭매거진의 신생 포맷 'Surf100' 파이널에 2012년 세계챔피언 조엘 파킨슨(45)이 와일드카드로 합류해 자유서핑의 반란아 노아 딘과 맞붙습니다. 경쟁 시대의 완성형 챔피언과 프리서핑 시대의 상징이 붙는 뚜렷한 비교 구도라 '누가 이길지' 논쟁·댓글을 유도하기 좋습니다.",
+      "status": "pending"
+    }
+  ]
+}
