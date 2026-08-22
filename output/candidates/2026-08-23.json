@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-23",
+  "generatedAt": "2026-08-23T07:30:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "How A Robot Rebuilt Kelly Slater's Hip -- Then He Stormed Teahupo'o",
+      "url": "https://www.surfer.com/news/how-a-robot-rebuilt-kelly-slaters-hip-then-he-stormed-teahupoo",
+      "feed": "surfer.com",
+      "published": "2026-08-21",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "54세 켈리 슬레이터가 로봇 팔로 엉덩이 관절을 재건하는 수술을 받은 지 9개월 만에 테아후포오에서 19.06점의 완벽에 가까운 라이딩을 선보였습니다. '나이 들면 은퇴'라는 통념을 뒤집는 반전 서사에 담당의(제이슨 스니브)의 수술 방식까지 구체적으로 나와, 저장·공유를 부르는 회복 스토리입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Why British Surfing Is Shit(e)",
+      "url": "https://stabmag.com/news/why-british-surfing-is-shite/",
+      "feed": "stabmag.com",
+      "published": "2026-08-21",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "영국 대표 프로 루시 캠벨과 루카스 스키너가 빅토리아 시대에 깔린 낡은 하수관 때문에 매 시즌 오수 속에서 서핑한다고 증언합니다. 사우스웨스트워터가 2025년 한 해에만 96,000건(20만 시간 분량)의 오수를 방류하고도 2400만 파운드 벌금에 그쳤다는 구체적 수치가 있어 경고형 훅으로 조회수·댓글을 동시에 노릴 수 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Record-Breaking El Niño Poised to Supercharge Hawaii and West Coast Winter Surf",
+      "url": "https://www.surfer.com/news/record-breaking-el-nino-surf-impact",
+      "feed": "surfer.com",
+      "published": "2026-08-21",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "NOAA 데이터 기준 올해 엘니뇨가 역대 최강이 될 확률이 70%이며, 태평양 해수온 상승폭이 1980년대 최강 엘니뇨(2.4도)를 넘는 3.5도로 예측됩니다. 하와이·캘리포니아 겨울 서핑 시즌에 초대형 스웰과 해안 침식을 동시에 가져오는 수치 기반 소재로, 시즌 전망을 궁금해하는 서퍼들의 조회수를 노릴 수 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Newquay Surfers Plot Mass Paddle to Smash World Record in September",
+      "url": "https://www.surfer.com/news/newquay-surfers-world-record-attempt",
+      "feed": "surfer.com",
+      "published": "2026-08-21",
+      "topic": "씬/담론",
+      "headlineType": "결과암시형",
+      "metric": "댓글",
+      "reason": "영국 뉴키의 어스웨이브 팀이 2009년 자신들이 세운 '같은 파도 111명 동시 라이딩' 세계기록에 9월 19일 재도전합니다. 70명에서 110명까지 매년 인원을 늘려온 도전 역사와 구체적 일정이 있어, 기네스 기록이라는 보편적 흥미 포인트로 비서퍼 댓글 반응까지 끌어낼 수 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Watch BLACKBALL: The Hardcore World of Wedge Bodysurfing",
+      "url": "https://stabmag.com/stabcinema/hold-up-theres-actually-some-fucking-cool-shit-happening-here/",
+      "feed": "stabmag.com",
+      "published": "2026-08-21",
+      "topic": "문화/무비",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "전 필름메이커 마이클 커가 서프보드 없이 맨몸으로 거대한 파도에 뛰어드는 '더 웨지' 바디서핑 커뮤니티를 다큐멘터리로 담았습니다. 블랙볼 깃발이 오르면 서퍼들이 바다를 비워주는 독특한 룰과 '니치하고 이상하지만 존나 멋있다'는 실제 인터뷰 인용이 있어, 낯설지만 매력적인 서핑 문화 단면을 보여줍니다.",
+      "status": "pending"
+    }
+  ]
+}
