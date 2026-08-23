@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-24",
+  "generatedAt": "2026-08-24T07:30:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Surfing Super League: how Australia's new team competition works",
+      "url": "https://www.surfertoday.com/surfing/surfing-super-league-team-competition",
+      "feed": "surfertoday.com",
+      "published": "2026-08-19",
+      "topic": "씬/담론",
+      "headlineType": "비교형",
+      "metric": "조회수",
+      "reason": "세계서핑리그(WSL)의 개인전 방식과 정반대로, 2028년 여름 호주에서 4인 1팀 릴레이 방식의 '서핑 슈퍼리그(SSL)'가 출범합니다. 90분 게임, 8개 지역 팀, '로열티·엘리트·와일드카드·프리서퍼' 4단계 선수 구성 등 구체적 룰이 있어 '이게 서핑 맞아?' 논쟁을 부를 비교형 훅이 명확합니다. 오언 라이트 같은 익숙한 이름이 예시로 등장해 찬반 반응과 조회수를 동시에 노릴 수 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "$100,000 Up For Grabs For Surviving 2026's Biggest Waves",
+      "url": "https://www.surfer.com/news/2026-big-wave-challenge-nominees-announced",
+      "feed": "surfer.com",
+      "published": "2026-08-19",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "26회째를 맞는 빅웨이브 챌린지가 9월 19일 미국 뉴포트비치에서 시상식을 열며 10만 달러 이상의 상금을 겁니다. 파이프라인·마베릭스 같은 전통 스팟 대신 테아후포오와 물라그모어 헤드가 '올해의 라이딩' 후보를 싹쓸이했다는 반전 포인트가 있어 수치충격형 헤드라인이 바로 나옵니다. 저스틴 뒤퐁·루카스 시앙카 등 실명 후보와 시상 부문이 구체적이라 조회수를 노리기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Owen Wright Seeks Fertile Ground in Rote",
+      "url": "https://tracksmag.com.au/owen-wright-seeks-fertile-ground-in-rote",
+      "feed": "tracksmag.com.au",
+      "published": "2026-08-20",
+      "topic": "인물/셀럽",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "올림픽 동메달리스트 오언 라이트가 서프에이드 앰버서더로 인도네시아 로테 섬을 찾아, 3년째 채소를 사지 않고도 자급자족하는 현지 주민 마마 마르가리타 하를 만난 이야기입니다. '직접 와서 보는 건 완전히 다르다'는 담백한 인용과 구체적 성과(2021년 이후 360만 달러 이상 모금)가 있어 서핑을 넘어선 선한 영향력 스토리로 저장·공유를 부릅니다. 익숙한 스타 선수가 등장해 접근성도 높습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "5 Terrifying Deep-Sea Discoveries That Look Straight-Up Alien",
+      "url": "https://www.surfer.com/news/terrifying-deep-sea-ocean-discoveries",
+      "feed": "surfer.com",
+      "published": "2026-08-22",
+      "topic": "해양생물",
+      "headlineType": "리스트형",
+      "metric": "저장",
+      "reason": "최근 심해 탐사에서 새로 발견된 약 1,100종의 해양생물 중 살아있는 먹이를 소화하는 '데스볼 스펀지', 4억 년 전 갈라져 나온 '고스트 샤크' 등 5가지 기괴한 생물을 리스트로 정리했습니다. 서퍼라면 한 번쯤 상상해본 '내가 서핑하는 바다 밑에 뭐가 있을까'라는 궁금증을 정확히 건드리는 리스트형 훅이라 저장 유도에 적합합니다. 수심·크기·발견 지역 등 항목별 구체적 수치가 있어 사실 밀도도 충분합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Watch BLACKBALL: The Hardcore World of Wedge Bodysurfing",
+      "url": "https://stabmag.com/stabcinema/hold-up-theres-actually-some-fucking-cool-shit-happening-here/",
+      "feed": "stabmag.com",
+      "published": "2026-08-21",
+      "topic": "문화/무비",
+      "headlineType": "현실폭로형",
+      "metric": "조회수",
+      "reason": "전직 필름메이커 마이클 커가 서프보드 없이 맨몸으로 거대한 파도에 뛰어드는 캘리포니아 '더 웨지' 바디서핑 커뮤니티를 다큐멘터리로 담았습니다. 블랙볼 깃발이 오르면 서퍼들이 자리를 비켜주는 독특한 룰과 '니치하고 이상하지만 존나 멋있다'는 실제 인터뷰 인용이 있어, 존재조차 몰랐던 서핑 문화의 이면을 폭로하는 현실폭로형 훅이 강합니다. 낯선 서브컬처 공개는 조회수를 끌기 좋은 소재입니다.",
+      "status": "pending"
+    }
+  ]
+}
