@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-26",
+  "generatedAt": "2026-08-26T07:30:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Stab Interview: Shane Dorian Doesn't Want to Want Jaws Anymore",
+      "url": "https://stabmag.com/features/shane-dorian-doesnt-want-to-want-jaws-anymore/",
+      "feed": "stabmag.com",
+      "published": "2026-08-25",
+      "topic": "인물/셀럽",
+      "headlineType": "선언형",
+      "metric": "저장",
+      "reason": "54세 빅웨이브 레전드 쇼반 도리안이 60피트 제이스를 더 이상 타지 않기로 스스로 정했다는 인터뷰입니다. \"제이스는 사랑하지만 그 파도들은 더 이상 원하지 않는다, 보상이 위험을 감당할 만큼 크지 않다\"는 인용이 강력한 선언형 훅이고, 브록 리틀의 죽음까지 언급하며 나이듦·두려움·은퇴 기준을 솔직하게 다뤄 30~50대 서퍼가 많은 타겟층에 깊은 공감과 저장을 유발합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "The Pilot Who May Have Saved This Great Barrier Reef Wave",
+      "url": "https://www.surfer.com/news/pilot-saved-great-barrier-reef-wave",
+      "feed": "surfer.com",
+      "published": "2026-08-25",
+      "topic": "환경",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "1969년 호주 조종사 돈 애덤스가 구아노 채굴로 황폐해진 111에이커 산호섬(레이디 엘리엇 아일랜드)에 나무를 심고 물을 실어 날라 생태계를 되살렸고, 반세기 뒤 그 섬 동쪽엔 파도가 몰아치는 서프 스팟이 생겼습니다. 환경 복원이 서핑 스팟 탄생으로 이어졌다는 흔치 않은 반전형 서사라 비서퍼 크로스오버 공유까지 기대할 수 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "The Ocean Is Hotter Than It's Ever Been",
+      "url": "https://www.surfer.com/news/ocean-record-breaking-hottest-recorded-history",
+      "feed": "surfer.com",
+      "published": "2026-08-25",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "코페르니쿠스 기후 서비스에 따르면 극지방을 제외한 지구 평균 해수면 온도가 21.1도(화씨 70도)로 2024년 기록(21.09도)을 갈아치웠습니다. \"엘니뇨가 수십 년간의 인위적 온난화 위에 열을 더하고 있다\"는 경고와 함께 캘리포니아 명물 서프 스팟의 침식 위협까지 구체적으로 짚어 수치충격형 훅과 한국 독자의 기후 위기 공감을 동시에 확보합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Tommy Myers' Winter Travel Diaries: Navigating steps at Shipstern Bluff and nursing injury",
+      "url": "https://tracksmag.com.au/tommy-myers-winter-travel-diaries-navigating-steps-at-shipstern-bluff-and-nursing-injury",
+      "feed": "tracksmag.com.au",
+      "published": "2026-08-25",
+      "topic": "안전/시설",
+      "headlineType": "경고형",
+      "metric": "댓글",
+      "reason": "시드니 서퍼 토미 마이어스가 두 달 만에 재개한 태즈메이니아 십스턴 블러프 세션에서 SNS에 퍼진 파도를 잡았지만, 그 대가로 발목 부상이 악화돼 연말까지 시즌아웃 위기에 놓였습니다. \"발목이 서 있는 것 말고는 아무것도 허락하지 않았다\"는 본인 인용이 직관적인 경고형 훅이고, 위험을 감수한 대가라는 공감 가능한 딜레마라 댓글 반응을 유도하기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Gabriela Bryan on Carissa Moore, Fiji and Being No. 1 in the World",
+      "url": "https://www.surfer.com/news/gabriela-bryan-interview-carissa-moore-fiji-number-1-world",
+      "feed": "surfer.com",
+      "published": "2026-08-25",
+      "topic": "인물/셀럽",
+      "headlineType": "비교형",
+      "metric": "팔로우",
+      "reason": "세계랭킹 1위 가브리엘라 브라이언이 피지프로에서 어릴 적 우상이던 5회 세계챔피언 캐리사 무어(2위)와 숙소·보트를 함께 쓰는 절친이 됐다는 인터뷰입니다. \"다른 종목에서 세계 1·2위가 이렇게 낄낄대며 노는 경우가 있겠냐\"는 캐리사의 농담 인용이 비교형 훅을 완성하고, 피지프로가 오늘(8/26) 개막할 만큼 시의성도 최고입니다.",
+      "status": "pending"
+    }
+  ]
+}
