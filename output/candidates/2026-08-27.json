@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-27",
+  "generatedAt": "2026-08-27T07:30:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "The World's Oceans Are OD'ing On Weed",
+      "url": "https://www.surfer.com/news/world-oceans-oding-on-weed-sargassum",
+      "feed": "surfer.com",
+      "published": "2026-08-26",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "사우스플로리다대 연구진이 AI로 2003~2022년 위성사진을 분석한 결과, 열대 대서양·서태평양 등 13개 해역의 떠다니는 해조류(사르가숨)가 매년 13.4%씩 늘어 누적 면적이 아시아 대륙보다 큰 1,690만 제곱마일에 달했습니다. 마이애미는 해조류 제거에만 연 900만 달러를 쓰고 툴룸 인근 식당 매출은 60%까지 줄었다는 구체적 수치가 있어 수치충격형 훅이 확실하고, 기후 위기 소재라 공유·논쟁을 부르는 조회수형 콘텐츠입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Was That Surfing's First Universal 10-Point Ride?",
+      "url": "https://stabmag.com/features/was-that-surfings-first-universal-10-point-ride/",
+      "feed": "stabmag.com",
+      "published": "2026-08-26",
+      "topic": "씬/담론",
+      "headlineType": "질문형",
+      "metric": "팔로우",
+      "reason": "피지프로 첫날 클라우드브레이크에서 캐나다 신예 에린 브룩스가 받은 퍼펙트 10점이 '성별 구분 없이 동일한 기준으로 매겨진 서핑 역사상 최초의 만점'일 수 있다는 스탭매그의 현장 분석입니다. 만점이라는 수치충격과 '역사상 최초'라는 반전이 겹쳐 질문형 헤드라인이 자연스럽고, 떠오르는 신예의 서사라 팔로우 유도에 유리합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Koa Smith Gets Tangled With Bystander At Maxing Indonesian Reef Pass",
+      "url": "https://stabmag.com/stabcinema/koa-smith-gets-tangled-with-bystander-at-maxing-indonesian-reef-pass/",
+      "feed": "stabmag.com",
+      "published": "2026-08-26",
+      "topic": "안전/시설",
+      "headlineType": "경고형",
+      "metric": "댓글",
+      "reason": "수마트라의 크라우드로 가득한 리프 패스에 대형 스웰이 들어온 날, 코아 스미스가 클린업 세트를 피하려다 다른 서퍼의 보드·리쉬와 엉키는 아찔한 순간이 그의 1인칭 브이로그에 그대로 담겼습니다. 붐비는 헤비 라인업에서 실제로 벌어질 수 있는 위험을 생생하게 보여줘 경고형 훅이 뚜렷하고, '나도 저런 적 있다'는 공감 댓글을 끌기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "This Has To Be The Most Perfect Boat Wake Ever Surfed",
+      "url": "https://www.surfer.com/culture/most-perfect-boat-wake-ever-surfed",
+      "feed": "surfer.com",
+      "published": "2026-08-25",
+      "topic": "파도/스펙터클",
+      "headlineType": "비교형",
+      "metric": "저장",
+      "reason": "벤 그레이비가 태평양 연안 페리의 항적(wake)이 켈리 슬레이터의 웨이브풀급으로 완벽하게 말리는 순간을 찾아내 서핑한 영상입니다. 배·조류·바람·해저 지형이 딱 맞아떨어져야만 나오는 '있어서는 안 될 파도'라는 반전 요소와 웨이브풀 비교가 비교형 훅을 만들고, 흔치 않은 스팟이라 저장해서 다시 보고 싶게 만듭니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Huge Rattlesnake Makes Unusual Appearance at Orange County Beach (Video)",
+      "url": "https://www.surfer.com/news/huge-rattlesnake-makes-unusual-appearance-at-orange-county-beach-video",
+      "feed": "surfer.com",
+      "published": "2026-08-26",
+      "topic": "해양생물",
+      "headlineType": "반전형",
+      "metric": "댓글",
+      "reason": "뉴포트비치 크리스탈 코브 해변에서 코미디언 니키 패리스가 모래사장을 가로지르는 대형 방울뱀과 마주친 영상이 화제입니다. 발가락이 '간지럽다'고 느껴 내려다보니 뱀이었다는 본인 인용과, 서식지가 겹치는 캘리포니아 해변에서 종종 벌어지는 일이라는 당국 코멘트가 있어 파도 대신 뭍의 위험을 경고하는 반전형 훅이 되고, 예상외의 목격담이라 댓글 반응을 끌기 좋습니다.",
+      "status": "pending"
+    }
+  ]
+}
