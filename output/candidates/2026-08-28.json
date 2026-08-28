@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-28",
+  "generatedAt": "2026-08-28T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "New school surfers claim the 2026 Rip Curl Cup Padang Padang",
+      "url": "https://www.surfertoday.com/surfing/rajo-saputra-lucy-darragh-win-rip-curl-cup-2026",
+      "feed": "surfertoday.com",
+      "published": "2026-08-24",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "인도네시아 파당파당에서 열린 립컬컵에서 라조 사푸트라가 퍼펙트 10점을 두 번이나 받으며 우승했는데, 그의 아버지가 2006년 바로 이 대회에서 준우승했다는 사실이 알려지며 20년 만의 반전 서사가 완성됐습니다. 16세 루시 다라도 여자부에서 우승하며 세대교체를 보여줬고, 완벽한 배럴 라이딩이라 카드 이미지로도 강력합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Carissa Moore Takes Over World Number One Ranking",
+      "url": "https://www.surfer.com/news/carissa-moore-new-world-number-one-ranking",
+      "feed": "surfer.com",
+      "published": "2026-08-27",
+      "topic": "인물/셀럽",
+      "headlineType": "공감형",
+      "metric": "팔로우",
+      "reason": "2024 파리올림픽 이후 출산을 위해 투어를 떠났던 5회 세계챔피언 캐리사 무어가 피지프로에서 랭킹 1위 자리를 탈환했습니다. 가족과 함께 지내며 '휴가처럼' 대회를 치른다는 이야기와 올림픽 금메달·5회 우승 이력이 겹쳐 있어 팔로우 전환에 유리한 인물 서사입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Good Day To Be A Goof (Or A Griff)",
+      "url": "https://stabmag.com/news/good-day-to-be-a-goof-or-a-griff/",
+      "feed": "stabmag.com",
+      "published": "2026-08-27",
+      "topic": "씬/담론",
+      "headlineType": "현실폭로형",
+      "metric": "댓글",
+      "reason": "피지프로 라운드2에서 구피풋 서퍼들이 모든 매치업을 싹쓸이한 가운데, 타바루아 리조트에서 한 방을 쓰는 선수들이 몇 시간 뒤 물속에서 서로를 눌러야 했다는 아이러니가 화제입니다. 이탈로 페레이라 얼굴 부상, 스트라이더 손목 골절 등 하루에 부상자가 속출한 사실까지 더해져 댓글을 부를 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Will Australian Fans Embrace the Surfing Super League?",
+      "url": "https://tracksmag.com.au/will-australian-fans-embrace-the-surfing-super-league",
+      "feed": "tracksmag.com.au",
+      "published": "2026-08-24",
+      "topic": "씬/담론",
+      "headlineType": "비교형",
+      "metric": "조회수",
+      "reason": "2028년 출범 예정인 서핑 슈퍼리그가 크리켓 빅배시·IPL을 벤치마킹해 8개 팀이 유니폼을 입고 스타디움에서 팀전으로 경쟁하는 방식을 공개했습니다. 선수 연봉 8만9천 달러, 프랜차이즈 매각 계획 등 구체적 수치가 있고 '서핑에 유니폼과 홈구장이 생긴다'는 낯선 그림이 논쟁과 조회수를 부를 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Demolition of Historic Cape Hatteras Lighthouse Underway",
+      "url": "https://www.surfer.com/news/demolition-of-historic-cape-hatteras-lighthouse-underway",
+      "feed": "surfer.com",
+      "published": "2026-08-27",
+      "topic": "환경",
+      "headlineType": "결과암시형",
+      "metric": "저장",
+      "reason": "미국 동부 최고의 서핑 스팟으로 꼽히던 케이프 해터러스 라이트하우스의 방파제가 이번 주 철거되기 시작했습니다. 1971년부터 이어진 대회 역사와 '세대마다 다른 전성기를 기억한다'는 현지 서퍼 브렛 발리의 인터뷰가 있어 사실 밀도가 높고, 파도가 앞으로 어떻게 바뀔지 모른다는 여운이 저장을 부릅니다.",
+      "status": "pending"
+    }
+  ]
+}
