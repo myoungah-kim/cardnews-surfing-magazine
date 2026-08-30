@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-30",
+  "generatedAt": "2026-08-30T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Norway's New King Confesses His Real Dream Was Pro Surfing",
+      "url": "https://www.surfer.com/news/norway-new-king-pro-surfer-dream",
+      "feed": "surfer.com",
+      "published": "2026-08-28",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "팔로우",
+      "reason": "노르웨이의 새 국왕 호콘 8세가 인터뷰에서 왕위만 아니었다면 프로 서핑 월드투어에 뛰어들었을 거라고 고백했습니다. 왕실 전체가 서핑을 즐기는 것으로 알려져 있고 로포텐 같은 콜드워터 명소까지 이어지는 이야기라, 서핑을 모르는 사람도 클릭할 크로스오버 소재입니다. 아직 카드로 제작되지 않아 이번 회차에도 이어갑니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Endless Surf, Flowstate Team Up On AI-Powered Wave Pool Tech",
+      "url": "https://www.surfer.com/news/endless-surf-unveils-ai-powered-flowstate-technology-next-generation-wave-pools",
+      "feed": "surfer.com",
+      "published": "2026-08-28",
+      "topic": "안전/시설",
+      "headlineType": "질문형",
+      "metric": "저장",
+      "reason": "엔들리스 서프와 플로우스테이트가 컴퓨터 비전으로 서퍼 개개인을 인식해 같은 세션에서도 실력별로 다른 파도를 주는 '더 믹스테이프' 시스템을 공개했습니다. 한국에도 웨이브파크가 있어 실력 차이 나는 친구와 함께 타기 애매했던 문제를 정면으로 짚는 소재라 저장 유도가 강합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "The World's Oceans Are OD'ing On Weed",
+      "url": "https://www.surfer.com/news/world-oceans-oding-on-weed-sargassum",
+      "feed": "surfer.com",
+      "published": "2026-08-26",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "사우스플로리다대 연구팀이 20년치 위성사진 120만 장을 AI로 분석한 결과, 열대 대서양·서태평양의 대형 해조류(사르가숨)가 연 13.4%씩 불어나 이제 아시아 대륙보다 넓어졌다는 결론을 냈습니다. 카리브해·플로리다 서프 스팟까지 냄새와 관광 손실로 번지는 구체적 수치가 있어 조회수를 부를 만합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Surfers of North East England Reveal the Hidden Heart of the Cold Water Coastline",
+      "url": "https://www.surfer.com/culture/north-sea-uk-cold-water-surf",
+      "feed": "surfer.com",
+      "published": "2026-08-29",
+      "topic": "문화/무비",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "영하에 가까운 수온에도 떠나지 않는 잉글랜드 북동부 서퍼 커뮤니티 이야기로, 오늘 새로 올라온 몇 안 되는 신규 후보 중 하나입니다. 파도 없는 날에도 바다 곁을 지키는 마음, '가끔 오는 완벽한 한 세션을 위해 버틴다'는 정서는 국내 서퍼도 공감할 소재라 저장 유도에 적합합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Good Day To Be A Goof (Or A Griff)",
+      "url": "https://stabmag.com/news/good-day-to-be-a-goof-or-a-griff/",
+      "feed": "stabmag.com",
+      "published": "2026-08-27",
+      "topic": "씬/담론",
+      "headlineType": "현실폭로형",
+      "metric": "댓글",
+      "reason": "WSL 클라우드브레이크 2라운드에서 구피풋 선수들이 정규풋 상대를 잇달아 꺾었고, 얼굴에 봉합 자국을 단 채 뛴 이탈로 페레이라 등 구체적 인물과 스코어가 있어 사실 밀도가 충분합니다. 같은 숙소를 쓰는 라이벌끼리 붙는 CT 특유의 긴장감이 마니아층 댓글을 부를 소재입니다.",
+      "status": "pending"
+    }
+  ]
+}
