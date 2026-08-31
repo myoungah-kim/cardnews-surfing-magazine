@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-31",
+  "generatedAt": "2026-08-31T09:38:43+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Norway's New King Confesses His Real Dream Was Pro Surfing",
+      "url": "https://www.surfer.com/news/norway-new-king-pro-surfer-dream",
+      "feed": "surfer.com",
+      "published": "2026-08-28",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "팔로우",
+      "reason": "지난주 즉위한 노르웨이 신임 국왕 호콘 8세가 '왕위만 아니었다면 프로 서핑 월드투어 선수가 됐을 것'이라고 직접 인터뷰에서 밝혔습니다. 왕실 전체가 서핑을 즐기고 로포텐 같은 콜드워터 명소까지 이어지는 구체적 배경이 있어 서핑을 모르는 사람도 클릭할 크로스오버 소재입니다. 아직 카드로 제작되지 않아 이번 회차에도 이어갑니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Xavier Stark – Plumber by trade, Slab Hunter by Nature",
+      "url": "https://tracksmag.com.au/xavier-stark-plumber-by-trade-slab-hunter-by-nature",
+      "feed": "tracksmag.com.au",
+      "published": "2026-08-31",
+      "topic": "인물/셀럽",
+      "headlineType": "공감형",
+      "metric": "댓글",
+      "reason": "18세 배관공 견습생 자비에 스타크가 견습생 월급을 털어 태즈메이니아 쉽스턴 블러프까지 원정을 다니며 올해 내내 그 파도 하나만 쫓았고, 결국 사진작가가 담은 완벽한 배럴 한 장으로 보상받은 이야기입니다. '평범한 직업 + 극한 파도'라는 반전 구도와 실제 인용문이 있어 응원 댓글을 부를 공감형 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Endless Surf, Flowstate Team Up On AI-Powered Wave Pool Tech",
+      "url": "https://www.surfer.com/news/endless-surf-unveils-ai-powered-flowstate-technology-next-generation-wave-pools",
+      "feed": "surfer.com",
+      "published": "2026-08-28",
+      "topic": "안전/시설",
+      "headlineType": "질문형",
+      "metric": "저장",
+      "reason": "엔들리스 서프와 플로우스테이트가 컴퓨터 비전으로 서퍼 개개인을 인식해 같은 세션에서도 실력별로 다른 파도를 주는 '더 믹스테이프' 시스템을 공개했습니다. 한국에도 웨이브파크가 있어 실력 차이 나는 친구와 함께 타기 애매했던 문제를 정면으로 짚는 소재라 저장 유도가 강합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "5 Underrated September Surf Escapes to Add to Your Travel Plans",
+      "url": "https://www.surfer.com/culture/underrated-surf-escapes-september",
+      "feed": "surfer.com",
+      "published": "2026-08-30",
+      "topic": "문화/무비",
+      "headlineType": "비교형",
+      "metric": "저장",
+      "reason": "9월 스웰 시즌 개막을 앞두고 해외 매체가 뽑은 저평가 서핑 여행지 5곳 중 하나로 한국(양양)이 실제로 이름을 올렸습니다. 발리에 견줄 만한 분위기라는 비교와 태풍 스웰로 실력이 확 달라진다는 구체적 서술이 있어, 해외 매거진이 한국 서핑을 인정했다는 자부심 포인트로 저장·공유를 유도할 수 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "The World's Oceans Are OD'ing On Weed",
+      "url": "https://www.surfer.com/news/world-oceans-oding-on-weed-sargassum",
+      "feed": "surfer.com",
+      "published": "2026-08-26",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "사우스플로리다대 연구팀이 20년치 위성사진 120만 장을 AI로 분석한 결과, 대형 해조류(사르가숨)가 연 13.4%씩 불어나 이제 아시아 대륙보다 넓어졌다는 결론을 냈습니다. 카리브해·플로리다 서프 스팟까지 냄새와 관광 손실로 번지는 구체적 수치가 있어 조회수를 부를 만합니다.",
+      "status": "pending"
+    }
+  ]
+}
