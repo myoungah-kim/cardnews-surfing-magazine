@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-01",
+  "generatedAt": "2026-09-01T09:20:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "The inaugural Wavepool Surf Tour season kicks off in 2026/2027",
+      "url": "https://www.surfertoday.com/surfing/wavepool-surf-tour-announced",
+      "feed": "surfertoday.com",
+      "published": "2026-08-31",
+      "topic": "안전/시설",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "웨이브풀 서프투어(WPST)가 2026~2027시즌 출범을 공식 발표했습니다. 8개 디지털 대회, 176명 결선 진출, 2만 달러 상금 등 구체적인 수치가 있고 아시아·퍼시픽 디비전이 포함돼 한국 웨이브파크 이용자도 직접 참가할 수 있는 구조라 저장 유도가 강합니다. 아마추어도 참가 가능하다는 점이 '그래서 나도?'라는 궁금증을 자극합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "5 Underrated September Surf Escapes to Add to Your Travel Plans",
+      "url": "https://www.surfer.com/culture/underrated-surf-escapes-september",
+      "feed": "surfer.com",
+      "published": "2026-08-30",
+      "topic": "문화/무비",
+      "headlineType": "비교형",
+      "metric": "저장",
+      "reason": "해외 매체가 9월 서핑 시즌 개막을 앞두고 뽑은 저평가 여행지 5곳 중 하나로 한국 양양이 이름을 올렸습니다. 발리에 견줄 만하다는 비교와 태풍 스웰로 실력이 달라진다는 구체적 서술이 있어, 마침 오늘(9월 1일) 시즌 개막 시점과 맞물려 자부심 포인트로 저장·공유를 유도할 수 있습니다. 아직 카드로 제작되지 않아 이번 회차에도 이어갑니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Norway's New King Confesses His Real Dream Was Pro Surfing",
+      "url": "https://www.surfer.com/news/norway-new-king-pro-surfer-dream",
+      "feed": "surfer.com",
+      "published": "2026-08-28",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "팔로우",
+      "reason": "노르웨이 신임 국왕 호콘 8세가 '왕위만 아니었다면 프로 서핑 선수가 됐을 것'이라고 직접 인터뷰에서 밝혔습니다. 왕실 전체가 서핑을 즐기고 로포텐 같은 콜드워터 명소까지 이어지는 구체적 배경이 있어 서핑을 모르는 사람도 클릭할 크로스오버 소재입니다. 아직 카드로 제작되지 않아 이번 회차에도 이어갑니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Could a Hurricane Hit Southern California Over Labor Day Weekend?",
+      "url": "https://www.surfer.com/news/could-a-hurricane-hit-southern-california-over-labor-day-weekend",
+      "feed": "surfer.com",
+      "published": "2026-08-31",
+      "topic": "파도/스펙터클",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "노동절 연휴를 앞두고 국립허리케인센터가 동태평양 열대저기압(Invest EP95)이 캘리포니아 쪽으로 북상할 가능성을 주시하고 있다고 밝혔습니다. 이미 카테고리4 허리케인 카리나가 만든 스웰이 밀려오는 중이며, 올여름 라구나비치에서만 3명이 물놀이 중 숨졌다는 안전 경고까지 곁들여져 조회수와 경각심을 동시에 부를 수 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Xavier Stark – Plumber by trade, Slab Hunter by Nature",
+      "url": "https://tracksmag.com.au/xavier-stark-plumber-by-trade-slab-hunter-by-nature",
+      "feed": "tracksmag.com.au",
+      "published": "2026-08-31",
+      "topic": "인물/셀럽",
+      "headlineType": "공감형",
+      "metric": "댓글",
+      "reason": "18세 배관공 견습생 자비에 스타크가 견습생 월급을 털어 태즈메이니아 쉽스턴 블러프까지 원정을 다니며 올해 내내 그 파도 하나만 쫓았고, 결국 사진작가가 담은 완벽한 배럴 한 장으로 보상받은 이야기입니다. '평범한 직업 + 극한 파도'라는 반전 구도와 실제 인용문이 있어 응원 댓글을 부를 공감형 소재입니다. 아직 카드로 제작되지 않아 이번 회차에도 이어갑니다.",
+      "status": "pending"
+    }
+  ]
+}
