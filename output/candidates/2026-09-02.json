@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-02",
+  "generatedAt": "2026-09-02T09:20:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Inside Brick Howze and Pharrell Williams' Mission to Rewrite Surf Culture",
+      "url": "https://www.surfer.com/culture/pharrell-williams-brick-howze-surfing",
+      "feed": "surfer.com",
+      "published": "2026-09-01",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "팔로우",
+      "reason": "글로벌 셀럽 퍼렐 윌리엄스가 버지니아비치에 3500억원 규모 웨이브가든 서프파크를 공동 소유하고 있고, 흑인 서퍼 커뮤니티 '에보니 비치 클럽' 창립자 브릭 하우즈를 서핑 멘토로 삼아 루이비통 2027 봄여름 컬렉션 런웨이까지 파도 콘셉트로 연출했다는 구체적 사실이 있습니다. 서핑과 무관해 보이던 패션·힙합 아이콘이 서핑 신 한복판까지 들어온 이야기라 비서퍼층까지 끌어당길 크로스오버 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Carissa Moore Takes Over World Number One Ranking",
+      "url": "https://www.surfer.com/news/carissa-moore-new-world-number-one-ranking",
+      "feed": "surfer.com",
+      "published": "2026-08-27",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "팔로우",
+      "reason": "2024 파리올림픽 이후 가정을 꾸리겠다며 투어를 떠났던 5회 세계챔피언 캐리사 무어가 피지프로에서 샐리 피츠기본스를 꺾고 8강에 오르며 다시 세계랭킹 1위에 복귀했습니다. 은퇴에 가까웠던 선수가 가정과 병행하며 정상에 재복귀한 반전 서사라 응원성 팔로우를 부르기 좋은 인물 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "(Watch) Another Section of Steamer Lane Cliff Collapses",
+      "url": "https://www.surfer.com/news/watch-another-section-of-steamer-lane-cliff-collapses",
+      "feed": "surfer.com",
+      "published": "2026-09-01",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "8월 30일 낮 12시 45분, 세계적 서핑 명소 스티머 레인의 절벽 일부가 라인업 바로 옆으로 무너져 내렸다는 인스타그램 영상 기반 실시간 사고 뉴스입니다. 절벽이 여전히 불안정해 추가 붕괴 위험이 있다는 경고까지 있어 경고형 훅이 바로 나오고, 서퍼 코앞에서 절벽이 무너지는 극적인 영상이 조회수를 견인할 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Endless Surf, Flowstate Team Up On AI-Powered Wave Pool Tech",
+      "url": "https://www.surfer.com/news/endless-surf-unveils-ai-powered-flowstate-technology-next-generation-wave-pools",
+      "feed": "surfer.com",
+      "published": "2026-08-28",
+      "topic": "안전/시설",
+      "headlineType": "결과암시형",
+      "metric": "저장",
+      "reason": "웨이브파크 업체 엔드리스 서프와 AI 분석기업 플로우스테이트가 2년간 개발한 '믹스테이프' 시스템은 컴퓨터 비전으로 각 서퍼를 인식해 실력에 맞는 파도를 개별 배정합니다. 한국에도 웨이브파크 이용자가 많아 '내 세션이 이렇게 바뀐다'는 정보성 저장을 유도할 수 있는 직접 관련 소재입니다(surfertoday.com도 동일 소식 보도).",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "2026 Big Wave Challenge Men's Ride of the Year Nominees: Matahi Drollet, Natxo Gonzalez, and Tom Lowe",
+      "url": "https://www.surfer.com/news/2026-big-wave-challenge-ride-of-the-year-nominees-tom-lowe-matahi-drollet-natxo-gonzalez",
+      "feed": "surfer.com",
+      "published": "2026-08-27",
+      "topic": "파도/스펙터클",
+      "headlineType": "비교형",
+      "metric": "조회수",
+      "reason": "페아히, 와이메아, 매버릭스 등 25년간 빅웨이브 시상식을 지배해온 전통의 명소들이 올해 후보에 단 한 자리도 못 올렸고, 대신 아일랜드 멀라모어와 타히티 초페스, 나자레가 전 부문을 휩쓸었습니다. 주최자 빌 샤프의 '하와이·서부 최악의 성적'이라는 직접 인용까지 있어 비교형 반전 서사가 뚜렷한 소재입니다.",
+      "status": "pending"
+    }
+  ]
+}
