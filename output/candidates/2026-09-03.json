@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-03",
+  "generatedAt": "2026-09-03T09:18:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "King Haakon VIII of Norway and his lifelong love of surfing",
+      "url": "https://www.surfertoday.com/surfing/king-haakon-viii-norway-lifelong-love-surfing",
+      "feed": "surfertoday.com",
+      "published": "2026-09-02",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "팔로우",
+      "reason": "2026년 8월 28일 새로 즉위한 노르웨이 국왕 호콘 8세가 실은 평생 서퍼였고, 2023년 인터뷰에서 '왕이 안 됐다면 월드투어 프로서퍼가 됐을 것'이라 말한 사실이 있습니다. 딸 잉그리드 알렉산드라 공주도 노르웨이 주니어 서핑 챔피언이라는 구체적 사실까지 있어, 왕실과 서핑이라는 이례적 조합이 비서퍼층까지 공유할 만한 크로스오버 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "California's Marine Heatwave Shatters Ocean Temperature Records",
+      "url": "https://www.surfer.com/news/california-marine-heatwave-ocean-records",
+      "feed": "surfer.com",
+      "published": "2026-09-02",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "스크립스 CDIP 부이 관측 결과 산타모니카베이 수온이 26년 평균보다 6도, 토리 파인즈는 23년 평균보다 6도 높게 나타났고 2026년 한 해에만 산타모니카 47회, 토리 파인즈 76회의 일일 신기록이 나왔다는 구체적 수치가 있습니다. 백상아리 이동 경로 변화까지 연결되는 경고성 소재라 이상기후에 민감한 한국 독자에게도 공유될 만합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Scrapped Florida Wave Pool May Become a Data Center",
+      "url": "https://www.surfer.com/news/scrapped-florida-wave-pool-may-become-a-data-center",
+      "feed": "surfer.com",
+      "published": "2026-09-02",
+      "topic": "안전/시설",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "5년간 추진돼온 플로리다 포트피어스의 200에이커 규모 웨이브가든 서프파크 프로젝트가 자금난으로 무산되고, 부지가 오히려 데이터센터·쇼핑몰 용지로 재신청됐다는 반전 소식입니다. 웨이브파크 이용자가 많은 한국 독자에게 관련성이 있고, 전 세계적 AI 데이터센터 붐과 맞물려 크로스오버 화제성도 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Erin Brooks Eyes Back-To-Back South Pacific Sweep",
+      "url": "https://www.surfer.com/news/erin-brooks-statement-making-south-pacific-sweep",
+      "feed": "surfer.com",
+      "published": "2026-09-02",
+      "topic": "인물/셀럽",
+      "headlineType": "결과암시형",
+      "metric": "조회수",
+      "reason": "19세 캐나다 서퍼 에린 브룩스가 피지프로 결승에 올랐는데, 상대 이사벨라 니콜스가 준결승에서 발목 부상을 당해 WSL 규정상(17.07조) 결승에 못 나오면 브룩스가 패들아웃만으로 우승할 수 있다는 흔치 않은 룰 기반 반전이 있습니다. 이런 규정을 처음 접하는 독자에게 강한 궁금증을 유발해 캡션을 열어보게 만들 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Ken 'Skindog' Collins Delivers a Masterclass in Surf Etiquette and How to Catch More Waves",
+      "url": "https://www.surfer.com/how-to/skindog-surf-etiquette-masterclass",
+      "feed": "surfer.com",
+      "published": "2026-09-02",
+      "topic": "씬/담론",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "산타크루즈의 빅웨이브 레전드 켄 '스킨독' 콜린스가 인스타그램에서 '서핑 스팟은 스타벅스가 아니라 술집이다, 줄 서는 게 아니라 눈치껏 자리를 잡는 것'이라는 직설 화법으로 서핑 에티켓 논쟁에 답한 실제 인용문이 있습니다. 초보자가 몰리는 스팟에서 실전 팁으로 저장할 만한 정보성 소재이면서, 유명 빅웨이버의 걸쭉한 말투 자체가 흥미 요소입니다.",
+      "status": "pending"
+    }
+  ]
+}
