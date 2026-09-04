@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-04",
+  "generatedAt": "2026-09-04T09:20:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Brooks, Houshmand Win Fiji Pro In Statement-Making Style",
+      "url": "https://www.surfer.com/news/brooks-houshmand-win-fiji-pro-in-statement-making-style",
+      "feed": "surfer.com",
+      "published": "2026-09-03",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "어제 후보였던 '에린 브룩스 남태평양 2연속 석권 가능성' 스토리가 실제로 반전으로 마무리됐습니다. 결승 상대 이사벨라 니콜스가 준결승에서 발목을 다쳐 결승에 나오지도 못하고 우승을 내줬고, 19세 브룩스는 타히티에 이어 피지까지 2연속 우승을 확정지었습니다. WSL 규정(17.07조)에 따른 부전승이라는 흔치 않은 결말과 랭킹 8위 도약이라는 구체적 수치가 있어 캡션을 채우기 좋습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Thomas Edison's Forgotten 1906 Surf Film Sparked Surf Cinema (Watch Here)",
+      "url": "https://www.surfer.com/news/thomas-edison-1906-surf-film",
+      "feed": "surfer.com",
+      "published": "2026-09-03",
+      "topic": "문화/무비",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "전구를 발명한 토마스 에디슨이 1906년 와이키키에서 촬영된 세계 최초의 서핑 영상까지 만들었다는, 잘 알려지지 않은 사실입니다. 촬영자(로버트 케이츠 보닌), 배급사(에디슨 매뉴팩처링 컴퍼니), 이후 '엔들리스 서머'로 이어지는 서핑 영화 계보까지 구체적 사실이 풍부해 트리비아성 저장 욕구를 자극합니다. 서퍼가 아니어도 '에디슨'이라는 이름값 때문에 공유될 만한 크로스오버 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "How a smoking surfer gave birth to urge surfing",
+      "url": "https://www.surfertoday.com/surfing/how-a-smoking-surfer-gave-birth-to-urge-surfing",
+      "feed": "surfertoday.com",
+      "published": "2026-09-03",
+      "topic": "문화/무비",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "금연 심리치료 기법인 '충동 서핑(urge surfing)'이 실은 서퍼였던 금연 시도자의 실화에서 나왔다는 기원 스토리입니다. 심리학자 G. 앨런 마랫과 주디스 고든의 1985년 저서, '파도처럼 차올랐다 가라앉는 충동'이라는 비유까지 구체적 사실이 있어 서핑을 몰라도 공감할 수 있는 크로스오버 소재입니다. 중독·금연에 관심 있는 비서퍼층까지 저장·공유할 만합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Surfer Attacked at Shark Bite Capital of the World",
+      "url": "https://www.surfer.com/news/surfer-attack-new-smyrna-beach-shark-bite-capital-world",
+      "feed": "surfer.com",
+      "published": "2026-09-03",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "플로리다 뉴스머나비치에서 서퍼가 상어에 물린 사건으로, 이 지역이 '세계 상어 물림 최다 지역'이라는 불명예를 재확인시켰습니다. 2023년 한 해에만 8건이 발생해 플로리다주 전체의 절반을 차지했다는 구체적 수치와, 서퍼의 팔다리를 미끼로 착각한다는 전문가 설명까지 있어 경고형 헤드라인이 바로 나옵니다. 해양생물 경고 소재는 이전에도 반응이 좋았던 카테고리입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Ocean-Tracking Robots Going Way of the Dodo for San Diego Researchers",
+      "url": "https://www.surfer.com/news/ocean-tracking-robots-going-way-of-the-dodo-for-san-diego-researchers",
+      "feed": "surfer.com",
+      "published": "2026-09-03",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "해파리 등 유해조류 경보와도 직결되는 해양 관측 로봇(BGC-ARGO) 프로그램이 연방 예산 삭감으로 10월 중단됩니다. 18개국이 참여하는 이 관측망 유지비가 미국인 1인당 연 10센트에 불과하다는 수치가 있어 '이 적은 돈도 못 아끼나'라는 반응을 유도합니다. 기후변화·해양 오염에 민감한 독자층이 저장할 만한 경고성 정보입니다.",
+      "status": "pending"
+    }
+  ]
+}
