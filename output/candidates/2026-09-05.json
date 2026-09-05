@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-05",
+  "generatedAt": "2026-09-05T09:14:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "WSL Scraps Surf Abu Dhabi Pro at Kelly Slater Wave Pool as Middle East Conflict Erupts",
+      "url": "https://www.surfer.com/news/wsl-cancels-surf-abu-dhabi-pro",
+      "feed": "surfer.com",
+      "published": "2026-09-04",
+      "topic": "씬/담론",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "WSL이 켈리 슬레이터 웨이브풀에서 열릴 예정이던 2026 서프 아부다비 프로를 파도나 시설 문제가 아니라 이란-호르무즈 해협을 둘러싼 실제 무력 충돌 때문에 통째로 취소했습니다. CEO 라이언 크로스비의 공식 사과 코멘트, 필리핀 시아르가오 클라우드나인으로의 대체 개최(10월31일~11월10일)까지 구체적 사실이 갖춰져 있고, 서핑 대회가 전쟁 뉴스에 등장한다는 자체가 강한 반전 포인트입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Laguna Beach Braces as 10-Foot Hurricane Swell Pounds Coast After Deadly Summer (Video)",
+      "url": "https://www.surfer.com/news/laguna-beach-big-waves-drowning-video",
+      "feed": "surfer.com",
+      "published": "2026-09-04",
+      "topic": "안전/시설",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "라구나비치 해양안전대장 카이 본드의 공식 경고와 함께, 올여름에만 5세 아동을 포함해 최소 3명이 익사한 구체적 사건(날짜·이름·해변 명시)이 나열된 뒤 노동절 연휴 10피트 스웰 경고가 이어집니다. 웨이브파크가 아닌 실제 해변 안전 이슈라 한국 서퍼·해수욕객에게도 직접 관련성이 높고, 경고형 헤드라인이 바로 나옵니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Triple Pacific Hurricanes Pummel the Basin as El Niño Ignites 50-Year Storm Pattern",
+      "url": "https://www.surfer.com/news/triple-pacific-hurricanes-el-nino-storms",
+      "feed": "surfer.com",
+      "published": "2026-09-04",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "1974년 이후 처음으로 태평양에 허리케인 3개(카리나·로웰·마리)가 동시에 활동 중이며, 로웰은 카테고리 5, 카리나는 카테고리 4에 동시 도달하는 이례적 기록을 세웠습니다. NASA의 엘니뇨 설명과 대서양 쪽은 오히려 폭풍이 거의 없다는 대조까지 있어 수치충격형 헤드라인과 비교 요소를 함께 쓸 수 있습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Rare 'Alien' Bigfin Squid Filmed 2 Miles Deep Off California (Video)",
+      "url": "https://www.surfer.com/news/bigfin-squid-california-coast-video",
+      "feed": "surfer.com",
+      "published": "2026-09-04",
+      "topic": "해양생물",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "MBARI·NOAA 공동 탐사대가 캘리포니아 해안에서 수심 3,277m(약 2마일) 지점에서 희귀 대왕지느러미오징어(Magnapinna)를 촬영했고, 이 종은 전 세계에서 지금까지 약 70마리만 관측됐다는 구체적 수치가 있습니다. 서핑을 몰라도 '외계 생명체 같다'는 비주얼만으로 공유·조회를 유도할 수 있는 크로스오버 소재입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "John Florence Adds Another Feather To Hooded Rashguard: Order Of The Ditch",
+      "url": "https://stabmag.com/elsewhere/john-florence-adds-another-feather-to-hooded-rashguard-order-of-the-ditch/",
+      "feed": "stabmag.com",
+      "published": "2026-09-04",
+      "topic": "인물/셀럽",
+      "headlineType": "현실폭로형",
+      "metric": "팔로우",
+      "reason": "2회 세계챔피언 존 존 플로렌스가 요트로 세계일주 중 파나마 운하를 통과하며 '오더 오브 더 디치' 등 뱃사람들만 아는 희귀 훈장 체계를 하나씩 채워가고 있다는 이야기입니다. 적도 통과 시 폭풍우 속 '이러다 배가 부서지는 줄 알았다'는 본인 코멘트까지 있어, 유명 서퍼의 잘 알려지지 않은 모험담으로 팔로우 유도에 적합합니다.",
+      "status": "pending"
+    }
+  ]
+}
