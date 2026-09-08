@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-08",
+  "generatedAt": "2026-09-08T09:15:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Hurricane Marie’s Towering Waves Annihilate Long Beach Sand Berms As Streets Vanish Under Water (Video)",
+      "url": "https://www.surfer.com/news/hurricane-marie-floods-long-beach-video",
+      "feed": "surfer.com",
+      "published": "2026-09-07",
+      "topic": "안전/시설",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "허리케인 마리 2.0이 만든 대형 스웰이 콘크리트 방벽을 그대로 넘어 롱비치 저지대 도로와 주택가·주차장까지 집어삼켰고, 페닌슐라 지역 주택 침수와 도로 침수 영상이 SNS에 확산 중입니다. 어제 후보였던 실비치 SUV 침수 사건과 같은 허리케인 마리 뉴스 사이클이지만, 피해 범위가 도로·주택까지 커져 더 강한 경고형 후킹이 나옵니다. 구체적 지명과 영상 증거가 있어 캡션 브리핑을 채우기 충분합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "WSL Scraps Surf Abu Dhabi Pro at Kelly Slater Wave Pool as Middle East Conflict Erupts",
+      "url": "https://www.surfer.com/news/wsl-cancels-surf-abu-dhabi-pro",
+      "feed": "surfer.com",
+      "published": "2026-09-04",
+      "topic": "씬/담론",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "WSL이 켈리 슬레이터 웨이브풀에서 열릴 예정이던 서프 아부다비 프로를, 파도나 시설 문제가 아니라 중동 지역의 실제 무력 충돌을 이유로 전격 취소했습니다. 서핑 대회가 전쟁 뉴스 때문에 취소됐다는 자체가 예상 밖의 반전이고, WSL CEO 공식 코멘트와 필리핀 시아르가오 대체 개최 일정까지 구체적으로 확인됩니다. 나흘째 미제작 상태로 대기 중인 강한 조회수형 후보입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Hurricane Lowell Eye Implodes Around NOAA Plane as Catastrophic Surf Targets Hawaii (Video)",
+      "url": "https://www.surfer.com/news/hurricane-lowell-eye-footage-hawaii",
+      "feed": "surfer.com",
+      "published": "2026-09-07",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "NOAA 허리케인 헌터 항공기가 카테고리 3 허리케인 로웰의 눈 속으로 직접 비행해 촬영한 영상이 공개된 동시에, 로웰이 카우아이 서쪽 약 130마일 지점을 지나며 최대 3피트 해일과 14인치 폭우를 몰고 올 것으로 예보돼 하와이 주지사가 비상사태를 선포했습니다. 3주 만에 하와이를 위협하는 세 번째 열대성 시스템이라는 구체적 수치가 있어 사실 밀도가 높고, 눈 속 비행 영상 자체가 스펙터클한 볼거리라 조회수 유도에 적합합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Surfer Attacked at Shark Bite Capital of the World",
+      "url": "https://www.surfer.com/news/surfer-attack-new-smyrna-beach-shark-bite-capital-world",
+      "feed": "surfer.com",
+      "published": "2026-09-03",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "플로리다 뉴스머나비치에서 서퍼가 또 상어에 물려, 이 지역이 '세계 상어 물림 최다 지역'이라는 불명예를 재확인시켰습니다. 2023년 한 해에만 8건이 발생해 플로리다주 전체의 절반을 차지했다는 구체적 수치와 전문가의 '서퍼 팔다리를 미끼로 착각한다'는 설명까지 있어 경고형 헤드라인이 바로 나옵니다. 해양생물 경고 소재는 반응이 꾸준히 좋은 카테고리입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "How Zeke Lau Became Surfing's Villain | StabMic Ep. 30",
+      "url": "https://stabmag.com/stabcinema/how-zeke-lau-became-surfings-villain-stabmic-ep-30/",
+      "feed": "stabmag.com",
+      "published": "2026-09-05",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "팔로우",
+      "reason": "WSL Surf100 챌린저 시리즈에서 '악당'으로 캐스팅됐던 제크 라우가, 8년 전 존 존 플로렌스·제이콥 윌콕스와 얽힌 충돌 사건의 뒷이야기를 이번 인터뷰에서 처음 공개했습니다. 지금은 딸을 둔 아빠이자 동료에게 관대해진 선수로 완전히 달라졌다는 반전이 확인되며 '왜 그랬는지' 궁금증을 자극합니다. 인지도 높은 존 존 플로렌스가 함께 언급돼 팔로우 유도용 크로스오버 소재로 적합합니다.",
+      "status": "pending"
+    }
+  ]
+}
