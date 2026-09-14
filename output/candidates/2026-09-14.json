@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-14",
+  "generatedAt": "2026-09-14T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Kelly Slater, 54, Dismantles Lower Trestles And Rekindles Wildcard Debate (Video)",
+      "url": "https://www.surfer.com/news/kelly-slater-lower-trestles-54-years-old",
+      "feed": "surfer.com",
+      "published": "2026-09-13",
+      "topic": "인물/셀럽",
+      "headlineType": "질문형",
+      "metric": "댓글",
+      "reason": "11회 세계챔피언 켈리 슬레이터가 54세 나이로 허리케인 마리 스웰이 밀어닥친 로워 트레슬스에서 파이어와이어 신보드를 타고 전성기급 바텀턴을 선보이며, 지난달 타히티 프로 와일드카드 논란(가브리엘 메디나전 19.06점) 이후 다시 한번 '와일드카드 자격 논쟁'에 불을 지폈습니다. 영상 말미 '당신 생각은?'이라는 질문형 마무리가 그대로 있어 댓글 유도에 최적이고, 전 세계적으로 이름값이 통하는 인물이라 서핑을 모르는 팔로워도 반응할 만합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Hurricane Marie 2014 vs. 2026 Swell Showdown Pummels SoCal Lineups (Video)",
+      "url": "https://www.surfer.com/news/hurricane-marie-2014-vs-2026-swell-comparison",
+      "feed": "surfer.com",
+      "published": "2026-09-13",
+      "topic": "파도/스펙터클",
+      "headlineType": "비교형",
+      "metric": "댓글",
+      "reason": "서핑라인 예보관 샤일러 페리가 '역대 최고 스웰'로 불리는 2014년 허리케인 마리와 이번 2026년 스웰을 정면 비교하며 '2014년은 하루짜리 완벽함, 2026년은 나흘 내내 지속된 실속형 스웰'이라는 뚜렷한 대조를 데이터로 제시했습니다. 두 시점을 나란히 놓는 비교형 헤드라인이 바로 나오고, '그래서 어느 쪽이 더 좋았나'라는 논쟁거리가 자연스럽게 댓글을 유도합니다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Sketchy and Scary: Cloudbreak Goes XXL",
+      "url": "https://www.surfer.com/news/photo-gallery-cloudbreak-fiji-biggest-surf-2026",
+      "feed": "surfer.com",
+      "published": "2026-09-13",
+      "topic": "파도/스펙터클",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "피지의 전설적 파도 클라우드브레이크가 몇 년 만에 가장 큰 사이즈로 터졌지만, 정작 강풍 탓에 '가장 완벽한 세션은 아니었다'는 반전이 있어 기대와 결과가 어긋나는 반전형 헤드라인이 바로 나옵니다. 쿰보 치안카, 카이 레니 등 실명이 등장하는 빅웨이브 세션 사진과 켈리 슬레이터의 클라우드브레이크 예찬 인용까지 있어 서프 트립 버킷리스트로 저장해두고 싶은 콘텐츠입니다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "The Poor Get Poorer: Does The WSL's Format Conspire Against Its Losers?",
+      "url": "https://stabmag.com/news/the-poor-get-poorer-does-the-wsls-format-conspire-against-its-losers/",
+      "feed": "stabmag.com",
+      "published": "2026-09-13",
+      "topic": "씬/담론",
+      "headlineType": "현실폭로형",
+      "metric": "댓글",
+      "reason": "CT 정규 시즌 마지막 대회를 앞두고, 첫 대회 성적 하나로 포인트 격차가 최대 20배까지 벌어져 하위 랭커는 매 대회 최상위 랭커와 곧바로 맞붙어야 하는 시드 구조의 불공정성을 데이터로 짚었습니다. '사실 이 스포츠는 첫 대회에서 이미 승부가 갈린다'는 현실 폭로가 강해 서핑 대회 포맷에 관심 있는 팔로워층의 댓글 논쟁을 끌 수 있습니다. 'premium' 태그가 붙어 있지만 링크 모음형 허브가 아니라 실제 데이터 분석 기사임을 본문 확인했습니다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Patagonia's New Inflation Vest is Here Just in Time For the Winter From Hell",
+      "url": "https://www.surfer.com/gear/patagonias-new-inflation-vest-in-time-for-el-nino",
+      "feed": "surfer.com",
+      "published": "2026-09-11",
+      "topic": "안전/시설",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "파타고니아가 10년 만에 내놓은 빅웨이브용 인플레이션 조끼가 2011년 서퍼 시온 밀로스키 사망 이후 개발이 시작됐고, 회사가 특허를 걸지 않아 다른 브랜드도 같은 기술을 쓸 수 있게 했다는 이면이 있습니다. 역대급 엘니뇨로 빅웨이브 시즌이 유례없이 거세질 거란 전망과 맞물려 안전 장비 정보를 저장해두고 싶게 만드는 소재입니다. Surfer Magazine 신규 발행에 안전/시설 소재군을 채울 후보가 없어 이틀째 이월하지만, 시의성이 떨어지지 않는 정보성 콘텐츠라 유지합니다.",
+      "status": "pending"
+    }
+  ]
+}
