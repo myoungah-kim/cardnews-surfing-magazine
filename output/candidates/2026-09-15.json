@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-15",
+  "generatedAt": "2026-09-15T09:41:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Scientists Just Discovered a New Shark...That Can Walk!",
+      "url": "https://www.surfer.com/news/scientists-discovered-new-shark-walk",
+      "feed": "surfer.com",
+      "published": "2026-09-14",
+      "topic": "해양생물",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "서퍼들이 매일 밟고 지나가는 파푸아뉴기니의 얕은 리프에서 '걷는 상어' 신종이 발견됐다. 위협적이지 않고 오히려 귀여운 반전 소재라 상어 특유의 공포감 없이 가볍게 퍼지기 좋고, 학명·발견팀·크기·멸종위기 등급까지 구체적 사실이 풍부해 캡션 브리핑도 탄탄하다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "20-Foot Hurricane Swell Obliterates SoCal Luxury Homes in 'Most Coastal Carnage I've Ever Seen' (Video)",
+      "url": "https://www.surfer.com/news/hurricane-marie-socal-coastal-carnage-video",
+      "feed": "surfer.com",
+      "published": "2026-09-14",
+      "topic": "파도/스펙터클",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "허리케인 '마리'가 만든 20피트 스웰이 남캘리포니아 해안 고급 주택가의 방파제와 기반시설을 그대로 무너뜨렸다. '내가 본 것 중 가장 큰 해안 참사'라는 현장 인용과 영상이 있어 경고형 헤드라인으로 시선을 붙잡기 좋고, 곧 다가올 켈빈파·엘니뇨로 추가 침식이 예상돼 후속 소재로도 이어진다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "The Poor Get Poorer: Does The WSL's Format Conspire Against Its Losers?",
+      "url": "https://stabmag.com/news/the-poor-get-poorer-does-the-wsls-format-conspire-against-its-losers/",
+      "feed": "stabmag.com",
+      "published": "2026-09-13",
+      "topic": "씬/담론",
+      "headlineType": "수치 충격형",
+      "metric": "댓글",
+      "reason": "하위 랭커가 1라운드부터 상위 시드와 붙는 현재 WSL 브래킷 구조가 똑같이 두 번 이기고도 포인트를 9배 차이나게 벌리는 문제를 데이터로 짚은 분석 기사다. 구체적 포인트 수치와 오스카 베리의 직접 인용이 있어 사실 밀도가 높고, 포맷 공정성 논쟁은 댓글을 유도하기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Max Holloway Surfs Japan Wave Pool While Conor McGregor Erupts Over 'Ref, Stop the Fight' (Video)",
+      "url": "https://www.surfer.com/news/max-holloway-japan-wave-pool-mcgregor-video",
+      "feed": "surfer.com",
+      "published": "2026-09-14",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "팔로우",
+      "reason": "펀치를 주고받는 게 직업인 UFC 스타 맥스 할로웨이가 정작 일본 파도풀 배럴 앞에서는 쩔쩔맸다는 반전 소재로, 은퇴 후 오사카에 살고 싶다는 농담까지 곁들여져 있다. 코너 맥그리거와의 전날 경기 후일담까지 엮여 있어 서핑 팬이 아닌 격투기 팬 유입도 노릴 수 있는 크로스오버 카드다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "The Evolution of the Spring Suit",
+      "url": "https://tracksmag.com.au/the-evolution-of-the-spring-suit",
+      "feed": "tracksmag.com.au",
+      "published": "2026-09-14",
+      "topic": "기어/어워드",
+      "headlineType": "현실 폭로형",
+      "metric": "저장",
+      "reason": "왜 서핑용 슈트만 팔다리가 없는 모양인지, 1960년대 잭 오닐의 발명부터 지금까지의 변천사를 정리한 트리비아형 기사다. 매일 입는 장비의 '왜'를 알려주는 에버그린 정보성 소재라 저장·공유가 잘 되고, 제품 나열형 어워드 콘텐츠와 달리 서사가 있어 카드 한 장의 훅이 분명하다.",
+      "status": "pending"
+    }
+  ]
+}
