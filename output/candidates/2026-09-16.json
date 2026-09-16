@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-16",
+  "generatedAt": "2026-09-16T09:15:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Namibia Approves Experimental Deep-Sea Phosphate Mining",
+      "url": "https://www.surfer.com/news/namibia-experimental-deep-sea-phosphate-mining-atlantic",
+      "feed": "surfer.com",
+      "published": "2026-09-14",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "댓글",
+      "reason": "세계적인 배럴 스팟 스켈레톤 베이에서 75마일 떨어진 해역에서 20년간 해저를 준설하는 인산염 채굴이 나미비아 정부 승인을 받았다. 멕시코·뉴질랜드가 같은 사업을 환경 이유로 이미 거부한 전례와 과학자들의 중금속 확산 경고까지 있어 개발 대 환경 보전 논쟁으로 댓글을 끌기 좋고, 유명 스팟이 걸려 있어 서퍼들의 즉각적 반응이 예상된다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Surfer: Danyil Smirnov, the Ukrainian boy who left the Mentawai for war",
+      "url": "https://tracksmag.com.au/surfer-danyil-smirnov-the-ukrainian-boy-who-left-the-mentawai-for-war",
+      "feed": "tracksmag.com.au",
+      "published": "2026-09-15",
+      "topic": "인물/셀럽",
+      "headlineType": "결과암시형",
+      "metric": "저장",
+      "reason": "인도네시아 멘타와이에서 자란 우크라이나 소년 서퍼가 전쟁이 나자 고향으로 돌아가 참전했고, 아들이 태어나기 전에 전사했다는 실화다. 결말을 감춘 채 시작하면 끝까지 읽게 만드는 결과암시형 훅이 자연스럽게 나오고, 동생이 형의 아들에게 언젠가 서핑을 가르치겠다는 여운까지 있어 저장·공유 유도가 강하다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Headless Thresher Shark Baffles Washington Beachgoers",
+      "url": "https://www.surfer.com/news/thresher-shark-decaptitated-washington",
+      "feed": "surfer.com",
+      "published": "2026-09-15",
+      "topic": "해양생물",
+      "headlineType": "현실폭로형",
+      "metric": "조회수",
+      "reason": "워싱턴 해변에 떠밀려온 환도상어 사체의 머리가 몇 시간 만에 누군가에 의해 잘려 사라진 미스터리 사건이다. 담당 공무원의 '머리에 연구 데이터가 있다'는 코멘트와 엘니뇨발 온난류 유입이라는 배경 설명까지 있어 사실 밀도가 높고, '누가, 왜'라는 궁금증이 클릭을 유도한다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Lady Gaga Escalates Lawsuit, Demands $232K From ...Lost Surfboards",
+      "url": "https://www.surfer.com/news/lady-gaga-lost-surfboards-lawsuit",
+      "feed": "surfer.com",
+      "published": "2026-09-15",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "팔로우",
+      "reason": "서핑 브랜드가 레이디 가가에게 1억 달러 상표권 소송을 걸었다가 패소하고, 이제 반대로 가가 측에 23만 달러를 물어주게 생겼다는 반전 스토리다. '홍보 스턴트'라는 가가 측 변호인의 직접 인용까지 있어 서퍼가 아닌 팬층 유입을 노릴 크로스오버 카드로 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "The dangers of swash and backwash",
+      "url": "https://www.surfertoday.com/surfing/the-dangers-of-swash-and-backwash",
+      "feed": "surfertoday.com",
+      "published": "2026-09-14",
+      "topic": "안전/시설",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "베테랑 서퍼가 직접 백워시에 휩쓸릴 뻔한 경험을 바탕으로, 파도 없이 그냥 서 있기만 해도 위험한 스와시·백워시의 메커니즘과 탈출 요령을 설명한다. 실제 탈출 기법(한 발씩 번갈아 딛기)까지 구체적으로 담겨 있어 실수 방지형 저장 콘텐츠로 바로 쓸 수 있고, 한국 해변에도 똑같이 적용되는 직접 관련 소재다.",
+      "status": "pending"
+    }
+  ]
+}
