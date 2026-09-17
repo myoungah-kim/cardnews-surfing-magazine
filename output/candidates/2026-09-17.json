@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-17",
+  "generatedAt": "2026-09-17T09:20:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Surfer: Danylo Smirnov, the Ukrainian boy who left the Mentawai for war",
+      "url": "https://tracksmag.com.au/surfer-danyil-smirnov-the-ukrainian-boy-who-left-the-mentawai-for-war",
+      "feed": "tracksmag.com.au",
+      "published": "2026-09-15",
+      "topic": "인물/셀럽",
+      "headlineType": "결과암시형",
+      "metric": "저장",
+      "reason": "인도네시아 멘타와이 서프캠프에서 자란 우크라이나 소년이 전쟁이 터지자 고향으로 돌아가 참전했고, 아들이 태어나기도 전에 전사했다는 실화다. 결말을 감춘 채 시작하면 끝까지 읽게 만드는 결과암시형 훅이 자연스럽게 나오고, 서핑과 전쟁이라는 극단적 대비가 강한 여운을 남겨 저장·공유로 이어지기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Any Port In A Storm, Sure, But If We're Taking Requests…",
+      "url": "https://stabmag.com/elsewhere/any-port-in-a-storm-sure-but-if-were-taking-requests/",
+      "feed": "stabmag.com",
+      "published": "2026-09-16",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "세계 최고의 서퍼 존 존 플로렌스가 엔진 고장으로 발이 묶인 파나마 항구에서 뜻밖에 말리부급 포인트브레이크를 발견했다는 반전 스토리다. 고장이 오히려 행운이 됐다는 구조가 '그래서 뭐인데?'를 자극하고, 세계적 인지도의 이름값이 크로스오버 유입까지 노릴 수 있게 한다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Headless Thresher Shark Baffles Washington Beachgoers And Stuns Wildlife Officials",
+      "url": "https://www.surfer.com/news/thresher-shark-decaptitated-washington",
+      "feed": "surfer.com",
+      "published": "2026-09-15",
+      "topic": "해양생물",
+      "headlineType": "현실폭로형",
+      "metric": "조회수",
+      "reason": "워싱턴 해변에 떠밀려온 환도상어 사체의 머리가 몇 시간 만에 누군가에 의해 잘려 사라진 미스터리 사건이다. 담당 공무원의 '머리가 없으면 연구 데이터 자체가 달라진다'는 코멘트까지 있어 사실 밀도가 높고, '누가, 왜'라는 궁금증이 클릭을 유도한다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Lady Gaga Escalates Lawsuit, Demands $232K From ...Lost Surfboards",
+      "url": "https://www.surfer.com/news/lady-gaga-lost-surfboards-lawsuit",
+      "feed": "surfer.com",
+      "published": "2026-09-15",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "팔로우",
+      "reason": "서핑 브랜드가 레이디 가가에게 1억 달러 상표권 소송을 걸었다가 패소하고, 이제 반대로 가가 측에 23만 달러를 물어주게 생겼다는 반전 스토리다. '홍보 스턴트였다'는 가가 측 변호인의 직접 인용까지 있어 서퍼가 아닌 팬층 유입을 노릴 크로스오버 카드로 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Namibia Approves Experimental Deep-Sea Phosphate Mining",
+      "url": "https://www.surfer.com/news/namibia-experimental-deep-sea-phosphate-mining-atlantic",
+      "feed": "surfer.com",
+      "published": "2026-09-14",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "댓글",
+      "reason": "세계적인 배럴 스팟 스켈레톤 베이에서 75마일 떨어진 해역에서 20년짜리 해저 인산염 준설 채굴 사업이 나미비아 정부 승인을 받았다. 멕시코·뉴질랜드가 같은 사업을 환경 이유로 이미 거부했고 과학자들의 중금속 확산 경고까지 있어, 개발 대 환경 보전 논쟁으로 댓글을 끌기 좋다.",
+      "status": "pending"
+    }
+  ]
+}
