@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-18",
+  "generatedAt": "2026-09-18T00:17:18Z",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Billionaire MLB Owner Mark Attanasio's Illegal Malibu Dig Hands Californians a $2 Million Beachfront Win",
+      "url": "https://www.surfer.com/news/mark-attanasio-malibu-illegal-dig-public-beach",
+      "feed": "surfer.com",
+      "published": "2026-09-16",
+      "topic": "환경",
+      "headlineType": "반전형",
+      "metric": "댓글",
+      "reason": "밀워키 브루어스 구단주가 말리부 저택 앞 조간대를 불법 굴착했다가 캘리포니아 해안위원회에 걸려 오히려 시민들에게 200만 달러짜리 해변 부지를 내주게 됐다. 억만장자가 벌금이 아니라 '해변 접근권'으로 되갚는다는 반전 구조가 통쾌해서 댓글·공유를 유발하기 좋고, 서퍼가 아니어도 공감할 크로스오버 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Venomous Sea Snake Startles Orange County Beachgoers in Rare El Niño Sighting (Video)",
+      "url": "https://www.surfer.com/news/venomous-sea-snake-orange-county-video",
+      "feed": "surfer.com",
+      "published": "2026-09-17",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "오렌지카운티 크리스탈 코브 해변에 맹독성 노랑배바다뱀이 나타났고, 전문가가 '매우 위험하지만 물 밖에서는 둔하다'고 직접 설명했다. 엘니뇨가 90% 이상 확률로 강해진다는 NOAA 수치까지 있어 사실 밀도가 높고, 해양생물 목격담은 한국 독자도 바로 공감하는 소재라 조회수를 끌기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Jamie O'Brien Unleashes 'Best Wave on Earth' at Top-Secret Sandbar (Video)",
+      "url": "https://www.surfer.com/news/best-wave-secret-surf-spot-video",
+      "feed": "surfer.com",
+      "published": "2026-09-17",
+      "topic": "파도/스펙터클",
+      "headlineType": "결과암시형",
+      "metric": "조회수",
+      "reason": "제이미 오브라이언이 '지구 최고의 파도'라 부른 완벽한 모래바닥 포인트브레이크를 발견했지만, 위치를 숨기려 소셜미디어와 댓글까지 차단했다. 유명 프리서퍼의 이름값과 '어디인지 아무도 모른다'는 결말 감추기 구조가 궁금증을 강하게 유발해 조회수에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Mexico's First Wave Pool Just Turned On The Spigot (Video)",
+      "url": "https://www.surfer.com/news/mexicos-first-wave-pool-just-turned-on-water",
+      "feed": "surfer.com",
+      "published": "2026-09-16",
+      "topic": "안전/시설",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "카보 산루카스의 카보 리얼 개발이 담수화 시설에서 끌어온 물 700만 갈론으로 멕시코 첫 4에이커 웨이브풀을 채우기 시작했고 12월 초 가동을 목표로 한다. 한국에도 웨이브파크가 있어 직접 대입되는 소재이고, 구체적 숫자와 유명인(에린 브룩스 등) 등장까지 갖춰 정보성 저장 콘텐츠로 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Watch: Arch Whiteman Scores Perfect Desert Point, Thanks to ChatGPT",
+      "url": "https://tracksmag.com.au/watch-arch-whiteman-scores-perfect-desert-point-thanks-to-chatgpt",
+      "feed": "tracksmag.com.au",
+      "published": "2026-09-16",
+      "topic": "인물/셀럽",
+      "headlineType": "현실폭로형",
+      "metric": "팔로우",
+      "reason": "시드니의 한 서퍼가 챗GPT에게 여행지를 추천받아 인도네시아 데저트포인트에서 완벽한 배럴을 연달아 탔다. AI가 서핑 여행지까지 추천해준다는 시의성 있는 소재라 서퍼가 아닌 AI 관심층까지 유입시킬 크로스오버 힘이 있어 팔로우 지표에 적합하다.",
+      "status": "pending"
+    }
+  ]
+}
