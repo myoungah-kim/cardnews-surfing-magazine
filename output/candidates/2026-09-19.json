@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-19",
+  "generatedAt": "2026-09-19T09:20:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "20-Foot Great White Shark Kills Swimmer in Western Australia 'Like a Scene Off Jaws' (Video)",
+      "url": "https://www.surfer.com/news/20-foot-great-white-attack-western-australia-video",
+      "feed": "surfer.com",
+      "published": "2026-09-18",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "20피트짜리 대백상어가 서호주 소렌토 비치에서 해변으로부터 30m 떨어진 곳에서 수영하던 사람을 공격해 숨지게 했고, 목격자는 '영화 조스의 한 장면 같았다'고 말했다. 며칠 전 인근 제럴드턴에서도 다른 서퍼가 상어에 다리를 잃어 같은 해역에서 공격이 반복되고 있다는 위기감이 있고, 2020년 철거된 상어 방지망 재설치 논쟁까지 있어 조회수·댓글을 동시에 끌 수 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "19-Year-Old Erin Brooks Wins 3 In A Row On Championship Tour",
+      "url": "https://www.surfer.com/news/19-year-old-erin-brooks-wins-3-in-a-row-on-championship-tour",
+      "feed": "surfer.com",
+      "published": "2026-09-18",
+      "topic": "인물/셀럽",
+      "headlineType": "비교형",
+      "metric": "팔로우",
+      "reason": "19세 캐나다 서퍼 에린 브룩스가 로어 트레스틀스 결승에서 가브리엘라 브라이언을 꺾고 챔피언십 투어 3연승을 달성했는데, 이는 1996년 켈리 슬레이터 이후 30년 만의 기록이다. 준결승에서 전 세계챔피언 몰리 픽클럼까지 잡아낸 상승세라 '다음엔 4연승까지 가나'라는 궁금증을 남기고, 어린 나이의 신성이라 팔로우 전환에 유리하다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Terrifying 'Standing Wave' Turns Harbor Into Death Trap (Video)",
+      "url": "https://www.surfer.com/news/terrifying-standing-wave-harbor-video",
+      "feed": "surfer.com",
+      "published": "2026-09-17",
+      "topic": "안전/시설",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "NOAA가 정의하는 '셰시'(정상파) 현상은 항구를 몇 시간에서 며칠까지 뒤흔들 수 있는데, 1844년 미국 이리호에서는 이 현상이 22피트 파고를 만들어 방파제를 무너뜨리고 78명이 숨졌다. 훈련된 구조대원조차 구조에 애를 먹는다는 경고가 있어 한국의 항만·방파제 낚시객에게도 바로 적용되는 안전 정보라 저장 유도에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "How a leadless pacemaker helped this surfer get back in the water",
+      "url": "https://www.surfertoday.com/surfing/surfing-with-a-pacemaker",
+      "feed": "surfertoday.com",
+      "published": "2026-09-18",
+      "topic": "인물/셀럽",
+      "headlineType": "공감형",
+      "metric": "댓글",
+      "reason": "어릴 때부터 심박조율기에 의존해온 31세 서퍼 니콜라스 라무뢰가 와이어 없는 최신 무선 이중실 심박조율기(Aveir DR)를 이식받은 뒤 8~10주 만에 다시 바다로 돌아가 지금은 코스타리카에서 하루 두 번 서핑하고 있다. 와이어 결함으로 개심술까지 받았던 과거와 대비되는 회복 서사라 공감이 크고, 서퍼가 아니어도 의료기술 이야기로 관심을 끌 크로스오버 소재라 댓글 유도에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Jamie O'Brien Unleashes 'Best Wave on Earth' at Top-Secret Sandbar (Video)",
+      "url": "https://www.surfer.com/news/best-wave-secret-surf-spot-video",
+      "feed": "surfer.com",
+      "published": "2026-09-17",
+      "topic": "파도/스펙터클",
+      "headlineType": "결과암시형",
+      "metric": "조회수",
+      "reason": "하와이 프리서퍼 제이미 오브라이언이 '지구 최고의 파도'라 부른 완벽한 모래바닥 포인트브레이크를 찾아냈다고 밝혔지만, 위치를 감추려 유튜브와 소셜미디어 댓글까지 막아버렸다. 2017년 믹 패닝이 발견한 전설의 샌드바 '더 스네이크'와 같은 곳인지조차 밝혀지지 않아 궁금증이 최고조이고, 유명 서퍼의 이름값까지 더해져 조회수를 노리기 좋다.",
+      "status": "pending"
+    }
+  ]
+}
