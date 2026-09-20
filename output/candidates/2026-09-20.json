@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-20",
+  "generatedAt": "2026-09-20T09:20:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "'Kill the Shark': Western Australia Issues Rare Great White Hunt After Fatal Attack",
+      "url": "https://www.surfer.com/news/great-white-shark-attack-western-australia-greg-oneill",
+      "feed": "surfer.com",
+      "published": "2026-09-19",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "댓글",
+      "reason": "서호주 소렌토 비치에서 63세 수영객 그렉 오닐을 죽인 대백상어를 두고 어업장관이 '포획 후 사살' 명령을 내렸는데, 담당 장관조차 '10년 만에 처음'이라며 이례적이라 밝힌 조치다. 2014년 172마리를 잡았지만 정작 백상어는 못 잡고 환경단체 반발만 샀던 살상 프로그램의 흑역사가 있어 '이번엔 다를까'라는 논쟁을 바로 유발하고, 어제 후보였던 20피트 상어 공격 사건의 후속 전개라 이어보기 수요도 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "'Super' El Niño Threatens to Repeat California's 1983 Coastal Destruction (Video)",
+      "url": "https://www.surfer.com/news/super-el-nino-1983-california-coast-video",
+      "feed": "surfer.com",
+      "published": "2026-09-19",
+      "topic": "환경",
+      "headlineType": "비교형",
+      "metric": "저장",
+      "reason": "1982-83년 슈퍼 엘니뇨 때 캘리포니아 해안주택 33채가 통째로 파괴되고 3,000채가 손상됐으며 산타모니카·헌팅턴비치 부두까지 무너졌는데, NOAA가 올가을 2026-27년 엘니뇨도 그만큼 강력해질 확률이 높다고 예측했다. 전설적 서퍼 스킵 프라이의 '거리로 밀려오는 파도를 봤다'는 생생한 증언까지 있어 43년 전과 지금을 나란히 놓는 비교형 헤드라인이 바로 나오고, 겨울 대비 정보로 저장 유도에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Miguel Pupo's Upset Win at Lowers Shakes Up World Title Race",
+      "url": "https://www.surfer.com/news/miguel-pupo-wins-lexus-trestles-pro",
+      "feed": "surfer.com",
+      "published": "2026-09-19",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "팔로우",
+      "reason": "2011년 CT에 데뷔해 은퇴를 논해도 이상하지 않을 나이의 미겔 푸포가 로어 트레스틀스에서 우승하며 시즌 두 번째 CT 타이틀을 따내고 랭킹 4위까지 올라섰다. 2015년 세계챔피언 아드리아누 지 소우자를 코치로 영입해 만든 반전의 커리어 후반전 서사라 '이 베테랑이 브라질에 타이틀을 가져올까'라는 궁금증을 남기고, 팔로우 전환에 유리한 인물 스토리다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Why Dolphins Surf Like Us, According to a Marine Biologist",
+      "url": "https://www.surfer.com/news/why-do-dolphins-surf",
+      "feed": "surfer.com",
+      "published": "2026-09-19",
+      "topic": "해양생물",
+      "headlineType": "비교형",
+      "metric": "조회수",
+      "reason": "40년 넘게 돌고래를 연구한 해양생물학자 피터 에반스 박사가 '돌고래도 서퍼처럼 파도를 놓고 자리싸움을 한다'고 밝혔는데, 수컷들이 파도를 독차지하려 다른 개체를 밀어내고 몸에 그 흔적(이빨 자국)까지 남는다는 대목이 라인업 텃세와 그대로 겹친다. 서퍼가 아니어도 흥미로운 동물 이야기라 크로스오버 유입에 유리하고, 가볍고 유쾌한 톤이라 조회수·공유를 동시에 노릴 수 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "What Is a Kelvin Wave? And What Does It Mean for California Surf?",
+      "url": "https://www.surfer.com/news/what-is-a-kelvin-wave-california-explained",
+      "feed": "surfer.com",
+      "published": "2026-09-19",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "적도에서 발생한 켈빈파가 다음 달 캘리포니아 해안에 도달하면 해수면이 최대 1피트(약 30cm) 상승할 수 있다고 NOAA가 설명했는데, 파도처럼 보이지도 부서지지도 않지만 폭풍과 겹치면 침수 위험을 키운다는 반전이 있다. '해수면이 오른다는데 그 파도, 대체 뭔가'라는 궁금증을 수치로 바로 유발해 정보 저장형 카드로 적합하고, 2위 후보(1983년 엘니뇨 비교)와 같은 기후 이슈를 다른 각도(과학 설명)로 보완한다.",
+      "status": "pending"
+    }
+  ]
+}
