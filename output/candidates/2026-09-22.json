@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-22",
+  "generatedAt": "2026-09-22T09:51:43+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Great White Shark Turns Nantucket Shallows into a Bloodbath (Video)",
+      "url": "https://www.surfer.com/news/great-white-shark-nantucket-video",
+      "feed": "surfer.com",
+      "published": "2026-09-21",
+      "topic": "해양생물",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "발목에서 허리 높이밖에 안 되는 낸터킷 얕은 물에서 백상아리가 물범을 덮쳐 순식간에 바다를 핏빛으로 물들인 영상이다. 목격자 캐리 드레이턴과 타일러 오브라이언이 직접 촬영했고, 해양보호단체는 물범 개체수 회복 때문에 상어가 몰려든다고 설명하며 주 정부가 실제로 해안 낚시 제한 조치까지 내렸다는 팩트가 있어, '얕은 물=안전'이라는 통념을 뒤집는 반전형 훅으로 바이럴 조회수를 노리기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "There's a Reef in Indonesia That's Bombed Every Hour of Every Day",
+      "url": "https://www.surfer.com/news/theres-a-reef-in-indonesia-thats-bombed-every-hour-of-every-day",
+      "feed": "surfer.com",
+      "published": "2026-09-21",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "런던대(UCL) 연구팀이 인도네시아 술라웨시 인근 스페르몬데 군도에 수중 음향 장비를 설치해 483일간 3,650시간을 분석한 결과, 하루 평균 23차례, 즉 시간당 한 번꼴로 폭탄 어업 폭발음이 기록됐다는 실제 연구 결과다. 인도네시아는 한국 서퍼들도 자주 찾는 서프 트립 목적지라는 점에서, 좋아하는 스팟 아래 산호초가 이렇게 파괴되고 있다는 사실이 저장·공유 욕구를 강하게 자극한다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "100-Foot Cascadia Megathrust Tsunami Threat Looms Off the West Coast (Video)",
+      "url": "https://www.surfer.com/news/cascadia-megathrust-100-foot-tsunami-video",
+      "feed": "surfer.com",
+      "published": "2026-09-21",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "1700년 이후 조용했던 캐스케이디아 섭입대가 수십~수백 년간 응력을 쌓아온 끝에 언젠가 다시 파열할 것이라는 시뮬레이션 영상과 함께, 해저가 솟아오르며 바닷물을 밀어내 쓰나미가 되는 메커니즘을 과학적으로 짚은 콘텐츠다. 서퍼가 아니어도 관심을 가질 재난 과학 소재라 크로스오버 유입이 기대되고, '이런 파도는 절대 타면 안 된다'는 경고형 훅으로 저장·공유가 잘 붙는다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Why surfing in cold water may be good for you",
+      "url": "https://www.surfertoday.com/surfing/why-surfing-in-cold-water-may-be-good-for-you",
+      "feed": "surfertoday.com",
+      "published": "2026-09-21",
+      "topic": "씬/담론",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "물에 들어가는 첫 순간엔 손발이 얼 것 같다가도, 패들링을 시작하면 추위가 더 이상 '메인 이벤트'가 아니게 되는 경험을 '한랭 쇼크 반응'(섭씨 15도 이하에서 나타나는 생리 반응)이라는 과학 용어로 설명한 글이다. 한국도 동해에서 겨울 서핑이 흔하다는 점에서 직접 관련성이 높고, 추위를 견딘 뒤 찾아오는 개운함을 겪어본 서퍼라면 저장해두고 싶은 공감형 정보 카드다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Bread and Butter – A New Zealand Surf Documentary",
+      "url": "https://tracksmag.com.au/bread-and-butter-a-new-zealand-surf-documentary",
+      "feed": "tracksmag.com.au",
+      "published": "2026-09-21",
+      "topic": "문화/무비",
+      "headlineType": "현실폭로형",
+      "metric": "팔로우",
+      "reason": "감독 벤 모리스가 3년간 혼자 카메라를 들고 뉴질랜드 수도 웰링턴의 서핑 커뮤니티를 담은 다큐멘터리다. '세상에서 바람이 제일 많이 부는 도시'라 파도 창이 짧은데도 그 안에서 차고에서 보드를 만들고 부업을 하는 '반지의 제왕 같은 분위기'의 코어한 로컬 문화를 조명해, 유명 스팟이 아닌 곳에도 진짜 서핑 신이 있다는 현실폭로형 소재로 서핑 문화 마니아층의 팔로우를 끌어오기 좋다.",
+      "status": "pending"
+    }
+  ]
+}
