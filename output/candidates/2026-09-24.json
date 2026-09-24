@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-24",
+  "generatedAt": "2026-09-24T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Surf therapy works at the beach and in wave pools, study finds",
+      "url": "https://www.surfertoday.com/surfing/study-finds-surf-therapy-works-at-the-beach-and-in-wave-pools",
+      "feed": "surfertoday.com",
+      "published": "2026-09-23",
+      "topic": "안전/시설",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "The Wave Project가 6주간 청소년 360명(해변 302명, 웨이브풀 58명)을 추적한 연구에서, 인공 웨이브풀에서도 정서적 안정감·자기효능감·사회적 유대 등 바다 서핑과 비슷한 수준의 치유 효과가 나타났다. '바다여야만 효과가 있다'는 통념을 뒤집는 반전형 소재이면서, 한국에 이미 여러 웨이브파크가 있어 국내 독자에게 직접 대입 가능한 실용 정보라 저장 전환이 기대된다. 참가자 수·기관명 등 구체적 수치가 있어 사실 밀도도 높다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Watch: Kim Kardashian Catches Manmade Wave at Palm Springs Surf Club",
+      "url": "https://www.surfer.com/news/kim-kardashian-surfing-palm-springs-video",
+      "feed": "surfer.com",
+      "published": "2026-09-23",
+      "topic": "인물/셀럽",
+      "headlineType": "결과암시형",
+      "metric": "팔로우",
+      "reason": "킴 카다시안이 웨이크서핑 경력을 앞세워 팜스프링스 서프클럽의 인공 파도(SurfLoch 기술)에 도전했는데, 영상이 라이딩 성공 여부를 애매하게 남긴 채 끝나 '그래서 성공했을까?'라는 결과암시형 훅이 자연스럽게 나온다. 초대형 셀럽이 등장하는 크로스오버 소재라 비서퍼 유입과 팔로우 전환을 동시에 노릴 수 있고, 시설명·기술명 등 구체적 사실도 확보돼 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Massive Bluefin Tuna Explodes Out of UK Lineup and Nearly Lands on Surfer (Video)",
+      "url": "https://www.surfer.com/news/bluefin-tuna-nearly-hits-surfer-video",
+      "feed": "surfer.com",
+      "published": "2026-09-23",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "영국 라인업에서 서퍼 바로 옆으로 대형 참다랑어가 먹이를 쫓다 그대로 튀어올라 하마터면 서퍼를 덮칠 뻔한 영상으로, '상어만 조심하면 되는 게 아니다'는 경고형 훅이 뚜렷하다. 남획으로 줄었던 참다랑어 개체수가 최근 회복되고 있다는 배경 설명까지 있어 단순 스펙터클을 넘어 환경 회복이라는 의미도 얹을 수 있는 조회수형 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Watch: 'Clusta' featuring Mitchell Peterson",
+      "url": "https://tracksmag.com.au/watch-clusta-featuring-mitchell-peterson",
+      "feed": "tracksmag.com.au",
+      "published": "2026-09-23",
+      "topic": "인물/셀럽",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "호주 누사 출신 17세 서퍼 미첼 피터슨이 오아후 오프더월에서 탄 대형 배럴 영상으로 갑자기 주목받은 뒤, 12~18개월간 하와이·인도네시아·피지 등을 돌며 직접 편집까지 한 9분짜리 데뷔작 'Clusta'를 발표했다. '무명이었다가 하루아침에'라는 현실폭로형 훅이 명확하고, 촬영 기간·지역 등 구체적 사실이 있어 서핑 마니아층의 저장·공유를 노릴 수 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Watch: Rare Meteotsunami Swallow Brazil Beach in 20 Seconds (Video)",
+      "url": "https://www.surfer.com/news/brazil-meteotsunami-swallows-beach-video",
+      "feed": "surfer.com",
+      "published": "2026-09-23",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "지진이 아닌 기압 변화와 초속 60~90km/h 돌풍이 만든 희귀 기상해일(메테오쓰나미)이 브라질 라구나 해변을 단 20초 만에 집어삼키는 CCTV 영상으로, '20초'라는 숫자 자체가 수치충격형 훅이 된다. 인명 피해는 없었지만 해안가 식당까지 순식간에 물에 잠기는 장면이 강렬해 조회수형 소재로 적합하며, 한국 서해안에서도 과거 유사한 메테오쓰나미가 관측된 적이 있어 완전히 남의 나라 얘기만은 아니다.",
+      "status": "pending"
+    }
+  ]
+}
