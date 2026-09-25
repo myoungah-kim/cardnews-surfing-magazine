@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-25",
+  "generatedAt": "2026-09-25T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Japan's 'Underwater Mount Everest' Unleashed a 124-Foot Tsunami and It Could Happen Again",
+      "url": "https://www.surfer.com/news/japan-trench-mega-tsunami",
+      "feed": "surfer.com",
+      "published": "2026-09-24",
+      "topic": "환경",
+      "headlineType": "비교형",
+      "metric": "조회수",
+      "reason": "일본 해구가 에베레스트를 뒤집어놓은 것과 맞먹는 규모라는 비교로 시작해, 2011년 동일본대지진 당시 실제로 124피트(38m) 쓰나미를 일으켰다는 사실과 향후 30년 내 미야기 앞바다 규모 M7.4 지진 확률이 80~90%라는 연구 수치까지 담고 있어 사실 밀도가 높다. 일본과 인접한 한국 동해안도 과거 유사 지진해일의 영향권에 있었기 때문에 '남의 나라 얘기'로 읽히지 않는 직접 관련성이 있고, 거대한 자연재해에 대한 본능적 공포감이 조회수를 끌어올릴 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Great White Sharks Rip Apart Dolphin in Brutal SoCal Feeding Frenzy (Video)",
+      "url": "https://www.surfer.com/news/great-white-sharks-dolphin-feeding-frenzy-video",
+      "feed": "surfer.com",
+      "published": "2026-09-24",
+      "topic": "해양생물",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "백상아리 네 마리가 돌고래를 뜯어먹는 자극적인 드론 영상이지만, 실제로는 상어가 돌고래를 직접 죽인 게 아니라 이미 죽어 있던 사체를 처리한 것이라는 반전이 핵심 훅이다. 캘리포니아가 엘니뇨 영향으로 이례적으로 상어가 많은 여름을 보내고 있다는 전문가 코멘트까지 있어 사실 밀도도 충분하고, 최근 국내에서도 연안 상어 목격담이 늘어난 터라 유사 관련성도 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Greenland Iceberg Implodes and Fires Off Shock Waves Across the Arctic (Video)",
+      "url": "https://www.surfer.com/news/greenland-iceberg-collapse-waves-video-2",
+      "feed": "surfer.com",
+      "published": "2026-09-24",
+      "topic": "파도/스펙터클",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "그린란드에서 거대한 빙하가 무너지며 충격파처럼 파도를 만들어내는 영상으로, '얼음이 무너지는데 서핑이 가능한 파도가 나온다'는 의외성이 강한 훅이다. 2007년 개럿 맥나마라가 알래스카 빙하 파도를 처음 탄 사례, 2024년 그린란드 첫 빙하파도 서퍼까지 구체적 사실이 뒷받침돼 있어 스펙터클 영상과 정보성을 동시에 갖췄다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Hurricane Polo Is So Powerful People Are Asking About 'Category 6' (Video)",
+      "url": "https://www.surfer.com/news/hurricane-polo-biggest-storm-ever",
+      "feed": "surfer.com",
+      "published": "2026-09-24",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "동태평양에서 관측 사상 두 번째로 강력한 허리케인(최대풍속 180mph, 중심기압 892mb)이 등장하면서 '카테고리 6이 필요한 것 아니냐'는 논쟁까지 낳았다. 24시간 만에 풍속이 110mph나 치솟았다는 수치 자체가 충격적이고, 이 여파로 캘리포니아 해안에 10~15피트 위험한 서프가 예보된다는 실질적 정보도 있어 조회수와 정보성을 함께 노릴 수 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "The story behind Ben Gravy's six-foot ferry wave",
+      "url": "https://www.surfertoday.com/surfing/the-story-behind-ben-gravys-six-foot-ferry-wave",
+      "feed": "surfertoday.com",
+      "published": "2026-09-24",
+      "topic": "씬/문화",
+      "headlineType": "결과암시형",
+      "metric": "저장",
+      "reason": "노바스코샤를 오가는 초고속 페리의 항적이 우연히 6피트짜리 배럴 파도로 자라난다는 사실 자체가 '그런 파도가 존재한다고?'라는 궁금증을 만든다. 연구개발비로 1만 달러를 썼다는 구체적 수치와 실패와 성공을 오간 여정이 상세히 담겨 있어 브리핑으로 풀어낼 사실 밀도가 높고, '이런 독특한 파도도 있다'는 정보성 덕분에 저장 전환을 기대할 수 있다.",
+      "status": "pending"
+    }
+  ]
+}
