@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-29",
+  "generatedAt": "2026-09-29T07:52:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "The Day Greg Long Drowned | StabMic Ep. 32",
+      "url": "https://stabmag.com/stabcinema/the-day-greg-long-drowned-stabmic-ep-33/",
+      "feed": "stabmag.com",
+      "published": "2026-09-28",
+      "topic": "안전/시설",
+      "headlineType": "반전형",
+      "metric": "저장",
+      "reason": "2012년 빅웨이브 서퍼 그렉 롱이 코르테즈 뱅크에서 3연속 파도에 휩쓸려 임상적으로 사망했다가 살아난 사건과, 당시 오작동했던 인플레이션 베스트가 파타고니아와의 협업 끝에 2세대로 재출시된다는 소식이다. '더 안전한 장비가 오히려 더 위험한 도전을 부추긴다'는 역설까지 짚어줘 단순 사고 소식이 아니라 안전 장비를 참고할 만한 저장형 콘텐츠로 확장 가능하다. 신작 다큐 'Inflation Point' 공개와 맞물려 시의성도 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Watch: Shark Rams 53-Year-Old Surfer Off His Board in Australia",
+      "url": "https://www.surfer.com/news/cabarita-shark-slams-matthew-devine-video",
+      "feed": "surfer.com",
+      "published": "2026-09-28",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "호주 카바리타 비치에서 53세 서퍼 매튜 데빈이 라인업에 앉아있다 상어에게 그대로 들이받혀 보드에서 튕겨나갔고, 세 번째로 달려들 것을 각오했다는 생생한 1인칭 인터뷰가 확보돼 있다. 같은 해변에서 15개월 새 벌써 세 번째 상어 사고라는 구체적 팩트가 경고형 훅을 완성하고, 공포 속에서도 '내일이라도 다시 들어간다'는 반전 코멘트가 공유 욕구를 자극한다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Chris Hemsworth's Carbon Fiber 'Spaceship' Surfboard Stuns Instagram (Video)",
+      "url": "https://www.surfer.com/news/chris-hemsworth-carbon-spaceship-surfboard-video",
+      "feed": "surfer.com",
+      "published": "2026-09-28",
+      "topic": "인물/셀럽",
+      "headlineType": "비교형",
+      "metric": "조회수",
+      "reason": "크리스 헴스워스가 뉴질랜드 출신 쉐이퍼 스카티 제임스의 카본 파이버 트윈핀 'Rock n Roller'를 처음 보자마자 '이거 하나 사야겠다'고 반응한 일화가 공개됐다. 서핑보드를 온라인으로 사는 게 중독이라는 헴스워스의 자기 고백과 켈리 슬레이터도 같은 쉐이퍼에게 주문했다는 사실이 비서퍼층까지 끌어당길 만한 셀럽 크로스오버 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "The story behind Ben Gravy's six-foot ferry wave",
+      "url": "https://www.surfertoday.com/surfing/the-story-behind-ben-gravys-six-foot-ferry-wave",
+      "feed": "surfertoday.com",
+      "published": "2026-09-24",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "유튜버 벤 그래비가 노바스코샤를 오가는 초고속 페리 'The CAT'의 항적에서 6피트급 튜브를 뽑아내려고 연구개발비로만 1만 달러를 쏟아붓다 마지막 날 완주에 성공해 '이게 1만 달러짜리 파도였다'고 외친 이야기다. 파도가 아니라 배가 만든 인공 파도라는 반전에 구체적 비용·엔진 스펙(1만2000마력×4)까지 나와 있어 사실 밀도가 높고 영상 자체도 바이럴성이 강하다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "A First Taste Of Cloudbreak",
+      "url": "https://tracksmag.com.au/a-first-taste-of-cloudbreak",
+      "feed": "tracksmag.com.au",
+      "published": "2026-09-24",
+      "topic": "파도/스펙터클",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "피지 클라우드브레이크에 XL 스웰이 들이닥쳐 카이 레니, 빌리 켐퍼 등 헤비웨이브 스타들이 총출동했고, 그 파도를 처음 만난 네드 하트와 렉스 오코너의 생생한 인터뷰(갈비뼈 3대 골절 포함)가 확보돼 있다. '세계 최고의 파도'로 불리는 곳의 실제 공포와 희열을 당사자 육성으로 전달할 수 있어 서퍼 독자에게는 저장할 만한 인사이트 콘텐츠다.",
+      "status": "pending"
+    }
+  ]
+}
