@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-06",
+  "generatedAt": "2026-10-06T07:15:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Kayaker Hospitalized After Shocking Shark Attack Off Paradise Cove in Malibu",
+      "url": "https://www.surfer.com/news/shark-paradise-cove-malibu-kayaker",
+      "feed": "surfer.com",
+      "published": "2026-10-04",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "말리부 파라다이스 코브에서 낚시를 하던 카약 낚시꾼이 상어에게 두 번—카약 위에서 한 번, 물에 빠진 뒤 다시 한 번—물려 병원으로 옮겨졌다. LA 카운티 구조대원 알렉스 뷰포드가 상황을 직접 설명했고, 피해자가 애초에 그 상어를 직접 낚으려다 공격당했다는 아이러니까지 확보돼 경고형 훅이 분명하다. 같은 주 말리부 해역에서 백상아리 관련 영상이 또 올라올 만큼 '샤키 위크'였다는 맥락도 있어 조회수를 끌기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Ben Gravy Hunts 30-Foot Nor'easter Seas as New Jersey Pumps (Video)",
+      "url": "https://www.surfer.com/news/ben-gravy-noreaster-new-jersey-surf-video",
+      "feed": "surfer.com",
+      "published": "2026-10-05",
+      "topic": "파도/스펙터클",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "동부 해안을 강타한 노리스터 폭풍이 대부분의 사람들에게는 재난이었지만, 뉴저지 노벨티 웨이브 전문 서퍼 벤 그레이비에게는 30피트짜리 깔끔한 배럴을 선물했다. 폭풍이 지나간 뒤 단 몇 시간만 열리는 희귀한 조건에서 촬영된 영상이라 사실 밀도가 높고, '모두에겐 악몽, 그에겐 선물'이라는 선명한 반전 구조가 바로 나온다. 영상 자체의 스펙터클이 강해 비서퍼도 반응할 조회수용 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "How Tom Curren Accidentally Baptized Japan's Most Fabled Big Wave Spot",
+      "url": "https://stabmag.com/features/how-tom-curren-accidentally-baptized-japans-most-fabled-big-wave-spot/",
+      "feed": "stabmag.com",
+      "published": "2026-10-05",
+      "topic": "인물/셀럽",
+      "headlineType": "결과암시형",
+      "metric": "저장",
+      "reason": "1991년 태풍이 몰아친 미야자키에서 톰 커렌이 작은 어촌 마을 리프에 홀로 들어갔던 것이 오늘날 '커렌스 포인트'로 불리는 일본 최고의 빅웨이브 스팟의 시작이었다. 고바야시 마사키·나카사코 켕고 등 실제 현지 서퍼들의 이름과 당시 상황이 구체적으로 확인돼 사실 밀도가 높고, 전설적인 서퍼가 의도치 않게 한 나라의 서핑 역사를 만들었다는 결과암시형 훅이 선명하다. `premium` 태그가 붙어 있지만 특집 링크 모음이 아니라 하나의 완결된 서사이며, 일본이라는 한국인에게 친숙한 여행지 소재라 저장·공유에 유리하다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Quik Fest Draws 55,000 to France for 9 Days of Surf, Skate, and Music",
+      "url": "https://www.surfer.com/news/quiksilver-festival-draws-55000-france-surf-skate-music",
+      "feed": "surfer.com",
+      "published": "2026-10-05",
+      "topic": "씬/담론",
+      "headlineType": "수치충격형",
+      "metric": "팔로우",
+      "reason": "스와치가 후원하는 퀵실버 페스티벌이 4번째 edition을 맞아 프랑스 오세고르·카프르통·세뇨스 일대에서 9일간 55,000명을 끌어모았다는 구체적 수치가 확보됐다. 2022년 시작된 이 행사는 서핑 경기뿐 아니라 스케이트·콘서트·아트가 뒤섞인 종합 문화 축제로 자리 잡았다는 맥락까지 있어 사실 밀도가 높다. 서핑을 몰라도 음악·축제 문화에 반응할 비서퍼 크로스오버 소재라 팔로우 전환에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "A Condensed History of the Surfing Webcam",
+      "url": "https://www.surfer.com/news/history-surfing-webcam",
+      "feed": "surfer.com",
+      "published": "2026-10-05",
+      "topic": "문화/무비",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "오늘날 서프 스팟마다 당연하게 켜져 있는 웹캠의 뿌리가, 사실은 1991년 케임브리지대 연구자들이 커피포트가 비었는지 확인하려고 만든 세계 최초의 웹캠 '트로이 룸 캠'까지 거슬러 올라간다는 몰랐던 사실을 다룬다. 서핑과 무관해 보이는 기술사 일화가 서프 브레이크 캠 문화로 이어지는 구체적 연결고리가 확인돼 현실폭로형 훅이 선명하다. 서퍼가 아닌 테크·트리비아 애호가까지 끌어올 크로스오버 소재라 저장에 유리하다.",
+      "status": "pending"
+    }
+  ]
+}
