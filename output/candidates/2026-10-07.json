@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-07",
+  "generatedAt": "2026-10-07T07:15:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Have You Ever Tried A Surfboard Made Out of Cigarettes?",
+      "url": "https://tracksmag.com.au/have-you-ever-tried-a-surfboard-made-out-of-cigarettes",
+      "feed": "tracksmag.com.au",
+      "published": "2026-10-06",
+      "topic": "환경",
+      "headlineType": "결과암시형",
+      "metric": "팔로우",
+      "reason": "서퍼 테일러 레인이 캘리포니아 해변에서 주운 담배꽁초 1만 개로 실제로 타는 서프보드를 만들었고, 그 캠페인이 산타크루즈 지역 세 개 지자체에서 일회용 담배 필터 판매를 금지하는 조례로까지 이어졌다. 케이티 시머스·마이키 페브러리 등 프로 서퍼가 출연하고 잭 존슨·클리프 카포노·롭 마차도가 지지자로 나선 다큐멘터리라 사실 밀도가 높고, '쓰레기로 만든 보드가 법을 바꿨다'는 결과암시형 훅이 선명하다. 환경 의식 있는 서핑 문화 콘텐츠로 계정 신뢰도를 쌓기 좋아 팔로우 전환에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "The Man with Four Breasts? Surfers Are Mistaking Chest Bumps for Cancer",
+      "url": "https://www.surfer.com/news/liposurfoma-surfer-chest-bumps-cancer",
+      "feed": "surfer.com",
+      "published": "2026-10-06",
+      "topic": "안전/시설",
+      "headlineType": "경고형",
+      "metric": "댓글",
+      "reason": "UC 어바인 피부과 전문의 제프리 클라인 박사의 연구에 따르면, 수십 년간 숏보드에 가슴을 밀착해 패들링한 서퍼들에게 암으로 오해받기 쉬운 양성 지방종 '리포서포마'가 흔하게 생긴다. 1973년 의학 문헌에 이미 '서퍼의 매듭'으로 기록된 오래된 증상이지만 최근 영상 보도로 재조명됐고, 전설적 서퍼 코키 캐롤이 스스로를 '가슴이 네 개인 남자'라 부른 일화까지 확인돼 사실 밀도가 높다. 패들링을 많이 하는 서퍼라면 누구나 공감하고 직접 확인해볼 소재라 댓글 유도에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Watch: Kelly Slater Rides An EAST Finalist In The South Pacific",
+      "url": "https://stabmag.com/stabcinema/watch-kelly-slater-rides-an-east-finalist-in-the-south-pacific/",
+      "feed": "stabmag.com",
+      "published": "2026-10-06",
+      "topic": "인물/셀럽",
+      "headlineType": "선언형",
+      "metric": "조회수",
+      "reason": "EAST 결선 진출자 그렉 웨버가 만든 보드를 켈리 슬레이터가 피지 타바루아 인근에서 직접 타며 '고득점 라이딩은 대부분 파도가 좋아서지, 서핑이 제대로 되어서가 아니다'라는 자기 성찰적 발언을 남겼다. 11번의 월드 챔피언이 자신의 보드 브랜드 대신 남의 보드를 타면서까지 솔직한 평가를 내놓는 장면이라 인용과 맥락이 명확하다. 서핑을 몰라도 켈리 슬레이터라는 이름값만으로 끌릴 수 있는 크로스오버 소재라 조회수에 유리하다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Watch: Boat Goes Airborne After Charging Through Waves at Popular California Surf Spot",
+      "url": "https://www.surfer.com/news/boat-airborne-waves-carlsbad-video",
+      "feed": "surfer.com",
+      "published": "2026-10-06",
+      "topic": "파도/스펙터클",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "캘리포니아 칼스배드의 인기 서핑 스팟 타마락 앞바다에서, 속도를 줄이지 않고 들어온 모터보트가 밀려오는 파도를 타고 그대로 공중으로 날아올랐다가 수면에 내리꽂혔다. 지켜보던 아이들의 생생한 반응이 영상에 담겼고, 캘리포니아주가 해변·수영객 인근에서 보트 속도를 시속 5마일로 제한하는 규정까지 구체적으로 확인돼 경고성 맥락도 갖췄다. 파도의 힘을 실감하게 하는 반전형 스펙터클이라 조회수에 유리하다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Are We About To See Someone Hit Three Rails On One Wave?",
+      "url": "https://stabmag.com/elsewhere/are-we-about-to-see-someone-hit-three-rails-on-one-wave/",
+      "feed": "stabmag.com",
+      "published": "2026-10-06",
+      "topic": "씬/담론",
+      "headlineType": "질문형",
+      "metric": "댓글",
+      "reason": "10월 8~10일 텍사스 웨이코에서 열리는 스와치 나인스 서핑 대회가 올해는 파도 위에 드롭인 레일을 설치해 한 번의 라이딩에서 레일 3개를 연속으로 타는 시도를 예고했다. 주최자 니코 자첵이 구체적 셋업과 참가 선수 명단(코코 호, 밀라 코코 브라운 등)을 직접 밝혀 사실 밀도가 높고, '정말 가능할까'라는 질문형 훅이 바로 나온다. 한국에도 웨이브파크가 늘고 있어 풀장 서핑 트릭 혁신 소재는 직접 관련성이 있고 댓글 유도에 적합하다.",
+      "status": "pending"
+    }
+  ]
+}
