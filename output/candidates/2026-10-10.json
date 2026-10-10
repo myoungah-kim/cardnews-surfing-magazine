@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-10",
+  "generatedAt": "2026-10-10T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "'1,000 Waves an Hour' Mega Surf Park Approved for Northern California",
+      "url": "https://www.surfer.com/news/alchemy-surf-resort-california-wave-pool",
+      "feed": "surfer.com",
+      "published": "2026-10-08",
+      "topic": "안전/시설",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "새크라멘토 인근 플레이서 카운티가 5에이커·62모듈 규모 웨이브가든 코브(시간당 파도 최대 1,000개)를 갖춘 '알케미 서프 리조트'를 만장일치로 승인했다. 100룸 호텔·22개 방갈로·스케이트 광장까지 포함된 25에이커 리조트로 연간 방문객 45만 명을 예상하며 2027년 착공·2029년 개장을 목표로 한다는 구체적 수치가 많아 사실 밀도가 높다. 기존 북미 최대였던 DSRT Surf(52모듈)를 능가한다는 비교형 요소까지 있어 한국 웨이브파크 이용자들도 직접 대입해 저장할 만하다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Hurricane Rachel's Colossal Swell Is Already Pummeling Southern California",
+      "url": "https://www.surfer.com/news/hurricane-rachel-swell-southern-california-video",
+      "feed": "surfer.com",
+      "published": "2026-10-09",
+      "topic": "파도/스펙터클",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "수백 마일 밖에 있는 허리케인 레이첼이 열대성 폭풍으로 약화된 채로도 남캘리포니아 해안을 이미 때리고 있다. 방파제를 때려 몇 층 높이로 솟구치는 파도 영상이 확인됐고, 국립허리케인센터는 주말 내내 생명을 위협하는 서프·이안류 경보를 내렸다. 엘니뇨로 인한 켈빈 웨이브가 해수면을 6~12인치 끌어올리고 수온도 평년보다 7~8도 높다는 수치까지 확보돼 사실 밀도가 높고, '아직 멀리 있는데 벌써 이 정도'라는 경고형 훅이 조회수를 끌 수 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Why surfers develop benign chest growths",
+      "url": "https://www.surfertoday.com/surfing/why-surfers-develop-benign-chest-growths",
+      "feed": "surfertoday.com",
+      "published": "2026-10-08",
+      "topic": "안전/시설",
+      "headlineType": "현실폭로형",
+      "metric": "댓글",
+      "reason": "숏보드 패들링을 반복하는 서퍼들에게 생기는 양성 종양 '리포서르포마'를 다룬 2024년 피부과 연구(사례 7건, 41~55세, 최대 10x12cm, 수술 후 재발 사례까지)가 구체적이라 사실 밀도가 높다. 무릎이 아니라 가슴에 생긴다는 의외성과 '서핑을 오래 하면 생긴다'는 반응이 바로 경험담 댓글로 이어지는 현실폭로형 소재라 숏보더들의 반응을 끌기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "AI Surf Forecasting Has Arrived… Is It Any Good?",
+      "url": "https://stabmag.com/premium/ai-surf-forecasting-has-arrived-is-it-any-good/",
+      "feed": "stabmag.com",
+      "published": "2026-10-09",
+      "topic": "씬/담론",
+      "headlineType": "현실폭로형",
+      "metric": "댓글",
+      "reason": "AI 기반 서핑 예보 앱이 쏟아지는 가운데, 서퍼스 로그 창업자 누노 고딩요, 스웰스코프 창업자 크리스 메데로스, 매직시위드 창업자이자 현 서프라인 최고제품책임자 벤 프리스턴의 실명 인터뷰까지 확보돼 사실 밀도가 높다. 대부분의 AI 앱이 미국 기상청의 무료 GFS 데이터를 쓰는 반면 서프라인은 자체 카메라망·데이터로 격차를 지키려 최근 라이브캠까지 유료화했다는 현실폭로형 훅이 있어, 매일 포캐스트 앱을 쓰는 서퍼들에게 직접 관련성이 높고 '어느 앱이 맞는지' 논쟁을 부를 수 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Jaleesa Vincent Is Dropping A Movie With Caity Simmers And Frankie Harrer",
+      "url": "https://stabmag.com/elsewhere/jaleesa-vincent-is-dropping-a-movie-with-caity-simmers-and-frankie-harrer/",
+      "feed": "stabmag.com",
+      "published": "2026-10-07",
+      "topic": "문화/무비",
+      "headlineType": "선언형",
+      "metric": "조회수",
+      "reason": "케이티 시머스·프랭키 해러가 주연한 서핑×뱀파이어 판타지 영화 '뱀파이어스 서프'가 10월 31일 호주 누사 프리미어를 시작으로 비아리츠·파리·뉴욕·LA 등 세계 10개 도시에서 순차 상영된다는 구체적 일정이 확인됐다. 서핑 영화에 뱀파이어가 나온다는 설정 자체가 이례적인 선언형 훅이고, 핼러윈(10/31)과 겹치는 프리미어 타이밍에 케이티 시머스의 네임벨류가 비서퍼 크로스오버 조회수를 끌 수 있다.",
+      "status": "pending"
+    }
+  ]
+}
