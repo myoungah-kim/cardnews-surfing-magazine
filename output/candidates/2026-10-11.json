@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-11",
+  "generatedAt": "2026-10-11T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Shark Attack Survivor Says Predator 'Winked' Before Tearing Off His Leg",
+      "url": "https://www.surfer.com/news/mel-ismail-australia-shark-attack",
+      "feed": "surfer.com",
+      "published": "2026-10-10",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "호주 제럴턴 인근 해변에서 소방관 멜 이스마일(56)이 백상아리에게 오른쪽 다리 무릎 아래를 물려 절단당했다. 상어의 눈을 봤다는 생생한 진술과 동료 서퍼가 레그로프로 지혈대를 만들어 구조한 디테일, 공격 후 몇 주 안에 보드를 다시 타겠다는 반응까지 사실 밀도가 매우 높다. '상어가 윙크했다'는 섬뜩한 디테일 자체가 강한 경고형 훅이라 조회수와 댓글 반응을 동시에 끌 수 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Newport Beach Flooding: Seawater Pours Into Streets Along the Balboa Peninsula, Local Emergency Declared",
+      "url": "https://www.surfer.com/news/newport-beach-flooding-local-emergency-balboa-peninsula",
+      "feed": "surfer.com",
+      "published": "2026-10-10",
+      "topic": "파도/스펙터클",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "예상보다 두 배 큰 허리케인 레이첼 스웰이 뉴포트 비치 '더 웨지'의 모래 방벽을 무너뜨려 21번가부터 6번가까지 무릎 높이로 거리가 침수됐고, 시의회 의원이 '20년 만에 본 최악'이라 평가하며 지역 비상사태까지 선포했다. 구체적 거리명·수위·대응(펌프 가동, 조수 밸브 개방)까지 확보돼 사실 밀도가 높고, 일요일 아침 더 큰 스웰이 온다는 경고가 더해져 긴박감이 큰 경고형 훅이다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "'1,000 Waves an Hour' Mega Surf Park Approved for Northern California",
+      "url": "https://www.surfer.com/news/alchemy-surf-resort-california-wave-pool",
+      "feed": "surfer.com",
+      "published": "2026-10-08",
+      "topic": "안전/시설",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "새크라멘토 인근 플레이서 카운티가 5에이커·62모듈 규모 웨이브가든 코브(시간당 파도 최대 1,000개)를 갖춘 '알케미 서프 리조트'를 만장일치로 승인했다. 100룸 호텔·22개 방갈로·스케이트 광장까지 포함된 25에이커 리조트로 연간 방문객 45만 명을 예상하며 2027년 착공·2029년 개장을 목표로 한다는 구체적 수치가 많아 사실 밀도가 높다. 기존 북미 최대였던 DSRT Surf(52모듈)를 능가한다는 비교형 요소까지 있어 한국 웨이브파크 이용자들도 직접 대입해 저장할 만하다. 이틀 연속 제작되지 않아 재후보로 유지.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "AI Surf Forecasting Has Arrived… Is It Any Good?",
+      "url": "https://stabmag.com/premium/ai-surf-forecasting-has-arrived-is-it-any-good/",
+      "feed": "stabmag.com",
+      "published": "2026-10-09",
+      "topic": "씬/담론",
+      "headlineType": "현실폭로형",
+      "metric": "댓글",
+      "reason": "AI 기반 서핑 예보 앱이 쏟아지는 가운데, 서퍼스 로그 창업자 누노 고딩요, 스웰스코프 창업자 크리스 메데로스, 매직시위드 창업자이자 현 서프라인 최고제품책임자 벤 프리스턴의 실명 인터뷰까지 확보돼 사실 밀도가 높다. 대부분의 AI 앱이 미국 기상청의 무료 GFS 데이터를 쓰는 반면 서프라인은 자체 카메라망·데이터로 격차를 지키려 한다는 현실폭로형 훅이 있어, 매일 포캐스트 앱을 쓰는 서퍼들에게 직접 관련성이 높다. 재후보로 유지.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Why surfers develop benign chest growths",
+      "url": "https://www.surfertoday.com/surfing/why-surfers-develop-benign-chest-growths",
+      "feed": "surfertoday.com",
+      "published": "2026-10-08",
+      "topic": "안전/시설",
+      "headlineType": "현실폭로형",
+      "metric": "댓글",
+      "reason": "숏보드 패들링을 반복하는 서퍼들에게 생기는 양성 종양 '리포서르포마'를 다룬 2024년 피부과 연구(사례 7건, 41~55세, 최대 10x12cm, 수술 후 재발 사례까지)가 구체적이라 사실 밀도가 높다. 무릎이 아니라 가슴에 생긴다는 의외성과 '서핑을 오래 하면 생긴다'는 반응이 바로 경험담 댓글로 이어지는 현실폭로형 소재라 숏보더들의 반응을 끌기 좋다. 재후보로 유지.",
+      "status": "pending"
+    }
+  ]
+}
