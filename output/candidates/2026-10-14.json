@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-14",
+  "generatedAt": "2026-10-14T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Hurricane Rachel Shreds 20-Foot Berms as Police Shut the Wedge in Newport",
+      "url": "https://www.surfer.com/news/hurricane-rachel-newport-beach-flooding-video",
+      "feed": "surfer.com",
+      "published": "2026-10-13",
+      "topic": "환경",
+      "headlineType": "비교형",
+      "metric": "조회수",
+      "reason": "엘니뇨발 켈빈파로 해수면이 6~12인치 상승한 상태에서 예보보다 약 2배 큰 스웰이 덮쳐, 뉴포트비치 명물 스팟 '더 웨지' 앞 20피트 모래방벽이 뚫리고 21번가부터 6번가까지 거리가 침수됐다. 경찰이 웨지·뉴포트 피어·발보아 피어를 전면 폐쇄하고 비상사태까지 선포됐으며, 20년째 반도에 사는 시의원이 \"이 정도는 처음 본다\"고 말할 만큼 피해가 커 비교형 훅이 또렷하다. 어제 후보에 올랐던 같은 침수 사건(California's Ritziest, Riskiest Peninsula)보다 최신 인용과 비상사태 선포 등 더 강한 사실을 담고 있어 그 자리를 대체한다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Super El Niño Surf Rips Open Giant Crack Beneath PCH in Orange County",
+      "url": "https://www.surfer.com/news/super-el-nino-crack-pch-orange-county-video",
+      "feed": "surfer.com",
+      "published": "2026-10-13",
+      "topic": "환경",
+      "headlineType": "결과암시형",
+      "metric": "조회수",
+      "reason": "몇 달째 이어진 엘니뇨 스웰이 라구나비치~뉴포트비치 사이 해안 절벽을 두들겨, PCH 도로에서 10피트 거리에 거대한 균열이 생겼다. 칼트랜스가 1번 국도를 1차선으로 줄이고 응급 공사에 들어갔고 크리스탈코브 주립공원은 100년 넘은 해변 별장 26채를 통째로 대피시켰다. 현지 필름메이커가 \"절벽이 무너지고 있다, 며칠 안에 붕괴할 것\"이라 경고해 결말을 숨기는 결과암시형 훅이 강하고, 겨울 폭풍·킹타이드가 겹치면 추가 붕괴 위험이 있다는 전문가 경고까지 있어 사실 밀도가 높다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Is Drawing First Blood In A Heat Actually Worth Anything?",
+      "url": "https://stabmag.com/features/the-first-wave-fallacy/",
+      "feed": "stabmag.com",
+      "published": "2026-10-13",
+      "topic": "씬/담론",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "서핑 데이터 분석팀 VORTEX가 CT 대회 9개 이벤트 483개 히트를 분석한 결과, 먼저 파도를 잡은 선수가 이기는 비율은 52%에 불과했고 첫 파도 중 30%만 최종 스코어라인에 남았다. 2관왕 가브리엘 메디나조차 첫 파도 유지율이 18%에 그친다는 반전 수치가 있어 '선취점이 곧 승리'라는 통념을 깨는 수치충격형 훅이 뚜렷하다. 서핑 룰과 전략을 아는 코어 팬에게 강하게 공유·저장될 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Killers of Perth Surfing Brothers to Be Sentenced This Week",
+      "url": "https://tracksmag.com.au/killers-of-perth-surfing-brothers-to-be-sentenced-this-week",
+      "feed": "tracksmag.com.au",
+      "published": "2026-10-13",
+      "topic": "안전/시설",
+      "headlineType": "경고형",
+      "metric": "댓글",
+      "reason": "2024년 바하칼리포르니아 서핑 여행 중 살해된 호주인 형제 캘럼·제이크 로빈슨과 미국인 친구 카터 로드 사건의 선고가 이번 주로 예정됐다. 검찰은 1인당 210년을 구형했지만 바하칼리포르니아주 법상 최대 60년까지만 선고할 수 있어, 피해자 가족이 바라는 처벌과 법이 허용하는 상한 사이 간극이 경고형 훅이 된다. 해외 서프 트립을 다니는 한국 독자에게도 직접적인 안전 경각심을 줄 수 있는 소재이지만, 실제 살해 사건이라는 점에서 선정적 표현 없이 사실 전달 톤을 지켜야 한다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Innovative Hawaiian Surf Legend Larry Bertlemann Dies at 71",
+      "url": "https://www.surfer.com/news/hawaiian-surf-legend-larry-bertlemann-dies-71",
+      "feed": "surfer.com",
+      "published": "2026-10-11",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "'고무인간' 래리 버틀만이 71세로 세상을 떠났다. 세계 챔피언 타이틀은 한 번도 못 땄지만(17세 때 커리어 최고 성적 4위) 무릎을 굽힌 낮은 자세의 턴으로 성능 서핑 자체를 재정의했고, 그 스타일이 도그타운 스케이터 제이 애덤스·토니 알바에게 전해져 '버트'라는 스케이트 기술로 남았다는 기대와 다른 반전 구조가 강하다. Stab Mag·Tracks가 나란히 추모 기사를 내며 \"We owe you everything\"(Thrasher), \"You made dreams happen for a lot of us kids\"(Kelly Slater) 인용을 교차 확인했다. 발행 사흘째에도 제작되지 않아 마지막으로 한 번 더 추천하며, 7일 나이 상한이 다가오는 만큼 내일부터는 재추천이 어렵다.",
+      "status": "pending"
+    }
+  ]
+}
