@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-18",
+  "generatedAt": "2026-10-18T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Killers of 3 Surfers in Baja Get 158-Year Sentences for Brutal Murders",
+      "url": "https://www.surfer.com/news/callum-jake-robinson-muders-baja-jail",
+      "feed": "surfer.com",
+      "published": "2026-10-17",
+      "topic": "안전/시설",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "호주 형제 제이크·캘럼 로빈슨과 미국인 카터 로드를 살해한 3명에게 멕시코 법원이 158년형을 선고했다. 바하칼리포르니아주 최고 형량이 60년인데도 피해자별 형량을 합산해 158년이 나왔다는 수치 자체가 충격 포인트고, 2024년 전 세계를 떠들썩하게 한 서퍼 살인사건의 결말이라 조회수를 끌기 좋다. 해외 서프 트립을 준비하는 독자에게 현지 치안 경각심을 주는 안전 이슈이기도 하다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "NOAA's Unmanned Saildrone Battles 65-Foot Hurricane Isaias Seas (Video)",
+      "url": "https://www.surfer.com/news/noaa-saildrone-65-foot-hurricane-isaias-video",
+      "feed": "surfer.com",
+      "published": "2026-10-16",
+      "topic": "파도/스펙터클",
+      "headlineType": "현실폭로형",
+      "metric": "조회수",
+      "reason": "사람이 들어갈 수 없는 허리케인 한복판에 무인 세일드론을 띄워 65피트 파도와 시속 103마일 돌풍을 실측 영상으로 포착했다. 카테고리 3 허리케인 아이사이아스가 걸프만에서 4명의 목숨을 앗아간 비극적 배경과, 로봇이 대신 들어가 찍어온 '괴물 파도' 영상의 시각적 충격이 겹쳐 조회수형 훅이 강하다. 태풍 시즌마다 비슷한 괴담이 도는 국내 독자에게도 비교 대상이 될 만하다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "The Great Portuguese Standby",
+      "url": "https://stabmag.com/news/the-great-portuguese-standby/",
+      "feed": "stabmag.com",
+      "published": "2026-10-17",
+      "topic": "씬/담론",
+      "headlineType": "반전형",
+      "metric": "댓글",
+      "reason": "리우컬프 프로 포르투갈 2일차에서 세계랭킹 1위 캐리사 무어가 케이틀린 시머스에게 11.50 대 8.93으로 완패했다. 컨디션이 나빠져 세 시간이나 대회가 중단될 만큼 까다로운 바다에서 나온 결과라 '1위가 떨어졌다'는 반전 임팩트가 크고, 투어 판도를 다시 따지게 만들어 댓글 반응을 끌기 좋다. premium 태그 없이 본문 전체가 공개돼 있어 사실 확인도 어렵지 않다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "El Niño Is Coming. And The Ocean's Doing Some Weird Stuff",
+      "url": "https://www.surfer.com/news/el-nino-is-coming-ocean-doing-weird-stuff",
+      "feed": "surfer.com",
+      "published": "2026-10-17",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "마셜제도에서 넉 달째 이어진 무역풍 역전 현상이 강한 엘니뇨의 전조로 꼽히고, 남가주 바다에는 희귀 어종과 바다거북, 고래상어까지 들어오는 이상 현상이 겹치고 있다. NOAA가 '역대급' 엘니뇨 가능성을 83%로, 해양 열파가 전체 해역의 45%까지 번질 가능성을 제시해 수치가 구체적이다. 올겨울 파도와 수온이 평년과 달라질 수 있다는 경고라 저장해두고 참고할 정보값이 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Must Watch: Mikey February's SunSong May Be the Best Surf Film of 2026",
+      "url": "https://www.surfer.com/culture/sunsong-mikey-february-tosh-tudor-james-kusitino",
+      "feed": "surfer.com",
+      "published": "2026-10-17",
+      "topic": "문화/무비",
+      "headlineType": "선언형",
+      "metric": "저장",
+      "reason": "피지 클라우드브레이크를 배경으로 마이키 페브러리와 신예 제임스 쿠시티노, 토시 튜더가 함께한 서핑 필름 '선송'이 올해 최고작으로 꼽힌다. 아프리카와 태평양 리듬을 엮은 사운드트랙과 감각적인 연출이 돋보여 무겁고 자극적인 다른 후보들 사이에서 톤을 환기하기 좋고, 영상미 중심 콘텐츠라 저장 유도에 적합하다. 떠오르는 피지 신예의 등장이라는 점도 담론거리다.",
+      "status": "pending"
+    }
+  ]
+}
