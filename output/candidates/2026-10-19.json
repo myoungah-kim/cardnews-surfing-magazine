@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-19",
+  "generatedAt": "2026-10-19T09:16:26+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "‘Second Arm’ Super El Niño Surges Toward What Could Be the Strongest in 1,000 Years",
+      "url": "https://www.surfer.com/news/second-arm-super-el-nino-warning",
+      "feed": "surfer.com",
+      "published": "2026-10-18",
+      "topic": "환경",
+      "headlineType": "수치충격",
+      "metric": "조회수",
+      "reason": "페루 기상당국이 '제2의 팔'이라 부른 이상 고수온대가 역대 최강급 슈퍼 엘니뇨로 커지고 있다는 수치(평균보다 3도 이상 상승, 2027년 1월까지 지속 전망)가 바로 수치충격형 헤드라인이 된다. 한국도 매년 태풍·이상고수온 피해를 겪는 만큼 '유사 관련' 소재로 공유·저장을 유도할 수 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "12-Foot Great White Showing ‘Aggressive Behavior’ Triggers Huntington Beach Shutdown (Video)",
+      "url": "https://www.surfer.com/news/great-white-aggressive-huntington-beach-video",
+      "feed": "surfer.com",
+      "published": "2026-10-14",
+      "topic": "해양생물",
+      "headlineType": "경고",
+      "metric": "조회수",
+      "reason": "3.6m급 백상아리가 '공격적 행동'을 보여 헌팅턴비치 해안 전체가 통제됐다는 구체적 사실(통제 구간, 시간, 전문가 인용)이 갖춰져 경고형 헤드라인이 바로 나온다. 한국 해변의 해파리·안전 이슈와 구조가 같아 직접 관련성이 높고, 영상 소스가 있어 스펙터클 요소도 강하다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Lewis Hamilton Rips Bali Left, Kelly Slater Fires Off One-Word Verdict (Video)",
+      "url": "https://www.surfer.com/news/lewis-hamilton-kelly-slater-bali-surf-video",
+      "feed": "surfer.com",
+      "published": "2026-10-14",
+      "topic": "인물/셀럽",
+      "headlineType": "결과암시",
+      "metric": "팔로우",
+      "reason": "F1 7회 챔피언 루이스 해밀턴이 발리에서 서핑하는 영상에 켈리 슬레이터가 단 한 단어로 반응했다는 궁금증 유발 구조가 그대로 결과암시형 헤드라인이 된다. 비서퍼도 F1 스타 이름만으로 클릭할 크로스오버 소재라 팔로워 유입 목적에 가장 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Don’t Stand Up Like an Old Man: Shane Dorian’s Blueprint for Surfing Into Your 50s and Beyond",
+      "url": "https://tracksmag.com.au/dont-stand-up-like-an-old-man-shane-dorians-blueprint-for-surfing-into-your-50s-and-beyond",
+      "feed": "tracksmag.com.au",
+      "published": "2026-10-18",
+      "topic": "인물/셀럽",
+      "headlineType": "현실폭로",
+      "metric": "저장",
+      "reason": "빅웨이브 레전드 셰인 도리안(54)이 '젊을 때 비웃던 팝업 연습이 50대엔 생존 조건이 된다'고 털어놓는 인터뷰로, 서핑을 취미로 하는 30~50대 한국 독자에게 정확히 꽂히는 직접 관련 소재다. 근력·가동성 관리 같은 구체적 조언이 있어 저장 유도에 최적화됐다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "ISA And WSL Settle Differences, Agree To Split Time With The Kids",
+      "url": "https://stabmag.com/news/isa-and-wsl-settle-differences-agree-to-split-time-with-the-kids/",
+      "feed": "stabmag.com",
+      "published": "2026-10-18",
+      "topic": "씬/담론",
+      "headlineType": "반전",
+      "metric": "댓글",
+      "reason": "올림픽 출전권을 두고 수개월간 대립하던 ISA와 WSL이 결국 월드게임스 일정을 조정해 CT 서퍼 전원 출전을 허용하기로 한 반전 결말이다. 투어 구조·종목 위상 논쟁은 서핑 씬에 관심 있는 독자의 댓글을 끌어낼 소재로 적합하다.",
+      "status": "pending"
+    }
+  ]
+}
