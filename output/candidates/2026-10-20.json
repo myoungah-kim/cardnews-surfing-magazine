@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-20",
+  "generatedAt": "2026-10-20T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Shark Cruises Through 'Literally Ankle-Deep Water' Among Surfers in Los Angeles (Video)",
+      "url": "https://www.surfer.com/news/shark-los-angeles-el-porto-surfers-video",
+      "feed": "surfer.com",
+      "published": "2026-10-19",
+      "topic": "해양생물",
+      "headlineType": "경고",
+      "metric": "조회수",
+      "reason": "LA 최고 인기 서핑 스팟인 엘포르토 발목 깊이 물에서 상어 등지느러미가 서퍼들 옆을 스쳐가는 영상이, 촬영자 조시 허블리츠의 실명 인용('발목 깊이. 이건 진짜 위험하다')과 함께 구체적으로 확보돼 경고형 헤드라인이 바로 나온다. 샤크토버 시즌이라는 배경 설명까지 갖춰져 사실 밀도가 높고, 한국 해변의 해파리·안전 이슈와 구조가 같아 직접 관련성도 높다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "'Multi-Headed Monster' Kelvin Waves Are About to Pummel California's Coast During Super El Niño",
+      "url": "https://www.surfer.com/news/kelvin-waves-super-el-nino-california-coast",
+      "feed": "surfer.com",
+      "published": "2026-10-19",
+      "topic": "환경",
+      "headlineType": "수치충격",
+      "metric": "조회수",
+      "reason": "NOAA·NC주립대·컬럼비아대 등 복수 과학자 인용으로 '한 번이 아니라 5~6개의 켈빈파가 몰려온다'는 구체적 수치가 확보돼 수치충격형 헤드라인이 바로 나온다. 어제 후보였던 '제2의 팔' 슈퍼 엘니뇨 보도의 후속 심화 기사로 한국도 매년 겪는 이상기후·해안 침식 이슈와 구조가 같아 유사 관련성이 높다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Larry Bertlemann: the Rubberman who changed surfing and skateboarding",
+      "url": "https://www.surfertoday.com/surfing/larry-bertlemann-rubberman-surfing-skateboarding",
+      "feed": "surfertoday.com",
+      "published": "2026-10-19",
+      "topic": "인물/셀럽",
+      "headlineType": "반전",
+      "metric": "저장",
+      "reason": "13세에 프로가 된 하와이안 서퍼가 만든 턴 하나('더 버트')가 서핑을 넘어 스케이트보딩 역사까지 바꿨다는 반전 구조가 뚜렷하고, 출생·사망 경위(2026.10.10 호놀룰루, 71세)부터 셰이퍼 벤 아이파와의 일화까지 사실 밀도가 매우 높다. 서핑뿐 아니라 스케이트보드 팬까지 끌어올 수 있는 크로스오버 소재라 팔로워 확장에도 유리하다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Dave Rastovich & Dane Reynolds On The Meaninglessness Of Surfing | StabMic Ep. 35",
+      "url": "https://stabmag.com/stabcinema/dave-rastovich-dane-reynolds-on-the-meaninglessness-of-surfing-stabmic-ep-35/",
+      "feed": "stabmag.com",
+      "published": "2026-10-19",
+      "topic": "문화/무비",
+      "headlineType": "선언",
+      "metric": "저장",
+      "reason": "좀처럼 미디어에 나오지 않는 두 서퍼 데이브 라스토비치와 데인 레이놀즈가 '서핑은 완전히 쓸모없다. 근데 그거 없는 인생을 상상해봐'라는 단정적인 역설을 던지는 선언형 소재다. 파타고니아 영화 'Sensing Home' 투어와 연결된 구체적 맥락이 있고, 서핑을 모르는 사람도 공감할 만한 문장이라 저장·공유 유도에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Swatch Nines Unleashes Surfing and Skating's Wildest Playground in Waco (Video, Photos)",
+      "url": "https://www.surfer.com/news/swatch-nines-2026-photos",
+      "feed": "surfer.com",
+      "published": "2026-10-19",
+      "topic": "씬/담론",
+      "headlineType": "현실폭로",
+      "metric": "댓글",
+      "reason": "텍사스 웨이코에서 스탠딩웨이브·웨이브풀·전기서프보드·윈치 에어까지 동원된 3일간의 창작자 축제를 코코 호·추모 치안카 등 실명 인용으로 생생하게 전한다. 한국에서도 관심이 커지는 웨이브풀 경험과 직결되는 소재라 직접 관련성이 있고, '이런 것도 서핑이다'는 현실폭로형 반응과 댓글을 끌어내기 좋다.",
+      "status": "pending"
+    }
+  ]
+}
