@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-21",
+  "generatedAt": "2026-10-21T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Great White Shark Breach Stuns Marina Beach As Viral 'Fake' Photobomb Proven Real",
+      "url": "https://www.surfer.com/news/great-white-shark-viral-photobomb-video",
+      "feed": "surfer.com",
+      "published": "2026-10-20",
+      "topic": "해양생물",
+      "headlineType": "반전",
+      "metric": "조회수",
+      "reason": "해변에서 사진을 찍던 에린 킹 바로 뒤로 대형 백상아리가 솟구친 영상이 처음엔 '합성 아니냐'는 의심을 받았지만, 서플라인 카메라 타임스탬프 대조로 캘리포니아 주립공원 당국이 실제 상황임을 공식 확인하면서 반전형 헤드라인이 바로 나온다. 가을이 백상아리 회귀 성수기라는 사실까지 더해져 한국 해변의 해파리·상어 출몰 경고와 구조가 같은 직접 관련 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "SEOTY: Micky Clarke Sings Ke$ha In The Face Of (Un)Certain Death",
+      "url": "https://stabmag.com/features/seoty-micky-clarke-sings-keha-in-the-face-of-uncertain-death/",
+      "feed": "stabmag.com",
+      "published": "2026-10-20",
+      "topic": "인물/셀럽",
+      "headlineType": "현실폭로",
+      "metric": "저장",
+      "reason": "멘타와이로 향하던 보트가 폭풍 속 파도에 반쯤 침수돼 생사를 오가던 순간, 서퍼 미키 클라크가 선택한 건 다름 아닌 Ke$ha의 'Timber' 떼창이었다는 현실폭로형 소재다. 구더기 라면, 놓친 페리, 사기꾼까지 겹친 인도네시아 서핑 트립의 민낯이 신작 서핑 필름 공개와 맞물려 구체적으로 확보됐고, 'premium' 태그가 붙었지만 허브형이 아닌 완결된 개별 피처라 사실 밀도도 충분하다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "El Niño Swell Bombards Southern California as Wedge Goes Berserk",
+      "url": "https://www.surfer.com/news/el-nino-surf-california-wedge-photos",
+      "feed": "surfer.com",
+      "published": "2026-10-20",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격",
+      "metric": "조회수",
+      "reason": "엘니뇨發 연속 스웰과 샌타애나 바람이 겹치며 더 웨지가 괴물 파도를 쏟아냈고, 포토그래퍼 오언 베임이 '25~30시간을 물속에서 보냈다. 내 인생 가장 미친 시즌'이라고 실명으로 증언할 만큼 스펙터클이 구체적이다. 올가을·겨울 내내 이어질 엘니뇨 시즌의 서막이라는 맥락까지 있어 수치충격형 헤드라인과 조회수 확보에 유리하다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Brazil Storms Supertubos As Erin's Four-Peat Hits A Pickle",
+      "url": "https://stabmag.com/news/brazil-storms-supertubos-as-erins-four-peat-hits-a-pickle/",
+      "feed": "stabmag.com",
+      "published": "2026-10-20",
+      "topic": "씬/담론",
+      "headlineType": "반전",
+      "metric": "댓글",
+      "reason": "4개 대회 연속 우승을 노리던 에린 브룩스를 몰리 피클럼이 8강에서 끊어낸(11.33-6.83) 구체적 스코어가 확보돼 반전형 헤드라인이 바로 나온다. 남자부도 브라질 서퍼들이 4강 중 상당수를 휩쓸며 'CT 우승 확률 75%' 전망까지 나와 WSL을 챙겨보는 국내 팬들의 댓글·논쟁을 끌어내기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Eddie Would Go. Nainoa Thompson Is Still Going.",
+      "url": "https://www.surfer.com/culture/eddie-would-go-nainoa-thompson-is-still-going",
+      "feed": "surfer.com",
+      "published": "2026-10-19",
+      "topic": "문화/무비",
+      "headlineType": "공감",
+      "metric": "저장",
+      "reason": "1978년 에디 아이카우가 바다로 사라진 그날 옆에 있던 25살 견습 항해사 나이노아 톰슨이, 73세가 된 지금도 호쿨레아 카누로 태평양을 횡단 중이라는 사실 자체가 공감형 헤드라인이 된다. 마우 피아일룩 밑에서 600년 만에 전통 항법으로 바다를 건넌 첫 하와이인이 된 과정, 2014~2017년 4만 해리 항해 등 사실 밀도가 높아 서핑을 몰라도 저장하고 싶은 이야기다.",
+      "status": "pending"
+    }
+  ]
+}
