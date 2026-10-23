@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-23",
+  "generatedAt": "2026-10-23T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Massive 16-Foot Crocodile Killed After Stalking Surfers at World-Famous Wave",
+      "url": "https://www.surfer.com/news/crocodile-killed-surfers-mentawai-islands",
+      "feed": "surfer.com",
+      "published": "2026-10-22",
+      "topic": "해양생물",
+      "headlineType": "경고",
+      "metric": "조회수",
+      "reason": "세계적으로 유명한 인도네시아 멘타와이 HT's(Lance's Right) 라인업에 5m급 초대형 악어가 나타나 서퍼들을 위협하자 현지 보트 업체가 긴급 대피시키고 당국이 결국 사살한 사건이다. 보트 운영자 Dave Crouch의 실명 인터뷰와 악어를 모른 채 접근한 호주 여성 서퍼의 구체적 상황까지 확보돼 사실 밀도가 매우 높고, 유명 서핑 스팟이라는 크로스오버 요소와 '야생동물 사살이 맞는 선택이었나'라는 논쟁거리까지 있어 조회수·댓글 모두 기대할 수 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Watch Boat Go Airborne in Brutal Wipeout as Wave Flips 3 Overboard (Video)",
+      "url": "https://www.surfer.com/news/boat-capsize-big-waves-australia",
+      "feed": "surfer.com",
+      "published": "2026-10-22",
+      "topic": "파도/스펙터클",
+      "headlineType": "경고",
+      "metric": "조회수",
+      "reason": "뉴사우스웨일스 브런즈윅 리버 바를 건너던 소형 보트가 파도에 솟아올랐다가 뒤집혀 탑승자 3명이 바다에 빠지는 장면이 목격자 증언과 함께 생생히 포착됐다. '구명조끼는 입었나'라는 목격자의 질문과 전원 무사 구조라는 결과까지 갖춰 보트 안전 경고 메시지로 쓰기 좋고, 극적인 영상미로 조회수를 노릴 수 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Lake Michigan Erupts as NOAA Warns of 26-Foot Freshwater Monsters (Video)",
+      "url": "https://www.surfer.com/news/lake-michigan-26-foot-waves-video",
+      "feed": "surfer.com",
+      "published": "2026-10-22",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격",
+      "metric": "조회수",
+      "reason": "바다가 아닌 호수에서 10월 폭풍으로 최대 26피트짜리 '담수 괴물 파도'가 발생했고, 미국 국립기상청(NWS)이 공식 경보를 냈다. 등대·방파제를 덮치는 드론 영상까지 확보돼 '파도가 바다에만 있는 게 아니다'라는 반전성 수치충격 소재로 크로스오버 조회수를 끌기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "The rise of the cheap foam board generation",
+      "url": "https://www.surfertoday.com/surfing/cheap-foam-board-generation",
+      "feed": "surfertoday.com",
+      "published": "2026-10-22",
+      "topic": "씬/담론",
+      "headlineType": "현실폭로",
+      "metric": "댓글",
+      "reason": "'요즘 서핑은 1회성 체험 상품이 됐다'며 초보 폼보더 급증이 라인업 혼잡·우선순위 규칙 붕괴·로컬 서프샵 폐업으로 이어진다고 꼬집는 논쟁적 글이다. 한국도 양양 등에서 비슷한 서핑 붐·혼잡 논쟁이 있어 국내 서퍼들이 직접 공감하거나 반박하며 댓글을 남기기 좋은 현실폭로형 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Fiji Surfers Rally Against Proposed Iron-Sand Mine at Sigatoka River Mouth",
+      "url": "https://www.surfer.com/news/fiji-sigatoka-river-mouth-iron-sand-mine-opposition",
+      "feed": "surfer.com",
+      "published": "2026-10-22",
+      "topic": "환경",
+      "headlineType": "현실폭로",
+      "metric": "댓글",
+      "reason": "피지 시가토카 리버마우스의 유일한 비치브레이크가 호주계 광산기업의 철광 모래 채굴 프로젝트로 사라질 위기에 놓여, 현지 서퍼·어민·지주들이 환경영향평가(EIA) 열람조차 어렵다며 반발하고 있다. 10월 30일이라는 구체적 심사 마감일과 실명 활동가(Stu Johnson, Kalani Miller)까지 확보돼 사실 밀도가 높고, 해안 개발 이슈에 민감한 국내 서퍼들의 공감·댓글을 끌 수 있다.",
+      "status": "pending"
+    }
+  ]
+}
