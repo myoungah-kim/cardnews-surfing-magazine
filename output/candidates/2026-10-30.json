@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-30",
+  "generatedAt": "2026-10-30T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "California's Record-Breaking Sea Levels Swamp Newport Beach Streets",
+      "url": "https://www.surfer.com/news/california-record-sea-levels-newport-flooding-video",
+      "feed": "surfer.com",
+      "published": "2026-10-29",
+      "topic": "환경",
+      "headlineType": "수치충격",
+      "metric": "저장",
+      "reason": "산페드로 조위계가 100년 만에 해수면 기록을 갈아치웠고 라홀라·산타바바라도 동시에 사상 최고치를 찍었다는 수치 자체가 강력한 훅이다. 해안 침수는 한국 해변 마을도 겪는 문제라 '우리 동네도 이럴 수 있다'는 직접 공감으로 저장을 유도하기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Great White Shark 'Baptizes' California Surfer in Terrifyingly Close Drone Encounter",
+      "url": "https://www.surfer.com/news/shark-surfer-san-luis-obispo-video",
+      "feed": "surfer.com",
+      "published": "2026-10-29",
+      "topic": "해양생물",
+      "headlineType": "경고",
+      "metric": "조회수",
+      "reason": "12~15피트 대형 백상어가 서퍼 바로 옆에서 꼬리로 물을 튀기는 드론 영상과 '상어가 나를 세례했다'는 본인의 생생한 인용문이 있어 카드 한 장으로 멈추게 하는 힘이 크다. 가을 샤크토버 시즌 상어 출몰은 해외 서핑 뉴스에서 꾸준히 강한 조회수를 내는 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Kelly Slater Crowns 'Surf's Up' Over Baywatch in Candid Hollywood Confession",
+      "url": "https://www.surfer.com/news/kelly-slater-surfs-up-vs-baywatch-video",
+      "feed": "surfer.com",
+      "published": "2026-10-29",
+      "topic": "인물/셀럽",
+      "headlineType": "비교",
+      "metric": "댓글",
+      "reason": "11번 세계 챔피언 켈리 슬레이터가 베이워치보다 애니메이션 펭귄 역할을 더 즐겼다는 의외의 고백이라 비서퍼도 아는 두 콘텐츠를 저울질하는 비교형 훅이 바로 나온다. '나도 서프스 업이 더 좋았다' 식의 공감·반박 댓글을 끌어내기 좋은 크로스오버 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "A Pool Film Starring Hughie Vaughan, Eithan Osborne, Craig Anderson + Mikey Wright",
+      "url": "https://stabmag.com/stabcinema/watch-left-right-goodnight-starring-hughie-vaughan-eithan-osborne-craig-anderson-mikey-wright/",
+      "feed": "stabmag.com",
+      "published": "2026-10-29",
+      "topic": "문화/무비",
+      "headlineType": "현실폭로",
+      "metric": "팔로우",
+      "reason": "670m급 인공 파도에 가족까지 데려와 호텔·스피크이지를 즐기는 '아부다비 웨이브풀' 라이프스타일은 한국 웨이브파크 이용자가 바로 대입해볼 수 있는 직접 관련 소재다. 세계적 프로 4인이 한 파도풀에서 보여주는 백플립·배럴 영상이 웨이브파크 트렌드에 관심 있는 팔로워를 모으기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Seven Minutes Of Damage From Australia's Youngest World Junior Champ",
+      "url": "https://stabmag.com/stabcinema/seven-minutes-of-damage-from-australias-youngest-world-junior-champ/",
+      "feed": "stabmag.com",
+      "published": "2026-10-29",
+      "topic": "인물/셀럽",
+      "headlineType": "수치충격",
+      "metric": "저장",
+      "reason": "13세에 호주 역사상 최연소 ISA 월드 주니어 챔피언이자 첫 원주민 챔피언이라는 기록 두 개가 한 문장에 겹쳐 수치충격형 훅이 바로 나온다. 몰디브 세션을 7분 영상으로 압축한 성장 스토리라 유소년 서핑을 챙겨보는 한국 독자층의 공감·저장을 끌어내기 좋다.",
+      "status": "pending"
+    }
+  ]
+}
