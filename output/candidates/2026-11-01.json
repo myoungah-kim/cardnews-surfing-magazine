@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-01",
+  "generatedAt": "2026-11-01T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Is This 13-Year-Old the Future of Women's Surfing?",
+      "url": "https://www.surfer.com/surfers/is-this-13-year-old-the-future-of-womens-surfing",
+      "feed": "surfer.com",
+      "published": "2026-10-31",
+      "topic": "인물/셀럽",
+      "headlineType": "수치충격형",
+      "metric": "팔로우",
+      "reason": "13세에 ISA 월드주니어 챔피언, 그것도 호주 원주민(눙가르 네이션) 최초 챔피언이라는 타이틀 두 개가 겹쳐 '이 어린 선수가 도대체 누구야'라는 궁금증이 즉시 생긴다. 몰디브에서 찍은 신작 영상과 2029 월드투어·LA 올림픽을 노린다는 구체적 목표까지 있어 사실 밀도가 높고, 성장 서사를 지켜보고 싶게 만들어 팔로우로 이어지기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Eddie Aikau 2026/27 Invite List Drops as John John Florence, Kai Lenny and Landon McNamara Target Historic Waimea Bay Swell",
+      "url": "https://www.surfer.com/news/eddie-aikau-2026-27-invitees-waimea-bay",
+      "feed": "surfer.com",
+      "published": "2026-10-30",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "41년간 단 11번만 열린 대회라는 수치 자체가 '그만큼 파도가 안 선다는 거야?'라는 궁금증을 만들고, 존존 플로렌스·카이 레니 같은 크로스오버 이름값이 비서퍼 유입에도 유리하다. 전날 후보로 뽑혔지만 제작까지 가지 않았고 12월 개최 시즌까지 후킹이 죽지 않아 재추천한다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "SEOTY: JOB's Favorite Backdoor Surfer Of All Time",
+      "url": "https://stabmag.com/stabcinema/jobs-favorite-backdoor-surfer-of-all-time/",
+      "feed": "stabmag.com",
+      "published": "2026-10-29",
+      "topic": "인물/셀럽",
+      "headlineType": "선언형",
+      "metric": "댓글",
+      "reason": "제이미 오브라이언이 역대 최고의 백도어 서퍼로 토레이 마이스터를 단정적으로 꼽는 선언 자체가 훅이고, 켈리 슬레이터·숀 도리안의 생생한 인용이 사실 밀도를 채운다. 켈리 슬레이터라는 크로스오버 이름값과 '내 생각은 다르다'는 반박을 부르는 선언형 구조라 댓글 유도에 적합해 다시 후보에 올린다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "'Sharkman' Charged After Dragging Tagged Great White Onto Cape Cod Beach (Video)",
+      "url": "https://www.surfer.com/news/christopher-stefanou-great-white-shark-illegal-video",
+      "feed": "surfer.com",
+      "published": "2026-10-31",
+      "topic": "해양생물",
+      "headlineType": "현실폭로형",
+      "metric": "조회수",
+      "reason": "보호종으로 태그까지 붙은 백상아리를 드론으로 유인해 한 시간 넘게 끌고 나와 사진을 찍은 인플루언서가 결국 기소됐다는 전개가 '이게 불법이었어?'라는 현실폭로형 궁금증을 만든다. 최대 7년형 동물학대 혐의, 1만 달러 보석금, 12월 11일 재판일까지 구체적 사실이 풍부해 논쟁적 조회수를 노리기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Emergency Seawalls Are Making California's Beaches Disappear, and El Niño Is Just Getting Started",
+      "url": "https://www.surfer.com/news/how-emergency-armoring-is-erasing-californias-beaches",
+      "feed": "surfer.com",
+      "published": "2026-10-31",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "'임시'로 쌓은 돌벽이 그대로 영구 시설이 되어 해변이 사라지고 있다는 경고·현실폭로형 구조가 강하고, 서프라이더 재단 2026 평가에서 30개 주 중 A는 하나도 없다는 수치, 샌클레멘테 2만7천톤 암석 투입 같은 구체적 데이터가 사실 밀도를 채운다. 해안침식은 한국 동해안(강릉·속초)에도 겹치는 상황이라 직접 관련성이 있어 저장해두고 싶은 경고성 정보로 적합하다.",
+      "status": "pending"
+    }
+  ]
+}
