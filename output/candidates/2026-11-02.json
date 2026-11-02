@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-02",
+  "generatedAt": "2026-11-02T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Lennix Smith’s Viral Mentawai Surf Fight Explodes Into Police Showdown (Video)",
+      "url": "https://www.surfer.com/news/surf-fight-indonesia-lennix-smith",
+      "feed": "surfer.com",
+      "published": "2026-11-01",
+      "topic": "씬/담론",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "호주 프로서퍼 레닉스 스미스가 멘타와이 라인업에서 드롭인한 서퍼에게 목을 긋는 제스처와 함께 죽이겠다는 협박까지 받았다고 폭로했는데, 흔한 서핑 다툼 영상인 줄 알았던 이 사건이 결국 경찰이 개입해 가해자에게 사과문까지 쓰게 만든 반전으로 끝났다. 쇼 도리안·톰 캐롤 같은 유명 서퍼들까지 댓글로 가세해 논쟁이 커졌고, 한국 서퍼들에게도 인기 여행지인 멘타와이에서 벌어진 일이라 직접 공감도 된다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "30-Foot ‘Silver Dragon’ Tidal Bore Swallows Fisherman on China’s Qiantang River (Video)",
+      "url": "https://www.surfer.com/news/qiantang-river-tidal-bore-fisherman-video",
+      "feed": "surfer.com",
+      "published": "2026-10-31",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "해변도 아닌 중국 강에서 30피트 '실버 드래곤' 조류가 낚시꾼을 그대로 집어삼키는 영상이 기네스 기록(세계 최대 조류)까지 인증된 현상이라 사실 밀도가 높고, 서핑과 무관해 보이는 소재라 오히려 비서퍼 유입에 유리하다. 시속 40km로 밀려오는 거대한 물벽이라는 구체적 수치가 그대로 공유되고 싶은 충격 포인트를 만든다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Is This 13-Year-Old the Future of Women's Surfing?",
+      "url": "https://www.surfer.com/surfers/is-this-13-year-old-the-future-of-womens-surfing",
+      "feed": "surfer.com",
+      "published": "2026-10-31",
+      "topic": "인물/셀럽",
+      "headlineType": "수치충격형",
+      "metric": "팔로우",
+      "reason": "13세에 ISA 월드주니어 챔피언, 호주 원주민(눙가르 네이션) 최초 챔피언이라는 두 타이틀이 겹쳐 '이 아이가 누구야'라는 궁금증이 바로 생기고, 2029 월드투어·LA 올림픽을 노린다는 구체적 목표까지 있어 성장 서사를 지켜보고 싶게 만든다. 전날에도 후보에 올랐지만 제작까지 가지 않았고 후킹이 그대로 유효해 다시 추천한다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Kelly Slater Crowns ‘Surf’s Up’ Over Baywatch in Candid Hollywood Confession (Video)",
+      "url": "https://www.surfer.com/news/kelly-slater-surfs-up-vs-baywatch-video",
+      "feed": "surfer.com",
+      "published": "2026-10-29",
+      "topic": "인물/셀럽",
+      "headlineType": "비교형",
+      "metric": "댓글",
+      "reason": "11번의 월드챔피언 켈리 슬레이터가 베이워치보다 애니메이션 펭귄으로 나온 '서프스 업'을 더 좋아한다고 밝힌 반전 섞인 비교가 가볍게 웃고 넘어갈 화제성을 만든다. 파멜라 앤더슨과 사귄 일화까지 곁들여져 비서퍼도 아는 이름값으로 유입을 노리기 좋고, '나는 베이워치파였는데' 식 댓글 유도에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Emergency Seawalls Are Making California's Beaches Disappear, and El Niño Is Just Getting Started",
+      "url": "https://www.surfer.com/news/how-emergency-armoring-is-erasing-californias-beaches",
+      "feed": "surfer.com",
+      "published": "2026-10-31",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "'임시'로 쌓은 돌벽이 그대로 영구 시설이 되어 해변이 사라지고 있다는 경고·현실폭로형 구조가 강하고, 서프라이더 재단 2026 평가에서 30개 주 중 A는 하나도 없다는 수치, 샌클레멘테 2만7천톤 암석 투입 같은 구체적 데이터가 사실 밀도를 채운다. 해안침식은 한국 동해안(강릉·속초)에도 겹치는 상황이라 직접 관련성이 있어 저장해두고 싶은 경고성 정보로 적합하다.",
+      "status": "pending"
+    }
+  ]
+}
