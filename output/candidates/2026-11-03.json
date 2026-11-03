@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-03",
+  "generatedAt": "2026-11-03T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Rare 'Alien' Fish With See-Through Head Spotted Off California Coast (Video)",
+      "url": "https://www.surfer.com/news/barreleye-fish-mbari",
+      "feed": "surfer.com",
+      "published": "2026-11-02",
+      "topic": "해양생물",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "투명한 머리에 초록색 눈이 둥둥 떠 있는 심해어 '배럴아이'가 캘리포니아 앞바다 수심 600미터에서 4K로 처음 포착됐는데, MBARI가 40년간 4만1천 시간 넘게 탐사하면서도 단 11번밖에 못 본 극희귀종이라는 구체적 수치가 신뢰를 준다. 서핑과 무관해 보이는 '외계생물' 비주얼이라 비서퍼까지 공유하고 싶게 만드는 크로스오버형 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Record-Breaking Ocean Levels Pummel California’s PCH at El Morro (Video)",
+      "url": "https://www.surfer.com/news/pacific-coast-highway-crack-el-morro-video",
+      "feed": "surfer.com",
+      "published": "2026-11-02",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "캘리포니아 해안도로 PCH 절벽에 길이 360피트, 폭 2피트짜리 균열이 생겨 주지사까지 나서 비상 행정명령을 내렸고, 캘트랜스가 400만 달러를 긴급 투입해 보강 중이라는 구체적 액션이 이어진다. 엘니뇨로 인한 기록적 해수면 상승이 겨울 스웰과 겹치면 더 심해질 거라는 경고가 강릉·속초 등 한국 동해안 침식 문제와도 맞닿아 직접 공감된다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "New Surfers Against Sewage Report Exposes the Devastating Health Impact of UK Sewage Discharges",
+      "url": "https://www.surfer.com/news/uk-sewage-report-surfers-against-sewage-2026",
+      "feed": "surfer.com",
+      "published": "2026-11-02",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "2026년 1~8월 영국에서만 1,687명이 서핑·수영 후 병이 났고, 그중 웨일스는 90%가 '좋음/우수' 등급 해변에서 나왔다는 반전적 수치가 충격을 준다. 2025년 한 해 50만 건 넘는 하수 방류, 신장 이식 환자가 세균 감염으로 입원한 실제 사례까지 있어 '물 들어가기 전 확인'해두고 싶은 저장형 경고 정보로 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "This DIY Backyard Wave Pool Just Exploded in Size and Power (Video)",
+      "url": "https://www.surfer.com/news/diy-backyard-wave-pool-arizona",
+      "feed": "surfer.com",
+      "published": "2026-11-02",
+      "topic": "씬/담론",
+      "headlineType": "반전형",
+      "metric": "댓글",
+      "reason": "리조트형 웨이브파크가 콘도·전용 카바나로 가격을 올리는 사이, 애리조나 사막 한가운데서 몇 명이 압축공기 방식으로 200피트 벽을 만들어 3~4피트 파도를 뽑아내는 데 성공했다는 반전이 흥미롭다. '파도 옆에 루이비통 매장이 왜 필요하냐'는 공동창업자 인용이 호불호 섞인 댓글을 유도하기 좋고, 한국에서도 웨이브파크 관심이 높아 직접 관련성이 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Why the same surfers always seem to get the best waves",
+      "url": "https://tracksmag.com.au/why-the-same-surfers-always-seem-to-get-the-best-waves",
+      "feed": "tracksmag.com.au",
+      "published": "2026-11-02",
+      "topic": "씬/담론",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "코너 오리어리·샐리 피츠기본스 등 WSL 선수들을 지도한 호주 코치 마틴 던이 '좋은 파도를 타는 사람은 실력이 아니라 자리 선정이 다를 뿐'이라며 무료 앱 '서프 리더'로 그 노하우를 공개했다는 공감형 소재다. '서핑라인은 해변까지, 서프 리더는 파도까지 데려다준다'는 인용처럼 실용적 팁이라 저장 전환이 기대된다.",
+      "status": "pending"
+    }
+  ]
+}
