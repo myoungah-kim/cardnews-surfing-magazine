@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-06",
+  "generatedAt": "2026-11-06T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "World's Best Waves Threatened By Climate Change New Study Finds",
+      "url": "https://www.surfer.com/news/worlds-best-waves-threatened-climate-change-new-study-finds",
+      "feed": "surfer.com",
+      "published": "2026-11-05",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "국제적으로 유명한 서핑 스팟 57곳을 분석한 새 연구가 대부분이 기후변화로 실제 위험에 처해 있다는 결론을 내렸다는 점이 후킹이다. 세이브더웨이브스 재단의 트렌트 호지스는 '파도가 변한다는 건 해변 자체가 변하고 있다는 뜻'이라고 직접 경고했다. 한국 서퍼들도 자신이 즐기는 스팟이 언제까지 그대로일지 걱정하게 만드는, 저장해두고 공유할 만한 환경 이슈다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "World Title Race: Who Needs What At Pipeline?",
+      "url": "https://stabmag.com/news/world-title-race-who-needs-what-at-pipeline/",
+      "feed": "stabmag.com",
+      "published": "2026-11-05",
+      "topic": "씬/담론",
+      "headlineType": "비교형",
+      "metric": "댓글",
+      "reason": "남자 6명, 여자 7명이 여전히 수학적으로 챔피언 가능성을 쥔 채 파이프라인 결선에 들어간다는 긴박함이 핵심이다. 가브리엘 메디나가 야고 도라에 580점 앞서 있어 둘이 같은 순위로 끝나면 메디나가 챔피언이 되는 의외의 계산법이 흥미를 끈다. 파이프라인 특유의 1.5배 가중치까지 더해져 WSL 팬이라면 댓글로 예측을 남기기 좋은 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "I Know You've Got A Good Kelly Story, Too…",
+      "url": "https://stabmag.com/features/i-know-youve-got-a-good-kelly-story-too/",
+      "feed": "stabmag.com",
+      "published": "2026-11-04",
+      "topic": "인물/셀럽",
+      "headlineType": "현실폭로형",
+      "metric": "팔로우",
+      "reason": "켈리 슬레이터와 퀵실버의 20년 넘은 파트너십을 다루는 다큐멘터리 'The Long Goodbye'가 11월 21일 로스앤젤레스와 시드니에서 동시 공개된다는 소식이다. 한때 그의 매니저가 서핑 대신 연기를 하라고 권했다는 일화와, 앤디 무니 체제에서 결국 퀵실버를 떠나게 된 사연이 현실폭로형 후킹을 만든다. 켈리 슬레이터는 비서퍼도 아는 이름이라 팔로우 전환에 유리하다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Shark Roams Flooded Florida Streets After Historic Storm (Video)",
+      "url": "https://www.surfer.com/news/shark-florida-streets-fort-pierce-video",
+      "feed": "surfer.com",
+      "published": "2026-11-05",
+      "topic": "해양생물",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "플로리다 포트피어스에 2026년 11월 기록적 폭우가 쏟아져 침수된 주택가 도로를 상어가 유유히 헤엄치는 영상이 '샤크네이도가 현실이 됐다'는 반응을 낳았다. 세인트루시카운티가 비상사태를 선포할 정도의 폭우였다는 구체적 배경이 신뢰를 더한다. 황당하면서도 무서운 그림이라 조회수와 공유를 동시에 노릴 수 있는 크로스오버 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Giant California Swell Hurls Coast Guard Rescue Boats Into The Air (Video)",
+      "url": "https://www.surfer.com/news/coast-guard-boats-giant-california-waves-video",
+      "feed": "surfer.com",
+      "published": "2026-11-05",
+      "topic": "파도/스펙터클",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "사람들이 피하는 파도 속으로 해안경비대가 오히려 뛰어들어 구조 훈련을 하는 영상이 반전을 만든다. 샌프란시스코 베이 지역에서 파도를 타고 솟아오르다 그대로 내려찍히는 보트의 모습이 드라마틱하고, '서프맨'이라는 수년간 훈련을 거쳐야 따는 자격증 이야기가 흥미를 더한다. 정확한 날짜·파고는 확인되지 않았지만 영상 자체의 스펙터클만으로 조회수를 노릴 수 있다.",
+      "status": "pending"
+    }
+  ]
+}
