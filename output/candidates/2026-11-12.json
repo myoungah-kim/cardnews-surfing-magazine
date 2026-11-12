@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-12",
+  "generatedAt": "2026-11-12T09:15:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "53-Foot Seas Ignite 'Parade of Storms' Aiming at California",
+      "url": "https://www.surfer.com/news/california-atmospheric-river-big-waves",
+      "feed": "surfer.com",
+      "published": "2026-11-11",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "알래스카발 폭풍이 연쇄로 밀려오면서 캘리포니아 북부 먼바다 파고가 53피트(약 16m)까지 관측됐고, 미국 기상청은 금요일부터 토요일까지 25~35피트 쇄파와 이안류·해안 침식 위험을 경고했다. 추수감사절 전후로 추가 스웰까지 예고돼 '폭풍 행렬'이 며칠간 이어질 전망이며, 매버릭스 세션 가능성에 서퍼들의 관심이 쏠려 있다. 구체적인 숫자와 임박한 주말 타임라인이 맞물려 즉각적인 화제성과 조회수를 끌 수 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Google Earth Hunters Expose Perfect 'Ayatollah' Wave Near Strait of Hormuz",
+      "url": "https://www.surfer.com/news/strait-of-hormuz-iran-surfing-video",
+      "feed": "surfer.com",
+      "published": "2026-11-10",
+      "topic": "파도/스펙터클",
+      "headlineType": "반전형",
+      "metric": "댓글",
+      "reason": "구글어스로 지형을 뒤지던 서퍼들이 이란 차바하르 인근 호르무즈 해협 근처에서 완벽한 좌파 포인트브레이크로 보이는 파도를 발견했다 — 아직 실제로 타본 사람은 확인되지 않았다. 지정학적 긴장으로 접근이 거의 불가능한 지역이라 '존재하지만 갈 수 없는 파도'라는 반전 포인트가 분명하고, 과거 에스키 브리튼의 이란 서핑 커뮤니티 활동 사례도 이야기를 뒷받침한다. '세계에 숨겨진 파도가 아직 더 있을까'라는 궁금증을 자극해 댓글·공유를 유도하기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "No 2027 CT, no 2028 Olympics, but John John Florence still wants a Pipe wildcard",
+      "url": "https://tracksmag.com.au/no-2027-ct-no-2028-olympics-but-john-john-florence-still-wants-a-pipe-wildcard",
+      "feed": "tracksmag.com.au",
+      "published": "2026-11-11",
+      "topic": "씬/담론",
+      "headlineType": "질문형",
+      "metric": "댓글",
+      "reason": "3회 세계챔피언 존 존 플로렌스가 2027시즌 투어 복귀를 접으며 올림픽 출전 자격도 포기했지만, 월드타이틀이 걸린 파이프 마스터스 결선 와일드카드는 따로 원한다고 밝혔다. 투어를 떠난 선수가 타이틀 레이스에 영향을 줄 와일드카드를 받는 게 공정한가를 두고 WSL이 난처한 선택에 놓였다는 논쟁 구도가 선명하다. 6명이 남은 타이틀 경쟁에 변수가 생기는 셈이라 코어 서핑팬들의 찬반 댓글을 끌어내기 좋은 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Albee Layer's Biggest Career Regrets, Getting Sober, And The Heaviest Wave On Earth | StabMic Ep. 38",
+      "url": "https://stabmag.com/stabcinema/albee-layers-biggest-career-regrets-getting-sober-and-the-heaviest-wave-on-earth-stabmic-ep-38/",
+      "feed": "stabmag.com",
+      "published": "2026-11-10",
+      "topic": "인물/셀럽",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "도발적인 캐릭터로 알려진 프로 서퍼 앨비 레이어가 팟캐스트에서 커리어 후회와 금주 과정을 솔직히 털어놓으며 '지금까지 탄 것 중 가장 무거운 파도를 타고 싶다'는 각오를 밝혔다. 치료와 자기 성찰을 이야기하는 모습이 평소 이미지와 대비돼 반전된 공감대를 형성하기 좋고, 유명 프로 서퍼의 솔직한 고백이라 서핑을 모르는 사람도 반응할 크로스오버 소재다. 어제 후보에 올랐지만 아직 제작되지 않아 훅이 살아있는 채로 다시 추천한다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Buoywatch puts the world's surf buoys and tide stations on one map",
+      "url": "https://www.surfertoday.com/surfing/buoywatch-surf-buoys-tides",
+      "feed": "surfertoday.com",
+      "published": "2026-11-11",
+      "topic": "기어/어워드",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "부이워치(Buoywatch)가 전세계 820여 개 파도 부이와 4,380여 개 조류 관측소 데이터를 지도 한 장에 모아 보여주는 앱으로, 최신 3.0 버전에서 7일 조류 예보와 전세계 지도·검색 기능까지 추가됐다. 개발팀은 '우리가 받은 최고의 마케팅은 켈리 슬레이터가 해준 것'이라고 말할 만큼 서퍼들 사이에서 입소문이 난 도구다. 포캐스트 앱을 찾는 한국 서퍼들에게도 바로 쓸 수 있는 실용 정보라 저장 유도에 적합하다.",
+      "status": "pending"
+    }
+  ]
+}
