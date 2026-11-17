@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-17",
+  "generatedAt": "2026-11-17T07:15:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "60-Foot Monster Surf Ushers in El Niño Winter at Maverick's (Photos)",
+      "url": "https://www.surfer.com/news/60-foot-monster-surf-el-nino-winter-mavericks-photos",
+      "feed": "surfer.com",
+      "published": "2026-11-16",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "2026/27 엘니뇨 시즌 개막일인 11월 14일, 마브릭스에서 24피트 스웰에 21초 주기가 겹쳐 실제 파고가 40~60피트까지 치솟았다. 카이 레니·루카스 치안카 등 빅웨이브 스타들이 토우인으로 맞섰고 사진가가 '역사적(historic)'이라 표현할 만큼 구체적 수치와 이름값이 갖춰져 수치충격형 헤드라인이 바로 나온다. 국내에서는 볼 수 없는 스케일의 스펙터클이라 조회수용으로 가장 강하다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Three surfers help save man who jumped from Golden Gate Bridge",
+      "url": "https://www.surfertoday.com/surfing/surfers-rescue-man-golden-gate-bridge",
+      "feed": "surfertoday.com",
+      "published": "2026-11-13",
+      "topic": "안전/시설",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "11월 10일 금문교에서 투신한 남성을 17세 서퍼 콜비 랄스를 포함한 서퍼 3명이 즉시 패들해 구조했고, 해안경비대도 '충격이 빠르게 올 수 있다'며 이들의 대응을 치켜세웠다. 자살예방 난간 설치 후 투신 사망이 연 30건에서 8건으로 줄었다는 구체적 수치까지 더해져 의미가 분명한 공감형 카드가 나오고, 비서퍼까지 공유할 영웅담이라 저장·댓글 모두에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "How A 14-Year-Old Won The ISA World Games… And Earned Australia An Extra Olympic Spot",
+      "url": "https://stabmag.com/news/14-year-old-leihani-zoric-and-ethan-ewing-win-isa-world-titles-earn-australia-an-extra-olympic-spot/",
+      "feed": "stabmag.com",
+      "published": "2026-11-16",
+      "topic": "인물/셀럽",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "페루 ISA 월드서핑게임즈에서 14세 레이하니 조릭이 1968년 세워진 최연소 챔피언 기록을 58년 만에 갈아치웠고, 더블 엘리미네이션 방식으로 총 11히트를 치르고 우승했다. 호주 여자팀 우승으로 LA28 올림픽 쿼터까지 추가로 따낸 구체적 성과가 있어 수치충격형 헤드라인이 자연스럽고, 세대교체 서사가 국내 서핑 씬 독자에게도 흥미로운 조회수용 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Pacifica's Legendary Beachfront Taco Bell Shrugs Off 30-Foot California Bomb Swell (Video)",
+      "url": "https://www.surfer.com/news/pacifica-taco-bell-30-foot-swell-video",
+      "feed": "surfer.com",
+      "published": "2026-11-16",
+      "topic": "파도/스펙터클",
+      "headlineType": "반전형",
+      "metric": "댓글",
+      "reason": "11월 14일 25~30피트 파도가 패시피카를 덮치는 와중에도 해변가 타코벨 매장은 영업을 멈추지 않았고, 30년 만의 두 번째로 높은 파고(31.2피트) 기록과 고속도로 침수 속에서 손님들이 데크에서 맥주를 마셨다는 의외의 디테일이 핵심이다. 재난 속 엉뚱한 생존기라는 반전이 비서퍼까지 웃으며 공유·댓글을 달 크로스오버 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Supercharged El Niño Swell Obliterates Michelin Hotel San Cristobal in Baja (Video)",
+      "url": "https://www.surfer.com/news/el-nino-waves-destroy-michelin-hotel-baja-video",
+      "feed": "surfer.com",
+      "published": "2026-11-14",
+      "topic": "환경",
+      "headlineType": "반전형",
+      "metric": "댓글",
+      "reason": "멕시코 바하 또도스산토스의 호텔 산크리스토발이 엘니뇨 스웰에 방파벽과 해안 객실을 잃었는데, 이 호텔은 10년간 어민들이 '해류를 바꾸고 생업을 위협한다'며 반대해온 시설이라 주민들이 재난을 '시적 정의'라며 반겼다는 반전이 핵심이다. 국내 해안 개발 찬반 구조와 닮아 유사 관련성이 있고, 아직 제작되지 않아 나흘째 재추천하는 만큼 다음 제작 우선순위로 고려할 만하다.",
+      "status": "pending"
+    }
+  ]
+}
