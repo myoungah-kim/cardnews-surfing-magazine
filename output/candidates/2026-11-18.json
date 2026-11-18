@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-18",
+  "generatedAt": "2026-11-18T07:15:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "How A 14-Year-Old Won The ISA World Games… And Earned Australia An Extra Olympic Spot",
+      "url": "https://stabmag.com/news/14-year-old-leihani-zoric-and-ethan-ewing-win-isa-world-titles-earn-australia-an-extra-olympic-spot/",
+      "feed": "stabmag.com",
+      "published": "2026-11-16",
+      "topic": "인물/셀럽",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "페루 ISA 월드서핑게임즈에서 14세 레이하니 조릭이 1968년 마고 오버그가 세운 역대 최연소 챔피언 기록을 58년 만에 갈아치웠고, 더블 엘리미네이션 방식으로 11히트를 치러 올림픽 메달리스트들까지 꺾고 우승했다. 호주는 여자부 우승으로 LA28 올림픽 쿼터를 추가로 확보했다는 구체적 성과까지 더해져 수치충격형 헤드라인이 바로 나오고, 세대교체 서사라 조회수용으로 강하다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Three surfers help save man who jumped from Golden Gate Bridge",
+      "url": "https://www.surfertoday.com/surfing/surfers-rescue-man-golden-gate-bridge",
+      "feed": "surfertoday.com",
+      "published": "2026-11-13",
+      "topic": "안전/시설",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "11월 10일 금문교에서 투신한 20대 남성을 포트 포인트에서 서핑 중이던 17세 콜비 랄스를 포함한 서퍼 3명이 즉시 패들해 보드에 태우고 구조대가 올 때까지 붙잡고 있었다. 해안경비대 존 톰슨 중위가 '그 서퍼들이 그곳에 있었기에 사람을 구할 결정적인 시간을 벌었다'고 공식적으로 공을 인정한 구체적 인용이 있어, 비서퍼도 공유할 영웅담이자 공감형 저장 유도 카드로 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Andy King Might Have Talked Himself Out Of A WSL Pass",
+      "url": "https://stabmag.com/elsewhere/andy-king-might-have-talked-himself-out-of-a-wsl-pass/",
+      "feed": "stabmag.com",
+      "published": "2026-11-16",
+      "topic": "씬/담론",
+      "headlineType": "반전형",
+      "metric": "댓글",
+      "reason": "믹 패닝·가브리엘 메디나·줄리안 윌슨 등을 지도한 코치 앤디 킹이 팟캐스트 '58 Surf and Turf'에 출연해 서핑의 올림픽 종목 적합성과 WSL의 자체 검열 관행을 직설적으로 비판하며 '이 방송 끝나면 모든 자리에서 잘릴 것 같다'고 스스로 말했다. 유명 코치가 방송에서 자기 입지를 걸고 한 솔직한 발언이라는 반전이 논쟁적 댓글을 유발하기 좋은 씬/담론 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Mutant El Niño Wave Explodes Onto Pebble Beach's Iconic 7th Hole",
+      "url": "https://www.surfer.com/news/pebble-beach-big-wave-7th-hole-video",
+      "feed": "surfer.com",
+      "published": "2026-11-17",
+      "topic": "파도/스펙터클",
+      "headlineType": "비교형+반전형",
+      "metric": "댓글",
+      "reason": "엘니뇨 스웰이 몰고 온 25~35피트(돌발 세트 40~50피트) 파도가 세계적으로 유명한 페블비치 골프장 7번 홀을 그대로 덮쳤고, 국립기상청은 '파도가 경고 없이 해안선을 휩쓸 수 있다'고 경고했다. 바로 옆 고스트 트리에서 2007년 사망 사고가 있었다는 과거 사례까지 겹쳐 골프와 서핑이라는 서로 다른 세계가 충돌하는 비교·반전 조합이 비서퍼까지 공유할 크로스오버 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Tijuana River Pollution Is Traceable In Southern California Air",
+      "url": "https://www.surfer.com/news/tijuana-river-pollution-is-traceable-in-southern-california-air",
+      "feed": "surfer.com",
+      "published": "2026-11-17",
+      "topic": "환경",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "UC 리버사이드 연구진이 Scientific Reports에 발표한 논문에 따르면, 티후아나강의 미처리 하수·산업폐기물이 22마일을 흘러간 뒤 대기 중으로 증발해 샌디에이고 라호야 지역 공기에서까지 검출됐다. 물 오염이 공기 오염으로 번진다는, 안에 있는 전문가만 아는 사실을 끌어내는 현실폭로형 소재이고 한국 해안 오염 이슈와도 구조가 닮아 저장 유도에 적합하다.",
+      "status": "pending"
+    }
+  ]
+}
