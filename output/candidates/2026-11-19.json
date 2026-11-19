@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-19",
+  "generatedAt": "2026-11-19T07:20:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Experts Warn of Potential $725 Billion 'ARkStorm' Catastrophe in California as Super El Niño Intensifies",
+      "url": "https://www.surfer.com/news/arkstorm-in-california-super-el-nino",
+      "feed": "surfer.com",
+      "published": "2026-11-18",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "USGS가 1861-62년 캘리포니아 대홍수를 모델로 만든 'ARkStorm' 시나리오가 올겨울 수퍼 엘니뇨와 겹쳐 실현 가능성이 커졌고, 경제적 피해 7250억 달러·대피 인원 150만 명이라는 구체적 수치와 기후학자 대니얼 스웨인의 '이번 겨울이 걱정된다'는 인용까지 갖춰 수치충격형 헤드라인이 바로 나온다. 한국 해안 지역의 기후재해 대비 관심과도 맞물려 저장 유도형 정보성 콘텐츠로 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Watch the Heroic Lifeguard Rescue at La Jolla Cove During San Diego's XL Swell",
+      "url": "https://www.surfer.com/news/san-diego-lifeguard-rescue-la-jolla-cove-el-nino",
+      "feed": "surfer.com",
+      "published": "2026-11-18",
+      "topic": "안전/시설",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "산타크루즈 해변이 전부 폐쇄될 정도의 엘니뇨발 대형 스웰 속에서, 핀도 없이 바다에 뛰어든 수영객을 29세 인명구조원 그리핀 홀딘이 구명튜브 하나로 암초에서 끌어낸 구체적 구조 장면과 '그가 붙잡지 못했다면 결과가 달랐을 것'이라는 본인 인용이 있다. 비서퍼도 공유할 만한 영웅담이자, 안전 이슈라는 한국 독자 직접 관련 소재로 공감형 저장 유도에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "20-Foot El Niño Swell Mauls San Diego as Jacob 'Zeke' Szekely and Skip McCullough Charge Death Slabs (Video)",
+      "url": "https://www.surfer.com/news/20-foot-el-nino-swell-san-diego-video",
+      "feed": "surfer.com",
+      "published": "2026-11-19",
+      "topic": "파도/스펙터클",
+      "headlineType": "경고형",
+      "metric": "조회수",
+      "reason": "샌디에이고 로컬 서퍼 제이콥 '지크' 세켈리가 20피트급 엘니뇨 스웰 속 위험한 리프 슬랩에 도전하다 안면으로 암초를 들이받는 와이프아웃을 당했고, '이런 스팟은 위험하다, 네 실력을 알아라'는 본인 경고 인용이 그대로 있어 경고형 헤드라인이 바로 나온다. 영상이 있는 극단적 스펙터클 소재라 조회수 유도에 강하다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "How Red Bull's big wave athletes train for Nazaré and the heaviest water in the world",
+      "url": "https://tracksmag.com.au/how-red-bulls-big-wave-athletes-train-for-nazare-and-the-heaviest-water-in-the-world",
+      "feed": "tracksmag.com.au",
+      "published": "2026-11-18",
+      "topic": "인물/셀럽",
+      "headlineType": "현실폭로형",
+      "metric": "팔로우",
+      "reason": "카이 레니, 루카스 치안카, 앤드류 코튼 등 톱 빅웨이브 서퍼들이 참가한 나자레 레드불 훈련캠프에서 '준비는 신체 40%, 멘탈 60%'라는 구체적 비율과 무호흡 훈련·올림픽 코치의 항공 훈련까지 세부 훈련법이 공개된다. 유명 선수들의 비공개 훈련 루틴을 들여다보는 현실폭로형 소재로, 꾸준한 팔로우 유도에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Cyclone Xavier Explodes Into Record-Breaking Category 5 Beast in the Pacific (Video)",
+      "url": "https://www.surfer.com/news/cyclone-xavier-record-category-5-video",
+      "feed": "surfer.com",
+      "published": "2026-11-18",
+      "topic": "환경",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "사이클론 자비에르가 최대풍속 145마일, 유효파고 34피트를 기록하며 남반구 11월 최강 사이클론 기록을 갈아치웠고, 피지기상청이 '매우 거친 고파고'를 공식 경고한 구체적 수치까지 갖췄다. 서핑과 직접 연결되진 않아도 역대급 기록이라는 크로스오버 소재로 조회수 유도에 적합하다.",
+      "status": "pending"
+    }
+  ]
+}
