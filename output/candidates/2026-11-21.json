@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-21",
+  "generatedAt": "2026-11-21T07:15:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "John John Florence Confirms He Won't Return To The CT In 2027",
+      "url": "https://stabmag.com/elsewhere/john-john-florence-confirms-he-wont-return-to-the-ct-in-2027/",
+      "feed": "stabmag.com",
+      "published": "2026-11-20",
+      "topic": "인물/셀럽",
+      "headlineType": "선언형",
+      "metric": "댓글",
+      "reason": "3회 월드챔피언 존 존 플로렌스가 2027시즌도 투어에 복귀하지 않겠다고 공식 선언하며 3년 연속 공백을 확정했다. 가족과 요트로 항해하는 삶을 택하며 2028 LA 올림픽 출전 가능성까지 스스로 접었고, '커리어보다 가족'이라는 분명한 메시지가 선언형 헤드라인으로 바로 나온다. 유명 선수의 보편적 선택 딜레마라 팔로워들의 공감과 의견 댓글을 동시에 끌어낼 수 있다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Atmospheric River Flooding Turns El Porto Into a Bizarre 'Waterfall' Surf Scene (Video)",
+      "url": "https://www.surfer.com/news/atmospheric-river-manhattan-beach-waterfall-video",
+      "feed": "surfer.com",
+      "published": "2026-11-20",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "엘포르토 비치브레이크가 폭우로 거리의 흙탕물이 그대로 바다로 쏟아지는 '폭포' 장면을 만들어냈는데, 비 온 뒤 72시간 내 입수 시 1,000명 중 30명꼴로 장염에 걸린다는 구체적 수치가 함께 제시된다. 한국 서퍼에게도 그대로 적용되는 실용 안전 수칙이라 저장해둘 가치가 큰 경고형 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "11-Foot Great White Stalks California Fisherman Before Drone Pilot's Life-Saving Warning (Video)",
+      "url": "https://www.surfer.com/news/great-white-shark-hunts-fishermen-california-video",
+      "feed": "surfer.com",
+      "published": "2026-11-20",
+      "topic": "해양생물",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "드론 촬영가가 2마일 밖에서 어부 곁을 노리는 11피트급 백상아리를 먼저 포착해 목숨을 구한 영상으로, 상어 전문가의 '사람은 먹잇감처럼 보이지 않는다'는 인용까지 갖춰 사실 밀도가 충분하다. 구조 영상 자체의 스펙터클과 더불어 '배 옆에 생선을 매달아두면 위험하다'는 반전형 안전 포인트가 살아있어 조회수를 끌기 좋다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Kelly Slater and Tomo's New Mindcraft X: The Art of Taking Things Away in Surfboard Design",
+      "url": "https://www.surfertoday.com/surfing/art-of-taking-things-away-surfboard-design",
+      "feed": "surfertoday.com",
+      "published": "2026-11-20",
+      "topic": "기어/어워드",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "켈리 슬레이터와 다니엘 토모슨이 보드 앞부분을 4~6인치나 잘라낸 '마인드크래프트 X'를 선보이며 '더하는 게 아니라 빼는 게 혁신'이라는 역발상 디자인 철학을 공개했다. 기어 소재는 원칙적으로 걸러내지만 슬레이터의 네임밸류와 구체적 설계 디테일(피라미드 노즈, 쿼드 콘케이브)이 예외를 둘 만한 훅을 만든다. 보드 디자인에 관심 있는 서퍼층의 저장 유도에 적합하다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Surfer Rides 'Giant' Easter Island Wave Beneath Ancient Stone Heads (Video)",
+      "url": "https://www.surfer.com/news/easter-island-surf-moai-video",
+      "feed": "surfer.com",
+      "published": "2026-11-20",
+      "topic": "파도/스펙터클",
+      "headlineType": "비교형",
+      "metric": "조회수",
+      "reason": "라파누이의 모아이 석상이 내려다보는 해변에서 파도를 타는 장면은 '고대 유적＋서핑'이라는 흔치 않은 조합으로 비서퍼까지 공유하게 만드는 소재다. 1960년대 떠다니던 서프보드를 주운 어부로부터 시작된 섬의 서핑 역사까지 더해져 캡션을 채울 사실도 충분하다. 다만 영상 속 서퍼의 실명이 확인되지 않은 점은 제작 단계에서 보완이 필요하다.",
+      "status": "pending"
+    }
+  ]
+}
