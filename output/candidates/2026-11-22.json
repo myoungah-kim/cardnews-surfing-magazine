@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-22",
+  "generatedAt": "2026-11-22T07:15:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "554-Foot Cargo Ship Slams Into French Beach as 20-Foot Atlantic Swell Triggers Dramatic Helicopter Rescue (Video)",
+      "url": "https://www.surfer.com/news/miro-g-cargo-ship-france-beach-rescue-video",
+      "feed": "surfer.com",
+      "published": "2026-11-21",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격형",
+      "metric": "조회수",
+      "reason": "프랑스 대서양 연안에서 554피트급 벌크선이 48노트 강풍과 13~20피트 스웰에 밀려 좌초됐고, 프랑스 공군 헬기가 선원 22명 중 19명을 구조하는 영상이 그대로 공개됐다. 디젤 100톤을 실은 배가 밀물 때 뒤집힐 위험까지 남아있다는 당국의 경고가 더해져 '파도가 거대 화물선을 집어삼켰다'는 수치충격형 헤드라인이 바로 나온다. 서퍼가 등장하지 않는 뉴스지만 스웰의 파괴력을 체감시키는 영상 자체가 비서퍼까지 공유할 만한 조회수형 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "Who Is The World's Best Surfer/Skater?",
+      "url": "https://stabmag.com/features/who-is-the-worlds-best-surfer-skater/",
+      "feed": "stabmag.com",
+      "published": "2026-11-21",
+      "topic": "인물/셀럽",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "발리 울루와투에서 열린 서핑·스케이트 크로스오버 대회 '케리스컵'에서, 올림픽 스케이트보드 금메달리스트 스카이 브라운이 서핑까지 겸비한 기량으로 우승을 차지했다. 페드로 바호스의 '나는 롤모델이라는 걸 깨달았다'는 인용과 지붕 위 그라인드 트릭 같은 비주얼 디테일까지 갖춰 사실 밀도가 높고, 올림픽 메달리스트라는 이름값이 비서퍼 유입을 끌어오는 반전형 조회수 소재다. (premium 태그가 붙어 있으나 RSS 본문에 전문 기사 내용이 그대로 포함돼 있어 허브형 포스트가 아님을 확인함)",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "Historic King Tides Threaten San Francisco with Unprecedented Thanksgiving Flooding",
+      "url": "https://www.surfer.com/news/uncharted-territory-san-francisco-braces-for-record-king-tides-and-holiday-flooding",
+      "feed": "surfer.com",
+      "published": "2026-11-21",
+      "topic": "환경",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "추수감사절 연휴에 맞춰 샌프란시스코가 북미 태평양 연안 사상 최고 기록을 넘어설 수 있는 '킹타이드'를 맞는다. 시장이 직접 '이 도시가 한 번도 본 적 없는 영역'이라고 경고했고 켈빈파·슈퍼문·폭우로 포화된 지반이 겹친 구체적 원인까지 짚어, 한국 서퍼에게도 적용되는 '폭우 후 입수 경보'로 저장 유도가 가능한 경고형 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Aussie Surf Fight Explodes After Angry Surfer Spears Brand-New Board (Video)",
+      "url": "https://www.surfer.com/news/surf-fight-australia-duranbah-video",
+      "feed": "surfer.com",
+      "published": "2026-11-21",
+      "topic": "씬/담론",
+      "headlineType": "공감형",
+      "metric": "댓글",
+      "reason": "호주 듀란바에서 라인업 갈등 끝에 한 서퍼가 상대의 새 보드를 일부러 들이박아 구멍을 낸 사건이, 가해자가 현장에서 100달러를 건네고 사과하는 장면까지 포함해 생생하게 중계됐다. 어디서나 벌어질 수 있는 라인업 분쟁이라 한국 서퍼들도 '내 얘기 같다'며 댓글로 자기 경험을 풀어놓기 좋은 공감형 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Did Twin Fins Suffer A Gross Injustice Back In 1981?",
+      "url": "https://stabmag.com/hardware/did-twin-fins-suffer-a-gross-injustice-back-in-1981/",
+      "feed": "stabmag.com",
+      "published": "2026-11-21",
+      "topic": "기어/어워드",
+      "headlineType": "현실폭로형",
+      "metric": "저장",
+      "reason": "1981년 사이먼 앤더슨의 스리핀(쓰러스터) 등장으로 밀려났던 트윈핀이, 매트 파간의 새 모델 '미니 파이퍼'로 다시 조명받는다. 기어 소재는 원칙적으로 걸러내지만 '제대로 발전할 시간도 없이 밀려났다'는 현실폭로형 각도와 구체적 설계 스펙(5'5\", 트윈+트레일러 핀 세팅)이 보드 디자인에 관심 있는 서퍼층의 저장 유도에 적합해 예외로 유지한다.",
+      "status": "pending"
+    }
+  ]
+}
