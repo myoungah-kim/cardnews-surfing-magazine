@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-23",
+  "generatedAt": "2026-11-23T07:15:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "20-Foot Great White Attacks California Surfer and Obliterates Board While He Escapes 'Without a Scratch' (Photos)",
+      "url": "https://www.surfer.com/news/great-white-shark-attack-surfer-santa-barbara",
+      "feed": "surfer.com",
+      "published": "2026-11-22",
+      "topic": "해양생물",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "15~20피트급 백상아리가 산타바바라 서퍼 잭 카니굴라의 라인업 밑에서 솟아올라 보드를 산산조각 냈지만, 다리를 반사적으로 빼내며 몸에는 상처 하나 없이 물 밖으로 튕겨나갔다(2026.11.22). 본인 증언과 처참하게 부서진 보드 사진까지 있어 사실 밀도가 높고, '공격당했는데 무사하다'는 반전이 비서퍼까지 공유할 조회수형 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "John John Florence Confirms He Won't Return To The CT In 2027",
+      "url": "https://stabmag.com/elsewhere/john-john-florence-confirms-he-wont-return-to-the-ct-in-2027/",
+      "feed": "stabmag.com",
+      "published": "2026-11-20",
+      "topic": "인물/셀럽",
+      "headlineType": "선언형",
+      "metric": "댓글",
+      "reason": "3회 월드챔피언 존 존 플로렌스가 WSL 와일드카드 신청 마감(11월 1일)을 넘기며 2027시즌 투어 복귀를 또 미뤄 3년 연속 공백을 확정했다. 'We need more time'이라는 ESPN 인터뷰 인용과 함께 2028 LA올림픽 출전 경로까지 막힌다는 파장이 커, 팬들의 찬반 댓글을 유도할 선언형 소재다. (11/21 후보에서 아직 제작되지 않아 후킹이 살아있어 재상정)",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "The XXL El Niño Swells That Rewrote Surfing History (Including the Day Earth Itself Shifted)",
+      "url": "https://www.surfer.com/news/el-nino-biggest-waves-swells-surf-history",
+      "feed": "surfer.com",
+      "published": "2026-11-22",
+      "topic": "파도/스펙터클",
+      "headlineType": "수치충격형",
+      "metric": "저장",
+      "reason": "켄 브래드쇼의 전설적인 80피트 웨이브부터 '지구 자전까지 바꾼 날'로 불리는 스웰까지, 역대 엘니뇨가 만든 최대 파도 5개를 정리한 아카이브성 피처다. 지금 캘리포니아를 덮친 슈퍼 엘니뇨 시즌과 맞물려 타이밍이 좋고, 구체적 숫자와 역사적 사실이 뚜렷해 '서핑 역사상 가장 큰 파도'를 저장해두고 싶게 만드는 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Review: Vampires Surf Probably Deserves A Sundance Nomination",
+      "url": "https://stabmag.com/stabcinema/review-vampires-surf-deserves-a-sundance-nomination/",
+      "feed": "stabmag.com",
+      "published": "2026-11-23",
+      "topic": "문화/무비",
+      "headlineType": "질문형",
+      "metric": "댓글",
+      "reason": "뱀파이어가 멈춘 시간을 되돌리려 서핑 대결을 벌인다는 설정의 영화 'Vampires Surf'에 여자 월드챔피언 케이티 시머스가 출연했고, 선댄스 노미네이트 거론까지 나왔다. '서핑 영화에 뱀파이어가?'라는 낯선 조합 자체가 궁금증을 유발해 댓글·공유를 끌어낼 질문형 소재다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Southland: Jed Fasso Chases Empty Waves Through New Zealand's Deep South",
+      "url": "https://tracksmag.com.au/southland-jed-fasso-chases-empty-waves-through-new-zealands-deep-south",
+      "feed": "tracksmag.com.au",
+      "published": "2026-11-22",
+      "topic": "씬/담론",
+      "headlineType": "공감형",
+      "metric": "저장",
+      "reason": "필름메이커 제드 파소가 뉴질랜드 피오르드랜드에서 2주간 모래파리떼와 싸우고 마지막 날은 굶은 채로 파도를 찾아다닌 여정을 다큐멘터리 'Southland'로 공개했다. 코블스톤 A프레임 같은 구체적 웨이브 디테일이 있어 서프트립을 꿈꾸는 한국 서퍼들의 공감과 저장을 끌어낼 소재다.",
+      "status": "pending"
+    }
+  ]
+}
