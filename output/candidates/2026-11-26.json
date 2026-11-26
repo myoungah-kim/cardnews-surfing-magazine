@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-26",
+  "generatedAt": "2026-11-26T07:12:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Pacifica Pier Collapses As 30-Foot El Niño Waves and Record King Tides Hammer California Coast (Video)",
+      "url": "https://www.surfer.com/news/pacifica-pier-collapse-king-tides-video",
+      "feed": "surfer.com",
+      "published": "2026-11-25",
+      "topic": "안전/시설",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "구조 결함으로 지난 6월부터 폐쇄 중이던 퍼시피카 부두가, 안전 점검으로 아무도 없던 상태에서 El Niño발 거센 파도에 통째로 꺾여 바다로 떨어지는 순간이 영상에 그대로 찍혔다. Stab Mag이 같은 사건을 18초 주기·14.9피트 스웰이 90도 각도로 부두를 때려 '마른 나뭇가지처럼' 부러뜨렸다는 세부 수치까지 더해 교차 확인했고, 목격자 Colin McCarthy의 실시간 반응과 ABC7·SF Chronicle 보도까지 있어 사실 밀도가 매우 높다. '안전하게 닫아놨는데도 결국 무너졌다'는 반전이 조회수·공유에 가장 강하다."
+    },
+    {
+      "index": 2,
+      "title": "A Firsthand Account Of Viral Central California Great White Shark Attack",
+      "url": "https://stabmag.com/news/a-firsthand-account-of-viral-central-california-great-white-shark-attack/",
+      "feed": "stabmag.com",
+      "published": "2026-11-25",
+      "topic": "해양생물",
+      "headlineType": "현실폭로형",
+      "metric": "조회수",
+      "reason": "서프 비치 인근에서 다리를 늘어뜨리고 앉아 있던 Jack Canigiula를 백상아리가 아래에서 끌어올려 보드를 물고 그를 공중으로 띄워버린 순간을 당사자가 직접 증언한다. 상어의 거친 피부 질감, 꼬리가 수면 위 1미터 가까이 솟았던 장면까지 생생하게 묘사했고 다행히 무사히 해변으로 돌아왔다는 결말까지 있어 사실 밀도가 높다. '당해본 사람만 아는' 현실폭로형 1인칭 서술이라 조회수·공유에 적합하다."
+    },
+    {
+      "index": 3,
+      "title": "Venomous Portuguese Man O' War Have Infiltrated San Diego Waters",
+      "url": "https://www.surfer.com/news/venomous-portuguese-man-o-war-san-diego-beaches",
+      "feed": "surfer.com",
+      "published": "2026-11-25",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "이례적으로 따뜻해진 El Niño 바닷물을 타고 포르투기즈 맨오워(장수 해파리 비슷한 자포동물)가 샌디에이고 카브리요·델마·라호야 해변까지 들어왔다. 촉수가 최대 30미터(100피트)까지 뻗고 죽은 뒤에도 수 주간 독성이 남는다는 구체적 수치, CDC의 응급처치법(민물·식초 사용 금지 등)까지 실용 정보가 풍부하다. 한국 해변에도 해파리 주의보가 흔해 직접 관련성이 높고, '봤을 때 어떻게 해야 하는지' 체크리스트형 정보라 저장 지표에 적합하다."
+    },
+    {
+      "index": 4,
+      "title": "Why do waves roar when they break?",
+      "url": "https://www.surfertoday.com/surfing/why-do-waves-roar-when-they-break",
+      "feed": "surfertoday.com",
+      "published": "2026-11-25",
+      "topic": "환경",
+      "headlineType": "질문형",
+      "metric": "저장",
+      "reason": "파도가 부서질 때 나는 '쏴아' 소리가 사실은 물속에 갇힌 수많은 공기 방울의 공명 때문이라는 걸, 2002년 Nature 연구부터 2024년 수중 음향 배열 연구까지 인용해 과학적으로 풀어낸다. 지름 6mm 방울은 540Hz, 1mm 방울은 3.3kHz로 공명한다는 구체적 수치가 있어 사실 밀도가 높고, 매일 파도 소리를 듣는 모든 서퍼에게 직접 관련된 에버그린 지식이라 저장 지표에 강하다."
+    },
+    {
+      "index": 5,
+      "title": "Jack Johnson's New Film Drops Worldwide Dec. 1 — And Benefits Your Beach",
+      "url": "https://www.surfer.com/news/jack-johnson-new-film-worldwide-release-giving-tuesday",
+      "feed": "surfer.com",
+      "published": "2026-11-25",
+      "topic": "문화/무비",
+      "headlineType": "선언형",
+      "metric": "저장",
+      "reason": "서핑 다큐 'SURFILMUSIC'이 12월 1일(기빙 튜즈데이) 전 세계 공개되는데, 대여 수익의 25%가 서프라이더 재단에 기부된다는 구체적 수치와 $4.99라는 가격, Coast Film Festival 최우수상 등 수상 내역까지 사실 밀도가 충분하다. 뮤지션이자 서퍼인 잭 존슨은 서핑을 모르는 음악 팬도 반응할 크로스오버 소재이고, '영화 한 편 보는 걸로 바다를 돕는다'는 선언형 메시지가 저장·공유에 적합하다."
+    }
+  ]
+}
