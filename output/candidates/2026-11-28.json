@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-28",
+  "generatedAt": "2026-11-28T07:20:00+09:00",
+  "candidates": [
+    {
+      "index": 1,
+      "title": "Aerial Footage Shows Pacifica Pier Implode as 30-Foot El Niño Waves Smash California Coast",
+      "url": "https://www.surfer.com/news/pacifica-pier-collapse-aerial-video",
+      "feed": "surfer.com",
+      "published": "2026-11-27",
+      "topic": "안전/시설",
+      "headlineType": "반전형",
+      "metric": "조회수",
+      "reason": "6월 구조 균열로 폐쇄된 퍼시피카 부두가 11월25일 30피트 엘니뇨 스웰과 역대 킹타이드에 끝부분이 꺾여 떨어진 데 이어, 27일 공개된 드론 항공 영상이 그 붕괴 순간을 더 선명하게 잡아냈다. '안전하게 닫아놨는데도 결국 무너졌다'는 반전과 갈수록 생생해지는 영상 자료가 조회수에 가장 강하다. 사흘째 이어지는 후보라 오늘 제작 요청이 없으면 소재를 접는 것을 권장한다.",
+      "status": "pending"
+    },
+    {
+      "index": 2,
+      "title": "A Firsthand Account Of Viral Central California Great White Shark Attack",
+      "url": "https://stabmag.com/news/a-firsthand-account-of-viral-central-california-great-white-shark-attack/",
+      "feed": "stabmag.com",
+      "published": "2026-11-25",
+      "topic": "해양생물",
+      "headlineType": "현실폭로형",
+      "metric": "조회수",
+      "reason": "서프 비치에 앉아 있던 Jack Canigiula가 백상아리에게 보드를 물려 공중으로 떠올랐던 순간을 1인칭으로 증언한다. '소만큼 넓었다'는 체감, 사포 같은 피부 질감 등 당해본 사람만 할 수 있는 디테일에 무사 귀환이라는 결말까지 있어 사실 밀도가 높다. 사흘 연속 후보에 오른 소재라 오늘이 마지막 추천에 가깝다.",
+      "status": "pending"
+    },
+    {
+      "index": 3,
+      "title": "If Kelly Slater Never Existed, Who Would Be Male Surfing's GOAT? (Part 1)",
+      "url": "https://stabmag.com/features/if-kelly-slater-never-existed-who-would-be-male-surfings-goat-part-1/",
+      "feed": "stabmag.com",
+      "published": "2026-11-26",
+      "topic": "씬/담론",
+      "headlineType": "질문형",
+      "metric": "댓글",
+      "reason": "11회 세계챔피언·CT 56승의 켈리 슬레이터 기록을 지우면 서핑 역사상 최고는 누구일지 7명의 후보를 놓고 120만 팔로워 설문까지 돌린 특집이다. '만약 OO이 없었다면'이라는 가정형 질문은 댓글 논쟁을 부르기 좋고, 11월30일 공개되는 2부로 이어지는 떡밥이라 발행 시점이 다가올수록 오히려 더 유리해진다. premium 태그 기사라 제작 단계에서 사실 재검증이 필요하다.",
+      "status": "pending"
+    },
+    {
+      "index": 4,
+      "title": "Venomous Portuguese Man O' War Have Infiltrated San Diego Waters",
+      "url": "https://www.surfer.com/news/venomous-portuguese-man-o-war-san-diego-beaches",
+      "feed": "surfer.com",
+      "published": "2026-11-25",
+      "topic": "해양생물",
+      "headlineType": "경고형",
+      "metric": "저장",
+      "reason": "따뜻해진 엘니뇨 바닷물을 타고 포르투기즈 맨오워가 샌디에이고 라호야·델마 해변까지 유입됐다. 촉수가 최대 100피트까지 뻗고 죽은 뒤에도 독성이 남는다는 수치, CDC 응급처치 가이드까지 실용 정보가 풍부해 저장 지표에 적합하다. 한국 해변 해파리 주의보와 직접 연결되는 소재지만 사흘 연속 후보라 이번 주 안에 제작하는 것을 권장한다.",
+      "status": "pending"
+    },
+    {
+      "index": 5,
+      "title": "Authentic Brands Group acquires O'Neill and adds another surfing original to its empire",
+      "url": "https://www.surfertoday.com/surfing/authentic-brands-group-acquires-oneill",
+      "feed": "surfertoday.com",
+      "published": "2026-11-24",
+      "topic": "씬/담론",
+      "headlineType": "수치충격형",
+      "metric": "댓글",
+      "reason": "1952년 잭 오닐이 만든 전통 서핑 브랜드 오닐이 퀵실버·빌라봉을 이미 소유한 라이선스 기업 Authentic Brands Group에 인수됐다. 매출 22억 달러·EBITDA 마진 81%라는 수치가 '서핑 브랜드 창업자 시대의 끝'을 체감시켜 댓글 논쟁에 적합하다. 나흘 전 등장 이후 신선한 소재에 두 번 밀렸던 후보지만, 오늘은 신규 RSS 수확이 얇아 다시 올라왔다.",
+      "status": "pending"
+    }
+  ]
+}
